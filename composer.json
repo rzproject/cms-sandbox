@@ -1,6 +1,6 @@
 {
-    "name": "rmzamora/sandbox",
-    "description": "rmzamora sandbox labs",
+    "name": "rz/cms-sandbox",
+    "description": "rz cms-sandbox",
     "autoload": {
         "psr-0":         {
             "": "src/"
@@ -111,8 +111,8 @@
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "branch-alias": {
-            "dev-2.1": "2.1.x-dev",
-            "dev-master": "2.1.x-dev"
+            "dev-2.1": "2.2.x-dev",
+            "dev-master": "2.3.x-dev"
         }
     }
 }
