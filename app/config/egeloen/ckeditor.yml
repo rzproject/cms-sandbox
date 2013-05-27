@@ -1,0 +1,3 @@
+ivory_ck_editor:
+    base_path: "ckeditor"
+    js_path:   "ckeditor/ckeditor.js"

@@ -1,0 +1,10 @@
+doctrine_phpcr:
+    session:
+        backend:
+            type: doctrinedbal
+            connection: doctrine.dbal.default_connection
+        workspace: default
+        username: admin
+        password: admin
+    odm:
+        auto_mapping: true

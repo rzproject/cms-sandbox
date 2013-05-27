@@ -1,0 +1,7 @@
+# Enable Doctrine to map the provided entities
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    RmzamoraDemoBundle: ~

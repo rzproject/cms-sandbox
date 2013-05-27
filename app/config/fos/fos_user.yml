@@ -1,0 +1,56 @@
+#
+# more information can be found here http://sonata-project.org/bundles/user
+#
+fos_user:
+    db_driver:      orm # can be orm or odm
+    firewall_name:  main
+    user_class:     Application\Sonata\UserBundle\Entity\User
+    use_listener:           true
+    use_username_form_type: true
+    model_manager_name:     null
+    group:
+        group_class: Application\Sonata\UserBundle\Entity\Group
+#
+#    registration:
+#        confirmation:
+#            enabled:    true
+#            from_email:
+#                address:        registration@rmzamora.com
+#                sender_name:    rzamora-sandbox Registration
+#            enabled:    true # change to true for required email confirmation
+#            template:   FOSUserBundle:Registration:email.txt.twig
+#        form:
+#            type:               rmzamora_sonataext_user_registration
+#            name:               rmzamora_sonataext_user_registration_form
+#            validation_groups:  [Registration, Default]
+#
+#    profile:  # Authentication Form
+#        form:
+#            type:               rmzamora_sonataext_auth_profile
+#            name:               rmzamora_sonataext_auth_profile_form
+#            validation_groups:  [Authentication] # Please note : this is not the default value
+#
+#    resetting:
+#        token_ttl: 86400
+#        email:
+#            from_email: # Use this node only if you don't want the global email address for the resetting email
+#                address:        reset@rmzamora.com
+#                sender_name:    rzamora-sandbox Reset Password
+#            template:   FOSUserBundle:Resetting:email.txt.twig
+
+    service:
+        mailer:                 fos_user.mailer.default
+        email_canonicalizer:    fos_user.util.canonicalizer.default
+        username_canonicalizer: fos_user.util.canonicalizer.default
+        token_generator:        fos_user.util.token_generator.default
+        user_manager:           fos_user.user_manager.default
+
+# Enable Doctrine to map the provided entities
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    FOSUserBundle: ~
+                    ApplicationSonataUserBundle: ~
+                    SonataUserBundle: ~

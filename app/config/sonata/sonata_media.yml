@@ -1,0 +1,90 @@
+#
+# more information can be found here http://sonata-project.org/bundles/media
+#
+sonata_media:
+    db_driver:       doctrine_orm # | doctrine_mongodb
+    default_context: default
+    contexts:
+        default:  # the default context is mandatory
+            download:
+                strategy: sonata.media.security.superadmin_strategy
+                mode: http
+            providers:
+                - sonata.media.provider.dailymotion
+                - sonata.media.provider.youtube
+                - sonata.media.provider.image
+                - sonata.media.provider.file
+                - sonata.media.provider.vimeo
+
+            formats:
+                small: { width: 100, quality: 100}
+                big:   { width: 820 , quality: 100}
+
+        news:
+            download:
+                strategy: sonata.media.security.superadmin_strategy
+                mode: http
+            providers:
+                - sonata.media.provider.dailymotion
+                - sonata.media.provider.youtube
+                - sonata.media.provider.image
+                - sonata.media.provider.vimeo
+
+            formats:
+                abtract: { width: 100, quality: 100}
+                wide:    { width: 820 , quality: 100}
+
+    cdn:
+        # define the public base url for the uploaded media
+        server:
+            path:      %sonata_media.cdn.host%
+
+    filesystem:
+        # define where the uploaded file will be stored
+        local:
+            directory:  %kernel.root_dir%/../web/uploads/media
+            create:     true
+
+    providers:
+        file:
+            resizer:    false
+
+    pixlr:
+        enabled:  true
+        referrer: Demo - Sonata Project
+
+    resizer:
+        simple:
+#            mode:  outbound
+            mode:  inset
+
+#
+# The LiipImagineBundle can be used if you want to convert on demand an image
+# to a specific format. (ie a controller render the file)
+#    more information can be found here : https://github.com/liip/LiipImagineBundle
+#
+liip_imagine:
+    filter_sets:
+        default_small:
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [100, 70], mode: outbound }
+
+
+        default_big:
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [500, 70], mode: outbound }
+
+        default_original:
+            filters:
+                relative_resize: { heighten: 60 }
+
+# Enable Doctrine to map the provided entities
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    ApplicationSonataMediaBundle: ~
+                    SonataMediaBundle: ~

@@ -1,0 +1,93 @@
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+#fos_user_profile:
+#    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+#    prefix: /profile
+
+#Sonata Profile Edition
+sonata_user_profile:
+    resource: "@SonataUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+#rmzamora_sonataext_user_resetting:
+#    resource: "@RmzamoraSonataExtUserBundle/Resources/config/routing/resetting.xml"
+#    prefix: /resetting
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
+sonata_media_gallery:
+    resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'
+    prefix: /media/gallery
+
+sonata_media_media:
+    resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
+    prefix: /media
+
+sonata_cache_cache:
+    resource: '@SonataCacheBundle/Resources/config/routing/cache.xml'
+    prefix: /
+
+sonata_page_cache:
+    resource: '@SonataPageBundle/Resources/config/routing/cache.xml'
+    prefix: /
+
+sonata_page_exceptions:
+    resource: '@SonataPageBundle/Resources/config/routing/exceptions.xml'
+    prefix: /page
+
+_monitor:
+    resource: "@LiipMonitorBundle/Resources/config/routing.yml"
+    prefix: /monitor/health
+
+sonata_media_pixlr:
+    resource: '@SonataMediaBundle/Resources/config/routing/pixlr.xml'
+    prefix: /admin/media
+
+#_imagine:
+#    resource: .
+#    type:     imagine
+
+rz_media_rest_service:
+    type: rest
+    resource: '@RzMediaBundle/Resources/config/REST/media_service_rest.yml'
+    prefix: /admin/api/rzmedia
+#
+#rmzamora_sontaext_block_admin_service:
+#    type: rest
+#    resource: '@RmzamoraSonataExtPageBundle/Resources/config/rest/block_admin_service.yml'
+#    prefix: /admin/api-secured-block
+#
+#rmzamora_sontaext_mercury_gallery_service:
+#    type: rest
+#    resource: '@RmzamoraSonataExtPageBundle/Resources/config/rest/mercury_gallery_service.yml'
+#    prefix: /admin/api-secured-mercury-gallery
+
+blog:
+    resource: '@SonataNewsBundle/Resources/config/routing/news.xml'
+    prefix: /blog
+
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
+
+soanata_user:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
+    prefix: /admin
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

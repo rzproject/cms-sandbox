@@ -1,0 +1,29 @@
+#
+# more information can be found here http://sonata-project.org/bundles/cache
+#
+sonata_cache:
+    caches:
+       esi:
+          token: ~
+          version: 3
+          servers:
+              - varnishadm -T 127.0.0.1:2000 {{ COMMAND }} "{{ EXPRESSION }}"
+       ssi:
+          token: ~
+
+       mongo:
+          database:   cache
+          collection: cache
+          servers:
+              - {host: 127.0.0.1, port: 27017}
+
+       memcached:
+          prefix: rmzamora-sandbox     # prefix to ensure there is no clash between instances
+          servers:
+              - {host: 127.0.0.1, port: 11211, weight: 1}
+
+       apc:
+           token:  s3cur3   # token used to clear the related cache
+           prefix: rmzamora-sandbox # prefix to ensure there is no clash between instances
+           servers:
+               - { domain: apc.localhost, ip: 127.0.0.1, port: 80, basic: 'admin:same2you'}

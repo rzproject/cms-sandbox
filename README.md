@@ -1,4 +1,4 @@
 cms-sandbox
 ===========
 
-rzcms-sandbox
+rzcms-sandbox - CMS sandbox based on SonataProject and RzBundles

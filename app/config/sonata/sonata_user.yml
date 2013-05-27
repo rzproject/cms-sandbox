@@ -1,0 +1,24 @@
+sonata_user:
+    security_acl:     false
+    class:
+        user:         Application\Sonata\UserBundle\Entity\User
+        group:        Application\Sonata\UserBundle\Entity\Group
+
+    impersonating:
+        route:                page_slug
+        parameters:           { path: / }
+
+    google_authenticator:
+        server:               %sonata_user.google_authenticator.server%
+        enabled:              true
+
+    manager_type:             orm
+
+    profile:  # Profile Form (firstname, lastname, etc ...)
+        form:
+            type:               rmzamora_sonataext_user_profile
+            name:               rmzamora_sonataext_user_profile_form
+            validation_groups:
+                # Defaults:
+                - Profile
+                - Default

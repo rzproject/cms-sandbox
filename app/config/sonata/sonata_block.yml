@@ -1,0 +1,28 @@
+sonata_block:
+    context_manager: sonata.page.block.context_manager
+    default_contexts: [cms]
+
+    profiler:
+        enabled:        %kernel.debug%
+        container_types:
+            sonata.page.block.container: sonata.page.block.container
+        template:       SonataBlockBundle:Profiler:block.html.twig
+
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+
+        sonata.block.service.text:
+              cache: sonata.cache.memcached
+        sonata.page.block.container:
+              cache: sonata.cache.memcached
+        sonata.page.block.children_pages:
+              cache: sonata.cache.memcached
+        sonata.block.service.rss:
+              cache: sonata.cache.memcached
+        sonata.media.block.media:
+              cache: sonata.cache.memcached
+        sonata.media.block.gallery:
+              cache: sonata.cache.memcached
+        sonata.media.block.feature_media:
+              cache: sonata.cache.memcached

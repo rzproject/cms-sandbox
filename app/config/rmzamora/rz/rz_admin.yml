@@ -1,0 +1,3 @@
+rz_admin:
+  templates:
+     layout: RzAdminBundle::standard_layout.html.twig

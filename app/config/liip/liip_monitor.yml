@@ -1,0 +1,35 @@
+liip_monitor:
+    checks:
+        php_extensions: [apc, xdebug, memcache]
+
+services:
+    monitor.check.memcahce:
+        class: Liip\Monitor\Check\MemcacheCheck
+        arguments:
+            host: 127.0.0.1
+            port: 11211
+        tags:
+            - { name: liip_monitor.check, alias: memcache }
+
+    monitor.check.writable_dir:
+        class: Liip\Monitor\Check\WritableDirectoryCheck
+        arguments:
+            - [ %kernel.root_dir%/cache, %kernel.root_dir%/logs ]
+        tags:
+            - { name: liip_monitor.check, alias: writable_dir }
+
+    monitor.check.disk_usage:
+        class: Liip\Monitor\Check\DiscUsageCheck
+        arguments:
+            max_disk_usage: 2048
+            path: %kernel.root_dir%
+        tags:
+            - { name: liip_monitor.check, alias: disk_usage }
+
+    monitor.check.process_rabbitmq:
+        class: Liip\Monitor\Check\ProcessActiveCheck
+        arguments:
+            cmd: rabbit
+        tags:
+            - { name: liip_monitor.check, alias: process_rabbitmq }
+

@@ -1,0 +1,1 @@
+../vendor/doctrine/phpcr-odm/bin/phpcr.php
