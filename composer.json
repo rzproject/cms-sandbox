@@ -57,7 +57,8 @@
         "rz/news-bundle": "2.2.*",
         "rz/doctrine-orm-admin-bundle": "2.2.*",
 
-        "symfony-cmf/routing-bundle": "1.*@dev",
+        "symfony-cmf/routing-extra-bundle": "1.*",
+        "symfony-cmf/routing": "1.*",
 
         "friendsofsymfony/user-bundle": "dev-master",
         "friendsofsymfony/jsrouting-bundle": "dev-master",

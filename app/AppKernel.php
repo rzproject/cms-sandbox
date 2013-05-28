@@ -72,7 +72,7 @@ class AppKernel extends Kernel
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
 
             //CMF Router
-            new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
+            new Symfony\Cmf\Bundle\RoutingExtraBundle\SymfonyCmfRoutingExtraBundle(),
 
             //FOS
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
