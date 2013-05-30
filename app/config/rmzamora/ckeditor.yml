@@ -2,6 +2,7 @@ rz_ckeditor:
         configs:
             admin_full_editor:
                 toolbar:  "full_toolbar"
+                allowedContent: true
                 enterMode: "CKEDITOR.ENTER_P"
                 extraPlugins: "autogrow,magicline"
                 autogrow:
@@ -31,6 +32,7 @@ rz_ckeditor:
                     bottomSpace: 200
             inline_editor:
                 toolbar:  "inline_toolbar"
+                allowedContent: true
                 removePlugins: "backup"
             bbcode_editor:
                 toolbar:  "bbcode_toolbar"
@@ -80,5 +82,3 @@ rz_ckeditor:
                 minimal_document    : [ "Maximize"]
                 minimal_basicstyles : [ "Bold","Italic","Underline", "-", "NumberedList","BulletedList" ]
                 minimal_clipboard : [ "Cut","Copy","Paste","PasteText","-","Undo","Redo" ]
-
-
