@@ -23,7 +23,6 @@ imports:
     - { resource: ornicar/apc.yml }
 
     # rmzamora
-    - { resource: rmzamora/demo.yml }
     - { resource: rmzamora/ckeditor.yml }
     #- { resource: rmzamora/rz/rz_admin.yml }
     #- { resource: rmzamora/rz/rz_user.yml }
