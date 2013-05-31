@@ -16,9 +16,13 @@ sonata_user:
 
     profile:  # Profile Form (firstname, lastname, etc ...)
         form:
-            type:               rmzamora_sonataext_user_profile
-            name:               rmzamora_sonataext_user_profile_form
+            type:               rz_user_profile
+            name:               rz_user_profile_form
             validation_groups:
                 # Defaults:
                 - Profile
                 - Default
+
+        update_password:
+                type:               rz_user_update_password
+                name:               rz_user_update_password_form
