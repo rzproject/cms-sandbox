@@ -31,6 +31,7 @@
         "jms/security-extra-bundle": "1.4.*",
         "jms/di-extra-bundle": "1.3.*",
         "jms/serializer-bundle": "0.12.*",
+        "jms/command-bundle": "dev-master",
 
         "symfony-cmf/routing-bundle": "1.1.*@dev",
 
@@ -44,12 +45,13 @@
         "sonata-project/intl-bundle": "2.2.*@dev",
         "sonata-project/cache-bundle": "2.1.*@dev",
 
-        "rmzamora/notification-bundle": "2.2.*@dev",
-        "rmzamora/admin-bundle": "2.2.*@dev",
-        "rmzamora/block-bundle": "2.2.*@dev",
-        "rmzamora/user-bundle": "2.2.*@dev",
-        "rmzamora/media-bundle": "2.2.*@dev",
-        "rmzamora/doctrine-orm-admin-bundle": "2.2.*@dev",
+        "rmzamora/notification-bundle": "2.3.*",
+        "rmzamora/admin-bundle": "2.3.*@dev",
+        "rmzamora/block-bundle": "2.3.*@dev",
+        "rmzamora/user-bundle": "2.3.*@dev",
+        "rmzamora/media-bundle": "2.3.*@dev",
+        "rmzamora/doctrine-orm-admin-bundle": "2.3.*@dev",
+
         "rmzamora/jquery-bundle": "1.9.*@dev",
         "rmzamora/bootstrap-bundle": "2.3.*@dev",
 
@@ -58,6 +60,17 @@
         "rmzamora/page-bundle": "2.3.*@dev",
 
         "rmzamora/entity-audit-bundle": "0.*@dev",
+        "rmzamora/jsrouting-bundle": "1.1.*@dev",
+        "rmzamora/rest-bundle": "0.13.*@dev",
+
+        "rz/formatter-bundle": "2.3.*",
+        "rz/admin-bundle": "2.3.*",
+        "rz/block-bundle": "2.3.*",
+        "rz/user-bundle": "2.3.*",
+        "rz/page-bundle": "2.3.*",
+        "rz/media-bundle": "2.3.*",
+        "rz/news-bundle": "2.3.*",
+        "rz/doctrine-orm-admin-bundle": "2.3.*",
 
         "kriswallsmith/buzz": "0.7.*",
 
@@ -66,8 +79,8 @@
 
         "dflydev/markdown": "1.0.2",
         "willdurand/faker-bundle": "dev-master",
-        "videlalvaro/php-amqplib"  : "dev-master",
-        "jms/command-bundle": "dev-master"
+        "videlalvaro/php-amqplib"  : "dev-master"
+
     },
 
     "require-dev": {
