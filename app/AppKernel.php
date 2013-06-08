@@ -72,7 +72,7 @@ class AppKernel extends Kernel
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
 
             //CMF Router
-            new Symfony\Cmf\Bundle\RoutingExtraBundle\SymfonyCmfRoutingExtraBundle(),
+            new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
 
             //FOS
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
@@ -83,7 +83,6 @@ class AppKernel extends Kernel
             new JMS\CommandBundle\JMSCommandBundle(),
 
             new Liip\MonitorBundle\LiipMonitorBundle(),
-            new Ornicar\ApcBundle\OrnicarApcBundle(),
 
             # Always Load Last
             new Rmzamora\SandboxInitDataBundle\RmzamoraSandboxInitDataBundle(),
