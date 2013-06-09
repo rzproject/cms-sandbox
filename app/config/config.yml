@@ -20,7 +20,7 @@ imports:
     - { resource: liip/liip_monitor.yml }
 
     # apc
-    - { resource: ornicar/apc.yml }
+    #- { resource: ornicar/apc.yml }
 
     # rmzamora
     - { resource: rmzamora/ckeditor.yml }
