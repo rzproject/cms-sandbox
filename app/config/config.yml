@@ -31,6 +31,7 @@ imports:
     - { resource: egeloen/ckeditor.yml }
 
 framework:
+    trusted_proxies: ['127.0.0.1'] # a list of proxy IPs you trust
     esi: { enabled: true }
     fragments: { path: /_fragment }
     translator: { fallback: en }
