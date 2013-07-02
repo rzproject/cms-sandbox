@@ -90,7 +90,7 @@ class AppKernel extends Kernel
             new Rmzamora\SandboxInitDataBundle\RmzamoraSandboxInitDataBundle(),
             new Rmzamora\BootstrapBundle\RmzamoraBootstrapBundle(),
             new Rmzamora\JqueryBundle\RmzamoraJqueryBundle(),
-            new Rmzamora\DemoBundle\RmzamoraDemoBundle(),
+            #new Rmzamora\DemoBundle\RmzamoraDemoBundle(),
             new Rz\CkeditorBundle\RzCkeditorBundle(),
             new Rz\CodemirrorBundle\RzCodemirrorBundle(),
             #new Rz\DemoBundle\RzDemoBundle(),

@@ -7,6 +7,7 @@ parameters:
 
     mailer_transport:   gmail
     mailer_host:        gmail.com
+    mailer_auth_mode:   login
     mailer_user:        test@gmail.com
     mailer_password:    password
 
