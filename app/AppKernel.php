@@ -86,9 +86,6 @@ class AppKernel extends Kernel
             new Liip\MonitorBundle\LiipMonitorBundle(),
             //new Ornicar\ApcBundle\OrnicarApcBundle(),
 
-            //Solr
-            new Nelmio\SolariumBundle\NelmioSolariumBundle(),
-
             # Always Load Last
             new Rmzamora\SandboxInitDataBundle\RmzamoraSandboxInitDataBundle(),
             new Rmzamora\BootstrapBundle\RmzamoraBootstrapBundle(),
@@ -106,7 +103,6 @@ class AppKernel extends Kernel
             new Rz\NewsBundle\RzNewsBundle(),
             new Rz\PageBundle\RzPageBundle(),
             new Rz\UserBundle\RzUserBundle(),
-            new Rz\SearchBundle\RzSearchBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
