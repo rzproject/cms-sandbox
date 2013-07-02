@@ -1,6 +1,6 @@
 {
-    "name": "rz/sandbox",
-    "description": "rz sandbox",
+    "name": "rmzamora/sandbox",
+    "description": "rmzamora sandbox labs",
     "autoload": {
         "psr-0":         {
             "": "src/"
@@ -21,7 +21,7 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
 
-        "doctrine/orm": ">=2.2.3,<2.4-dev@stable",
+        "doctrine/orm": ">=2.2.3,<2.4-dev",
         "doctrine/doctrine-bundle": "1.2.*",
         "doctrine/doctrine-migrations-bundle": "dev-master",
         "doctrine/migrations": "dev-master",
@@ -51,17 +51,17 @@
         "rmzamora/media-bundle": "2.3.*@dev",
         "rmzamora/doctrine-orm-admin-bundle": "2.3.*@dev",
 
-        "rmzamora/jquery-bundle": "1.9.*@dev",
+        "rmzamora/jquery-bundle": "1.10.*@dev",
         "rmzamora/bootstrap-bundle": "2.3.*@dev",
 
         "rmzamora/news-bundle": "2.3.*@dev",
         "rmzamora/formatter-bundle": "2.3.*@dev",
         "rmzamora/page-bundle": "2.3.*@dev",
 
+        "rmzamora/knp-menu-bundle": "2.0.x-dev",
         "rmzamora/entity-audit-bundle": "0.*@dev",
         "rmzamora/jsrouting-bundle": "1.1.*@dev",
         "rmzamora/rest-bundle": "0.13.*@dev",
-        "rmzamora/knp-menu-bundle": "2.0.x-dev",
 
         "rz/formatter-bundle": "2.3.*",
         "rz/admin-bundle": "2.3.*",

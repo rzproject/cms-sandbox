@@ -4,7 +4,7 @@ rz_ckeditor:
                 toolbar:  "full_toolbar"
                 allowedContent: true
                 enterMode: "CKEDITOR.ENTER_P"
-                extraPlugins: "autogrow,magicline"
+                extraPlugins: "autogrow,magicline,divarea"
                 autogrow:
                     minHeight: 300
                     maxHeight: 700
@@ -14,7 +14,7 @@ rz_ckeditor:
                     color: "#2D335B"
             simple_editor:
                 toolbar:  "simple_toolbar"
-                extraPlugins: "autogrow,magicline"
+                extraPlugins: "autogrow,magicline,divarea"
                 autogrow:
                     minHeight: 300
                     maxHeight: 700
@@ -82,3 +82,5 @@ rz_ckeditor:
                 minimal_document    : [ "Maximize"]
                 minimal_basicstyles : [ "Bold","Italic","Underline", "-", "NumberedList","BulletedList" ]
                 minimal_clipboard : [ "Cut","Copy","Paste","PasteText","-","Undo","Redo" ]
+
+

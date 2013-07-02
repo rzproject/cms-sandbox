@@ -26,3 +26,17 @@ sonata_block:
               cache: sonata.cache.memcached
         sonata.media.block.feature_media:
               cache: sonata.cache.memcached
+
+    exception:
+        default:
+            renderer:               inline_debug
+            filter:                 keep_all
+        renderers:
+            inline:                 sonata.block.exception.renderer.inline
+            inline_debug:           sonata.block.exception.renderer.inline_debug
+            throw:                  sonata.block.exception.renderer.throw
+        filters:
+            debug_only:             sonata.block.exception.filter.debug_only
+            ignore_block_exception: sonata.block.exception.filter.ignore_block_exception
+            keep_all:               sonata.block.exception.filter.keep_all
+            keep_none:              sonata.block.exception.filter.keep_none

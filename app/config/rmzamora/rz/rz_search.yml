@@ -1,0 +1,40 @@
+rz_search:
+    search:
+      solr:
+        endpoints:
+            default:
+                host: localhost
+                port: 8080
+                path: /solr
+                core: rmzamora_sandbox
+                timeout: 5
+    configs:
+      # Identifier can by any word with no space replace space using . or _
+      sonata.news.post:
+          model_class: Application\Sonata\NewsBundle\Entity\Post
+          model_manager: sonata.news.manager.post
+          field_mapping:
+                title : title
+                description : abstract
+                content : content
+                tags : tags
+                comments : comments
+                author : author
+          field_map_settings:
+                tags:
+                  fields : name
+                  filter : ~
+                comments:
+                  fields:
+                    - message
+                    - name
+                    - email
+                  filter:
+                    status:
+                      operand: =
+                      value: 1
+                author:
+                  fields:
+                    - username
+                    - email
+                  filter: ~

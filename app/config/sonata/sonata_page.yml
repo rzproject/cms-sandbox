@@ -45,9 +45,10 @@ sonata_page:
 
     caches:
          esi:
-             token:  ~   #add an unique token here # default is a random value
-             servers:
-                 - varnishadm -T 127.0.0.1:2000 {{ COMMAND }} "{{ EXPRESSION }}"
+            token: ~
+            version: 3
+            servers:
+                - varnishadm -T 127.0.0.1:2000 {{ COMMAND }} "{{ EXPRESSION }}"
          ssi:
             token: ~ #add an unique token here # default is a random value
 

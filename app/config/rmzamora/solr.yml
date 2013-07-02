@@ -1,0 +1,8 @@
+nelmio_solarium:
+    endpoints:
+        default:
+            host: localhost
+            port: 8080
+            path: /solr
+            core: rmzamora_sandbox
+            timeout: 5

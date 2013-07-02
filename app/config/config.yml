@@ -23,9 +23,10 @@ imports:
     #- { resource: ornicar/apc.yml }
 
     # rmzamora
+    - { resource: rmzamora/demo.yml }
     - { resource: rmzamora/ckeditor.yml }
-    #- { resource: rmzamora/rz/rz_admin.yml }
-    #- { resource: rmzamora/rz/rz_user.yml }
+    - { resource: rmzamora/solr.yml }
+    - { resource: rmzamora/rz/rz_search.yml }
 
     #  egeloen
     - { resource: egeloen/ckeditor.yml }
@@ -100,6 +101,7 @@ doctrine:
 # Swiftmailer Configuration
 swiftmailer:
     transport: %mailer_transport%
+    auth_mode: %mailer_auth_mode%
     host:      %mailer_host%
     username:  %mailer_user%
     password:  %mailer_password%
