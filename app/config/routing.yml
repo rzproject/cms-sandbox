@@ -42,10 +42,6 @@ sonata_page_exceptions:
     resource: '@SonataPageBundle/Resources/config/routing/exceptions.xml'
     prefix: /page
 
-rz_search_search:
-    resource: '@RzSearchBundle/Resources/config/routing/search.xml'
-    prefix: /search
-
 _monitor:
     resource: "@LiipMonitorBundle/Resources/config/routing.yml"
     prefix: /monitor/health
