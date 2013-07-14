@@ -1,25 +1,26 @@
 parameters:
     database_driver:   pdo_mysql
-    database_host:
-    database_name:
-    database_user:
-    database_password:
+    database_host:     localhost
+    database_name:     cms_sandbox
+    database_user:     username
+    database_password: password
 
-    mailer_transport:   smtp
-    mailer_host:        localhost
-    mailer_user:
-    mailer_password:
+    mailer_transport:   gmail
+    mailer_host:        gmail.com
+    mailer_auth_mode:   login
+    mailer_user:        test@gmail.com
+    mailer_password:    password
 
     locale:             en
 
-    secret:             ThisTokenIsNotSoSecretChangeIt
+    secret:             secret
 
     # Sonata Admin Options
-    sonata_admin.title:             Sonata Project
-    sonata_admin.logo_title:        /bundles/sonataadmin/logo_title.png
+    sonata_admin.title:             cms-sandbox
+    sonata_admin.logo_title:        /bundles/rzadmin/img/rz-logo.png
 
     # Sonata News Options
-    sonata_news.blog_title:         My Awesome Blog
+    sonata_news.blog_title:         cms-sandbox Blog
     sonata_news.blog_link:          http://awesome-blog.ltd
     sonata_news.blog_description:   My Awesome blog description
     sonata_news.salt:               ThisTokenIsNotSoSecretChangeIt
@@ -28,3 +29,24 @@ parameters:
 
     # Sonata Media options
     sonata_media.cdn.host:          /uploads/media
+
+    # Sonata User Options
+    sonata_user.google_authenticator.server:  demo.sonata-project.org
+
+    #rabbitmq settings
+    rabbitmq_host:         127.0.0.1
+    rabbitmq_user:         user
+    rabbitmq_pass:         pass
+    rabbitmq_port:         5672
+    rabbitmq_vhost:        /
+
+    #memcache settings
+    memcache_host:         localhost
+    memcache_port:         11211
+
+    #monolog production mailer
+    prod_monolog_type:       swift_mailer
+    prod_monolog_from_email: test@gmail.com
+    prod_monolog_to_email:   test@gmail.com
+    prod_monolog_subject:    cms-sandbox Monitoring Mailer!
+    prod_monolog_level:      error
