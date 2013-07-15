@@ -5,14 +5,6 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kernel
 {
-//    public function init()
-//    {
-//        // Please read http://symfony.com/doc/2.0/book/installation.html#configuration-and-setup
-//        umask(0002);
-//
-//        parent::init();
-//    }
-
     public function registerBundles()
     {
         $bundles = array(
@@ -84,16 +76,13 @@ class AppKernel extends Kernel
             new JMS\CommandBundle\JMSCommandBundle(),
 
             new Liip\MonitorBundle\LiipMonitorBundle(),
-            //new Ornicar\ApcBundle\OrnicarApcBundle(),
 
             # Always Load Last
             new Rmzamora\SandboxInitDataBundle\RmzamoraSandboxInitDataBundle(),
             new Rmzamora\BootstrapBundle\RmzamoraBootstrapBundle(),
             new Rmzamora\JqueryBundle\RmzamoraJqueryBundle(),
-            #new Rmzamora\DemoBundle\RmzamoraDemoBundle(),
             new Rz\CkeditorBundle\RzCkeditorBundle(),
             new Rz\CodemirrorBundle\RzCodemirrorBundle(),
-            #new Rz\DemoBundle\RzDemoBundle(),
             new Rz\AdminBundle\RzAdminBundle(),
             new Rz\BlockBundle\RzBlockBundle(),
             new Rz\DoctrineORMAdminBundle\RzDoctrineORMAdminBundle(),
