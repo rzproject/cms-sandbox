@@ -9,7 +9,7 @@ What's inside?
 cms-sandbox Standard Edition is based on rz-platform and comes pre-configured with the following bundles:
 
 Symfony Standard Edition
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 * FrameworkBundle
 * SensioFrameworkExtraBundle
@@ -24,10 +24,8 @@ Symfony Standard Edition
 * SensioGeneratorBundle (in dev/test env)
 * AcmeDemoBundle (in dev/test env)
 
-
-
 Uses Forked version of Sonata Bundles
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------
 
 * SonataAdminBundle - The missing Symfony2 Admin Generator
 * SonataMediaBundle
@@ -41,20 +39,20 @@ Uses Forked version of Sonata Bundles
 
 
 FOS Bundles
-~~~~~~~~~~~
+-----------
 
 * FOSUserBundle
 
 
 Behat Bundles
-~~~~~~~~~~~~~
+-------------
 
 * MinkBundle
 * BehatBundle
 
 
 Rz Bundles
-~~~~~~~~~~
+----------
 
 * RzDoctrineORMAdminBundle
 * RzAdminBundle
@@ -66,7 +64,7 @@ Rz Bundles
 
 
 Installation from Sonata Sandbox
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 Run the following commands::
 
@@ -90,7 +88,7 @@ Run the following commands::
 
 
 Database initialization
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 At this point, the ``app/console`` command should start with no issues. However some you need the complete some others step:
 
@@ -102,7 +100,7 @@ then runs the commands::
     app/console doctrine:schema:create
 
 Fixtures (For Demo Purpose Only)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 To have some actual data in your DB, you should load the fixtures by running::
 
@@ -110,7 +108,7 @@ To have some actual data in your DB, you should load the fixtures by running::
 
 
 Assets Installation
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 Your frontend still looking weird because bundle assets are not installed. Run the following command to install assets for all active bundles under public directory::
 
@@ -119,7 +117,7 @@ Your frontend still looking weird because bundle assets are not installed. Run t
 
 
 Sonata Page Bundle
-~~~~~~~~~~~~~~~~~~
+------------------
 
 By default the Sonata Page bundle is activated, so you need to starts 2 commands before going further::
 
@@ -134,7 +132,7 @@ By default the Sonata Page bundle is activated, so you need to starts 2 commands
 
 
 Create User
-~~~~~~~~~~~
+-----------
 
 .. note::
 
@@ -150,7 +148,7 @@ Add Role::
 
 
 Unit Testing
-~~~~~~~~~~~~
+------------
 
 Automatic Unit Testing with ``watchr``::
 
