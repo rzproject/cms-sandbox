@@ -25,8 +25,9 @@ Symfony Standard Edition
 * AcmeDemoBundle (in dev/test env)
 
 
-Rmzamora Forked version of Sonata Bundles
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Uses Forked version of Sonata Bundles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * SonataAdminBundle - The missing Symfony2 Admin Generator
 * SonataMediaBundle
@@ -36,6 +37,7 @@ Rmzamora Forked version of Sonata Bundles
 * SonataIntlBundle
 * SonataNewsBundle
 * SonatajQueryBundle
+
 
 
 FOS Bundles
