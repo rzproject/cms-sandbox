@@ -31,20 +31,24 @@ class AppKernel extends Kernel
             // USER
             new FOS\UserBundle\FOSUserBundle(),
             new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
+            new Rz\UserBundle\RzUserBundle(),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
 
             // PAGE
             new Sonata\PageBundle\SonataPageBundle(),
+            new Rz\PageBundle\RzPageBundle(),
             new Application\Sonata\PageBundle\ApplicationSonataPageBundle(),
 
             // NEWS
             new Sonata\MarkItUpBundle\SonataMarkItUpBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new Sonata\NewsBundle\SonataNewsBundle(),
+            new Rz\NewsBundle\RzNewsBundle(),
             new Application\Sonata\NewsBundle\ApplicationSonataNewsBundle(),
 
             // MEDIA
             new Sonata\MediaBundle\SonataMediaBundle(),
+            new Rz\MediaBundle\RzMediaBundle(),
             new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
 
@@ -77,6 +81,9 @@ class AppKernel extends Kernel
 
             new Liip\MonitorBundle\LiipMonitorBundle(),
 
+            //Stof
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+
             # Always Load Last
             new Rmzamora\SandboxInitDataBundle\RmzamoraSandboxInitDataBundle(),
             new Rmzamora\BootstrapBundle\RmzamoraBootstrapBundle(),
@@ -88,10 +95,7 @@ class AppKernel extends Kernel
             new Rz\DoctrineORMAdminBundle\RzDoctrineORMAdminBundle(),
             new Rz\FieldTypeBundle\RzFieldTypeBundle(),
             new Rz\FormatterBundle\RzFormatterBundle(),
-            new Rz\MediaBundle\RzMediaBundle(),
-            new Rz\NewsBundle\RzNewsBundle(),
-            new Rz\PageBundle\RzPageBundle(),
-            new Rz\UserBundle\RzUserBundle(),
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -69,7 +69,7 @@
         "rz/user-bundle": "2.3.*",
         "rz/page-bundle": "2.3.*",
         "rz/media-bundle": "2.3.*",
-        "rz/news-bundle": "2.3.0.*",
+        "rz/news-bundle": "2.3.*",
         "rz/doctrine-orm-admin-bundle": "2.3.*",
 
         "kriswallsmith/buzz": "0.7.*",
@@ -79,7 +79,8 @@
 
         "dflydev/markdown": "1.0.2",
         "willdurand/faker-bundle": "dev-master",
-        "videlalvaro/php-amqplib"  : "dev-master"
+        "videlalvaro/php-amqplib"  : "dev-master",
+        "stof/doctrine-extensions-bundle": "1.1.*"
 
     },
 
@@ -116,7 +117,7 @@
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "branch-alias": {
-            "dev-2.3.0": "2.3.x-dev"
+            "dev-master": "2.3.x-dev"
         }
     }
 }
