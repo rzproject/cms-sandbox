@@ -69,7 +69,7 @@
         "rz/user-bundle": "2.3.*",
         "rz/page-bundle": "2.3.*",
         "rz/media-bundle": "2.3.*",
-        "rz/news-bundle": "2.3.*",
+        "rz/news-bundle": "2.3.0.*",
         "rz/doctrine-orm-admin-bundle": "2.3.*",
 
         "kriswallsmith/buzz": "0.7.*",
