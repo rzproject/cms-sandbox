@@ -1,51 +1,62 @@
 fos_rest:
+    access_denied_listener: ~
+        # Prototype
+        #name:                   []
+    param_fetcher_listener:     false
+    cache_dir:                  %kernel.cache_dir%/fos_rest
+    allowed_methods_listener:   false
+    routing_loader:
+        default_format:         ~
+        include_format:         ~
     service:
-        router:               router
-        templating:           templating
-        serializer:           jms_serializer.serializer
-        view_handler:         fos_rest.view_handler.default
+        router:                 router
+        templating:             templating
+        serializer:             jms_serializer.serializer
+        view_handler:           fos_rest.view_handler.default
     serializer:
-        version:              ~
-        groups:               []
+        version:                ~
+        groups:                 []
+        serialize_null:         false
     view:
-#        default_engine: php
-        view_response_listener: force
-        force_redirects:
-          html: true
-          json: true
-#          xml: true
-        formats:
-            json: true
-            xml: true
-            rss: false
-        templating_formats:
-            html: true
-        mime_types:
-            json: ['application/json', 'application/x-json', 'application/vnd.example-com.foo+json']
-            rss: 'application/rss+xml'
-            jpg: 'image/jpeg'
-            png: 'image/png'
+        default_engine:         twig
+        force_redirects: ~
+            # Prototype
+            #name:               []
+        mime_types: ~
+            # Prototype
+            #name:               []
+        formats: ~
+            # Prototype
+            #name:               []
+        templating_formats: ~
+            # Prototype
+            #name:               []
+        view_response_listener: false
+        failed_validation:      400
+        empty_content:          204
+        serialize_null:         false
+    exception:
+        codes: ~
+            # Prototype
+            #name:               []
+        messages: ~
+            # Prototype
+            #name:               []
+    body_listener:
+        decoders: ~
+            # Prototype
+            #name:               []
+    body_converter:
+        enabled: false
+        validate: false
+        validation_errors_argument: validationErrors # The name of the argument on which the validation errors are set
     format_listener:
         default_priorities:
+            # Defaults:
             - html
-            - json
-            - xml
-            - rss
             - "*/*"
-            # never reached due to "*/*"
-            - ding
-        # the subsequent line overrides the following line, so the default is NULL
-        fallback_format: json
-        fallback_format: ~
-        prefer_extension: true
-    routing_loader:
-        default_format: json
-    exception:
-        codes:
-            'Symfony\Component\Routing\Exception\ResourceNotFoundException': 404
-            'Doctrine\ORM\OptimisticLockException': HTTP_CONFLICT
-        messages:
-            'Symfony\Component\Routing\Exception\ResourceNotFoundException': true
+        prefer_extension:       true
+        fallback_format:        html
 
 sensio_framework_extra:
     view:
