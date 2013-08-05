@@ -19,8 +19,8 @@ imports:
     # liip
     - { resource: liip/liip_monitor.yml }
 
-    # apc
-    #- { resource: ornicar/apc.yml }
+    # stof
+    - { resource: stof/doctrine_extension.yml }
 
     # rmzamora
     #- { resource: rmzamora/demo.yml }
@@ -43,7 +43,9 @@ framework:
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig'] }
     default_locale: %locale%
-    session: ~
+    session:
+      name: %session_name%
+      cookie_lifetime: %cookie_lifetime%
 
 # Twig Configuration
 twig:

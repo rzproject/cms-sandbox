@@ -60,7 +60,7 @@
 
         "rmzamora/knp-menu-bundle": "2.0.x-dev",
         "rmzamora/entity-audit-bundle": "0.*@dev",
-        "rmzamora/jsrouting-bundle": "1.1.*@dev",
+        "rmzamora/jsrouting-bundle": "1.2.*@dev",
         "rmzamora/rest-bundle": "0.13.*@dev",
 
         "rz/formatter-bundle": "2.3.*",
@@ -79,7 +79,8 @@
 
         "dflydev/markdown": "1.0.2",
         "willdurand/faker-bundle": "dev-master",
-        "videlalvaro/php-amqplib"  : "dev-master"
+        "videlalvaro/php-amqplib"  : "dev-master",
+        "stof/doctrine-extensions-bundle": "1.1.*"
 
     },
 
@@ -105,7 +106,9 @@
     },
 
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "bin",
+        "process-timeout" : 4000,
+        "github-protocols": ["https", "git"]
     },
 
     "minimum-stability": "dev",

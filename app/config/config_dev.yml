@@ -27,6 +27,16 @@ monolog:
             path: %kernel.logs_dir%/doctrine_%kernel.environment%.log
             channels: doctrine
 
+doctrine:
+    orm:
+        auto_generate_proxy_classes: %kernel.debug%
+        default_entity_manager: default
+
+        entity_managers:
+            default:
+                auto_mapping: true
+                mappings: ~
+
 assetic:
     use_controller: false
 

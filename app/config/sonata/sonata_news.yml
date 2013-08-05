@@ -1,4 +1,4 @@
-# 
+#
 # more information can be found here http://sonata-project.org/bundles/news
 #
 sonata_news:
@@ -24,5 +24,11 @@ doctrine:
         entity_managers:
             default:
                 mappings:
-                    ApplicationSonataNewsBundle: ~
                     SonataNewsBundle: ~
+                    RzNewsBundle: ~
+                    ApplicationSonataNewsBundle: ~
+                    gedmo_tree:
+                        type: xml
+                        prefix: Gedmo\Tree\Entity
+                        dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity"
+                        is_bundle: false
