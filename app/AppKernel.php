@@ -84,6 +84,9 @@ class AppKernel extends Kernel
             //Stof
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
 
+            //HWI
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+
             # Always Load Last
             new Rmzamora\SandboxInitDataBundle\RmzamoraSandboxInitDataBundle(),
             new Rmzamora\BootstrapBundle\RmzamoraBootstrapBundle(),
@@ -95,6 +98,7 @@ class AppKernel extends Kernel
             new Rz\DoctrineORMAdminBundle\RzDoctrineORMAdminBundle(),
             new Rz\FieldTypeBundle\RzFieldTypeBundle(),
             new Rz\FormatterBundle\RzFormatterBundle(),
+            new Rz\OAuthBundle\RzOAuthBundle(),
 
         );
 

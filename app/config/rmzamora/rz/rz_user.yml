@@ -1,4 +1,6 @@
 rz_user:
+    templates:
+      login: 'RzOAuthBundle:Security:login.html.twig'
     admin:
       user:
         templates:
