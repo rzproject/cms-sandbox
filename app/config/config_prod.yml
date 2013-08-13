@@ -23,32 +23,41 @@ doctrine:
                   instance_class: Memcache
                 auto_mapping: true
                 mappings: ~
-
 monolog:
     handlers:
         main:
             type:         fingers_crossed
-            action_level: critical
-            handler:      grouped
-        grouped:
-            type:    group
-            members: [streamed, buffered]
-        streamed:
+            action_level: error
+            handler:      nested
+        nested:
             type:  stream
-            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            path:  %kernel.logs_dir%/%kernel.environment%.log
             level: debug
-            channels: !doctrine
-        buffered:
-            type:    buffer
-            handler: swift
-        doctrine:
-            type: stream
-            path: %kernel.logs_dir%/doctrine_%kernel.environment%.log
-            level: debug
-            channels: doctrine
-        swift:
-            type:       %prod_monolog_type%
-            from_email: %prod_monolog_from_email%
-            to_email:   %prod_monolog_to_email%
-            subject:    %prod_monolog_subject%
-            level:      %prod_monolog_level%
+#monolog:
+#    handlers:
+#        main:
+#            type:         fingers_crossed
+#            action_level: critical
+#            handler:      grouped
+#        grouped:
+#            type:    group
+#            members: [streamed, buffered]
+#        streamed:
+#            type:  stream
+#            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+#            level: debug
+#            channels: !doctrine
+#        buffered:
+#            type:    buffer
+#            handler: swift
+#        doctrine:
+#            type: stream
+#            path: %kernel.logs_dir%/doctrine_%kernel.environment%.log
+#            level: debug
+#            channels: doctrine
+#        swift:
+#            type:       %prod_monolog_type%
+#            from_email: %prod_monolog_from_email%
+#            to_email:   %prod_monolog_to_email%
+#            subject:    %prod_monolog_subject%
+#            level:      %prod_monolog_level%
