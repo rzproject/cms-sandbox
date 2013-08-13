@@ -17,8 +17,8 @@ hwi_oauth:
             #client_id:          <client_id>
             #client_secret:      <client_secret>
             type:               facebook
-            client_id:          591363507580887
-            client_secret:      fa843c4700cea7351a49d167e1ae1c78
+            client_id:          xxxxxxxx
+            client_secret:      xxxxxxxxxxxx
             scope:              "email"
             paths:
                 facebookUid:    id
