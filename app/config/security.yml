@@ -69,6 +69,8 @@ security:
             oauth:
               resource_owners:
                 facebook:      /login/check-facebook
+                twitter:       /login/check-twitter
+                google:       /login/check-google
               login_path:        /login
               failure_path:      /login
               oauth_user_provider:

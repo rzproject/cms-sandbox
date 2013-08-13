@@ -11,6 +11,12 @@ rz_oauth_connect:
 facebook_login:
     pattern: /login/check-facebook
 
+twitter_login:
+    pattern: /login/check-twitter
+
+google_login:
+    pattern: /login/check-google
+
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 

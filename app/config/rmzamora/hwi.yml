@@ -17,8 +17,6 @@ hwi_oauth:
             #client_id:          <client_id>
             #client_secret:      <client_secret>
             type:               facebook
-            client_id:          xxxxxxxx
-            client_secret:      xxxxxxxxxxxx
             scope:              "email"
             paths:
                 facebookUid:    id
@@ -28,6 +26,31 @@ hwi_oauth:
             user_response_class: Rz\OAuthBundle\OAuth\Response\FacebookUserResponse
             options:
                 display: popup #dialog is optimized for popup window
+        twitter:
+            type:                twitter
+            #client_id:          <client_id>
+            #client_secret:      <client_secret>
+            paths:
+                twitterUid:    id
+                twitterName:   name
+                username:      name
+            user_response_class: Rz\OAuthBundle\OAuth\Response\TwitterUserResponse
+        google:
+            #client_id:          <client_id>
+            #client_secret:      <client_secret>
+            type:                google
+            scope:               "https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"
+            paths:
+                gplusUid:       id
+                gplusName:      name
+                username:       name
+                email:          email
+                firstname:      given_name
+                lastname:       family_name
+                gender:         gender
+                locale:         locale
+                gplusData:      ['picture','email']
+            user_response_class: Rz\OAuthBundle\OAuth\Response\GplusUserResponse
     connect: true
         #registration_form_handler: hwi_oauth.registration.form.handler
         #registration_form: fos_user_registration_form
@@ -35,7 +58,8 @@ hwi_oauth:
     fosub:
         # try 30 times to check if a username is available (foo, foo1, foo2 etc)
         username_iterations: 30
-
         # mapping between resource owners (see below) and properties
         properties:
             facebook: facebookUid
+            twitter:  twitterUid
+            google:   gplusUid
