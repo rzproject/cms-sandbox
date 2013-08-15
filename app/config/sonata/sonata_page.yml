@@ -17,8 +17,8 @@ sonata_page:
         - ^_(.*)            # ignore symfony routes
 
     ignore_routes:
-        - sonata_page_esi_cache
-        - sonata_page_ssi_cache
+        - sonata_page_cache_esi
+        - sonata_page_cache_ssi
         - sonata_page_js_sync_cache
         - sonata_page_js_async_cache
         - sonata_cache_esi
@@ -48,7 +48,7 @@ sonata_page:
             token: ~
             version: 3
             servers:
-                - varnishadm -T 127.0.0.1:2000 {{ COMMAND }} "{{ EXPRESSION }}"
+                - sudo varnishadm -S /etc/varnish/secret -T 127.0.0.1:6082 {{ COMMAND }} "{{ EXPRESSION }}" # you need to adapt this line to work with your configuration
          ssi:
             token: ~ #add an unique token here # default is a random value
 
