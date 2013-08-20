@@ -66,6 +66,15 @@ security:
 #                remember_me_parameter: _remember_me
 #                path: /
 #                domain: ~
+            oauth:
+              resource_owners:
+                facebook:      /login/check-facebook
+                twitter:       /login/check-twitter
+                google:       /login/check-google
+              login_path:        /login
+              failure_path:      /login
+              oauth_user_provider:
+                service: hwi_oauth.user.provider.fosub_bridge
             logout:       true
             anonymous:    true
 
