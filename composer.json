@@ -9,28 +9,28 @@
     "require": {
         "php": ">=5.3.3",
 
-        "twig/twig": "1.12.*",
-        "twig/extensions": "1.0.*@dev",
+        "twig/twig": "~1.12",
+        "twig/extensions": "~1.0",
 
-        "symfony/symfony": "2.3.*",
-        "symfony/assetic-bundle": "2.3.*",
-        "symfony/swiftmailer-bundle": "2.3.*",
-        "symfony/monolog-bundle": "2.3.*",
+        "symfony/symfony": "~2.3",
+        "symfony/assetic-bundle": "~2.3",
+        "symfony/swiftmailer-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.3",
 
-        "sensio/distribution-bundle": "2.3.*",
-        "sensio/framework-extra-bundle": "2.3.*",
-        "sensio/generator-bundle": "2.3.*",
+        "sensio/distribution-bundle": "~2.3",
+        "sensio/framework-extra-bundle": "~2.3",
+        "sensio/generator-bundle": "~2.3",
 
         "doctrine/orm": ">=2.2.3,<2.4-dev",
-        "doctrine/doctrine-bundle": "1.2.*",
+        "doctrine/doctrine-bundle": "~1.2",
         "doctrine/doctrine-migrations-bundle": "dev-master",
         "doctrine/migrations": "dev-master",
         "doctrine/doctrine-fixtures-bundle": "2.1.*@dev",
         "doctrine/data-fixtures": "dev-master",
 
-        "jms/security-extra-bundle": "1.5.*",
-        "jms/di-extra-bundle": "1.4.*",
-        "jms/serializer-bundle": "0.12.*",
+        "jms/security-extra-bundle": "~1.5",
+        "jms/di-extra-bundle": "~1.4",
+        "jms/serializer-bundle": "~0.13",
         "jms/command-bundle": "dev-master",
 
         "symfony-cmf/routing-bundle": "1.1.*@dev",
@@ -61,7 +61,7 @@
         "rmzamora/knp-menu-bundle": "2.0.x-dev",
         "rmzamora/entity-audit-bundle": "0.*@dev",
         "rmzamora/jsrouting-bundle": "1.2.*@dev",
-        "rmzamora/rest-bundle": "0.13.*@dev",
+        "rmzamora/rest-bundle": "~1.0",
 
         "rz/formatter-bundle": "2.3.*",
         "rz/admin-bundle": "2.3.*",
@@ -72,15 +72,19 @@
         "rz/news-bundle": "2.3.*",
         "rz/doctrine-orm-admin-bundle": "2.3.*",
 
+        "rz/oauth-bundle": "0.3.*@dev",
+
         "kriswallsmith/buzz": "0.7.*",
 
         "liip/imagine-bundle": "0.9.*@stable",
         "liip/monitor-bundle": "1.0.*@dev",
 
-        "dflydev/markdown": "1.0.2",
-        "willdurand/faker-bundle": "dev-master",
+        "dflydev/markdown": "~1.0",
+        "willdurand/faker-bundle": "~1.0",
         "videlalvaro/php-amqplib"  : "dev-master",
         "stof/doctrine-extensions-bundle": "1.1.*"
+
+
 
     },
 

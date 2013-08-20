@@ -23,16 +23,20 @@ imports:
     - { resource: stof/doctrine_extension.yml }
 
     # rmzamora
-    #- { resource: rmzamora/demo.yml }
     - { resource: rmzamora/ckeditor.yml }
+    - { resource: rmzamora/rz/rz_user.yml }
 #    - { resource: rmzamora/solr.yml }
 #    - { resource: rmzamora/rz/rz_search.yml }
+
+    #HWI
+    - { resource: rmzamora/hwi.yml }
 
     #  egeloen
     - { resource: egeloen/ckeditor.yml }
 
 framework:
     trusted_proxies: ['127.0.0.1'] # a list of proxy IPs you trust
+    trusted_hosts: ['.*\.?rmzamora.com$']
     esi: { enabled: true }
     fragments: { path: /_fragment }
     translator: { fallback: en }
