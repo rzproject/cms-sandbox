@@ -87,7 +87,7 @@ class AppKernel extends Kernel
             //HWI
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
 
-            # Always Load Last
+            //RZ & RMZAMORA bundles
             new Rmzamora\SandboxInitDataBundle\RmzamoraSandboxInitDataBundle(),
             new Rmzamora\BootstrapBundle\RmzamoraBootstrapBundle(),
             new Rmzamora\JqueryBundle\RmzamoraJqueryBundle(),

@@ -63,14 +63,14 @@
         "rmzamora/jsrouting-bundle": "1.2.*@dev",
         "rmzamora/rest-bundle": "~1.0",
 
-        "rz/formatter-bundle": "2.3.*",
-        "rz/admin-bundle": "2.3.*",
-        "rz/block-bundle": "2.3.*",
-        "rz/user-bundle": "2.3.*",
-        "rz/page-bundle": "2.3.*",
-        "rz/media-bundle": "2.3.*",
-        "rz/news-bundle": "2.3.*",
-        "rz/doctrine-orm-admin-bundle": "2.3.*",
+        "rz/formatter-bundle": "2.3.1.*@dev",
+        "rz/admin-bundle": "2.3.1.*@dev",
+        "rz/block-bundle": "2.3.1.*@dev",
+        "rz/user-bundle": "2.3.1.*@dev",
+        "rz/page-bundle": "2.3.1.*@dev",
+        "rz/media-bundle": "2.3.2.*@dev",
+        "rz/news-bundle": "2.3.2.*@dev",
+        "rz/doctrine-orm-admin-bundle": "2.3.1.*@dev",
 
         "rz/oauth-bundle": "0.3.*@dev",
 
@@ -121,6 +121,7 @@
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "branch-alias": {
+            "dev-2.3.2": "2.3.2.x-dev",
             "dev-master": "2.4.x-dev"
         }
     }
