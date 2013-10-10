@@ -26,6 +26,10 @@ sonata_block:
               cache: sonata.cache.memcached
         sonata.media.block.feature_media:
               cache: sonata.cache.memcached
+        sonata.news.block.recent_comments:
+              cache: sonata.cache.memcached
+        sonata.news.block.recent_posts:
+              cache: sonata.cache.memcached
 
     exception:
         default:

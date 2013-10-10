@@ -25,7 +25,7 @@
         "doctrine/doctrine-bundle": "~1.2",
         "doctrine/doctrine-migrations-bundle": "dev-master",
         "doctrine/migrations": "dev-master",
-        "doctrine/doctrine-fixtures-bundle": "2.1.*@dev",
+        "doctrine/doctrine-fixtures-bundle": "2.2.*@dev",
         "doctrine/data-fixtures": "dev-master",
 
         "jms/security-extra-bundle": "~1.5",

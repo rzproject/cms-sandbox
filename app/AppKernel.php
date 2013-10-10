@@ -64,6 +64,8 @@ class AppKernel extends Kernel
             new Sonata\SeoBundle\SonataSeoBundle(),
             new Sonata\NotificationBundle\SonataNotificationBundle(),
             new Application\Sonata\NotificationBundle\ApplicationSonataNotificationBundle(),
+            new Sonata\ClassificationBundle\SonataClassificationBundle(),
+            new Application\Sonata\ClassificationBundle\ApplicationSonataClassificationBundle(),
 
             // Enable this if you want to audit backend action
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),

@@ -15,6 +15,7 @@ imports:
     - { resource: sonata/sonata_cache.yml }
     - { resource: sonata/sonata_seo.yml }
     - { resource: sonata/sonata_user.yml }
+    - { resource: sonata/sonata_classification.yml }
 
     # liip
     - { resource: liip/liip_monitor.yml }
@@ -39,9 +40,12 @@ framework:
     trusted_hosts: ['.*\.?rmzamora.com$']
     esi: { enabled: true }
     fragments: { path: /_fragment }
-    translator: { fallback: en }
+    translator:
+        fallback: en
     secret:          %secret%
-    router:          { resource: "%kernel.root_dir%/config/routing.yml" }
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
     form:            true
     csrf_protection: true
     validation:      { enable_annotations: true }
@@ -50,6 +54,7 @@ framework:
     session:
       name: %session_name%
       cookie_lifetime: %cookie_lifetime%
+    http_method_override: true
 
 # Twig Configuration
 twig:
