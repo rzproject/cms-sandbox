@@ -30,6 +30,8 @@ sonata_block:
               cache: sonata.cache.memcached
         sonata.news.block.recent_posts:
               cache: sonata.cache.memcached
+        sonata.admin.block.search_result:
+              cache: sonata.cache.memcached
 
     exception:
         default:
