@@ -22,3 +22,4 @@ sonata_block:
         sonata.news.block.recent_comments:
         sonata.news.block.recent_posts:
         sonata.admin.block.search_result:
+        sonata.user.block.menu:

@@ -32,6 +32,8 @@ sonata_block:
               cache: sonata.cache.memcached
         sonata.admin.block.search_result:
               cache: sonata.cache.memcached
+        sonata.user.block.menu:
+              cache: sonata.cache.memcached
 
     exception:
         default:
