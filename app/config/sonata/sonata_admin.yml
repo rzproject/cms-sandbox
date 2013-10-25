@@ -28,3 +28,21 @@ sonata_admin:
             - { position: center, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: http://sonata-project.org/blog/archive.rss }}
             - { position: right, type: sonata.news.block.recent_posts, settings: { title: Recent Posts, number: 10, mode: admin }}
             - { position: right, type: sonata.news.block.recent_comments, settings: { title: Recent Comments, number: 10, mode: admin }}
+
+          groups:
+            CMS:
+                items:
+                   - sonata.page.admin.site
+                   - sonata.page.admin.page
+                   - sonata.media.admin.media
+                   - sonata.media.admin.gallery
+                   - sonata.news.admin.post
+                   - sonata.news.admin.comment
+            System:
+                items:
+                   - sonata.user.admin.user
+                   - sonata.user.admin.group
+                   - sonata.classification.admin.collection
+                   - sonata.classification.admin.tag
+                   - sonata.classification.admin.category
+                   - sonata.notification.admin.message
