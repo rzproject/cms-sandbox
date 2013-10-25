@@ -65,6 +65,7 @@ class AppKernel extends Kernel
             new Sonata\NotificationBundle\SonataNotificationBundle(),
             new Application\Sonata\NotificationBundle\ApplicationSonataNotificationBundle(),
             new Sonata\ClassificationBundle\SonataClassificationBundle(),
+            new Rz\ClassificationBundle\RzClassificationBundle(),
             new Application\Sonata\ClassificationBundle\ApplicationSonataClassificationBundle(),
 
             // Enable this if you want to audit backend action
@@ -101,7 +102,6 @@ class AppKernel extends Kernel
             new Rz\FieldTypeBundle\RzFieldTypeBundle(),
             new Rz\FormatterBundle\RzFormatterBundle(),
             new Rz\OAuthBundle\RzOAuthBundle(),
-
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

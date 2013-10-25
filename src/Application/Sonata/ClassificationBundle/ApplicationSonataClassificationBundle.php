@@ -27,6 +27,6 @@ class ApplicationSonataClassificationBundle extends Bundle
      */
     public function getParent()
     {
-        return 'SonataClassificationBundle';
+        return 'RzClassificationBundle';
     }
 }
