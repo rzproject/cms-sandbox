@@ -58,6 +58,9 @@ framework:
 
 # Twig Configuration
 twig:
+    exception_controller:  rz_admin.twig.controller.exception:showAction
+    globals:
+        rz_twig_app_error_title: %twig_app_error_title%
     base_template_class: Sonata\CacheBundle\Twig\TwigTemplate14
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
