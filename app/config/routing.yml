@@ -69,6 +69,8 @@ sonata_media_pixlr:
     resource: '@SonataMediaBundle/Resources/config/routing/pixlr.xml'
     prefix: /admin/media
 
+sonata_qa:
+    resource: "@SonataQABundle/Resources/config/routing/qa.xml"
 #_imagine:
 #    resource: .
 #    type:     imagine

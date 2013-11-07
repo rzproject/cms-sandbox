@@ -1,7 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-    - { resource: fos/fos_user.yml }
+#    - { resource: fos/fos_user.yml }
     - { resource: fos/fos_rest.yml }
     - { resource: fos/fos_js.yml }
     - { resource: jms/jms_serializer.yml }
@@ -16,6 +16,7 @@ imports:
     - { resource: sonata/sonata_seo.yml }
     - { resource: sonata/sonata_user.yml }
     - { resource: sonata/sonata_classification.yml }
+    - { resource: sonata/sonata_timeline.yml }
 
     # liip
     - { resource: liip/liip_monitor.yml }
@@ -54,6 +55,7 @@ framework:
     session:
       name: %session_name%
       cookie_lifetime: %cookie_lifetime%
+    fragments:       ~
     http_method_override: true
 
 # Twig Configuration

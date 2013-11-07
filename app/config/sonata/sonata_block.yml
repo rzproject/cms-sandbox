@@ -36,6 +36,8 @@ sonata_block:
               cache: sonata.cache.memcached
         sonata.news.block.recent_posts:
               cache: sonata.cache.memcached
+        sonata.timeline.block.timeline:
+              cache: sonata.cache.memcached
         sonata.user.block.account:
             cache: sonata.page.cache.js_async
 #            cache: sonata.page.cache.esi

@@ -10,7 +10,7 @@ cmf_routing:
 # more information can be found here http://sonata-project.org/bundles/page
 #
 sonata_page:
-    multisite: host
+    multisite: host_with_path # host
     use_streamed_response: false # set the value to false in debug mode or if the reverse proxy does not handle streamed response
     ignore_route_patterns:
         - (.*)admin(.*)     # ignore admin route, ie route containing 'admin'
@@ -48,7 +48,7 @@ sonata_page:
             token: ~
             version: 3
             servers:
-                - sudo varnishadm -S /etc/varnish/secret -T 127.0.0.1:6082 {{ COMMAND }} "{{ EXPRESSION }}" # you need to adapt this line to work with your configuration
+                - varnishadm -S /etc/varnish/secret -T 127.0.0.1:6082 {{ COMMAND }} "{{ EXPRESSION }}" # you need to adapt this line to work with your configuration
          ssi:
             token: ~ #add an unique token here # default is a random value
 

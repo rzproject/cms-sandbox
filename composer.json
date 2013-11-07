@@ -50,6 +50,8 @@
         "rmzamora/user-bundle": "2.3.*@dev",
         "rmzamora/media-bundle": "2.3.*@dev",
         "rmzamora/doctrine-orm-admin-bundle": "2.3.*@dev",
+        "rmzamora/timeline-bundle": "~2.3@dev",
+        "rmzamora/classification-bundle": "2.3.*@dev",
 
         "rmzamora/jquery-bundle": "1.10.*@dev",
         "rmzamora/bootstrap-bundle": "2.3.*@dev",
@@ -72,6 +74,7 @@
         "rz/news-bundle": "2.3.2.*@dev",
         "rz/doctrine-orm-admin-bundle": "2.3.1.*@dev",
 
+
         "rz/oauth-bundle": "0.3.*@dev",
 
         "kriswallsmith/buzz": "0.7.*",
@@ -82,18 +85,21 @@
         "dflydev/markdown": "~1.0",
         "willdurand/faker-bundle": "~1.0",
         "videlalvaro/php-amqplib"  : "dev-master",
-        "stof/doctrine-extensions-bundle": "1.1.*"
+        "stof/doctrine-extensions-bundle": "1.1.*",
+        "stephpy/TimelineBundle": "2.0.*@dev",
+        "stephpy/timeline": "~1.0@dev"
 
 
 
     },
 
     "require-dev": {
-        "phpunit/phpunit": "3.7.*",
-        "behat/mink-extension": "*",
-        "behat/mink-goutte-driver": "*",
-        "behat/behat": "2.4.*",
-        "guzzle/guzzle": "3.0.*"
+        "phpunit/phpunit": "~3.7",
+        "behat/mink": "~1.5",
+        "behat/mink-extension": "~1.2",
+        "behat/mink-goutte-driver": "~1.0",
+        "behat/behat": "~2.4",
+        "guzzle/guzzle": "~3.0"
     },
 
     "scripts": {

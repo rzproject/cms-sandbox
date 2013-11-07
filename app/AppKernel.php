@@ -90,6 +90,14 @@ class AppKernel extends Kernel
             //HWI
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
 
+            // QA Bundle
+            new Sonata\Bundle\QABundle\SonataQABundle(),
+
+            // Disable this if you don't want the timeline in the admin
+            new Spy\TimelineBundle\SpyTimelineBundle(),
+            new Sonata\TimelineBundle\SonataTimelineBundle(),
+            new Application\Sonata\TimelineBundle\ApplicationSonataTimelineBundle(), // easy extends integration
+
             //RZ & RMZAMORA bundles
             new Rmzamora\SandboxInitDataBundle\RmzamoraSandboxInitDataBundle(),
             new Rmzamora\BootstrapBundle\RmzamoraBootstrapBundle(),
