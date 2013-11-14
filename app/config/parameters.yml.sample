@@ -12,8 +12,9 @@ parameters:
     mailer_password:    password
 
     locale:             en
-
-    secret:             secret
+    secret:             d4b3a896a53437307b062a8d229e0c97
+    session_name:       cms-sandbox
+    cookie_lifetime:    3600
 
     # Sonata Admin Options
     sonata_admin.title:             cms-sandbox
@@ -33,6 +34,9 @@ parameters:
     # Sonata User Options
     sonata_user.google_authenticator.server:  demo.sonata-project.org
 
+    # Sonata Page Options
+    sonata_page.varnish.command: sudo varnishadm -S /etc/varnish/secret -T 127.0.0.1:6082 {{ COMMAND }} "{{ EXPRESSION }}" # you need to adapt this line to work with your configuration
+
     #rabbitmq settings
     rabbitmq_host:         127.0.0.1
     rabbitmq_user:         user
@@ -50,3 +54,6 @@ parameters:
     prod_monolog_to_email:   test@gmail.com
     prod_monolog_subject:    cms-sandbox Monitoring Mailer!
     prod_monolog_level:      error
+
+    #twig global
+    twig_app_error_title:  cms-sandbox
