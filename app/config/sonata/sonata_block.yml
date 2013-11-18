@@ -44,6 +44,8 @@ sonata_block:
             contexts: [user]
         sonata.user.block.menu:
             contexts: [user]
+        rz_media.block.media_carousel:
+            cache: sonata.cache.memcached
 
     exception:
         default:
