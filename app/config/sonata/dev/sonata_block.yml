@@ -35,7 +35,9 @@ sonata_block:
             contexts: [user]
         sonata.user.block.menu:
             contexts: [user]
-        rz_media.block.media_carousel:
+        rz_media.block.media_bxslider:
+        rz_media.block.featured_galleries:
+        rz_news.block.featured_posts:
 
     exception:
         default:

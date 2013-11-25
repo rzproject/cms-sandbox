@@ -44,7 +44,11 @@ sonata_block:
             contexts: [user]
         sonata.user.block.menu:
             contexts: [user]
-        rz_media.block.media_carousel:
+        rz_media.block.media_bxslider:
+            cache: sonata.cache.memcached
+        rz_media.block.featured_galleries:
+            cache: sonata.cache.memcached
+        rz_news.block.featured_posts:
             cache: sonata.cache.memcached
 
     exception:
