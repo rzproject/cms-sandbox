@@ -35,6 +35,9 @@ sonata_media:
                 abtract: { width: 100, quality: 100}
                 wide:    { width: 820 , quality: 100}
 
+    buzz:
+        connector:  sonata.media.buzz.connector.curl #sonata.media.buzz.connector.file_get_contents # sonata.media.buzz.connector.curl
+
     cdn:
         # define the public base url for the uploaded media
         server:

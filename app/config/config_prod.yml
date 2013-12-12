@@ -3,6 +3,10 @@ imports:
     - { resource: sonata/sonata_notification.yml }
     - { resource: config.yml }
 
+framework:
+    validation:
+        cache: apc
+
 doctrine:
     orm:
         auto_generate_proxy_classes: %kernel.debug%
