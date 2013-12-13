@@ -77,7 +77,7 @@
         "rz/classification-bundle": "~2.3",
 
 
-        "rz/oauth-bundle": "~0.3",
+        "rz/oauth-bundle": "~0.4",
 
         "liip/imagine-bundle": "0.9.*@stable",
         "liip/monitor-bundle": "1.0.*@dev",
