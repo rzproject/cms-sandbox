@@ -2,6 +2,9 @@ sonata_block:
     context_manager: sonata.page.block.context_manager
     default_contexts: [cms]
 
+    http_cache:
+        listener: true
+
     profiler:
         enabled:        %kernel.debug%
         container_types:
@@ -10,6 +13,9 @@ sonata_block:
 
     blocks:
         sonata.admin.block.admin_list:
+            contexts:   [admin]
+
+        sonata.admin.block.search_result:
             contexts:   [admin]
 
         sonata.block.service.text:
@@ -26,6 +32,24 @@ sonata_block:
               cache: sonata.cache.memcached
         sonata.media.block.feature_media:
               cache: sonata.cache.memcached
+        sonata.news.block.recent_comments:
+              cache: sonata.cache.memcached
+        sonata.news.block.recent_posts:
+              cache: sonata.cache.memcached
+        sonata.timeline.block.timeline:
+              cache: sonata.cache.memcached
+        sonata.user.block.account:
+            cache: sonata.page.cache.js_async
+#            cache: sonata.page.cache.esi
+            contexts: [user]
+        sonata.user.block.menu:
+            contexts: [user]
+        rz_media.block.media_bxslider:
+            cache: sonata.cache.memcached
+        rz_media.block.featured_galleries:
+            cache: sonata.cache.memcached
+        rz_news.block.featured_posts:
+            cache: sonata.cache.memcached
 
     exception:
         default:

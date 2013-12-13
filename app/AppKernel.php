@@ -53,6 +53,7 @@ class AppKernel extends Kernel
             new Liip\ImagineBundle\LiipImagineBundle(),
 
             // SONATA CORE & HELPER BUNDLES
+            new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
             new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
@@ -64,6 +65,9 @@ class AppKernel extends Kernel
             new Sonata\SeoBundle\SonataSeoBundle(),
             new Sonata\NotificationBundle\SonataNotificationBundle(),
             new Application\Sonata\NotificationBundle\ApplicationSonataNotificationBundle(),
+            new Sonata\ClassificationBundle\SonataClassificationBundle(),
+            new Rz\ClassificationBundle\RzClassificationBundle(),
+            new Application\Sonata\ClassificationBundle\ApplicationSonataClassificationBundle(),
 
             // Enable this if you want to audit backend action
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
@@ -87,7 +91,15 @@ class AppKernel extends Kernel
             //HWI
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
 
-            # Always Load Last
+            // QA Bundle
+            new Sonata\Bundle\QABundle\SonataQABundle(),
+
+            // Disable this if you don't want the timeline in the admin
+            new Spy\TimelineBundle\SpyTimelineBundle(),
+            new Sonata\TimelineBundle\SonataTimelineBundle(),
+            new Application\Sonata\TimelineBundle\ApplicationSonataTimelineBundle(), // easy extends integration
+
+            //RZ & RMZAMORA bundles
             new Rmzamora\SandboxInitDataBundle\RmzamoraSandboxInitDataBundle(),
             new Rmzamora\BootstrapBundle\RmzamoraBootstrapBundle(),
             new Rmzamora\JqueryBundle\RmzamoraJqueryBundle(),
@@ -99,7 +111,6 @@ class AppKernel extends Kernel
             new Rz\FieldTypeBundle\RzFieldTypeBundle(),
             new Rz\FormatterBundle\RzFormatterBundle(),
             new Rz\OAuthBundle\RzOAuthBundle(),
-
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -25,7 +25,7 @@
         "doctrine/doctrine-bundle": "~1.2",
         "doctrine/doctrine-migrations-bundle": "dev-master",
         "doctrine/migrations": "dev-master",
-        "doctrine/doctrine-fixtures-bundle": "2.1.*@dev",
+        "doctrine/doctrine-fixtures-bundle": "2.2.*@dev",
         "doctrine/data-fixtures": "dev-master",
 
         "jms/security-extra-bundle": "~1.5",
@@ -43,38 +43,41 @@
         "sonata-project/doctrine-extensions": "1.*",
         "sonata-project/intl-bundle": "2.2.*@dev",
         "sonata-project/cache-bundle": "2.1.*@dev",
+        "sonata-project/core-bundle": "~2.2@dev",
 
-        "rmzamora/notification-bundle": "2.3.*",
-        "rmzamora/admin-bundle": "2.3.*@dev",
+        "rmzamora/notification-bundle": "~2.3",
+        "rmzamora/admin-bundle": "~2.3",
         "rmzamora/block-bundle": "2.3.*@dev",
-        "rmzamora/user-bundle": "2.3.*@dev",
-        "rmzamora/media-bundle": "2.3.*@dev",
-        "rmzamora/doctrine-orm-admin-bundle": "2.3.*@dev",
+        "rmzamora/user-bundle": "~2.3",
+        "rmzamora/media-bundle": "~2.3",
+        "rmzamora/doctrine-orm-admin-bundle": "~2.3",
+        "rmzamora/timeline-bundle": "~2.3",
+        "rmzamora/classification-bundle": "~2.3",
 
         "rmzamora/jquery-bundle": "1.10.*@dev",
         "rmzamora/bootstrap-bundle": "2.3.*@dev",
 
-        "rmzamora/news-bundle": "2.3.*@dev",
-        "rmzamora/formatter-bundle": "2.3.*@dev",
-        "rmzamora/page-bundle": "2.3.*@dev",
+        "rmzamora/news-bundle": "~2.3",
+        "rmzamora/formatter-bundle": "~2.3",
+        "rmzamora/page-bundle": "~2.3",
 
         "rmzamora/knp-menu-bundle": "2.0.x-dev",
         "rmzamora/entity-audit-bundle": "0.*@dev",
-        "rmzamora/jsrouting-bundle": "1.2.*@dev",
+        "rmzamora/jsrouting-bundle": "1.4.*@dev",
         "rmzamora/rest-bundle": "~1.0",
 
-        "rz/formatter-bundle": "2.3.*",
-        "rz/admin-bundle": "2.3.*",
-        "rz/block-bundle": "2.3.*",
-        "rz/user-bundle": "2.3.*",
-        "rz/page-bundle": "2.3.*",
-        "rz/media-bundle": "2.3.*",
-        "rz/news-bundle": "2.3.*",
-        "rz/doctrine-orm-admin-bundle": "2.3.*",
+        "rz/formatter-bundle": "~2.3.1",
+        "rz/admin-bundle": "~2.3.1",
+        "rz/block-bundle": "~2.3.1",
+        "rz/user-bundle": "~2.3.1",
+        "rz/page-bundle": "~2.3.1",
+        "rz/media-bundle": "~2.3.2",
+        "rz/news-bundle": "~2.3.2",
+        "rz/doctrine-orm-admin-bundle": "~2.3.1",
+        "rz/classification-bundle": "~2.3",
 
-        "rz/oauth-bundle": "0.3.*@dev",
 
-        "kriswallsmith/buzz": "0.7.*",
+        "rz/oauth-bundle": "~0.4",
 
         "liip/imagine-bundle": "0.9.*@stable",
         "liip/monitor-bundle": "1.0.*@dev",
@@ -82,18 +85,21 @@
         "dflydev/markdown": "~1.0",
         "willdurand/faker-bundle": "~1.0",
         "videlalvaro/php-amqplib"  : "dev-master",
-        "stof/doctrine-extensions-bundle": "1.1.*"
+        "stof/doctrine-extensions-bundle": "1.1.*",
+        "stephpy/TimelineBundle": "2.0.*@dev",
+        "stephpy/timeline": "~1.0@dev"
 
 
 
     },
 
     "require-dev": {
-        "phpunit/phpunit": "3.7.*",
-        "behat/mink-extension": "*",
-        "behat/mink-goutte-driver": "*",
-        "behat/behat": "2.4.*",
-        "guzzle/guzzle": "3.0.*"
+        "phpunit/phpunit": "~3.7",
+        "behat/mink": "~1.5",
+        "behat/mink-extension": "~1.2",
+        "behat/mink-goutte-driver": "~1.0",
+        "behat/behat": "~2.4",
+        "guzzle/guzzle": "~3.0"
     },
 
     "scripts": {
@@ -121,6 +127,7 @@
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "branch-alias": {
+            "dev-2.3.2": "2.3.2.x-dev",
             "dev-master": "2.4.x-dev"
         }
     }
