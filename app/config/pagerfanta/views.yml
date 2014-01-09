@@ -1,0 +1,15 @@
+services:
+    pagerfanta.view.pager_view_1:
+        class: Pagerfanta\View\OptionableView
+        arguments:
+            - @pagerfanta.view.default
+            - { proximity: 1, previous_message: First, next_message: Last }
+        public: false
+        tags: [{ name: pagerfanta.view, alias: pager_view_1 }]
+    pagerfanta.view.pager_view_2:
+        class: Pagerfanta\View\OptionableView
+        arguments:
+            - @pagerfanta.view.default
+            - { proximity: 5 }
+        public: false
+        tags: [{ name: pagerfanta.view, alias: pager_view_2 }]

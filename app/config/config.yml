@@ -24,6 +24,9 @@ imports:
     # stof
     - { resource: stof/doctrine_extension.yml }
 
+    # pagerfanta
+    - { resource: pagerfanta/views.yml }
+
     # rmzamora
     - { resource: rmzamora/ckeditor.yml }
     - { resource: rmzamora/rz/rz_user.yml }

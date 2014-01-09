@@ -38,7 +38,18 @@ sonata_block:
         rz_media.block.media_bxslider:
         rz_media.block.featured_galleries:
         rz_news.block.featured_posts:
-
+        rz_news.block.tags:
+        rz_news.block.collection:
+        sonata.seo.block.email.share_button:
+        sonata.seo.block.facebook.like_box:
+        sonata.seo.block.facebook.like_button:
+        sonata.seo.block.facebook.send_button:
+        sonata.seo.block.facebook.share_button:
+        sonata.seo.block.twitter.share_button:
+        sonata.seo.block.twitter.follow_button:
+        sonata.seo.block.twitter.hashtag_button:
+        sonata.seo.block.twitter.mention_button:
+        sonata.seo.block.pinterest.pin_button:
     exception:
         default:
             renderer:               inline_debug

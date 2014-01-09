@@ -28,8 +28,8 @@ hwi_oauth:
                 display: popup #dialog is optimized for popup window
         twitter:
             type:                twitter
-            client_id:          <client_id>
-            client_secret:      <client_secret>
+            client_id:          6s9QaGTKm3z97n99GLHxdA
+            client_secret:      ocnMYbmJiDEMwrpcSSbydQka012tHeFTxflGRmvk
             paths:
                 twitterUid:    id
                 twitterName:   name
@@ -51,7 +51,7 @@ hwi_oauth:
                 locale:         locale
                 gplusData:      ['picture','email']
             user_response_class: Rz\OAuthBundle\OAuth\Response\GplusUserResponse
-    connect: true
+    connect:
         #registration_form_handler: hwi_oauth.registration.form.handler
         #registration_form: fos_user_registration_form
         #account_connector: hwi_oauth.user.provider.fosub_bridge
