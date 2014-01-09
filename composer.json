@@ -33,7 +33,7 @@
         "jms/serializer-bundle": "~0.13",
         "jms/command-bundle": "dev-master",
 
-        "symfony-cmf/routing-bundle": "1.1.*@dev",
+        "symfony-cmf/routing-bundle": "~1.1",
 
         "knplabs/gaufrette": "0.2.*@dev",
         "knplabs/knp-markdown-bundle": "1.2.*@dev",
@@ -66,18 +66,18 @@
         "rmzamora/jsrouting-bundle": "1.4.*@dev",
         "rmzamora/rest-bundle": "~1.0",
 
-        "rz/formatter-bundle": "~2.3.1",
-        "rz/admin-bundle": "~2.3.1",
-        "rz/block-bundle": "~2.3.1",
-        "rz/user-bundle": "~2.3.1",
-        "rz/page-bundle": "~2.3.1",
-        "rz/media-bundle": "~2.3.2",
-        "rz/news-bundle": "~2.3.2",
-        "rz/doctrine-orm-admin-bundle": "~2.3.1",
-        "rz/classification-bundle": "~2.3",
+        "rz/formatter-bundle":  "~1.0",
+        "rz/admin-bundle":  "~1.0",
+        "rz/block-bundle":  "~1.0",
+        "rz/user-bundle":  "~1.0",
+        "rz/page-bundle":  "~1.0",
+        "rz/media-bundle":  "~1.0",
+        "rz/news-bundle":  "~1.0",
+        "rz/doctrine-orm-admin-bundle":  "~1.0",
+        "rz/classification-bundle": "~1.0",
 
 
-        "rz/oauth-bundle": "~0.4",
+        "rz/oauth-bundle": "~1.0",
 
         "liip/imagine-bundle": "0.9.*@stable",
         "liip/monitor-bundle": "1.0.*@dev",
