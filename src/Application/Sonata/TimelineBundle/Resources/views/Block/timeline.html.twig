@@ -1,0 +1,41 @@
+{% extends sonata_block.templates.block_base %}
+
+{% block block %}
+    {% if settings.title %}
+    <h3>{{ settings.title }}</h3>
+    {% endif %}
+    <ul{% if context.settings.context != 'SONATA_ADMIN' %} class="icons"{% endif %}>
+        {% for entry in entries %}
+            {% set subject = entry.getComponent('subject') %}
+            {% set target = entry.getComponent('target') %}
+            {% set target_text_component = entry.getComponent('target_text') %}
+
+            {% if subject.data %}
+                {% set subject_text = sonata_timeline_generate_link(subject) %}
+            {% else %}
+                {% set subject_text = '<abbr title="reference: ' ~  subject.hash ~ '">element deleted</abbr>' %}
+            {% endif %}
+
+            {% if target.data is defined and target.data is not empty %}
+                {% set target_text = sonata_timeline_generate_link(target) %}
+            {% elseif target_text_component %}
+                {% set target_text = '<abbr title="Element Deleted">'~target_text_component~'</abbr>' %}
+            {% else %}
+                {% set target_text = '<abbr title="reference: ' ~  target.hash ~ '">element deleted</abbr>' %}
+            {% endif %}
+
+            {% set verb = "actions."~entry.verb %}
+            <li{% if context.settings.context != 'SONATA_ADMIN' %} class="marg-left-minus5"{% endif %}>
+                {% if verb == 'actions.sonata.admin.update' %} <i class="icon-edit"></i>
+                {% elseif verb == 'actions.sonata.admin.create' %} <i class="icon-plus"></i>
+                {% elseif verb == 'actions.sonata.admin.delete' %} <i class="icon-eraser"></i></i>
+                {% else %} <i class="icon-bolt"></i></i>
+                {% endif %}
+                {{ verb|trans({'%subject%': subject_text, '%target%': target_text}, "SonataTimelineBundle")|raw }}
+            </li>
+        {% else %}
+            No action for now ...
+        {% endfor %}
+    </ul>
+{% endblock block %}
+
