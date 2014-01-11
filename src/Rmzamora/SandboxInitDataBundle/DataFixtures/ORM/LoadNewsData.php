@@ -63,7 +63,8 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
         $collection->setName('General');
         $this->getCollectionManager()->save($collection);
 
-        foreach (range(1, 20) as $id) {
+        $i = 0;
+        foreach (range(1, 3) as $id) {
             $post = $postManager->create();
             $post->setAuthor($this->getReference('user-admin'));
 
@@ -72,8 +73,6 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
             $post->setEnabled(true);
             $post->setTitle($faker->sentence(6));
             $post->setPublicationDateStart($faker->dateTimeBetween('-30 days', '-1 days'));
-
-            $id = $this->getReference('sonata-media-'.rand(2, 7))->getId();
 
             $raw =<<<RAW
 ### Gist Formatter
@@ -118,6 +117,8 @@ RAW
 
                 $post->addComments($comment);
             }
+
+            $this->addReference('sonata-news-'.($i++), $post);
 
             $postManager->save($post);
         }

@@ -45,7 +45,7 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
         $faker = $this->getFaker();
 
         $files = Finder::create()
-            ->name('*.JPG')
+            ->name('*.jpeg')
             ->in(__DIR__.'/../data/files');
 
         $i = 0;
@@ -63,9 +63,9 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
         }
 
         $videos = array(
-            'ocAyDZC2aiU' => 'sonata.media.provider.youtube',
-            'xdw0tz'      => 'sonata.media.provider.dailymotion',
-            '9636197'     => 'sonata.media.provider.vimeo'
+            'ythUVU31Y18' => 'sonata.media.provider.youtube'
+//            'xdw0tz'      => 'sonata.media.provider.dailymotion',
+//            '9636197'     => 'sonata.media.provider.vimeo'
         );
 
         foreach ($videos as $video => $provider) {

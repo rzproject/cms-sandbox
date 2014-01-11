@@ -112,7 +112,8 @@ Assets Installation
 
 Your frontend still looking weird because bundle assets are not installed. Run the following command to install assets for all active bundles under public directory::
 
-    app/console assets:install web
+    app/console assets:install web --symlink
+    app/console assetic:dump
 
 
 

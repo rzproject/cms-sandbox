@@ -54,7 +54,7 @@
         "rmzamora/timeline-bundle": "~2.3",
         "rmzamora/classification-bundle": "~2.3",
 
-        "rmzamora/jquery-bundle": "1.10.*@dev",
+        "rmzamora/jquery-bundle": "~1.10.1",
         "rmzamora/bootstrap-bundle": "2.3.*@dev",
 
         "rmzamora/news-bundle": "~2.3",
@@ -63,7 +63,7 @@
 
         "rmzamora/knp-menu-bundle": "2.0.x-dev",
         "rmzamora/entity-audit-bundle": "0.*@dev",
-        "rmzamora/jsrouting-bundle": "1.4.*@dev",
+        "rmzamora/jsrouting-bundle": "~1.5",
         "rmzamora/rest-bundle": "~1.0",
 
         "rz/formatter-bundle":  "~1.0",
@@ -87,7 +87,8 @@
         "videlalvaro/php-amqplib"  : "dev-master",
         "stof/doctrine-extensions-bundle": "1.1.*",
         "stephpy/TimelineBundle": "2.0.*@dev",
-        "stephpy/timeline": "~1.0@dev"
+        "stephpy/timeline": "~1.0@dev",
+        "white-october/pagerfanta-bundle": "~1.0"
 
 
 
