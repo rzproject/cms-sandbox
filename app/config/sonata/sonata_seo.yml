@@ -5,10 +5,10 @@ sonata_seo:
     default:          sonata.seo.page.default
     encoding:             UTF-8
     page:
-        title:            rmzamora-sandbox
+        title:            cms-sandbox
         metas:
             name:
-                keywords:             foo bar
+                keywords:             cms sandbox cms-sandbox rzproject symfony2 sonata-project
                 description:          The description
                 robots:               index, follow
 
@@ -19,8 +19,8 @@ sonata_seo:
 
                 # Open Graph information
                 # see http://developers.facebook.com/docs/opengraphprotocol/#types or http://ogp.me/
-                'og:site_name':       Sonata Project Sandbox
-                'og:description':     A demo of the some rich bundles for your Symfony2 projects
+                'og:site_name':       RzProject CMS Sandbox
+                'og:description':     A CMS demo built on top of RzProject Sonata-Project and Symfony2
 
             http-equiv:
                 'Content-Type':         text/html; charset=utf-8
