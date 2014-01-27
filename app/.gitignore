@@ -1,3 +1,4 @@
 /cache/
 /logs/
 /*.php.cache
+/*.DS_Store
