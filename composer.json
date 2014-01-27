@@ -21,11 +21,11 @@
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "~2.3",
 
-        "doctrine/orm": ">=2.2.3,<2.4-dev",
+        "doctrine/orm": "~2.4",
         "doctrine/doctrine-bundle": "~1.2",
         "doctrine/doctrine-migrations-bundle": "dev-master",
         "doctrine/migrations": "dev-master",
-        "doctrine/doctrine-fixtures-bundle": "2.2.*@dev",
+        "doctrine/doctrine-fixtures-bundle": "~2.2",
         "doctrine/data-fixtures": "dev-master",
 
         "jms/security-extra-bundle": "~1.5",
