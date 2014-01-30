@@ -17,7 +17,8 @@ sonata_block:
 
         sonata.admin.block.search_result:
             contexts:   [admin]
-
+        sonata.block.service.container:
+              cache: sonata.cache.memcached
         sonata.block.service.text:
               cache: sonata.cache.memcached
         sonata.page.block.container:
@@ -54,16 +55,20 @@ sonata_block:
             cache: sonata.cache.memcached
         rz_news.block.collection:
             cache: sonata.cache.memcached
+        sonata.seo.block.social.container:
         sonata.seo.block.email.share_button:
         sonata.seo.block.facebook.like_box:
         sonata.seo.block.facebook.like_button:
         sonata.seo.block.facebook.send_button:
         sonata.seo.block.facebook.share_button:
+        sonata.seo.block.pinterest.pin_button:
         sonata.seo.block.twitter.share_button:
         sonata.seo.block.twitter.follow_button:
         sonata.seo.block.twitter.hashtag_button:
         sonata.seo.block.twitter.mention_button:
-        sonata.seo.block.pinterest.pin_button:
+
+        sonata.page.block.breadcrumb:
+              cache: sonata.cache.memcached
 
     exception:
         default:
