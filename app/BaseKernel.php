@@ -5,6 +5,31 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 
 class BaseKernel extends Kernel
 {
+
+    /**
+     * Constructor.
+     *
+     * @param string  $environment The environment
+     * @param Boolean $debug       Whether to enable debugging or not
+     *
+     * @api
+     */
+    public function __construct($environment, $debug)
+    {
+        parent::__construct($environment, $debug);
+        bcscale(3);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getKernelParameters()
+    {
+        return array_merge(parent::getKernelParameters(), array(
+            'kernel.conf_dir' => $this->getConfDir()
+        ));
+    }
+
     public function registerBundles()
     {
         $bundles = array(
@@ -128,8 +153,45 @@ class BaseKernel extends Kernel
         return $bundles;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
+        $loader->load($this->getConfDir().'/config_'.$this->getEnvironment().'.yml');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getCacheDir()
+    {
+        return $this->rootDir.'/cache/'.$this->getName().'_'.$this->environment;
+    }
+
+    /**
+     * @return string
+     */
+    public function getConfDir()
+    {
+        var_dump($this->getRootDir().'/config'. ($this->getName() != 'app' ? '/'.$this->getName() : ''));
+        return  $this->getRootDir().'/config'. ($this->getName() != 'app' ? '/'.$this->getName() : '');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getName()
+    {
+        if (null === $this->name) {
+            $name = get_class($this);
+            if (substr($name, -6) !== 'Kernel') {
+                throw new \RuntimeException('Invalid Kernel class name, must be XXXKernel');
+            }
+
+            $this->name = strtolower(substr($name, 0, -6));
+        }
+
+        return $this->name;
     }
 }

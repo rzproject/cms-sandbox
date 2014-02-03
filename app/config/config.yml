@@ -1,6 +1,8 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+
+    # FOS
 #    - { resource: fos/fos_user.yml }
     - { resource: fos/fos_rest.yml }
     - { resource: fos/fos_js.yml }
@@ -45,15 +47,14 @@ imports:
     - { resource: bazinga/bazinga_hateoas.yml }
 
 framework:
-    trusted_proxies: ['127.0.0.1'] # a list of proxy IPs you trust
+    trusted_proxies: ~ #['127.0.0.1'] # a list of proxy IPs you trust
     trusted_hosts: ['.*\.?rmzamora.com$']
     esi: { enabled: true }
-    fragments: { path: /_fragment }
     translator:
         fallback: en
     secret:          %secret%
     router:
-        resource: "%kernel.root_dir%/config/routing.yml"
+        resource:  "%kernel.conf_dir%/routing.yml"
         strict_requirements: ~
     form:            true
     csrf_protection: true
@@ -112,6 +113,7 @@ doctrine:
 
         types:
             json: Sonata\Doctrine\Types\JsonType
+            currency: Sonata\Component\Currency\CurrencyDoctrineType
 
     orm:
         auto_generate_proxy_classes: %kernel.debug%

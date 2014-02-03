@@ -5,9 +5,7 @@ imports:
 
 
 framework:
-    router:
-        resource: "%kernel.root_dir%/config/routing_dev.yml"
-        strict_requirements: true
+    router:   { resource: "%kernel.conf_dir%/routing_dev.yml" }
     profiler: { only_exceptions: false }
 
 web_profiler:
@@ -18,29 +16,11 @@ monolog:
     handlers:
         main:
             type:  stream
-            path:  %kernel.logs_dir%/%kernel.environment%.log
+            path:  %kernel.logs_dir%/%kernel.name%_%kernel.environment%.log
             level: debug
-            channels: !doctrine
-        firephp:
-            type:  firephp
-            level: info
-        doctrine:
-            type: stream
-            path: %kernel.logs_dir%/doctrine_%kernel.environment%.log
-            channels: doctrine
-
-doctrine:
-    orm:
-        auto_generate_proxy_classes: %kernel.debug%
-        default_entity_manager: default
-
-        entity_managers:
-            default:
-                auto_mapping: true
-                mappings: ~
 
 assetic:
-    use_controller: false
+    use_controller: true
 
 bazinga_faker:
     orm: doctrine
