@@ -96,23 +96,40 @@
 
     "require-dev": {
         "phpunit/phpunit": "~3.7",
-        "behat/mink": "~1.5",
+        "behat/behat": "~2.4",
         "behat/mink-extension": "~1.2",
         "behat/mink-goutte-driver": "~1.0",
-        "behat/behat": "~2.4",
+        "behat/mink": "~1.5",
+        "behat/mink-browserkit-driver": "~1.1",
+        "behat/mink-selenium2-driver": "~1.1",
         "guzzle/guzzle": "~3.0"
     },
 
     "scripts": {
         "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets"
+            "Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets"
+            "Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ],
+        "post-create-project-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "php load_data.php"
         ]
     },
 
@@ -127,8 +144,25 @@
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
+        "symfony-assets-install": "symlink",
         "branch-alias": {
             "dev-master": "1.0.x-dev"
-        }
+        },
+        "incenteev-parameters": [{
+            "file": "app/config/parameters.yml",
+            "env-map": {
+                "database_driver":   "DATABASE_DRIVER",
+                "database_host":     "DATABASE_HOST",
+                "database_name":     "DATABASE_NAME",
+                "database_user":     "DATABASE_USER",
+                "database_password": "DATABASE_PASSWORD",
+                "mailer_transport":  "MAILER_TRANSPORT",
+                "mailer_host":       "MAILER_HOST",
+                "mailer_user":       "MAILER_USER",
+                "mailer_password":   "MAILER_PASSWORD",
+
+                "sonata_media.cdn.host": "SONATA_MEDIA_CDN_HOST"
+            }
+        }]
     }
 }
