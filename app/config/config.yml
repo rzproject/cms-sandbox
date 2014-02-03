@@ -39,6 +39,11 @@ imports:
     #  egeloen
     - { resource: egeloen/ckeditor.yml }
 
+    # FOS Rest
+    - { resource: fos/fos_rest.yml }
+    - { resource: nelmio/nelmio_apidoc.yml }
+    - { resource: bazinga/bazinga_hateoas.yml }
+
 framework:
     trusted_proxies: ['127.0.0.1'] # a list of proxy IPs you trust
     trusted_hosts: ['.*\.?rmzamora.com$']
