@@ -1,6 +1,7 @@
 cms-sandbox
 ===========
 
+UNSTABLE!!! use branch 1.0.x
 rzproject cms-sandbox - CMS sandbox based on SonataProject and RzBundles
 
 What's inside?
