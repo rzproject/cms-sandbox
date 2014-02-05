@@ -1,8 +1,10 @@
+imports:
+    - { resource: ../../config/parameters.yml }
+    - { resource: ../../config/security.yml }
+
 sonata_page:
     ignore_route_patterns:
-        - ^sonata_api(.*)          # ignore API routes
-        - ^nelmio(.*)       # ignore API doc routes
-
+        - (.*)       # ignore API doc routes
 
 nelmio_api_doc: ~
 

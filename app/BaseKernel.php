@@ -174,7 +174,6 @@ class BaseKernel extends Kernel
      */
     public function getConfDir()
     {
-        var_dump($this->getRootDir().'/config'. ($this->getName() != 'app' ? '/'.$this->getName() : ''));
         return  $this->getRootDir().'/config'. ($this->getName() != 'app' ? '/'.$this->getName() : '');
     }
 
@@ -191,6 +190,8 @@ class BaseKernel extends Kernel
 
             $this->name = strtolower(substr($name, 0, -6));
         }
+
+
 
         return $this->name;
     }

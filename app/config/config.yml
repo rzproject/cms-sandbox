@@ -48,8 +48,8 @@ imports:
 
 framework:
     trusted_proxies: ~ #['127.0.0.1'] # a list of proxy IPs you trust
-    trusted_hosts: ['.*\.?rmzamora.com$']
-    esi: { enabled: true }
+    #trusted_hosts: ['.*\.?rmzamora.com$']
+    #esi: { enabled: true }
     translator:
         fallback: en
     secret:          %secret%
