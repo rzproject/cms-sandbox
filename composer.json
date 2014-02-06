@@ -42,6 +42,8 @@
         "sonata-project/doctrine-extensions": "1.*",
         "sonata-project/intl-bundle": "~2.2",
         "sonata-project/core-bundle": "~2.2",
+        "rmzamora/cache": "~1.0@dev",
+
 
         "rmzamora/cache-bundle": "~2.2",
         "rmzamora/notification-bundle": "~2.3",
