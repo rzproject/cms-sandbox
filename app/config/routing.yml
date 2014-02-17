@@ -59,7 +59,7 @@ sonata_page_exceptions:
     prefix: /page
 
 _monitor:
-    resource: "@LiipMonitorBundle/Resources/config/routing.yml"
+    resource: "@LiipMonitorBundle/Resources/config/routing.xml"
     prefix: /monitor/health
 
 sonata_media_pixlr:

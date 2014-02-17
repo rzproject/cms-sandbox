@@ -81,7 +81,7 @@
         "rz/oauth-bundle": "~1.0",
 
         "liip/imagine-bundle": "0.9.*@stable",
-        "liip/monitor-bundle": "1.0.*@dev",
+        "liip/monitor-bundle": "~2.0",
 
         "dflydev/markdown": "~1.0",
         "willdurand/faker-bundle": "~1.0",
