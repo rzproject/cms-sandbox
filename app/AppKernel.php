@@ -68,6 +68,9 @@ class AppKernel extends Kernel
             new Sonata\ClassificationBundle\SonataClassificationBundle(),
             new Rz\ClassificationBundle\RzClassificationBundle(),
             new Application\Sonata\ClassificationBundle\ApplicationSonataClassificationBundle(),
+            new FOS\CommentBundle\FOSCommentBundle(),
+            new Sonata\CommentBundle\SonataCommentBundle(),
+            new Application\Sonata\CommentBundle\ApplicationSonataCommentBundle(),
 
             // Enable this if you want to audit backend action
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
@@ -78,6 +81,7 @@ class AppKernel extends Kernel
             //FOS
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new FOS\RestBundle\FOSRestBundle(),
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
 
             //JMS
             new JMS\SerializerBundle\JMSSerializerBundle($this),
