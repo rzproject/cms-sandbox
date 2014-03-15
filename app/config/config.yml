@@ -19,9 +19,6 @@ imports:
     - { resource: sonata/sonata_classification.yml }
     - { resource: sonata/sonata_timeline.yml }
 
-    # liip
-    - { resource: liip/liip_monitor.yml }
-
     # stof
     - { resource: stof/doctrine_extension.yml }
 

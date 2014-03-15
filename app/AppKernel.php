@@ -87,8 +87,6 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle($this),
             new JMS\CommandBundle\JMSCommandBundle(),
 
-            new Liip\MonitorBundle\LiipMonitorBundle(),
-
             //Stof
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
 
