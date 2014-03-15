@@ -1,6 +1,6 @@
 {
-    "name": "rmzamora/sandbox",
-    "description": "rmzamora sandbox labs",
+    "name": "rzproject/sandbox",
+    "description": "rzproject sandbox",
     "autoload": {
         "psr-0":         {
             "": "src/"
@@ -96,8 +96,6 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "nelmio/api-doc-bundle": "~2.4",
         "willdurand/hateoas-bundle": "0.2.*"
-
-
 
     },
 
