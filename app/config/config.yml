@@ -6,6 +6,7 @@ imports:
 #    - { resource: fos/fos_user.yml }
     - { resource: fos/fos_rest.yml }
     - { resource: fos/fos_js.yml }
+    - { resource: fos/fos_comment.yml }
     - { resource: jms/jms_serializer.yml }
 
     # Sonata Bundles
@@ -19,9 +20,6 @@ imports:
     - { resource: sonata/sonata_user.yml }
     - { resource: sonata/sonata_classification.yml }
     - { resource: sonata/sonata_timeline.yml }
-
-    # liip
-    - { resource: liip/liip_monitor.yml }
 
     # stof
     - { resource: stof/doctrine_extension.yml }

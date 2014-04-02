@@ -1,9 +1,10 @@
 {
-    "name": "rmzamora/sandbox",
-    "description": "rmzamora sandbox labs",
-
+    "name": "rzproject/sandbox",
+    "description": "rzproject sandbox",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0":         {
+            "": "src/"
+        }
     },
     "require": {
         "php": ">=5.3.3",
@@ -35,13 +36,16 @@
         "symfony-cmf/routing-bundle": "~1.1",
 
         "knplabs/gaufrette": "0.2.*@dev",
-        "knplabs/knp-markdown-bundle": "1.2.*@dev",
+        "knplabs/knp-markdown-bundle": "~1.3",
+
+        "friendsofsymfony/comment-bundle": "~2.0@dev",
 
         "sonata-project/easy-extends-bundle": "~2.1",
         "sonata-project/doctrine-extensions": "1.*",
         "sonata-project/intl-bundle": "~2.2",
         "sonata-project/core-bundle": "~2.2",
 
+        "rmzamora/cache": "~1.0@dev",
         "rmzamora/cache-bundle": "~2.2",
         "rmzamora/notification-bundle": "~2.3",
         "rmzamora/admin-bundle": "~2.3",
@@ -52,6 +56,7 @@
         "rmzamora/timeline-bundle": "~2.3",
         "rmzamora/classification-bundle": "~2.3",
         "rmzamora/seo-bundle": "~1.1",
+        "rmzamora/comment-bundle": "~2.3",
 
         "rmzamora/jquery-bundle": "~1.10.1",
         "rmzamora/bootstrap-bundle": "2.3.*@dev",
@@ -63,7 +68,7 @@
         "rmzamora/knp-menu-bundle": "2.0.x-dev",
         "rmzamora/entity-audit-bundle": "0.*@dev",
         "rmzamora/jsrouting-bundle": "~1.5",
-        "rmzamora/rest-bundle": "~1.0",
+        "rmzamora/rest-bundle": "~1.4",
 
         "rz/formatter-bundle":  "~1.0",
         "rz/admin-bundle":  "~1.0",
@@ -79,7 +84,6 @@
         "rz/oauth-bundle": "~1.0",
 
         "liip/imagine-bundle": "0.9.*@stable",
-        "liip/monitor-bundle": "1.0.*@dev",
 
         "dflydev/markdown": "~1.0",
         "willdurand/faker-bundle": "~1.0",
@@ -90,7 +94,7 @@
         "white-october/pagerfanta-bundle": "~1.0",
 
         "incenteev/composer-parameter-handler": "~2.0",
-        "nelmio/api-doc-bundle": "2.4.*",
+        "nelmio/api-doc-bundle": "~2.4",
         "willdurand/hateoas-bundle": "0.2.*"
 
     },
@@ -144,7 +148,7 @@
         "symfony-web-dir": "web",
         "symfony-assets-install": "symlink",
         "branch-alias": {
-            "dev-master": "1.1.x-dev"
+            "dev-master": "1.0.x-dev"
         },
         "incenteev-parameters": [{
             "file": "app/config/parameters.yml",
