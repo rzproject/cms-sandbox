@@ -70,18 +70,18 @@
         "rmzamora/jsrouting-bundle": "~1.5",
         "rmzamora/rest-bundle": "~1.4",
 
-        "rz/formatter-bundle":  "~1.0",
-        "rz/admin-bundle":  "~1.0",
-        "rz/block-bundle":  "~1.0",
-        "rz/user-bundle":  "~1.0",
-        "rz/page-bundle":  "~1.0",
-        "rz/media-bundle":  "~1.0",
-        "rz/news-bundle":  "~1.0",
-        "rz/doctrine-orm-admin-bundle":  "~1.0",
-        "rz/classification-bundle": "~1.0",
+        "rz/formatter-bundle":  "~2.0",
+        "rz/admin-bundle":  "~2.0",
+        "rz/block-bundle":  "~2.0",
+        "rz/user-bundle":  "~2.0",
+        "rz/page-bundle":  "~2.0",
+        "rz/media-bundle":  "~2.0",
+        "rz/news-bundle":  "~2.0",
+        "rz/doctrine-orm-admin-bundle":  "~2.0",
+        "rz/classification-bundle": "~2.0",
 
 
-        "rz/oauth-bundle": "~1.0",
+        "rz/oauth-bundle": "~2.0",
 
         "liip/imagine-bundle": "0.9.*@stable",
 
