@@ -41,7 +41,7 @@ sonata_block:
         rz_news.block.featured_posts:
         rz_news.block.tags:
         rz_news.block.collection:
-        sonata.seo.block.social.container:
+        #sonata.seo.block.social.container:
         sonata.seo.block.email.share_button:
         sonata.seo.block.facebook.like_box:
         sonata.seo.block.facebook.like_button:

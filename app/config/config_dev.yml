@@ -20,14 +20,14 @@ monolog:
             type:  stream
             path:  %kernel.logs_dir%/%kernel.environment%.log
             level: debug
-            channels: !doctrine
+#            channels: !doctrine
         firephp:
             type:  firephp
             level: info
-        doctrine:
-            type: stream
-            path: %kernel.logs_dir%/doctrine_%kernel.environment%.log
-            channels: doctrine
+#        doctrine:
+#            type: stream
+#            path: %kernel.logs_dir%/doctrine_%kernel.environment%.log
+#            channels: doctrine
 
 doctrine:
     orm:
