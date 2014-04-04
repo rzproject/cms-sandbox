@@ -4,12 +4,38 @@
 fos_user:
     db_driver:      orm # can be orm or odm
     firewall_name:  main
+
+    # if you change the class configuration, please also alter the sonata_user.yml file
     user_class:     Application\Sonata\UserBundle\Entity\User
-    use_listener:           true
-    use_username_form_type: true
-    model_manager_name:     null
+
     group:
-        group_class: Application\Sonata\UserBundle\Entity\Group
+        group_class:   Application\Sonata\UserBundle\Entity\Group
+        group_manager: sonata.user.orm.group_manager
+
+    service:
+        user_manager: sonata.user.orm.user_manager
+
+    registration:
+#        confirmation:
+#            enabled:    true
+#            from_email:
+#                address:        registration@rmzamora.com
+#                sender_name:    rzamora-sandbox Registration
+#            enabled:    true # change to true for required email confirmation
+#            template:   FOSUserBundle:Registration:email.txt.twig
+        form:
+            type:               rz_o_auth_user_registration
+            name:               rz_o_auth_registration_form
+            validation_groups:  [Registration, Default]
+#fos_user:
+#    db_driver:      orm # can be orm or odm
+#    firewall_name:  main
+#    user_class:     Application\Sonata\UserBundle\Entity\User
+#    use_listener:           true
+#    use_username_form_type: true
+#    model_manager_name:     null
+#    group:
+#        group_class: Application\Sonata\UserBundle\Entity\Group
 #
 #    registration:
 #        confirmation:
@@ -38,12 +64,12 @@ fos_user:
 #                sender_name:    rzamora-sandbox Reset Password
 #            template:   FOSUserBundle:Resetting:email.txt.twig
 
-    service:
-        mailer:                 fos_user.mailer.default
-        email_canonicalizer:    fos_user.util.canonicalizer.default
-        username_canonicalizer: fos_user.util.canonicalizer.default
-        token_generator:        fos_user.util.token_generator.default
-        user_manager:           fos_user.user_manager.default
+#    service:
+#        mailer:                 fos_user.mailer.default
+#        email_canonicalizer:    fos_user.util.canonicalizer.default
+#        username_canonicalizer: fos_user.util.canonicalizer.default
+#        token_generator:        fos_user.util.token_generator.default
+#        user_manager:           fos_user.user_manager.default
 
 # Enable Doctrine to map the provided entities
 doctrine:
