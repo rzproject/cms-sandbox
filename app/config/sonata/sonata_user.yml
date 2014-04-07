@@ -33,6 +33,7 @@ sonata_user:
                 # Defaults:
                 - Profile
                 - Default
+
 #        update_password:
 #                type:               rz_user_update_password
 #                name:               rz_user_update_password_form
