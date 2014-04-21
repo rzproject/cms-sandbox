@@ -113,6 +113,7 @@ class AppKernel extends Kernel
             new Rz\FieldTypeBundle\RzFieldTypeBundle(),
             new Rz\FormatterBundle\RzFormatterBundle(),
             new Rz\OAuthBundle\RzOAuthBundle(),
+            new Rz\SeoBundle\RzSeoBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
