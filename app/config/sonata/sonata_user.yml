@@ -27,8 +27,8 @@ sonata_user:
 
     profile:  # Profile Form (firstname, lastname, etc ...)
         form:
-            type:               rz_user_profile
-            name:               rz_user_profile_form
+            type:               rz_o_auth_user_profile
+            name:               rz_o_auth_user_profile_form
             validation_groups:
                 # Defaults:
                 - Profile

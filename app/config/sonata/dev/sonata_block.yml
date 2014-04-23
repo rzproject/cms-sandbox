@@ -19,41 +19,41 @@ sonata_block:
             contexts:   [admin]
 
         sonata.block.service.text:
-              #cache: sonata.cache.mongo
+              cache: sonata.cache.mongo
         sonata.page.block.container:
-              #cache: sonata.cache.mongo
+              cache: sonata.cache.mongo
         sonata.page.block.children_pages:
-              #cache: sonata.cache.mongo
+              cache: sonata.cache.mongo
         sonata.block.service.rss:
-              #cache: sonata.cache.mongo
+              cache: sonata.cache.mongo
         sonata.media.block.media:
-              #cache: sonata.cache.mongo
+              cache: sonata.cache.mongo
         sonata.media.block.gallery:
-              #cache: sonata.cache.mongo
+              cache: sonata.cache.mongo
         sonata.media.block.feature_media:
-              #cache: sonata.cache.mongo
+              cache: sonata.cache.mongo
         sonata.news.block.recent_comments:
-              #cache: sonata.cache.mongo
+              cache: sonata.cache.mongo
         sonata.news.block.recent_posts:
-              #cache: sonata.cache.mongo
+              cache: sonata.cache.mongo
         sonata.timeline.block.timeline:
-              #cache: sonata.cache.mongo
+              cache: sonata.cache.mongo
         sonata.user.block.account:
-            #cache: sonata.page.cache.js_async
+            cache: sonata.page.cache.js_async
 #            cache: sonata.page.cache.esi
             contexts: [user]
         sonata.user.block.menu:
             contexts: [user]
         rz_media.block.media_bxslider:
-            #cache: sonata.cache.mongo
+            cache: sonata.cache.mongo
         rz_media.block.featured_galleries:
-            #cache: sonata.cache.mongo
+            cache: sonata.cache.mongo
         rz_news.block.featured_posts:
-            #cache: sonata.cache.mongo
+            cache: sonata.cache.mongo
         rz_news.block.tags:
-            #cache: sonata.cache.mongo
+            cache: sonata.cache.mongo
         rz_news.block.collection:
-            #cache: sonata.cache.mongo
+            cache: sonata.cache.mongo
         sonata.seo.block.email.share_button:
         sonata.seo.block.facebook.like_box:
         sonata.seo.block.facebook.like_button:
