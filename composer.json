@@ -80,6 +80,7 @@
         "rz/doctrine-orm-admin-bundle":  "~1.0",
         "rz/classification-bundle": "~1.0",
         "rz/seo-bundle": "~1.0",
+        "rz/timeline-bundle": "~1.0",
 
 
         "rz/oauth-bundle": "~1.0",
