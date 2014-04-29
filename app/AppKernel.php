@@ -5,6 +5,17 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kernel
 {
+    /**
+     * {@inheritdoc}
+     */
+    public function init()
+    {
+        // Please read http://symfony.com/doc/2.0/book/installation.html#configuration-and-setup
+        bcscale(3);
+
+        parent::init();
+    }
+
     public function registerBundles()
     {
         $bundles = array(
