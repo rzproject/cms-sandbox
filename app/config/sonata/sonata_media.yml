@@ -7,7 +7,7 @@ sonata_media:
     contexts:
         default:  # the default context is mandatory
             download:
-                strategy: sonata.media.security.superadmin_strategy
+                #strategy: sonata.media.security.superadmin_strategy
                 mode: http
             providers:
                 - sonata.media.provider.dailymotion
@@ -52,6 +52,22 @@ sonata_media:
     providers:
         file:
             resizer:    false
+        image:
+           thumbnail: sonata.media.thumbnail.format          # default value
+#           thumbnail: sonata.media.thumbnail.consumer.format # can be used to dispatch the resize action to async task
+#            thumbnail: sonata.media.thumbnail.liip_imagine    # use the LiipImagineBundle to resize the image
+        vimeo:
+            thumbnail: sonata.media.thumbnail.format          # default value
+#           thumbnail: sonata.media.thumbnail.consumer.format # can be used to dispatch the resize action to async task
+#           thumbnail: sonata.media.thumbnail.liip_imagine    # use the LiipImagineBundle to resize the image
+        youtube:
+            thumbnail: sonata.media.thumbnail.format          # default value
+#           thumbnail: sonata.media.thumbnail.consumer.format # can be used to dispatch the resize action to async task
+#           thumbnail: sonata.media.thumbnail.liip_imagine    # use the LiipImagineBundle to resize the image
+        dailymotion:
+            thumbnail: sonata.media.thumbnail.format          # default value
+#           thumbnail: sonata.media.thumbnail.consumer.format # can be used to dispatch the resize action to async task
+#           thumbnail: sonata.media.thumbnail.liip_imagine    # use the LiipImagineBundle to resize the image
 
     pixlr:
         enabled:  true
@@ -67,22 +83,22 @@ sonata_media:
 # to a specific format. (ie a controller render the file)
 #    more information can be found here : https://github.com/liip/LiipImagineBundle
 #
-liip_imagine:
-    filter_sets:
-        default_small:
-            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
-            filters:
-                thumbnail: { size: [100, 70], mode: outbound }
-
-
-        default_big:
-            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
-            filters:
-                thumbnail: { size: [500, 70], mode: outbound }
-
-        default_original:
-            filters:
-                relative_resize: { heighten: 60 }
+#liip_imagine:
+#    filter_sets:
+#        default_small:
+#            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+#            filters:
+#                thumbnail: { size: [100, 70], mode: outbound }
+#
+#
+#        default_big:
+#            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+#            filters:
+#                thumbnail: { size: [500, 70], mode: outbound }
+#
+#        default_original:
+#            filters:
+#                relative_resize: { heighten: 60 }
 
 # Enable Doctrine to map the provided entities
 doctrine:
