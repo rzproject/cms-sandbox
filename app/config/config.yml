@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: assetic.yml }
     - { resource: fos/fos_user.yml }
     - { resource: fos/fos_rest.yml }
     - { resource: fos/fos_js.yml }
@@ -18,6 +19,10 @@ imports:
     - { resource: sonata/sonata_user.yml }
     - { resource: sonata/sonata_classification.yml }
     - { resource: sonata/sonata_timeline.yml }
+    - { resource: sonata/sonata_intl.yml }
+
+    # liip
+    #- { resource: liip/liip_monitor.yml }
 
     # stof
     - { resource: stof/doctrine_extension.yml }
@@ -51,6 +56,7 @@ framework:
     form:            true
     csrf_protection: true
     validation:      { enable_annotations: true }
+    #templating:      { engines: ['twig'], assets_version_format: %%s?v=%%s, assets_version: demo-0.4.1 }
     templating:      { engines: ['twig'] }
     default_locale: %locale%
     session:
