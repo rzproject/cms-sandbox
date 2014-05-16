@@ -9,39 +9,12 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
     <![endif]-->
-    {% stylesheets  '@RzPageBundle/Resources/public/theme/rzcms/css/style.css'
-                    '@RzPageBundle/Resources/public/theme/rzcms/css/settings.css'
-                    '@RzPageBundle/Resources/public/theme/rzcms/css/icon-effect.css'
-                    '@RzPageBundle/Resources/public/theme/rzcms/css/prettyphoto.css'
-                    '@RzPageBundle/Resources/public/theme/rzcms/css/dzsportfolio.css'
-                    filter='?yui_css' %}
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
-    {% endstylesheets %}
-
-    {% stylesheets
-            'bundles/rzpage/theme/rzcms/css/font-awesome.min.css'
-            'bundles/rzpage/theme/rzcms/css/fontello.css'
-            filter='cssrewrite' %}
-            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
-    {% endstylesheets %}
-
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_theme2_css.css') }}"/>
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_font_css.css') }}"/>
     {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
-        {% stylesheets
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/bxslider/jquery.bxslider.css'
-            '@RzMediaBundle/Resources/public/css/block/rzmedia-bxslider.css'
-            '@RzMediaBundle/Resources/public/css/block/rzmedia-featured-gallery.css'
-            '@RzNewsBundle/Resources/public/css/featured_post_block.css'
-            filter='?yui_css' %}
-            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
-        {% endstylesheets %}
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_edit2_css.css') }}"/>
     {%  endif %}
-    {% stylesheets
-        '@RzPageBundle/Resources/public/theme/rzcms/css/style-override.css'
-        '@RzPageBundle/Resources/public/theme/rzcms/css/style-override.css'
-        '@RzPageBundle/Resources/public/theme/rzcms/css/theme-override.css'
-        filter='?yui_css' %}
-        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
-    {% endstylesheets %}
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_theme_override_css.css') }}"/>
 {% endblock %}
 
 {% block rz_page_theme_javascripts %}
@@ -52,28 +25,7 @@
     <link rel="stylesheet" href="{{  asset('bundles/rzpage/theme/rzcms/css/font-awesome-ie7.min.css')}}">
     <link rel="stylesheet" href="{{  asset('bundles/rzpage/theme/rzcms/css/fontello-ie7.css')}}">
     <![endif]-->
-
-    {% javascripts
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/bxslider/jquery.bxslider.js'
-            '@RzMediaBundle/Resources/public/js/block/rzmedia-bxslider.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/imgLiquid/js/imgLiquid.js'
-            '@RzMediaBundle/Resources/public/js/block/rzmedia-featured-gallery.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/eqheight/jquery.eqheight.js'
-            '@RzPageBundle/Resources/public/theme/rzcms/js/jquery.themepunch.revolution.min.js'
-            '@RzPageBundle/Resources/public/theme/rzcms/js/jquery.themepunch.plugins.min.js'
-            '@RzPageBundle/Resources/public/theme/rzcms/js/dzsportfolio.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/masonry/masonry.min.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/imagesloaded/imagesloaded.min.js'
-            '@RzPageBundle/Resources/public/theme/rzcms/js/scroller.js'
-            '@RzPageBundle/Resources/public/theme/rzcms/js/prettyphoto.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/imagesloaded/imagesloaded.min.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/fitvids/jquery.fitvids.js'
-            '@RzPageBundle/Resources/public/theme/rzcms/js/scripts.js'
-            filter='?closure' %}
-            <script type="text/javascript" async src="{{ asset_url }}"></script>
-    {% endjavascripts %}
-
-
+    <script type="text/javascript" src="{{ asset('assetic/sonata_front_theme_js.js') }}" ></script>
     <!-- fade in settings -->
     <script>
         //<![CDATA[

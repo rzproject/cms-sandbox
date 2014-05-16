@@ -9,52 +9,16 @@
             {{ sonata_seo_metadatas() }}
 
             {% block sonata_page_stylesheets %}
-                {% stylesheets '@RmzamoraBootstrapBundle/Resources/public/css/bootstrap.min.css'
-                               '@RmzamoraBootstrapBundle/Resources/public/css/bootstrap-responsive.min.css'
-                               '@RzPageBundle/Resources/public/sonata/css/default.css'
-                               '@RzPageBundle/Resources/public/sonata/css/default.css'
-                                filter='?yui_css' %}
-                    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
-                {% endstylesheets %}
+                <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_css.css') }}"/>
 
                 {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
-
-                    {% stylesheets '@RmzamoraBootstrapBundle/Resources/public/plugins/modal/css/modal.css'
-                                   '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/gritter/css/gritter.css'
-                                   '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/breadcrumbs/css/breadcrumb.css'
-                                   '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/chosen/chosen.css'
-                                   '@RmzamoraBootstrapBundle/Resources/public/plugins/tabdrop/css/tabdrop.css'
-                                   '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/uniform/themes/default/css/uniform.default.css'
-                                   '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/foo-table/css/footable.min.css'
-                                   '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/foo-table/css/footable.sortable.min.css'
-                                   '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/multi-select/css/multiselect.css'
-                                   '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/qtip2/css/qtip.css'
-                                   '@RmzamoraBootstrapBundle/Resources/public/plugins/switch/css/switch.css'
-                                   '@RmzamoraBootstrapBundle/Resources/public/plugins/select/css/select.css'
-                                   '@RmzamoraBootstrapBundle/Resources/public/plugins/datepicker/css/datepicker.css'
-                                   '@RmzamoraBootstrapBundle/Resources/public/plugins/timepicker/css/timepicker.css'
-                                   '@RmzamoraBootstrapBundle/Resources/public/plugins/datetimepicker/css/datetimepicker.css'
-                                   '@RmzamoraBootstrapBundle/Resources/public/plugins/fileupload/css/fileupload.css'
-                                   '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/select2/select2.css'
-                                    filter='?yui_css' %}
-                    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
-                    {% endstylesheets %}
-                    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('bundles/rmzamorajquery/jquery-plugins/icheck/skins/all.css') }}">
+                <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_edit_css.css') }}"/>
                 {% endif %}
 
                 {% block rz_page_theme_stylesheets %}{% endblock %}
 
                 {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
-                    {% stylesheets  '@RzAdminBundle/Resources/public/css/style.css'
-                                    '@RzAdminBundle/Resources/public/css/rz-style.css'
-                                    '@RzAdminBundle/Resources/public/css/themes.css'
-                                    '@RzAdminBundle/Resources/public/css/rz-theme.css'
-                                    '@RzAdminBundle/Resources/public/css/font.css'
-                                    '@RzPageBundle/Resources/public/rzcms/css/rzcms-sidebar.css'
-                                    '@RzPageBundle/Resources/public/rzcms/css/rzcms-blocks.css'
-                                    filter='?yui_css' %}
-                    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
-                    {% endstylesheets %}
+                <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_theme_css.css') }}"/>
                 {% endif %}
             {% endblock %}
 
@@ -63,60 +27,11 @@
                 <!--[if lt IE 9]>
                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
                 <![endif]-->
-
-                {% javascripts
-                                '@RmzamoraJqueryBundle/Resources/public/jquery/jquery.min.js'
-                                '@RmzamoraJqueryBundle/Resources/public/jqueryui/js/jqueryui.custom.min.js'
-                                '@RmzamoraBootstrapBundle/Resources/public/js/bootstrap.min.js'
-                filter='?closure' %}
-                <script type="text/javascript" src="{{ asset_url }}"></script>
-                {% endjavascripts %}
+                <script type="text/javascript" src="{{ asset('assetic/sonata_front_js.js') }}" ></script>
                 {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
-                    {% javascripts
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/hoverintent/js/hoverintent.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/easing/js/easing.js'
-                                    '@RzCkeditorBundle/Resources/public/ckeditor.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/blockui/jquery.blockui.min.js'
-                                    '@RzAdminBundle/Resources/public/js/rz/blockui.js'
-                                    '@RzAdminBundle/Resources/public/js/rz/gritter.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/gritter/js/gritter.js'
-                                    '@RmzamoraBootstrapBundle/Resources/public/plugins/modal/js/modalmanager.js'
-                                    '@RmzamoraBootstrapBundle/Resources/public/plugins/modal/js/modal.js'
-                                    '@RmzamoraBootstrapBundle/Resources/public/plugins/select/js/select.js'
-                                    '@RmzamoraBootstrapBundle/Resources/public/plugins/tabdrop/js/tabdrop.js'
-                                    '@RmzamoraBootstrapBundle/Resources/public/plugins/datepicker/js/bootstrap-datepicker.js'
-                                    '@RmzamoraBootstrapBundle/Resources/public/plugins/timepicker/js/timepicker.js'
-                                    '@RmzamoraBootstrapBundle/Resources/public/plugins/datetimepicker/js/datetimepicker.js'
-                                    '@RmzamoraBootstrapBundle/Resources/public/plugins/switch/js/switch.js'
-                                    '@RmzamoraBootstrapBundle/Resources/public/plugins/modal/js/modalmanager.js'
-                                    '@RmzamoraBootstrapBundle/Resources/public/plugins/modal/js/modal.js'
-                                    '@RmzamoraBootstrapBundle/Resources/public/plugins/fileupload/js/fileupload.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/form/jquery.form.min.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/uniform/uniform.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/chosen/chosen.jquery.min.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/chosen/chosen.jquery.min.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/breadcrumbs/js/jquery.breadbrumb.min.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/foo-table/js/footable.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/qtip2/js/qtip.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/multi-select/js/multiselect.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/multi-select/js/quicksearch.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/icheck/jquery.icheck.min.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/hovercontent/js/contenthover.min.js'
-                                    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/select2/select2.js'
-                                    '@RzAdminBundle/Resources/public/js/lib/sprintf.js'
-                                    '@RzAdminBundle/Resources/public/js/rzadmin-base.js'
-                                    '@RzFieldTypeBundle/Resources/public/js/rzadmin-fieldtype.js'
-                                    '@RzDoctrineORMAdminBundle/Resources/public/js/rzadmin-many-assoc.js'
-                                    '@RzDoctrineORMAdminBundle/Resources/public/js/rzadmin-one-assoc.js'
-                                    '@RzPageBundle/Resources/public/rzcms/js/custom.js'
-                                    '@RzPageBundle/Resources/public/rzcms/js/page.js'
-                                    '@FOSJsRoutingBundle/Resources/public/js/router.js'
-                                    filter='?closure' %}
-                    <script type="text/javascript" async src="{{ asset_url }}"></script>
-                    {% endjavascripts %}
-                    <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+                <script type="text/javascript" src="{{ asset('assetic/sonata_front_edit_js.js') }}" ></script>
+                <script type="text/javascript" src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
                 {% endif %}
-
                 {% block rz_page_theme_javascripts %}{% endblock %}
             {% endblock %}
         </head>
