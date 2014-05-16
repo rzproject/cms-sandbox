@@ -966,16 +966,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "91df8f5649b33d0c3bb50b04c66e1c00bf345df5"
+                "reference": "47ca10076b19ce2da1a17e24a963bdf42a18a723"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/91df8f5649b33d0c3bb50b04c66e1c00bf345df5",
-                "reference": "91df8f5649b33d0c3bb50b04c66e1c00bf345df5",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/47ca10076b19ce2da1a17e24a963bdf42a18a723",
+                "reference": "47ca10076b19ce2da1a17e24a963bdf42a18a723",
                 "shasum": ""
             },
             "require": {
-                "doctrine/collections": "~1.1",
+                "doctrine/collections": "~1.2",
                 "doctrine/dbal": ">=2.5-dev,<2.6-dev",
                 "ext-pdo": "*",
                 "php": ">=5.3.2",
@@ -1035,7 +1035,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2014-05-15 15:37:55"
+            "time": "2014-05-16 04:27:30"
         },
         {
             "name": "egeloen/ckeditor-bundle",
@@ -1044,12 +1044,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/egeloen/IvoryCKEditorBundle.git",
-                "reference": "70395a7b8b95faaf76042c2012ae377cdbb60078"
+                "reference": "12c81a2320168e05a6042bf3b3c03b80307e0b02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egeloen/IvoryCKEditorBundle/zipball/70395a7b8b95faaf76042c2012ae377cdbb60078",
-                "reference": "70395a7b8b95faaf76042c2012ae377cdbb60078",
+                "url": "https://api.github.com/repos/egeloen/IvoryCKEditorBundle/zipball/12c81a2320168e05a6042bf3b3c03b80307e0b02",
+                "reference": "12c81a2320168e05a6042bf3b3c03b80307e0b02",
                 "shasum": ""
             },
             "require": {
@@ -1092,7 +1092,7 @@
             "keywords": [
                 "CKEditor"
             ],
-            "time": "2014-05-15 16:47:48"
+            "time": "2014-05-16 10:00:06"
         },
         {
             "name": "egeloen/json-builder",
@@ -2716,12 +2716,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/NelmioApiDocBundle.git",
-                "reference": "a88e7d82789c86e4a915f08c69cf3d9d915c9de5"
+                "reference": "fa920111260e350ea17942c77c811762e965cbdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/a88e7d82789c86e4a915f08c69cf3d9d915c9de5",
-                "reference": "a88e7d82789c86e4a915f08c69cf3d9d915c9de5",
+                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/fa920111260e350ea17942c77c811762e965cbdc",
+                "reference": "fa920111260e350ea17942c77c811762e965cbdc",
                 "shasum": ""
             },
             "require": {
@@ -2782,7 +2782,7 @@
                 "documentation",
                 "rest"
             ],
-            "time": "2014-05-15 17:01:35"
+            "time": "2014-05-16 09:33:58"
         },
         {
             "name": "pagerfanta/pagerfanta",
@@ -3685,12 +3685,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/HWIOAuthBundle.git",
-                "reference": "c71c2a4c31c2d1d526a60caaf8ad09e3ad027d61"
+                "reference": "60ec656e674d52fec475f4d9b5faeedfff887669"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/HWIOAuthBundle/zipball/c71c2a4c31c2d1d526a60caaf8ad09e3ad027d61",
-                "reference": "c71c2a4c31c2d1d526a60caaf8ad09e3ad027d61",
+                "url": "https://api.github.com/repos/rmzamora/HWIOAuthBundle/zipball/60ec656e674d52fec475f4d9b5faeedfff887669",
+                "reference": "60ec656e674d52fec475f4d9b5faeedfff887669",
                 "shasum": ""
             },
             "require": {
@@ -3698,7 +3698,8 @@
                 "php": ">=5.3.3",
                 "symfony/framework-bundle": "~2.4",
                 "symfony/options-resolver": "~2.4",
-                "symfony/security-bundle": "~2.4"
+                "symfony/security-bundle": "~2.4",
+                "symfony/yaml": "~2.4"
             },
             "require-dev": {
                 "doctrine/orm": ">=2.2.3,<2.4-dev",
@@ -3736,7 +3737,7 @@
                     "homepage": "https://github.com/hwi/HWIOAuthBundle/contributors"
                 },
                 {
-                    "name": "Alexander",
+                    "name": "Alexander Mols",
                     "email": "iam.asm89@gmail.com",
                     "homepage": "http://asm89.github.io/"
                 },
@@ -3745,9 +3746,9 @@
                     "email": "stloyd@gmail.com"
                 },
                 {
-                    "name": "mell m. zamora",
+                    "name": "Mell M. Zamora",
                     "email": "mell@rzproject.org",
-                    "homepage": "http://www.rzproject.org"
+                    "homepage": "http://rzproject.org"
                 }
             ],
             "description": "Support for authenticating users using both OAuth1.0a and OAuth2 in Symfony2. rmzamora forked",
@@ -3795,7 +3796,7 @@
                 "yahoo",
                 "yandex"
             ],
-            "time": "2014-05-03 05:14:16"
+            "time": "2014-05-16 10:41:46"
         },
         {
             "name": "rmzamora/jquery-bundle",
@@ -4587,12 +4588,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/AdminBundle.git",
-                "reference": "2e39cdf2d266a2f4c5544459497d703ca88e13be"
+                "reference": "068b051feb5f83ad8a9f6daf47bd11782ac7e2ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/2e39cdf2d266a2f4c5544459497d703ca88e13be",
-                "reference": "2e39cdf2d266a2f4c5544459497d703ca88e13be",
+                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/068b051feb5f83ad8a9f6daf47bd11782ac7e2ee",
+                "reference": "068b051feb5f83ad8a9f6daf47bd11782ac7e2ee",
                 "shasum": ""
             },
             "require": {
@@ -4633,7 +4634,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-05-15 09:41:27"
+            "time": "2014-05-16 07:34:03"
         },
         {
             "name": "rz/block-bundle",
@@ -5142,12 +5143,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/PageBundle.git",
-                "reference": "f43b382baadeb1a671467b4772281d5bb33193d0"
+                "reference": "b27d433476f2e75e717e9e6bde72b9a269e1c374"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/f43b382baadeb1a671467b4772281d5bb33193d0",
-                "reference": "f43b382baadeb1a671467b4772281d5bb33193d0",
+                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/b27d433476f2e75e717e9e6bde72b9a269e1c374",
+                "reference": "b27d433476f2e75e717e9e6bde72b9a269e1c374",
                 "shasum": ""
             },
             "require": {
@@ -5184,7 +5185,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-05-16 02:57:10"
+            "time": "2014-05-16 10:02:25"
         },
         {
             "name": "rz/seo-bundle",
@@ -5517,12 +5518,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataCoreBundle.git",
-                "reference": "c1c7ef6e0d2679c475180384a03bfd69a3cc63ee"
+                "reference": "b4562a9850a5cfc23d5ee87abe5e82107ef17d99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/c1c7ef6e0d2679c475180384a03bfd69a3cc63ee",
-                "reference": "c1c7ef6e0d2679c475180384a03bfd69a3cc63ee",
+                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/b4562a9850a5cfc23d5ee87abe5e82107ef17d99",
+                "reference": "b4562a9850a5cfc23d5ee87abe5e82107ef17d99",
                 "shasum": ""
             },
             "require": {
@@ -5571,7 +5572,7 @@
             "keywords": [
                 "sonata"
             ],
-            "time": "2014-05-14 16:25:48"
+            "time": "2014-05-16 08:52:16"
         },
         {
             "name": "sonata-project/datagrid-bundle",
@@ -6944,12 +6945,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/willdurand/BazingaFakerBundle.git",
-                "reference": "09a6a057c1ef42a87c289b04a81fad4bf79325f6"
+                "reference": "381a5b55b689c19b4ff1e607611496a80db80e5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/willdurand/BazingaFakerBundle/zipball/09a6a057c1ef42a87c289b04a81fad4bf79325f6",
-                "reference": "09a6a057c1ef42a87c289b04a81fad4bf79325f6",
+                "url": "https://api.github.com/repos/willdurand/BazingaFakerBundle/zipball/381a5b55b689c19b4ff1e607611496a80db80e5a",
+                "reference": "381a5b55b689c19b4ff1e607611496a80db80e5a",
                 "shasum": ""
             },
             "require": {
@@ -6984,7 +6985,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2014-04-17 08:09:38"
+            "time": "2014-05-16 08:29:15"
         },
         {
             "name": "willdurand/hateoas",
@@ -7591,36 +7592,29 @@
         },
         {
             "name": "fabpot/goutte",
-            "version": "v1.0.6",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Goutte.git",
-                "reference": "06a5451288ffddd204b10fa6c6f9ab2b86dd515d"
+                "reference": "104ef44a9fc8a8dfe66fef5f8e8deb4567f3dc7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Goutte/zipball/06a5451288ffddd204b10fa6c6f9ab2b86dd515d",
-                "reference": "06a5451288ffddd204b10fa6c6f9ab2b86dd515d",
+                "url": "https://api.github.com/repos/fabpot/Goutte/zipball/104ef44a9fc8a8dfe66fef5f8e8deb4567f3dc7c",
+                "reference": "104ef44a9fc8a8dfe66fef5f8e8deb4567f3dc7c",
                 "shasum": ""
             },
             "require": {
-                "ext-curl": "*",
-                "guzzle/http": "~3.1",
-                "php": ">=5.3.0",
+                "guzzlehttp/guzzle": "4.*",
+                "php": ">=5.4.0",
                 "symfony/browser-kit": "~2.1",
                 "symfony/css-selector": "~2.1",
-                "symfony/dom-crawler": "~2.1",
-                "symfony/finder": "~2.1",
-                "symfony/process": "~2.1"
-            },
-            "require-dev": {
-                "guzzle/plugin-history": "~3.1",
-                "guzzle/plugin-mock": "~3.1"
+                "symfony/dom-crawler": "~2.1"
             },
             "type": "application",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -7645,7 +7639,7 @@
             "keywords": [
                 "scraper"
             ],
-            "time": "2014-03-14 13:02:09"
+            "time": "2014-05-13 05:05:35"
         },
         {
             "name": "guzzle/guzzle",
@@ -7738,6 +7732,124 @@
                 "web service"
             ],
             "time": "2014-05-07 17:04:22"
+        },
+        {
+            "name": "guzzlehttp/guzzle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "ca838eda194b50a722590a18b1d2fec35652b645"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/ca838eda194b50a722590a18b1d2fec35652b645",
+                "reference": "ca838eda194b50a722590a18b1d2fec35652b645",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/streams": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "~4.0",
+                "psr/log": "~1.0"
+            },
+            "suggest": {
+                "ext-curl": "Guzzle will use specific adapters if cURL is present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2014-05-15 17:29:38"
+        },
+        {
+            "name": "guzzlehttp/streams",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/streams.git",
+                "reference": "cf0c8c33ca95cc147efba4c714f630ee44767180"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/streams/zipball/cf0c8c33ca95cc147efba4c714f630ee44767180",
+                "reference": "cf0c8c33ca95cc147efba4c714f630ee44767180",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Stream\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple abstraction over streams of data (Guzzle 4+)",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "stream"
+            ],
+            "time": "2014-04-03 04:48:24"
         },
         {
             "name": "instaclick/php-webdriver",
