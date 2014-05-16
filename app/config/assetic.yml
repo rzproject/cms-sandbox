@@ -61,13 +61,13 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/modal/css/modal.css
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/tabdrop/css/tabdrop.css
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/modal/css/modal.css
-                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/multi-select/css/multiselect.css
-                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/gritter/css/gritter.css
-                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/qtip2/css/qtip.css
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/select/css/select.css
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/datepicker/css/datepicker.css
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/timepicker/css/timepicker.css
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/datetimepicker/css/datetimepicker.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/multi-select/css/multiselect.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/gritter/css/gritter.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/qtip2/css/qtip.css
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/minimal/_all.css
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/square/_all.css
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/flat/_all.css
@@ -94,9 +94,7 @@ assetic:
 
         sonata_front_edit_js:
             inputs:
-                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/browser-detect/jquery.browser.detect.js
                 - %kernel.root_dir%/../web/bundles/fosjsrouting/js/router.js
-                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/js/bootstrap.min.js
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/select/js/select.js
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/tabdrop/js/tabdrop.js
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/datepicker/js/bootstrap-datepicker.js
@@ -104,6 +102,11 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/datetimepicker/js/datetimepicker.js
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/modal/js/modalmanager.js
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/modal/js/modal.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/fileupload/js/fileupload.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/gritter/js/gritter.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/hoverintent/js/hoverintent.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/easing/js/easing.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/blockui/jquery.blockui.min.js
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/uniform/uniform.js
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/foo-table/js/footable.js
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/multi-select/js/multiselect.js
@@ -119,6 +122,13 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/masonry/masonry.min.js
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/imagesloaded/imagesloaded.min.js
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/select2/select2.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/form/jquery.form.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/chosen/chosen.jquery.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/uniform/uniform.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/hovercontent/js/contenthover.min.js
+                - %kernel.root_dir%/../web/bundles/rzckeditor/ckeditor.js
+                - %kernel.root_dir%/../web/bundles/rzadmin/js/rz/blockui.js
+                - %kernel.root_dir%/../web/bundles/rzadmin/js/rz/gritter.js
                 - %kernel.root_dir%/../web/bundles/rzadmin/js/lib/sprintf.js
                 - %kernel.root_dir%/../web/bundles/rzadmin/js/rzadmin-base.js
                 - %kernel.root_dir%/../web/bundles/rzfieldtype/js/rzadmin-fieldtype.js

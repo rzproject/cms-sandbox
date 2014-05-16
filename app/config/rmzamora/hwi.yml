@@ -21,8 +21,8 @@ hwi_oauth:
             infos_url:          "https://graph.facebook.com/me?fields=name,email,picture.type(square)"
             paths:
                 facebookUid:    id
-                facebookName:   username
-                username:       username
+                facebookName:   name
+                username:       name
                 email:          email
                 emailCanonical: email
                 facebookData:   ['picture.data.url', 'email']
@@ -64,7 +64,7 @@ hwi_oauth:
         username_iterations: 30
         # mapping between resource owners (see below) and properties
         properties:
-            facebook: facebookUid
+            facebook: email
             twitter:  twitterUid
             google:   gplusUid
 
@@ -75,6 +75,6 @@ rz_o_auth:
         username_iterations: 30
         # mapping between resource owners (see below) and properties
         properties:
-            facebook: facebookUid
+            facebook: email
             twitter:  twitterUid
             google:   gplusUid
