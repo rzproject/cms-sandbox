@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "7f61df9b21ac6f5b42ee042b8b21579b",
+    "hash": "267da2c4b150c1324777bedfb66eab3b",
     "packages": [
         {
             "name": "dflydev/markdown",
@@ -966,12 +966,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "8babb77d3723c5a10e3400b8a9e923205497bea6"
+                "reference": "04aea73a850dad408c068f43c875e52fbd14004e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/8babb77d3723c5a10e3400b8a9e923205497bea6",
-                "reference": "8babb77d3723c5a10e3400b8a9e923205497bea6",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/04aea73a850dad408c068f43c875e52fbd14004e",
+                "reference": "04aea73a850dad408c068f43c875e52fbd14004e",
                 "shasum": ""
             },
             "require": {
@@ -1035,7 +1035,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2014-05-16 12:40:17"
+            "time": "2014-05-17 17:08:37"
         },
         {
             "name": "egeloen/ckeditor-bundle",
@@ -2368,12 +2368,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
-                "reference": "e5700ed8cbd5c402d24d6dda118aa23400937288"
+                "reference": "f6d6d5081c0e441f953200a6b5f1c760ee54377e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/e5700ed8cbd5c402d24d6dda118aa23400937288",
-                "reference": "e5700ed8cbd5c402d24d6dda118aa23400937288",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/f6d6d5081c0e441f953200a6b5f1c760ee54377e",
+                "reference": "f6d6d5081c0e441f953200a6b5f1c760ee54377e",
                 "shasum": ""
             },
             "require": {
@@ -2413,7 +2413,7 @@
             "keywords": [
                 "menu"
             ],
-            "time": "2014-03-03 22:44:01"
+            "time": "2014-05-17 17:25:37"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -2716,12 +2716,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/NelmioApiDocBundle.git",
-                "reference": "fa920111260e350ea17942c77c811762e965cbdc"
+                "reference": "968a162544cbf32b8ea5ab1b7dedeb87a3ce0ccf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/fa920111260e350ea17942c77c811762e965cbdc",
-                "reference": "fa920111260e350ea17942c77c811762e965cbdc",
+                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/968a162544cbf32b8ea5ab1b7dedeb87a3ce0ccf",
+                "reference": "968a162544cbf32b8ea5ab1b7dedeb87a3ce0ccf",
                 "shasum": ""
             },
             "require": {
@@ -2782,7 +2782,7 @@
                 "documentation",
                 "rest"
             ],
-            "time": "2014-05-16 09:33:58"
+            "time": "2014-05-16 21:52:41"
         },
         {
             "name": "pagerfanta/pagerfanta",
@@ -6620,12 +6620,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "825867208e82be7c56ed6448f2d8dd9e5b548aed"
+                "reference": "b2855a55dd0428a22f799a4298a57599e209cfd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/825867208e82be7c56ed6448f2d8dd9e5b548aed",
-                "reference": "825867208e82be7c56ed6448f2d8dd9e5b548aed",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/b2855a55dd0428a22f799a4298a57599e209cfd4",
+                "reference": "b2855a55dd0428a22f799a4298a57599e209cfd4",
                 "shasum": ""
             },
             "require": {
@@ -6728,7 +6728,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-05-16 14:54:34"
+            "time": "2014-05-17 20:50:45"
         },
         {
             "name": "twig/extensions",
@@ -7325,12 +7325,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Mink.git",
-                "reference": "a61d282f41595d3386516077e25864265e5094e8"
+                "reference": "8d8b852e6cecb4031e503d9ab46cb9b643f0131e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Mink/zipball/a61d282f41595d3386516077e25864265e5094e8",
-                "reference": "a61d282f41595d3386516077e25864265e5094e8",
+                "url": "https://api.github.com/repos/Behat/Mink/zipball/8d8b852e6cecb4031e503d9ab46cb9b643f0131e",
+                "reference": "8d8b852e6cecb4031e503d9ab46cb9b643f0131e",
                 "shasum": ""
             },
             "require": {
@@ -7372,7 +7372,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2014-05-11 20:21:56"
+            "time": "2014-05-18 23:03:47"
         },
         {
             "name": "behat/mink-browserkit-driver",
@@ -7380,12 +7380,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/MinkBrowserKitDriver.git",
-                "reference": "ee49460b648a5a0a90a1d84af3f5bbbcb0205616"
+                "reference": "952335460728599f1257424e8009208626e97439"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/MinkBrowserKitDriver/zipball/ee49460b648a5a0a90a1d84af3f5bbbcb0205616",
-                "reference": "ee49460b648a5a0a90a1d84af3f5bbbcb0205616",
+                "url": "https://api.github.com/repos/Behat/MinkBrowserKitDriver/zipball/952335460728599f1257424e8009208626e97439",
+                "reference": "952335460728599f1257424e8009208626e97439",
                 "shasum": ""
             },
             "require": {
@@ -7427,7 +7427,7 @@
                 "browser",
                 "testing"
             ],
-            "time": "2014-05-15 15:02:45"
+            "time": "2014-05-17 14:21:57"
         },
         {
             "name": "behat/mink-extension",
@@ -7538,12 +7538,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/MinkSelenium2Driver.git",
-                "reference": "18537998d59e0fa915cca75720fafe452e79b719"
+                "reference": "93397d919c18aced53ec694aae89fc033a9225e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/MinkSelenium2Driver/zipball/18537998d59e0fa915cca75720fafe452e79b719",
-                "reference": "18537998d59e0fa915cca75720fafe452e79b719",
+                "url": "https://api.github.com/repos/Behat/MinkSelenium2Driver/zipball/93397d919c18aced53ec694aae89fc033a9225e8",
+                "reference": "93397d919c18aced53ec694aae89fc033a9225e8",
                 "shasum": ""
             },
             "require": {
@@ -7588,7 +7588,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2014-05-12 14:42:42"
+            "time": "2014-05-18 20:38:49"
         },
         {
             "name": "fabpot/goutte",
@@ -8445,6 +8445,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "symfony/symfony": 20,
         "doctrine/doctrine-migrations-bundle": 20,
         "doctrine/migrations": 20,
         "doctrine/data-fixtures": 20,
