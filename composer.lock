@@ -4588,12 +4588,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/AdminBundle.git",
-                "reference": "a081ba1d67832ddd12d7e6ee3462d93e60bd2b20"
+                "reference": "1fead90431063e6528c7a5b5524a2824e1b8fc4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/a081ba1d67832ddd12d7e6ee3462d93e60bd2b20",
-                "reference": "a081ba1d67832ddd12d7e6ee3462d93e60bd2b20",
+                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/1fead90431063e6528c7a5b5524a2824e1b8fc4a",
+                "reference": "1fead90431063e6528c7a5b5524a2824e1b8fc4a",
                 "shasum": ""
             },
             "require": {
@@ -4634,7 +4634,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-05-20 08:28:41"
+            "time": "2014-05-20 10:29:45"
         },
         {
             "name": "rz/block-bundle",
@@ -5143,12 +5143,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/PageBundle.git",
-                "reference": "808dced1aa6748c1401dd12b1d67873edb7e885c"
+                "reference": "ee41e0d9a0993ce255c3d96fd4f7d12e8562853a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/808dced1aa6748c1401dd12b1d67873edb7e885c",
-                "reference": "808dced1aa6748c1401dd12b1d67873edb7e885c",
+                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/ee41e0d9a0993ce255c3d96fd4f7d12e8562853a",
+                "reference": "ee41e0d9a0993ce255c3d96fd4f7d12e8562853a",
                 "shasum": ""
             },
             "require": {
@@ -5185,7 +5185,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-05-20 08:31:09"
+            "time": "2014-05-20 10:30:28"
         },
         {
             "name": "rz/seo-bundle",
@@ -6891,12 +6891,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git",
-                "reference": "35c8e2124ffa62b14f09dd357c78ade58ac444bc"
+                "reference": "8bac169e9839bb685a4b912f426600b3d7401ec3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/35c8e2124ffa62b14f09dd357c78ade58ac444bc",
-                "reference": "35c8e2124ffa62b14f09dd357c78ade58ac444bc",
+                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/8bac169e9839bb685a4b912f426600b3d7401ec3",
+                "reference": "8bac169e9839bb685a4b912f426600b3d7401ec3",
                 "shasum": ""
             },
             "require": {
@@ -6936,7 +6936,7 @@
                 "page",
                 "paging"
             ],
-            "time": "2014-01-30 11:03:51"
+            "time": "2014-05-20 10:23:37"
         },
         {
             "name": "willdurand/faker-bundle",
