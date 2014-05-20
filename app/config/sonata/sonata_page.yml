@@ -48,22 +48,22 @@ sonata_page:
     page_defaults:
         homepage: {decorate: false, enabled: true}
 
-    assets:
-        stylesheets:
-            # Defaults:
-            - assetic/sonata_front_css.css
-            - assetic/sonata_front_font_css.css
-            - assetic/sonata_front_edit_css.css
-            - assetic/sonata_front_edit2_css.css
-            - assetic/sonata_front_theme_css.css
-            - assetic/sonata_front_theme2_css.css
-            - assetic/sonata_front_theme_override_css.css
-
-        javascripts:
-            # Defaults:
-            - assetic/sonata_front_js.js
-            - assetic/sonata_front_edit_js.js
-            - assetic/sonata_front_theme_js.js
+#    assets:
+#        stylesheets:
+#            # Defaults:
+#            - assetic/sonata_front_css.css
+#            - assetic/sonata_front_font_css.css
+#            - assetic/sonata_front_edit_css.css
+#            - assetic/sonata_front_edit2_css.css
+#            - assetic/sonata_front_theme_css.css
+#            - assetic/sonata_front_theme2_css.css
+#            - assetic/sonata_front_theme_override_css.css
+#
+#        javascripts:
+#            # Defaults:
+#            - assetic/sonata_front_js.js
+#            - assetic/sonata_front_edit_js.js
+#            - assetic/sonata_front_theme_js.js
 
     caches:
          esi:

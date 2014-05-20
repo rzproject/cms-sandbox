@@ -12,7 +12,8 @@
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_theme2_css.css') }}"/>
 
     {% stylesheets
-        'assetic/sonata_front_font_css.css'
+        'bundles/rzpage/theme/rzcms/css/font-awesome.min.css'
+        'bundles/rzpage/theme/rzcms/css/fontello.css'
         'bundles/rzpage/theme/rzcms/css/style.css'
         'bundles/rzpage/theme/rzcms/css/settings.css'
         filter='?yui_css'
@@ -21,11 +22,12 @@
     {% endstylesheets %}
     {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
         {% stylesheets
-        'assetic/sonata_front_edit2_css.css'
-        'bundles/rzmedia/css/block/rzmedia-bxslider.css'
-        'bundles/rzmedia/css/block/rzmedia-featured-gallery.css'
-        'bundles/rznews/css/featured_post_block.css'
-        filter='?yui_css'
+            'bundles/rmzamorajquery/jquery-plugins/bxslider/jquery.bxslider.css'
+            'bundles/sonatamedia/blocks/feature_media/theme.css'
+            'bundles/rzmedia/css/block/rzmedia-bxslider.css'
+            'bundles/rzmedia/css/block/rzmedia-featured-gallery.css'
+            'bundles/rznews/css/featured_post_block.css'
+            filter='?yui_css'
         %}
         <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
         {% endstylesheets %}
@@ -48,7 +50,19 @@
     <link rel="stylesheet" href="{{  asset('bundles/rzpage/theme/rzcms/css/fontello-ie7.css')}}">
     <![endif]-->
     {% javascripts
-    '@sonata_front_theme_js'
+    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/bxslider/jquery.bxslider.js'
+    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/imgLiquid/js/imgLiquid.js'
+    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/eqheight/jquery.eqheight.js'
+    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/masonry/masonry.min.js'
+    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/imagesloaded/imagesloaded.min.js'
+    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/fitvids/jquery.fitvids.js'
+    '@RzMediaBundle/Resources/public/js/block/rzmedia-bxslider.js'
+    '@RzMediaBundle/Resources/public/js/block/rzmedia-featured-gallery.js'
+    '@RzPageBundle/Resources/public/theme/rzcms/js/jquery.themepunch.revolution.min.js'
+    '@RzPageBundle/Resources/public/theme/rzcms/js/jquery.themepunch.plugins.min.js'
+    '@RzPageBundle/Resources/public/theme/rzcms/js/dzsportfolio.js'
+    '@RzPageBundle/Resources/public/theme/rzcms/js/scroller.js'
+    '@RzPageBundle/Resources/public/theme/rzcms/js/prettyphoto.js'
     '@RzPageBundle/Resources/public/theme/rzcms/js/scripts.js'
     filter='?closure'
     %}
@@ -117,12 +131,6 @@
                                         <a href="{{ path(url) }}">Gallery</a>
                                     </li>
                                 {% endif %}
-                                {% set url = rz_render_page_url('syncflex_sms_applicant') %}
-                                {% if  url %}
-                                    <li class="has-submenu-no">
-                                        <a href="{{ path(url) }}">Apply</a>
-                                    </li>
-                                {% endif %}
                                 {% if (app.user is not null and app.security and app.security.token and app.security.isGranted('IS_AUTHENTICATED_FULLY')) %}
                                 <li class="has-submenu">
                                     {% set url = rz_render_page_url('sonata_user_profile_show') %}
@@ -138,6 +146,12 @@
                                     {% if  url %}
                                     <li class="has-submenu-no">
                                         <a href="{{ path(url) }}">Login</a>
+                                    </li>
+                                    {% endif %}
+                                    {% set url = rz_render_page_url('fos_user_registration_register') %}
+                                    {% if  url %}
+                                    <li class="has-submenu-no">
+                                        <a href="{{ path(url) }}">Register</a>
                                     </li>
                                     {% endif %}
                                 {% endif %}
@@ -181,14 +195,6 @@
                                     <a href="{{ path(url) }}">Gallery</a>
                                 </li>
                                 {% endif %}
-
-                                {% set url = rz_render_page_url('syncflex_sms_applicant') %}
-                                {% if  url %}
-                                    <li class="has-submenu-no">
-                                        <a href="{{ path(url) }}">Apply</a>
-                                    </li>
-                                {% endif %}
-
                                 {% if (app.user is not null and app.security and app.security.token and app.security.isGranted('IS_AUTHENTICATED_FULLY')) %}
                                     {% set url = rz_render_page_url('sonata_user_profile_show') %}
                                     {% if  url %}
@@ -201,6 +207,10 @@
                                     <li class="has-submenu-no">
                                         <a href="{{ path(rz_render_page_url('fos_user_security_login')) }}">Login</a>
                                     </li>
+                                    <li class="has-submenu-no">
+                                        <a href="{{ path(rz_render_page_url('fos_user_registration_register')) }}">Register</a>
+                                    </li>
+
                                 {% endif %}
                             </ul>
                         </nav>
@@ -226,7 +236,11 @@
                         {% if content|length > 0 %}
                             {{ content|raw }}
                         {% elseif page is defined %}
-                            {{ sonata_page_render_container('content', page) }}
+                            {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.token and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
+                                {{ sonata_page_render_container('content',page,{ 'use_cache': false})}}
+                            {% else %}
+                                {{ sonata_page_render_container('content', page,{ 'use_cache': true}) }}
+                            {% endif %}
                         {% endif %}
                     {% endif %}
                     </div>
@@ -237,33 +251,49 @@
     {% endblock rzcms_body %}
 
     {% block rzcms_footer %}
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="span12 center">
-                    <img src="{{  asset('bundles/rzpage/theme/rzcms/img/diamond.png')}}" alt="" />
-                    <div class="copyright">
-                        <p>
-                            <a href="#"><i class="icon icon-facebook marg-right5"></i></a>
-                            <a href="#"><i class="icon icon-twitter marg-right5"></i></a>
-                            <a href="#"><i class="icon icon-pinterest marg-right5"></i></a>
-                            <a href="#"><i class="icon icon-github marg-right5"></i></a>
-                            <a href="#"><i class="icon icon-google-plus"></i></a>
-                        </p>
-                        <p>
-                            {{ sonata_page_render_container('footer', 'global') }}
-                        </p>
-                    </div>
-                    <div class="go-top">
-                        <span class="dark-grey"><i class="icon icon-align-justify marg-right5"></i></span>
-                        <a href="#"><i class="icon icon-chevron-sign-up"></i></a>
-                        <span class="dark-grey"><i class="icon icon-align-justify marg-left5"></i></span>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="span12 center">
+                        <img src="{{  asset('bundles/rzpage/theme/rzcms/img/diamond.png')}}" alt="" />
+                        <div class="copyright" style="text-align: center !important;">
+                            {#{% if page is defined and not page.isHybrid %}#}
+                             {#<p>#}
+                                {#{{ sonata_block_render({ 'type': 'rz.seo.block.facebook.share_button', 'settings': {'default_url':url(rz_render_page_url(page.name), {}, true), 'default_title':rz_seo_title(), 'layout':'footer' } }) }}#}
+                                {#{{ sonata_block_render({ 'type': 'rz.seo.block.twitter.share_button', 'settings': {'default_url':url(rz_render_page_url(page.name), {}, true), 'default_title':rz_seo_title(), 'layout':'footer' } }) }}#}
+                                {#{{ sonata_block_render({ 'type': 'rz.seo.block.pinterest.share_button', 'settings': {'default_url':url(rz_render_page_url(page.name), {}, true), 'default_title':rz_seo_title(), 'layout':'footer', 'is_video':false, 'default_media_url':app.request.scheme ~'://' ~ app.request.httpHost ~ asset('bundles/rzpage/theme/rzcms/img/sandbox-logo.png') } }) }}#}
+                                {#{{ sonata_block_render({ 'type': 'rz.seo.block.google.share_button', 'settings': {'default_url':url(rz_render_page_url(page.name), {}, true), 'layout':'footer' } }) }}#}
+                             {#</p>#}
+                            {#{% else %}#}
+                            {#{% sonata_template_box 'Override the Block' 'RzPageBundle' %}#}
+                            <p class="a2a_kit">
+                                <a class="a2a_button_facebook"><i class="icon icon-facebook marg-right5"></i></a>
+                                <a class="a2a_button_twitter"><i class="icon icon-twitter marg-right5"></i></a>
+                                <a class="a2a_button_pinterest"><i class="icon icon-pinterest marg-right5"></i></a>
+                                <a class="a2a_button_google_plus"><i class="icon icon-google-plus"></i></a>
+                                <a class="a2a_button_email"><i class="icon icon-envelope marg-right5"></i></a>
+                            </p>
+                            {#{% endif %}#}
+                            {% if page is defined %}
+                            <p>
+                                {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.token and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
+                                    {{ sonata_page_render_container('footer',page,{ 'use_cache': false})}}
+                                {% else %}
+                                    {{ sonata_page_render_container('footer', page,{ 'use_cache': true}) }}
+                                {% endif %}
+                            </p>
+                            {% endif %}
+                        </div>
+                        <div class="go-top">
+                            <span class="dark-grey"><i class="icon icon-align-justify marg-right5"></i></span>
+                            <a href="#"><i class="icon icon-chevron-sign-up"></i></a>
+                            <span class="dark-grey"><i class="icon icon-align-justify marg-left5"></i></span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- // END FOOTER -->
+        </footer>
+        <!-- // END FOOTER -->
     {% endblock rzcms_footer %}
 {% endblock %}
