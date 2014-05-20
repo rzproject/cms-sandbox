@@ -10,11 +10,33 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
     <![endif]-->
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_theme2_css.css') }}"/>
-    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_font_css.css') }}"/>
+
+    {% stylesheets
+        'assetic/sonata_front_font_css.css'
+        'bundles/rzpage/theme/rzcms/css/style.css'
+        'bundles/rzpage/theme/rzcms/css/settings.css'
+        filter='?yui_css'
+    %}
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
+    {% endstylesheets %}
     {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
-    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_edit2_css.css') }}"/>
+        {% stylesheets
+        'assetic/sonata_front_edit2_css.css'
+        'bundles/rzmedia/css/block/rzmedia-bxslider.css'
+        'bundles/rzmedia/css/block/rzmedia-featured-gallery.css'
+        'bundles/rznews/css/featured_post_block.css'
+        filter='?yui_css'
+        %}
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
+        {% endstylesheets %}
     {%  endif %}
-    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_theme_override_css.css') }}"/>
+    {% stylesheets
+        'bundles/rzpage/theme/rzcms/css/style-override.css'
+        'bundles/rzpage/theme/rzcms/css/theme-override.css'
+        filter='?yui_css'
+    %}
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
+    {% endstylesheets %}
 {% endblock %}
 
 {% block rz_page_theme_javascripts %}
@@ -25,7 +47,13 @@
     <link rel="stylesheet" href="{{  asset('bundles/rzpage/theme/rzcms/css/font-awesome-ie7.min.css')}}">
     <link rel="stylesheet" href="{{  asset('bundles/rzpage/theme/rzcms/css/fontello-ie7.css')}}">
     <![endif]-->
-    <script type="text/javascript" src="{{ asset('assetic/sonata_front_theme_js.js') }}" ></script>
+    {% javascripts
+    '@sonata_front_theme_js'
+    '@RzPageBundle/Resources/public/theme/rzcms/js/scripts.js'
+    filter='?closure'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
     <!-- fade in settings -->
     <script>
         //<![CDATA[

@@ -9,8 +9,14 @@
             {{ sonata_seo_metadatas() }}
 
             {% block sonata_page_stylesheets %}
+                {% stylesheets
+                    'assetic/sonata_front_css.css'
+                    'bundles/rzpage/sonata/css/default.css'
+                    filter='?yui_css'
+                %}
+                <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
+                {% endstylesheets %}
                 <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_css.css') }}"/>
-
                 {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
                 <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_edit_css.css') }}"/>
                 {% endif %}
@@ -18,7 +24,18 @@
                 {% block rz_page_theme_stylesheets %}{% endblock %}
 
                 {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
-                <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_theme_css.css') }}"/>
+                {% stylesheets
+                    'assetic/sonata_front_theme_css.css'
+                    'bundles/rzadmin/css/style.css'
+                    'bundles/rzadmin/css/rz-style.css'
+                    'bundles/rzadmin/css/themes.css'
+                    'bundles/rzadmin/css/rz-theme.css'
+                    'bundles/rzpage/rzcms/css/rzcms-sidebar.css'
+                    'bundles/rzpage/rzcms/css/rzcms-blocks.css'
+                    filter='?yui_css'
+                %}
+                <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
+                {% endstylesheets %}
                 {% endif %}
             {% endblock %}
 
@@ -29,9 +46,21 @@
                 <![endif]-->
                 <script type="text/javascript" src="{{ asset('assetic/sonata_front_js.js') }}" ></script>
                 {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
-                <script type="text/javascript" src="{{ asset('assetic/sonata_front_edit_js.js') }}" ></script>
+                {% javascripts
+                    '@sonata_front_edit_js'
+                    '@RzAdminBundle/Resources/public/js/rzadmin-base.js'
+                    '@RzFieldTypeBundle/Resources/public/js/rzadmin-fieldtype.js'
+                    '@RzDoctrineORMAdminBundle/Resources/public/js/rzadmin-many-assoc.js'
+                    '@RzDoctrineORMAdminBundle/Resources/public/js/rzadmin-one-assoc.js'
+                    '@RzPageBundle/Resources/public/rzcms/js/custom.js'
+                    '@RzPageBundle/Resources/public/rzcms/js/page.js'
+                    filter='?closure'
+                %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>
+                {% endjavascripts %}
                 <script type="text/javascript" src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
                 {% endif %}
+
                 {% block rz_page_theme_javascripts %}{% endblock %}
             {% endblock %}
         </head>

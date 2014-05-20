@@ -2,7 +2,7 @@
 assetic:
     debug:          %kernel.debug% #false
     use_controller: false
-    java: "/usr/bin/java"
+    java:           "/usr/bin/java"
     read_from:      %kernel.root_dir%/../web
     write_to:       %kernel.root_dir%/../web
     #bundles:        [] # disable bundles parsing
@@ -47,12 +47,13 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/imagesloaded/imagesloaded.min.js
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/select2/select2.js
                 - %kernel.root_dir%/../web/bundles/rzadmin/js/lib/sprintf.js
-                - %kernel.root_dir%/../web/bundles/rzadmin/js/rzadmin-base.js
-                - %kernel.root_dir%/../web/bundles/rzfieldtype/js/rzadmin-fieldtype.js
-                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-many-assoc.js
-                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-one-assoc.js
+#                - %kernel.root_dir%/../web/bundles/rzadmin/js/rzadmin-base.js
+#                - %kernel.root_dir%/../web/bundles/rzfieldtype/js/rzadmin-fieldtype.js
+#                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-many-assoc.js
+#                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-one-assoc.js
             filters:
                 - closure
+
 
         sonata_admin_css:
             inputs:
@@ -76,10 +77,10 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/futurico/futurico.css
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/select2/select2.css
                 - %kernel.root_dir%/../web/bundles/rzadmin/css/font.css
-                - %kernel.root_dir%/../web/bundles/rzadmin/css/style.css
-                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-style.css
-                - %kernel.root_dir%/../web/bundles/rzadmin/css/themes.css
-                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-theme.css
+#                - %kernel.root_dir%/../web/bundles/rzadmin/css/style.css
+#                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-style.css
+#                - %kernel.root_dir%/../web/bundles/rzadmin/css/themes.css
+#                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-theme.css
             filters:
                 - cssrewrite
                 - yui_css
@@ -130,12 +131,12 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/rzadmin/js/rz/blockui.js
                 - %kernel.root_dir%/../web/bundles/rzadmin/js/rz/gritter.js
                 - %kernel.root_dir%/../web/bundles/rzadmin/js/lib/sprintf.js
-                - %kernel.root_dir%/../web/bundles/rzadmin/js/rzadmin-base.js
-                - %kernel.root_dir%/../web/bundles/rzfieldtype/js/rzadmin-fieldtype.js
-                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-many-assoc.js
-                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-one-assoc.js
-                - %kernel.root_dir%/../web/bundles/rzpage/rzcms/js/custom.js
-                - %kernel.root_dir%/../web/bundles/rzpage/rzcms/js/page.js
+#                - %kernel.root_dir%/../web/bundles/rzadmin/js/rzadmin-base.js
+#                - %kernel.root_dir%/../web/bundles/rzfieldtype/js/rzadmin-fieldtype.js
+#                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-many-assoc.js
+#                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-one-assoc.js
+#                - %kernel.root_dir%/../web/bundles/rzpage/rzcms/js/custom.js
+#                - %kernel.root_dir%/../web/bundles/rzpage/rzcms/js/page.js
             filters:
                 - closure
 
@@ -154,7 +155,7 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/js/dzsportfolio.js
                 - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/js/scroller.js
                 - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/js/prettyphoto.js
-                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/js/scripts.js
+#                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/js/scripts.js
 
             filters:
                 - closure
@@ -163,7 +164,7 @@ assetic:
             inputs:
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/css/bootstrap.min.css
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/css/bootstrap-responsive.min.css
-                - %kernel.root_dir%/../web/bundles/rzpage/sonata/css/default.css
+#                - %kernel.root_dir%/../web/bundles/rzpage/sonata/css/default.css
             filters:
                 - cssrewrite
                 - yui_css
@@ -199,9 +200,10 @@ assetic:
         sonata_front_edit2_css:
             inputs:
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/bxslider/jquery.bxslider.css
-                - %kernel.root_dir%/../web/bundles/rzmedia/css/block/rzmedia-bxslider.css
-                - %kernel.root_dir%/../web/bundles/rzmedia/css/block/rzmedia-featured-gallery.css
-                - %kernel.root_dir%/../web/bundles/rznews/css/featured_post_block.css
+                - %kernel.root_dir%/../web/bundles/sonatamedia/blocks/feature_media/theme.css
+#                - %kernel.root_dir%/../web/bundles/rzmedia/css/block/rzmedia-bxslider.css
+#                - %kernel.root_dir%/../web/bundles/rzmedia/css/block/rzmedia-featured-gallery.css
+#                - %kernel.root_dir%/../web/bundles/rznews/css/featured_post_block.css
             filters:
                 - cssrewrite
                 - yui_css
@@ -215,23 +217,23 @@ assetic:
 
         sonata_front_theme_css:
             inputs:
-                - %kernel.root_dir%/../web/bundles/rzadmin/css/style.css
-                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-style.css
-                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-theme.css
                 - %kernel.root_dir%/../web/bundles/rzadmin/css/font.css
-                - %kernel.root_dir%/../web/bundles/rzpage/rzcms/css/rzcms-sidebar.css
-                - %kernel.root_dir%/../web/bundles/rzpage/rzcms/css/rzcms-blocks.css
+#                - %kernel.root_dir%/../web/bundles/rzadmin/css/style.css
+#                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-style.css
+#                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-theme.css
+#                - %kernel.root_dir%/../web/bundles/rzpage/rzcms/css/rzcms-sidebar.css
+#                - %kernel.root_dir%/../web/bundles/rzpage/rzcms/css/rzcms-blocks.css
             filters:
                 - cssrewrite
                 - yui_css
 
         sonata_front_theme2_css:
             inputs:
-                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/style.css
-                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/settings.css
                 - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/icon-effect.css
                 - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/prettyphoto.css
                 - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/dzsportfolio.css
+#                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/style.css
+#                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/settings.css
             filters:
                 - cssrewrite
                 - yui_css
