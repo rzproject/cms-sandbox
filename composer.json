@@ -12,7 +12,7 @@
         "twig/twig": "~1.12",
         "twig/extensions": "~1.0",
 
-        "symfony/symfony": "dev-master#b2855a55dd0428a22f799a4298a57599e209cfd4",
+        "symfony/symfony": "~2.4",
         "symfony/assetic-bundle": "~2.4",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
