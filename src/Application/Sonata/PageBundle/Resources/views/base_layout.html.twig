@@ -34,23 +34,18 @@
                         'bundles/rmzamorajquery/jquery-plugins/foo-table/css/footable.sortable.min.css'
                         'bundles/rmzamorajquery/jquery-plugins/multi-select/css/multiselect.css'
                         'bundles/rmzamorajquery/jquery-plugins/qtip2/css/qtip.css'
-                        'bundles/rmzamorajquery/jquery-plugins/icheck/skins/minimal/_all.css'
-                        'bundles/rmzamorajquery/jquery-plugins/icheck/skins/square/_all.css'
-                        'bundles/rmzamorajquery/jquery-plugins/icheck/skins/flat/_all.css'
-                        'bundles/rmzamorajquery/jquery-plugins/icheck/skins/line/_all.css'
-                        'bundles/rmzamorajquery/jquery-plugins/icheck/skins/polaris/polaris.css'
-                        'bundles/rmzamorajquery/jquery-plugins/icheck/skins/futurico/futurico.css'
                         'bundles/rmzamorajquery/jquery-plugins/select2/select2.css'
                         filter='?yui_css'
                     %}
                     <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
                     {% endstylesheets %}
                 {% endif %}
+                <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rzadmin/css/font.css') }}" />
+                <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rmzamorajquery/jquery-plugins/icheck/skins/all.css') }}" />
 
                 {% block rz_page_theme_stylesheets %}{% endblock %}
                 {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
                     {% stylesheets
-                        'bundles/rzadmin/css/font.css'
                         'bundles/rzadmin/css/style.css'
                         'bundles/rzadmin/css/rz-style.css'
                         'bundles/rzadmin/css/themes.css'
@@ -111,7 +106,6 @@
                     '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/chosen/chosen.jquery.min.js'
                     '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/uniform/uniform.js'
                     '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/hovercontent/js/contenthover.min.js'
-                    '@RzCkeditorBundle/Resources/public/ckeditor.js'
                     '@RzAdminBundle/Resources/public/js/rz/blockui.js'
                     '@RzAdminBundle/Resources/public/js/rz/gritter.js'
                     '@RzAdminBundle/Resources/public/js/lib/sprintf.js'
@@ -125,6 +119,7 @@
                 %}
                 <script type="text/javascript" src="{{ asset_url }}"></script>
                 {% endjavascripts %}
+                <script src="{{ asset('bundles/rzckeditor/ckeditor.js') }}" type="text/javascript"></script>
                 <script type="text/javascript" src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
                 {% endif %}
 

@@ -82,6 +82,7 @@ class AppKernel extends Kernel
             new FOS\CommentBundle\FOSCommentBundle(),
             new Sonata\CommentBundle\SonataCommentBundle(),
             new Application\Sonata\CommentBundle\ApplicationSonataCommentBundle(),
+            new Sonata\DatagridBundle\SonataDatagridBundle(),
 
             // Enable this if you want to audit backend action
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
