@@ -50,13 +50,13 @@ sonata_admin:
                 items:
                    - sonata.user.admin.user
                    - sonata.user.admin.group
-    assets:
-        stylesheets:
-            # The sandbox includes default pre-optimized version of some css and js
-            # So you can either use them, and add your custom assets here
-            #   ~ or ~
-            # tweak the assetic.yml and the following lines
-            - assetic/sonata_admin_css.css
-
-        javascripts:
-            - assetic/sonata_admin_js.js
+#    assets:
+#        stylesheets:
+#            # The sandbox includes default pre-optimized version of some css and js
+#            # So you can either use them, and add your custom assets here
+#            #   ~ or ~
+#            # tweak the assetic.yml and the following lines
+#            - assetic/sonata_admin_css.css
+#
+#        javascripts:
+#            - assetic/sonata_admin_js.js

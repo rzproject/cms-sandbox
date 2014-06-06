@@ -1,7 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-    - { resource: assetic.yml }
+#    - { resource: assetic.yml }
     - { resource: fos/fos_user.yml }
     - { resource: fos/fos_rest.yml }
     - { resource: fos/fos_js.yml }
@@ -75,7 +75,7 @@ twig:
     strict_variables: %kernel.debug%
     form:
         resources:
-            - 'SonataAdminBundle:Form:silex_form_div_layout.html.twig'
+            #- 'SonataAdminBundle:Form:silex_form_div_layout.html.twig'
             - 'SonataFormatterBundle:Form:formatter.html.twig'
 
     base_template_class: Sonata\CacheBundle\Twig\TwigTemplate13
@@ -134,6 +134,13 @@ swiftmailer:
 
 jms_security_extra:
     secure_all_services: false
+
+jms_serializer:
+    metadata:
+        directories:
+            - { path: %kernel.root_dir%/../vendor/sonata-project/user-bundle/Resources/config/serializer/FOSUserBundle, namespace_prefix: 'FOS\UserBundle' }
+#            - { path: %kernel.root_dir%/../vendor/sonata-project/ecommerce/src/BasketBundle/Resources/config/serializer/Component, namespace_prefix: 'Sonata\Component\Basket' }
+            - { path: %kernel.root_dir%/../vendor/sonata-project/datagrid-bundle/Resources/config/serializer, namespace_prefix: 'Sonata\DatagridBundle' }
 
 nelmio_api_doc: ~
 

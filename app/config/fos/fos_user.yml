@@ -16,13 +16,13 @@ fos_user:
         user_manager: sonata.user.orm.user_manager
 
     registration:
-#        confirmation:
-#            enabled:    true
-#            from_email:
-#                address:        registration@rmzamora.com
-#                sender_name:    rzamora-sandbox Registration
-#            enabled:    true # change to true for required email confirmation
-#            template:   FOSUserBundle:Registration:email.txt.twig
+        confirmation:
+            enabled:    true
+            from_email:
+                address:        registration@rmzamora.com
+                sender_name:    rzamora-sandbox Registration
+            enabled:    true # change to true for required email confirmation
+            template:   FOSUserBundle:Registration:email.txt.twig
         form:
             type:               rz_o_auth_user_registration
             name:               rz_o_auth_registration_form
