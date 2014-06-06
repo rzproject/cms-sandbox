@@ -75,7 +75,7 @@ twig:
     strict_variables: %kernel.debug%
     form:
         resources:
-            - 'SonataAdminBundle:Form:silex_form_div_layout.html.twig'
+            #- 'SonataAdminBundle:Form:silex_form_div_layout.html.twig'
             - 'SonataFormatterBundle:Form:formatter.html.twig'
 
     base_template_class: Sonata\CacheBundle\Twig\TwigTemplate13
