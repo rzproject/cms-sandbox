@@ -2,3 +2,6 @@
 /logs/
 /*.php.cache
 /*.DS_Store
+/solr/
+/lucene/
+/admin/

@@ -44,6 +44,7 @@ sonata_page:
         rzcms_blog_post: { path: 'RzPageBundle:theme\rzcms:blog_post.html.twig', name: 'Blog Post' }
         rzcms_gallery: { path: 'RzPageBundle:theme\rzcms:gallery.html.twig', name: 'Gallery' }
         rzcms_user_profile: { path: 'RzPageBundle:theme\rzcms:profile.html.twig', name: 'User Profile' }
+        rzcms_full: { path: 'RzPageBundle:theme\rzcms:full.html.twig', name: 'Generic Page' }
 
     page_defaults:
         homepage: {decorate: false, enabled: true}

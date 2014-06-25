@@ -112,6 +112,8 @@ class AppKernel extends Kernel
             new Spy\TimelineBundle\SpyTimelineBundle(),
             new Sonata\TimelineBundle\SonataTimelineBundle(),
             new Application\Sonata\TimelineBundle\ApplicationSonataTimelineBundle(), // easy extends integration
+            new Ivory\LuceneSearchBundle\IvoryLuceneSearchBundle(),
+            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
 
             //RZ & RMZAMORA bundles
             new Rmzamora\SandboxInitDataBundle\RmzamoraSandboxInitDataBundle(),
@@ -127,6 +129,7 @@ class AppKernel extends Kernel
             new Rz\OAuthBundle\RzOAuthBundle(),
             new Rz\SeoBundle\RzSeoBundle(),
             new Rz\TimelineBundle\RzTimelineBundle(),
+            new Rz\SearchBundle\RzSearchBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

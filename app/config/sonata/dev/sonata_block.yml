@@ -68,6 +68,7 @@ sonata_block:
         rz.seo.block.twitter.share_button:
         rz.seo.block.pinterest.share_button:
         rz.seo.block.google.share_button:
+        rz.search.block.search:
 
     exception:
         default:

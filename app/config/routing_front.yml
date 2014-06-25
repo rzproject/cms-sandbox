@@ -86,3 +86,7 @@ fos_comment:
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+rz_seach:
+    resource: "@RzSearchBundle/Resources/config/routing/search.xml"
+    prefix: /search

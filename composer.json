@@ -81,8 +81,7 @@
         "rz/classification-bundle": "~1.0",
         "rz/seo-bundle": "~1.0",
         "rz/timeline-bundle": "~1.0",
-
-
+        "rz/search-bundle": "~1,0",
         "rz/oauth-bundle": "~1.0",
 
         "liip/imagine-bundle": "0.9.*@stable",
