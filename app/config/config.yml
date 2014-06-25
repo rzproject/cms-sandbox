@@ -42,7 +42,7 @@ imports:
 
     #  egeloen
     - { resource: egeloen/ckeditor.yml }
-    - { resource: egeloen/lucene.yml }
+    #- { resource: egeloen/lucene.yml }
 
 framework:
     trusted_proxies: ['127.0.0.1'] # a list of proxy IPs you trust

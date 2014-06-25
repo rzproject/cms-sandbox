@@ -26,6 +26,10 @@ sonata_block:
               cache: sonata.cache.mongo
         sonata.block.service.rss:
               cache: sonata.cache.mongo
+        sonata.block.service.template:
+              cache: sonata.cache.mongo
+        sonata.block.service.menu:
+              cache: sonata.cache.mongo
         sonata.media.block.media:
               cache: sonata.cache.mongo
         sonata.media.block.gallery:
@@ -69,6 +73,10 @@ sonata_block:
         rz.seo.block.pinterest.share_button:
         rz.seo.block.google.share_button:
         rz.search.block.search:
+
+    container:
+        types: [sonata.block.service.container, sonata.page.block.container]
+        templates:  { 'SonataPageBundle:Block:block_container.html.twig': 'SonataPageBundle default template', 'SonataSeoBundle:Block:block_social_container.html.twig': 'SonataSeoBundle (to contain social buttons)'}
 
     exception:
         default:

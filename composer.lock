@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bf2043edac16651d70bc153878c1ae5c",
+    "hash": "e10f2fcbedf8b878b3efebef8b7afa25",
     "packages": [
         {
             "name": "dflydev/markdown",
@@ -1049,12 +1049,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/egeloen/IvoryCKEditorBundle.git",
-                "reference": "1a6c3e477524e68d3dbf06ba6152cfd0654b78e4"
+                "reference": "399492caae814892ce696232a27236608eadab57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egeloen/IvoryCKEditorBundle/zipball/1a6c3e477524e68d3dbf06ba6152cfd0654b78e4",
-                "reference": "1a6c3e477524e68d3dbf06ba6152cfd0654b78e4",
+                "url": "https://api.github.com/repos/egeloen/IvoryCKEditorBundle/zipball/399492caae814892ce696232a27236608eadab57",
+                "reference": "399492caae814892ce696232a27236608eadab57",
                 "shasum": ""
             },
             "require": {
@@ -1074,7 +1074,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -1096,7 +1096,7 @@
             "keywords": [
                 "CKEditor"
             ],
-            "time": "2014-06-23 20:57:28"
+            "time": "2014-06-24 20:30:15"
         },
         {
             "name": "egeloen/json-builder",
@@ -1104,20 +1104,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/egeloen/ivory-json-builder.git",
-                "reference": "bcd21c287675d80f02c8945c13fa150bd77525f0"
+                "reference": "215f0d33f9821f9d73a6b0e6479efc6d483af63f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egeloen/ivory-json-builder/zipball/bcd21c287675d80f02c8945c13fa150bd77525f0",
-                "reference": "bcd21c287675d80f02c8945c13fa150bd77525f0",
+                "url": "https://api.github.com/repos/egeloen/ivory-json-builder/zipball/215f0d33f9821f9d73a6b0e6479efc6d483af63f",
+                "reference": "215f0d33f9821f9d73a6b0e6479efc6d483af63f",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
                 "php": ">=5.3.0",
                 "symfony/property-access": "~2.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "~3.7",
+                "phpunit/phpunit": "~4.0",
                 "satooshi/php-coveralls": "~0.6"
             },
             "type": "library",
@@ -1147,7 +1148,7 @@
                 "builder",
                 "json"
             ],
-            "time": "2014-06-20 22:07:56"
+            "time": "2014-06-24 22:34:11"
         },
         {
             "name": "friendsofsymfony/comment-bundle",
@@ -3004,12 +3005,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataAdminBundle.git",
-                "reference": "e1a8347be9ce4cd71d246c7ede017af792100778"
+                "reference": "f80f126dd6f46f44a4b1b4f26f72705821d41189"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/e1a8347be9ce4cd71d246c7ede017af792100778",
-                "reference": "e1a8347be9ce4cd71d246c7ede017af792100778",
+                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/f80f126dd6f46f44a4b1b4f26f72705821d41189",
+                "reference": "f80f126dd6f46f44a4b1b4f26f72705821d41189",
                 "shasum": ""
             },
             "require": {
@@ -3081,7 +3082,7 @@
                 "rmzamora fork",
                 "sonata"
             ],
-            "time": "2014-06-19 02:05:24"
+            "time": "2014-06-25 02:28:10"
         },
         {
             "name": "rmzamora/block-bundle",
@@ -3976,62 +3977,6 @@
                 "menu"
             ],
             "time": "2014-06-13 03:18:53"
-        },
-        {
-            "name": "rmzamora/lucene-search-bundle",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rmzamora/IvoryLuceneSearchBundle.git",
-                "reference": "d29da9468e8823ba48c8cf6e208b54cf69ad9efc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/IvoryLuceneSearchBundle/zipball/d29da9468e8823ba48c8cf6e208b54cf69ad9efc",
-                "reference": "d29da9468e8823ba48c8cf6e208b54cf69ad9efc",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "symfony/filesystem": "~2.4",
-                "symfony/framework-bundle": "~2.4",
-                "zendframework/zendsearch": "dev-master"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7",
-                "satooshi/php-coveralls": "~0.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ivory\\LuceneSearchBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Eric GELOEN",
-                    "email": "geloen.eric@gmail.com"
-                },
-                {
-                    "name": "Mell M. Zamora",
-                    "email": "me@mellzamora.com",
-                    "homepage": "http://mellzamora.com"
-                }
-            ],
-            "description": "Forked version of egeloen/lucene-search-bundle: Provides a zend lucene search integration for your Symfony2 Project.",
-            "keywords": [
-                "lucene search"
-            ],
-            "time": "2014-06-11 04:35:43"
         },
         {
             "name": "rmzamora/media-bundle",
@@ -5251,33 +5196,34 @@
         },
         {
             "name": "rz/search-bundle",
-            "version": "dev-master",
-            "target-dir": "Rz/SearchBundle",
+            "version": "1.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/SearchBundle.git",
-                "reference": "31ef2c5834869af6a4c7f5ddf4ae895638e228f9"
+                "reference": "2e435ad14875042111fe98789f6f904245da9f86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/SearchBundle/zipball/31ef2c5834869af6a4c7f5ddf4ae895638e228f9",
-                "reference": "31ef2c5834869af6a4c7f5ddf4ae895638e228f9",
+                "url": "https://api.github.com/repos/rzproject/SearchBundle/zipball/2e435ad14875042111fe98789f6f904245da9f86",
+                "reference": "2e435ad14875042111fe98789f6f904245da9f86",
                 "shasum": ""
             },
             "require": {
                 "solarium/solarium": "~3.0",
+                "symfony/filesystem": "~2.1",
                 "symfony/framework-bundle": "~2.4",
-                "white-october/pagerfanta-bundle": "~1.0"
+                "white-october/pagerfanta-bundle": "~1.0",
+                "zendframework/zendsearch": "dev-master"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3.x-dev"
+                    "dev-1.0": "1.0-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Rz\\SearchBundle": ""
+                "psr-4": {
+                    "Rz\\SearchBundle\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5297,7 +5243,7 @@
                 "RZProject",
                 "Symfony2"
             ],
-            "time": "2014-06-24 08:06:03"
+            "time": "2014-06-25 03:09:49"
         },
         {
             "name": "rz/seo-bundle",
@@ -8706,8 +8652,7 @@
         "liip/imagine-bundle": 0,
         "videlalvaro/php-amqplib": 20,
         "stephpy/timelinebundle": 20,
-        "stephpy/timeline": 20,
-        "rmzamora/lucene-search-bundle": 20
+        "stephpy/timeline": 20
     },
     "platform": {
         "php": ">=5.3.3"

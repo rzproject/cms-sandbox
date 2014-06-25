@@ -112,7 +112,6 @@ class AppKernel extends Kernel
             new Spy\TimelineBundle\SpyTimelineBundle(),
             new Sonata\TimelineBundle\SonataTimelineBundle(),
             new Application\Sonata\TimelineBundle\ApplicationSonataTimelineBundle(), // easy extends integration
-            new Ivory\LuceneSearchBundle\IvoryLuceneSearchBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
 
             //RZ & RMZAMORA bundles
