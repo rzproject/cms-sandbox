@@ -10,9 +10,10 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
     <![endif]-->
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assetic/sonata_front_theme2_css.css') }}"/>
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rzpage/theme/rzcms/css/font-awesome.min.css') }}"/>
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rmzamorajquery/jquery-plugins/bxslider/jquery.bxslider.css') }}"/>
 
     {% stylesheets
-        'bundles/rzpage/theme/rzcms/css/font-awesome.min.css'
         'bundles/rzpage/theme/rzcms/css/fontello.css'
         'bundles/rzpage/theme/rzcms/css/style.css'
         'bundles/rzpage/theme/rzcms/css/settings.css'
@@ -22,7 +23,6 @@
     {% endstylesheets %}
     {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
         {% stylesheets
-            'bundles/rmzamorajquery/jquery-plugins/bxslider/jquery.bxslider.css'
             'bundles/sonatamedia/blocks/feature_media/theme.css'
             'bundles/rzmedia/css/block/rzmedia-bxslider.css'
             'bundles/rzmedia/css/block/rzmedia-featured-gallery.css'

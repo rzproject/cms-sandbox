@@ -57,7 +57,7 @@ framework:
         strict_requirements: ~
     form:            true
     csrf_protection: true
-    validation:      { enable_annotations: true, api: 2.4 }
+    validation:      { enable_annotations: true }
     #templating:      { engines: ['twig'], assets_version_format: %%s?v=%%s, assets_version: demo-0.4.1 }
     templating:      { engines: ['twig'] }
     default_locale: %locale%
