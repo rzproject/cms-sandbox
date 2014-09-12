@@ -3334,12 +3334,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataCacheBundle.git",
-                "reference": "d9d85f141817a42aba59f411790fd967070c1cd5"
+                "reference": "cc44c0a6ab77e95a1a50dcf2bbf736e32e3b690a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataCacheBundle/zipball/d9d85f141817a42aba59f411790fd967070c1cd5",
-                "reference": "d9d85f141817a42aba59f411790fd967070c1cd5",
+                "url": "https://api.github.com/repos/rmzamora/SonataCacheBundle/zipball/cc44c0a6ab77e95a1a50dcf2bbf736e32e3b690a",
+                "reference": "cc44c0a6ab77e95a1a50dcf2bbf736e32e3b690a",
                 "shasum": ""
             },
             "require": {
@@ -3366,7 +3366,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2.x-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "autoload": {
@@ -3400,7 +3400,7 @@
                 "cache block",
                 "rmzamora fork"
             ],
-            "time": "2014-06-11 03:42:04"
+            "time": "2014-09-12 01:51:19"
         },
         {
             "name": "rmzamora/classification-bundle",
@@ -3408,12 +3408,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataClassificationBundle.git",
-                "reference": "3931f7024051fec9480d53f7141c42b3542ba38c"
+                "reference": "1a96ea642595ba7d5360b2aca620a7f032c7cce8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataClassificationBundle/zipball/3931f7024051fec9480d53f7141c42b3542ba38c",
-                "reference": "3931f7024051fec9480d53f7141c42b3542ba38c",
+                "url": "https://api.github.com/repos/rmzamora/SonataClassificationBundle/zipball/1a96ea642595ba7d5360b2aca620a7f032c7cce8",
+                "reference": "1a96ea642595ba7d5360b2aca620a7f032c7cce8",
                 "shasum": ""
             },
             "require": {
@@ -3469,7 +3469,7 @@
                 "tag",
                 "taxonomy"
             ],
-            "time": "2014-09-10 01:44:31"
+            "time": "2014-09-12 01:47:27"
         },
         {
             "name": "rmzamora/comment-bundle",
@@ -3679,12 +3679,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataFormatterBundle.git",
-                "reference": "7778078114b9978be7ad30eb9713bf948f1ca9bf"
+                "reference": "ab81561fc569b2db2cde077a1dd13434abfc5753"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataFormatterBundle/zipball/7778078114b9978be7ad30eb9713bf948f1ca9bf",
-                "reference": "7778078114b9978be7ad30eb9713bf948f1ca9bf",
+                "url": "https://api.github.com/repos/rmzamora/SonataFormatterBundle/zipball/ab81561fc569b2db2cde077a1dd13434abfc5753",
+                "reference": "ab81561fc569b2db2cde077a1dd13434abfc5753",
                 "shasum": ""
             },
             "require": {
@@ -3740,7 +3740,7 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2014-09-02 02:14:35"
+            "time": "2014-09-12 01:49:37"
         },
         {
             "name": "rmzamora/hwi-oauth-bundle",
@@ -4202,12 +4202,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataNotificationBundle.git",
-                "reference": "addff39ad6a7a87523b374a374944f882336ebef"
+                "reference": "693a71512f61d03304b7d18c8631520ff65f2b76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataNotificationBundle/zipball/addff39ad6a7a87523b374a374944f882336ebef",
-                "reference": "addff39ad6a7a87523b374a374944f882336ebef",
+                "url": "https://api.github.com/repos/rmzamora/SonataNotificationBundle/zipball/693a71512f61d03304b7d18c8631520ff65f2b76",
+                "reference": "693a71512f61d03304b7d18c8631520ff65f2b76",
                 "shasum": ""
             },
             "require": {
@@ -4271,7 +4271,7 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2014-08-13 00:47:05"
+            "time": "2014-09-12 01:50:39"
         },
         {
             "name": "rmzamora/page-bundle",
