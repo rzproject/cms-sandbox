@@ -58,7 +58,7 @@
         "rmzamora/seo-bundle": "~1.1",
         "rmzamora/comment-bundle": "~2.3",
 
-        "rmzamora/jquery-bundle": "~1.10.1",
+        "rmzamora/jquery-bundle": "~1.11",
         "rmzamora/bootstrap-bundle": "2.3.*@dev",
 
         "rmzamora/news-bundle": "~2.3",

@@ -49,56 +49,63 @@ rz_search:
     configs:
       # Identifier can by any word with no space replace space using . or _
       sonata.news.post:
-          label: Sonata News
-          model_class: Application\Sonata\NewsBundle\Entity\Post
-          model_manager: sonata.news.manager.post
-          route_generator: sonata.news.permalink.date
-          model_identifier: sonata.news.post
-          route: sonata_news_view
-          template:
-            result:
-              solr: RzSearchBundle:Search:news_solr_results.html.twig
-              #solr: ~
-              #lucene: RzSearchBundle:Search:news_lucene_results.html.twig
-              lucene: ~
-            search: { 'RzSearchBundle:Block:block_search.html.twig': 'RzSearchBundle default template'}
-          field_mapping:
-                title : title
-                description : abstract
-                content : content
-                tags : tags
-                comments : comments
-                author : author
-          field_map_settings:
-                title :
-                   fields : ~
-                   filter : ~
-                   type : text
-                description:
-                   fields : ~
-                   filter : ~
-                   type : text
-                content:
-                   fields : ~
-                   filter : ~
-                   type : unStored
-                tags:
-                  fields : name
-                  filter : ~
-                  type : text
-                comments:
-                  fields:
-                    - message
-                    - name
-                    - email
-                  filter:
-                    status:
-                      operand: =
-                      value: 1
-                  type : unStored
-                author:
-                  fields:
-                    - username
-                    - email
-                  filter: ~
-                  type : text
+                label: Sonata News
+                model_class: Application\Sonata\NewsBundle\Entity\Post
+                model_manager: sonata.news.manager.post
+                route_generator: sonata.news.permalink.date
+                model_identifier: sonata.news.post
+                route: sonata_news_view
+                template:
+                  result:
+                    solr: RzSearchBundle:Search:news_solr_results.html.twig
+                    #solr: ~
+                    #lucene: RzSearchBundle:Search:news_lucene_results.html.twig
+                    lucene: ~
+                  search: { 'RzSearchBundle:Block:block_search.html.twig': 'RzSearchBundle default template'}
+                # filter to trigger if the record will be indexed
+                # only supports 1 filter for now!
+                model_index_filter: ~
+                field_mapping:
+                      title : title
+                      description : abstract
+                      content : content
+                      tags : tags
+                      comments : comments
+                      author : author
+                field_map_settings:
+                      title :
+                         fields : ~
+                         separator: ~
+                         filter : ~
+                         type : text
+                      description:
+                         fields : ~
+                         filter : ~
+                         type : text
+                      content:
+                         fields : ~
+                         separator: ~
+                         filter : ~
+                         type : unStored
+                      tags:
+                        fields : name
+                        filter : ~
+                        type : text
+                      comments:
+                        fields:
+                          - message
+                          - name
+                          - email
+                        separator: " "
+                        filter:
+                          status:
+                            operand: =
+                            value: 1
+                        type : unStored
+                      author:
+                        fields:
+                          - username
+                          - email
+                        separator: " "
+                        filter: ~
+                        type : text
