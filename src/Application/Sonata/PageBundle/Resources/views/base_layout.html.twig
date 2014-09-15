@@ -27,7 +27,6 @@
                 'bundles/rmzamorabootstrap/plugins/timepicker/css/timepicker.css'
                 'bundles/rmzamorabootstrap/plugins/datetimepicker/css/datetimepicker.css'
                 'bundles/rmzamorabootstrap/plugins/fileupload/css/fileupload.css'
-                'bundles/rmzamorajquery/jquery-plugins/gritter/css/gritter.css'
                 'bundles/rmzamorajquery/jquery-plugins/breadcrumbs/css/breadcrumb.css'
                 'bundles/rmzamorajquery/jquery-plugins/uniform/themes/default/css/uniform.default.css'
                 'bundles/rmzamorajquery/jquery-plugins/foo-table/css/footable.min.css'
@@ -40,6 +39,7 @@
                 <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
                 {% endstylesheets %}
             {% endif %}
+            <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rmzamorajquery/jquery-plugins/gritter/css/gritter.css') }}" />
             <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rzadmin/css/font.css') }}" />
             <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rmzamorajquery/jquery-plugins/icheck/skins/all.css') }}" />
 
@@ -120,7 +120,7 @@
             %}
             <script type="text/javascript" src="{{ asset_url }}"></script>
             {% endjavascripts %}
-            <script src="{{ asset('bundles/rzckeditor/ckeditor.js') }}" type="text/javascript"></script>
+            {#<script src="{{ asset('bundles/rzckeditor/ckeditor.js') }}" type="text/javascript"></script>#}
             <script type="text/javascript" src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
             {% endif %}
 
@@ -142,7 +142,7 @@
                         jQuery(document).ready(function() {
                             Sonata.Page.init({
                                 debug: true,
-                                rmz_editor_config: {{ rz_ckeditor_config('inline_editor') | json_encode | raw }},
+                                {#rmz_editor_config: {{ rz_ckeditor_config('inline_editor') | json_encode | raw }},#}
                                 url: {
                                     block_save_position: '{{ path('admin_sonata_page_block_savePosition') }}',
                                     block_edit:          '{{ path('admin_sonata_page_block_edit', {'id': 'BLOCK_ID'}) }}',

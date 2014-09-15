@@ -1,3 +1,164 @@
 ivory_ck_editor:
-    base_path: "ckeditor"
-    js_path:   "ckeditor/ckeditor.js"
+    default_config: default
+    configs:
+        default:
+            toolbar:  "simple_toolbar"
+            allowedContent: true
+            enterMode: "CKEDITOR.ENTER_P"
+            filebrowserBrowseRoute: admin_sonata_media_media_browser
+            filebrowserImageBrowseRoute: admin_sonata_media_media_browser
+            # Display images by default when clicking the image dialog browse button
+            filebrowserImageBrowseRouteParameters:
+                provider: sonata.media.provider.image
+            filebrowserUploadRoute: admin_sonata_media_media_upload
+            filebrowserUploadRouteParameters:
+                provider: sonata.media.provider.file
+            # Upload file as image when sending a file from the image dialog
+            filebrowserImageUploadRoute: admin_sonata_media_media_upload
+            filebrowserImageUploadRouteParameters:
+                provider: sonata.media.provider.image
+                context: default # Optional, to upload in a custom context
+        news:
+            toolbar:  "simple_toolbar"
+            allowedContent: true
+            enterMode: "CKEDITOR.ENTER_P"
+            filebrowserBrowseRoute: admin_sonata_media_media_browser
+            filebrowserImageBrowseRoute: admin_sonata_media_media_browser
+            # Display images by default when clicking the image dialog browse button
+            filebrowserImageBrowseRouteParameters:
+                provider: sonata.media.provider.image
+            filebrowserUploadRoute: admin_sonata_media_media_upload
+            filebrowserUploadRouteParameters:
+                provider: sonata.media.provider.file
+            # Upload file as image when sending a file from the image dialog
+            filebrowserImageUploadRoute: admin_sonata_media_media_upload
+            filebrowserImageUploadRouteParameters:
+                provider: sonata.media.provider.image
+                context: news # Optional, to upload in a custom context
+
+        admin_full_editor:
+            toolbar:  "full_toolbar"
+            allowedContent: true
+            enterMode: "CKEDITOR.ENTER_P"
+            filebrowserBrowseRoute: admin_sonata_media_media_browser
+            filebrowserImageBrowseRoute: admin_sonata_media_media_browser
+            # Display images by default when clicking the image dialog browse button
+            filebrowserImageBrowseRouteParameters:
+                provider: sonata.media.provider.image
+            filebrowserUploadRoute: admin_sonata_media_media_upload
+            filebrowserUploadRouteParameters:
+                provider: sonata.media.provider.file
+            # Upload file as image when sending a file from the image dialog
+            filebrowserImageUploadRoute: admin_sonata_media_media_upload
+            filebrowserImageUploadRouteParameters:
+                provider: sonata.media.provider.image
+                context: default # Optional, to upload in a custom context
+
+        simple_editor:
+            toolbar:  "simple_toolbar"
+            allowedContent: true
+            filebrowserBrowseRoute: admin_sonata_media_media_browser
+            filebrowserImageBrowseRoute: admin_sonata_media_media_browser
+            # Display images by default when clicking the image dialog browse button
+            filebrowserImageBrowseRouteParameters:
+                provider: sonata.media.provider.image
+            filebrowserUploadRoute: admin_sonata_media_media_upload
+            filebrowserUploadRouteParameters:
+                provider: sonata.media.provider.file
+            # Upload file as image when sending a file from the image dialog
+            filebrowserImageUploadRoute: admin_sonata_media_media_upload
+            filebrowserImageUploadRouteParameters:
+                provider: sonata.media.provider.image
+                context: default # Optional, to upload in a custom context
+
+        minimal_editor:
+            toolbar:  "minimal_toolbar"
+            allowedContent: true
+            filebrowserBrowseRoute: admin_sonata_media_media_browser
+            filebrowserImageBrowseRoute: admin_sonata_media_media_browser
+            # Display images by default when clicking the image dialog browse button
+            filebrowserImageBrowseRouteParameters:
+                provider: sonata.media.provider.image
+            filebrowserUploadRoute: admin_sonata_media_media_upload
+            filebrowserUploadRouteParameters:
+                provider: sonata.media.provider.file
+            # Upload file as image when sending a file from the image dialog
+            filebrowserImageUploadRoute: admin_sonata_media_media_upload
+            filebrowserImageUploadRouteParameters:
+                provider: sonata.media.provider.image
+                context: default # Optional, to upload in a custom context
+
+        inline_editor:
+            toolbar:  "inline_toolbar"
+            allowedContent: true
+            removePlugins: "backup"
+            filebrowserBrowseRoute: admin_sonata_media_media_browser
+            filebrowserImageBrowseRoute: admin_sonata_media_media_browser
+            # Display images by default when clicking the image dialog browse button
+            filebrowserImageBrowseRouteParameters:
+                provider: sonata.media.provider.image
+            filebrowserUploadRoute: admin_sonata_media_media_upload
+            filebrowserUploadRouteParameters:
+                provider: sonata.media.provider.file
+            # Upload file as image when sending a file from the image dialog
+            filebrowserImageUploadRoute: admin_sonata_media_media_upload
+            filebrowserImageUploadRouteParameters:
+                provider: sonata.media.provider.image
+                context: default # Optional, to upload in a custom context
+
+        bbcode_editor:
+            toolbar:  "bbcode_toolbar"
+            extraPlugins: "bbcode,autogrow"
+            removePlugins: "bidi,dialogadvtab,div,filebrowser,flash,format,forms,horizontalrule,iframe,justify,liststyle,pagebreak,showborders,stylescombo,table,tabletools,templates"
+            filebrowserBrowseRoute: admin_sonata_media_media_browser
+            filebrowserImageBrowseRoute: admin_sonata_media_media_browser
+            # Display images by default when clicking the image dialog browse button
+            filebrowserImageBrowseRouteParameters:
+                provider: sonata.media.provider.image
+            filebrowserUploadRoute: admin_sonata_media_media_upload
+            filebrowserUploadRouteParameters:
+                provider: sonata.media.provider.file
+            # Upload file as image when sending a file from the image dialog
+            filebrowserImageUploadRoute: admin_sonata_media_media_upload
+            filebrowserImageUploadRouteParameters:
+                provider: sonata.media.provider.image
+                context: default # Optional, to upload in a custom context
+    toolbars:
+        configs:
+            full_toolbar  : [ "@full_document",  "@full_fstyles", "@full_basicstyles", "@colors", "@full_insert", "@full_pstyles", "@full_paragraph", "@full_paragraph_more",  "@full_clipboard" , "@full_editing",  ]
+            bbcode_toolbar: [ "@bbcode_document", "@bbcode_link" , "@bbcode_editing", "/", "@bbcode_basicstyles", "@bbcode_paragraph" ]
+            inline_toolbar:  [ "@inline_basicstyles", "@inline_insert", "@inline_link", "@inline_tool", "/", "@inline_styles", "@inline_clipboard"]
+            simple_toolbar:  [ "@simple_document", "@simple_styles", "@simple_basicstyles", "@simple_insert", @simple_clipboard ]
+            minimal_toolbar:  [ "@minimal_document", "@minimal_basicstyles", "@minimal_clipboard"]
+        items:
+            full_document    : [ "Source", "-","Maximize", "ShowBlocks", "-","Templates" ]
+            full_clipboard   : [ "Cut","Copy","Paste","PasteText","PasteFromWord","-","Undo","Redo" ]
+            full_basicstyles : [ "Bold","Italic","Underline","Strike","Subscript","Superscript","-","RemoveFormat" ]
+            full_paragraph   : [ "NumberedList","BulletedList","Outdent","Indent","-","Blockquote","CreateDiv"]
+            full_paragraph_more   : [ "JustifyLeft","JustifyCenter","JustifyRight","JustifyBlock","-","BidiLtr","BidiRtl" ]
+            full_insert      : [ "Image","Flash","Table","HorizontalRule","Smiley","SpecialChar","PageBreak" ]
+            full_forms       : [ "Form", "Checkbox", "Radio", "TextField", "Textarea", "Select", "Button", "ImageButton", "HiddenField" ]
+            full_editing     : [ "Find","Replace","-","SelectAll","-","SpellChecker", "Scayt" ]
+            full_pstyles      : [ "Styles","Format" ]
+            full_fstyles      : [ "Font","FontSize" ]
+            colors           : [ "TextColor","BGColor" ]
+            link             : [ "Link", "Unlink", "-", "Anchor" ]
+            inline_basicstyles: [ "Bold","Italic","Underline","Strike","Subscript","Superscript","-","RemoveFormat" ]
+            inline_insert    : [ "Image","Flash","Table","HorizontalRule","Smiley","SpecialChar","PageBreak" ]
+            inline_link      : [ "Link", "Unlink", "-", "Anchor" ]
+            inline_tool      : [ "ShowBlocks" ]
+            inline_styles    : [ "Styles","Format","Font","FontSize" ]
+            inline_clipboard : [ "Cut","Copy","Paste","PasteText","PasteFromWord","-","Undo","Redo" ]
+            bbcode_document  : [ "Source", "-", "Save", "NewPage", "-", "Undo", "Redo" ]
+            bbcode_link      : [ "Link", "Unlink", "Image" ]
+            bbcode_editing   : [ "Find", "Replace", "-", "SelectAll", "RemoveFormat" ]
+            bbcode_basicstyles: [ "FontSize", "Bold", "Italic", "Underline","TextColor", "-", "Smiley", "SpecialChar" ]
+            bbcode_paragraph: [ "NumberedList", "BulletedList", "-", "Blockquote" ]
+            simple_document  : [ "Source", "Maximize", "ShowBlocks" ]
+            simple_basicstyles : [ "Bold","Italic","Underline", "-", "NumberedList","BulletedList" ]
+            simple_insert      : [ "Image","Flash","Table","PageBreak" ]
+            simple_clipboard : [ "Cut","Copy","Paste","PasteText","-","Undo","Redo" ]
+            simple_styles      : [ "Format", "Font","FontSize" ]
+            minimal_document    : [ "Maximize"]
+            minimal_basicstyles : [ "Bold","Italic","Underline", "-", "NumberedList","BulletedList" ]
+            minimal_clipboard : [ "Cut","Copy","Paste","PasteText","-","Undo","Redo" ]

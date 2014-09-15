@@ -31,7 +31,7 @@ imports:
     - { resource: pagerfanta/views.yml }
 
     # rmzamora
-    - { resource: rmzamora/ckeditor.yml }
+#    - { resource: rmzamora/ckeditor.yml }
     - { resource: rmzamora/rz/rz_user.yml }
     - { resource: rmzamora/rz/rz_news.yml }
 #    - { resource: rmzamora/solr.yml }

@@ -18,7 +18,6 @@ sonata_media:
 
             formats:
                 small: { width: 234, height: 155,  quality: 100}
-                big:   { width: 820 , quality: 100}
 
         news:
             download:
@@ -32,8 +31,7 @@ sonata_media:
                 - sonata.media.provider.vimeo
 
             formats:
-                abtract: { width: 100, quality: 100}
-                wide:    { width: 820 , quality: 100}
+                small: { width: 234, height: 155,  quality: 100}
 
     buzz:
         connector:  sonata.media.buzz.connector.curl #sonata.media.buzz.connector.file_get_contents # sonata.media.buzz.connector.curl

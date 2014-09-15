@@ -2,6 +2,10 @@
 # more information can be found here http://sonata-project.org/bundles/formatter
 #
 sonata_formatter:
+    ckeditor:
+        templates:
+            browser: 'SonataFormatterBundle:Ckeditor:browser.html.twig'
+            upload: 'SonataFormatterBundle:Ckeditor:upload.html.twig'
     formatters:
         markdown:
             service: sonata.formatter.text.markdown

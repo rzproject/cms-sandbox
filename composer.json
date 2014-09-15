@@ -84,7 +84,6 @@
         "rz/search-bundle": "~1.0",
         "rz/oauth-bundle": "~1.0",
 
-
         "liip/imagine-bundle": "0.9.*@stable",
 
         "dflydev/markdown": "~1.0",

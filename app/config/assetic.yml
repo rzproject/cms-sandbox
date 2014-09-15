@@ -20,7 +20,7 @@ assetic:
             inputs:
                 - %kernel.root_dir%/../web/bundles/rzadmin/js/modernizr.custom.42016.js
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery/jquery.min.js
-                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jqueryui/js/jqueryui.custom.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jqueryui/jquery-ui.min.js
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/browser-detect/jquery.browser.detect.js
                 - %kernel.root_dir%/../web/bundles/fosjsrouting/js/router.js
                 - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/js/bootstrap.min.js
@@ -47,10 +47,10 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/imagesloaded/imagesloaded.min.js
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/select2/select2.js
                 - %kernel.root_dir%/../web/bundles/rzadmin/js/lib/sprintf.js
-#                - %kernel.root_dir%/../web/bundles/rzadmin/js/rzadmin-base.js
-#                - %kernel.root_dir%/../web/bundles/rzfieldtype/js/rzadmin-fieldtype.js
-#                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-many-assoc.js
-#                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-one-assoc.js
+                - %kernel.root_dir%/../web/bundles/rzadmin/js/rzadmin-base.js
+                - %kernel.root_dir%/../web/bundles/rzfieldtype/js/rzadmin-fieldtype.js
+                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-many-assoc.js
+                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-one-assoc.js
             filters:
                 - closure
 
@@ -69,18 +69,11 @@ assetic:
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/multi-select/css/multiselect.css
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/gritter/css/gritter.css
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/qtip2/css/qtip.css
-                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/minimal/_all.css
-                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/square/_all.css
-                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/flat/_all.css
-                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/line/_all.css
-                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/polaris/polaris.css
-                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/futurico/futurico.css
                 - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/select2/select2.css
-                - %kernel.root_dir%/../web/bundles/rzadmin/css/font.css
-#                - %kernel.root_dir%/../web/bundles/rzadmin/css/style.css
-#                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-style.css
-#                - %kernel.root_dir%/../web/bundles/rzadmin/css/themes.css
-#                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-theme.css
+                - %kernel.root_dir%/../web/bundles/rzadmin/css/style.css
+                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-style.css
+                - %kernel.root_dir%/../web/bundles/rzadmin/css/themes.css
+                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-theme.css
             filters:
                 - cssrewrite
                 - yui_css
