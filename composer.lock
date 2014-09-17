@@ -5153,12 +5153,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/PageBundle.git",
-                "reference": "356d98c58541203221e0486283f73a2feedffe16"
+                "reference": "2ddfd0804f05016e48d69a6ea93edfd3f506728d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/356d98c58541203221e0486283f73a2feedffe16",
-                "reference": "356d98c58541203221e0486283f73a2feedffe16",
+                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/2ddfd0804f05016e48d69a6ea93edfd3f506728d",
+                "reference": "2ddfd0804f05016e48d69a6ea93edfd3f506728d",
                 "shasum": ""
             },
             "require": {
@@ -5195,7 +5195,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-09-17 02:03:06"
+            "time": "2014-09-17 05:11:18"
         },
         {
             "name": "rz/search-bundle",
