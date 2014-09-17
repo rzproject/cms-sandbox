@@ -17,11 +17,11 @@
         'bundles/rzpage/theme/rzcms/css/icon-effect.css'
         'bundles/rzpage/theme/rzcms/css/prettyphoto.css'
         'bundles/rzpage/theme/rzcms/css/dzsportfolio.css'
-        'bundles/rmzamorajquery/jquery-plugins/bxslider/jquery.bxslider.css'
         filter='?yui_css'
     %}
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
     {% endstylesheets %}
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rmzamorajquery/jquery-plugins/bxslider/jquery.bxslider.css') }}"/>
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rzpage/theme/rzcms/css/font-awesome.min.css') }}"/>
     {% if sonata_page.isEditor or (app.security is defined and app.security and app.security.token and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
         {% stylesheets
