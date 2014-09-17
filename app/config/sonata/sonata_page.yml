@@ -60,6 +60,12 @@ sonata_page:
         rzcms_gallery: { path: 'RzPageBundle:theme\rzcms:gallery.html.twig', name: 'Gallery' }
         rzcms_user_profile: { path: 'RzPageBundle:theme\rzcms:profile.html.twig', name: 'User Profile' }
         rzcms_full: { path: 'RzPageBundle:theme\rzcms:full.html.twig', name: 'Generic Page' }
+        rzcms_exception_404:
+            path: 'RzPageBundle:theme\rzcms:error404.html.twig'
+            name: 'Exception 404'
+        rzcms_exception_500:
+            path: 'RzPageBundle:theme\rzcms:error500.html.twig'
+            name: 'Exception 500'
 
     page_defaults:
         homepage: {decorate: false, enabled: true}
