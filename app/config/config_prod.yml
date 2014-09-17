@@ -14,7 +14,11 @@ doctrine:
 
         entity_managers:
             default:
-                metadata_cache_driver: apc
+                metadata_cache_driver:
+                  type: memcache
+                  host: %memcache_host%
+                  port: %memcache_port%
+                  instance_class: Memcache
                 query_cache_driver:
                   type: memcache
                   host: %memcache_host%
