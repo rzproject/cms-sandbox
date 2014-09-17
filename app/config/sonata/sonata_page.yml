@@ -38,7 +38,22 @@ sonata_page:
 
     default_template: default
     templates:
-        default: { path: 'RzPageBundle:theme\rzcms:layout.html.twig', name: 'Default' }
+        default:
+            path: 'RzPageBundle:theme\rzcms:layout.html.twig'
+            name: 'Default'
+            containers:
+                content:
+                    name: Content
+                footer:
+                    name: Footer
+            matrix:
+                layout: |
+                    CCCCCCCCCCCC
+                    FFFFFFFFFFFF
+                mapping:
+                    H: header
+                    C: content
+                    F: footer
         rzcms_homepage: { path: 'RzPageBundle:theme\rzcms:homepage.html.twig', name: 'Homepage' }
         rzcms_blog: { path: 'RzPageBundle:theme\rzcms:blog.html.twig', name: 'Blog' }
         rzcms_blog_post: { path: 'RzPageBundle:theme\rzcms:blog_post.html.twig', name: 'Blog Post' }
