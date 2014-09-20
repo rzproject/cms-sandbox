@@ -5,6 +5,7 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kernel
 {
+
     /**
      * Constructor.
      *
@@ -15,7 +16,15 @@ class AppKernel extends Kernel
      */
     public function __construct($environment, $debug)
     {
-        parent:__construct($environment, $debug);
+        $this->environment = $environment;
+        $this->debug = (bool) $debug;
+        $this->rootDir = $this->getRootDir();
+        $this->name = $this->getName();
+
+        if ($this->debug) {
+            $this->startTime = microtime(true);
+        }
+
         bcscale(3);
     }
 
