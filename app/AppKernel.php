@@ -6,14 +6,17 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 class AppKernel extends Kernel
 {
     /**
-     * {@inheritdoc}
+     * Constructor.
+     *
+     * @param string  $environment The environment
+     * @param bool    $debug       Whether to enable debugging or not
+     *
+     * @api
      */
-    public function init()
+    public function __construct($environment, $debug)
     {
-        // Please read http://symfony.com/doc/2.0/book/installation.html#configuration-and-setup
+        parent:__construct($environment, $debug);
         bcscale(3);
-
-        parent::init();
     }
 
     public function registerBundles()
