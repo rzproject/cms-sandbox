@@ -42,9 +42,10 @@ sonata_admin:
                    - sonata.news.admin.comment
             System:
                 items:
+                   - sonata.classification.admin.context
                    - sonata.classification.admin.collection
-                   - sonata.classification.admin.tag
                    - sonata.classification.admin.category
+                   - sonata.classification.admin.tag
                    - sonata.notification.admin.message
             User:
                 items:

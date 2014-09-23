@@ -18,7 +18,7 @@ sonata_media:
 
             formats:
                 small: { width: 234, height: 155,  quality: 100}
-
+                big:    { width: 820, quality: 100}
         news:
             download:
                 strategy: sonata.media.security.superadmin_strategy
@@ -29,9 +29,21 @@ sonata_media:
                 - sonata.media.provider.image
                 - sonata.media.provider.file
                 - sonata.media.provider.vimeo
-
             formats:
                 small: { width: 234, height: 155,  quality: 100}
+
+        sonata_collection:
+            providers:
+              - sonata.media.provider.image
+            formats:
+                preview: { width: 100, quality: 100}
+                wide:    { width: 820, quality: 100}
+        sonata_category:
+            providers:
+              - sonata.media.provider.image
+            formats:
+                preview: { width: 100, quality: 100}
+                wide:    { width: 820, quality: 100}
 
     buzz:
         connector:  sonata.media.buzz.connector.curl #sonata.media.buzz.connector.file_get_contents # sonata.media.buzz.connector.curl
