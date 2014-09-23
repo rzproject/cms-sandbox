@@ -31,6 +31,15 @@ doctrine:
                   instance_class: Memcache
                 auto_mapping: true
                 mappings: ~
+
+#doctrine_cache:
+#    providers:
+#        my_memcached_cache:
+#            memcached:
+#                servers:
+#                    memcached01.ss: 11211
+#                        port: 11211
+
 monolog:
     handlers:
         main:
