@@ -27,8 +27,8 @@ hwi_oauth:
                 emailCanonical: email
                 facebookData:   ['picture.data.url', 'email']
             user_response_class: Rz\OAuthBundle\OAuth\Response\FacebookUserResponse
-            #options:
-            #    display: popup #dialog is optimized for popup window
+            options:
+                display: page #dialog is optimized for popup window
         twitter:
             type:               twitter
             client_id:          CLIENT_ID
@@ -54,6 +54,12 @@ hwi_oauth:
                 lastname:       family_name
                 gplusData:      ['picture','email', 'given_name', 'family_name', 'link', 'gender', 'locale']
             user_response_class: Rz\OAuthBundle\OAuth\Response\GplusUserResponse
+            options:
+                access_type:     offline
+                approval_prompt: auto
+                display:         page
+                login_hint:      'email address'
+                prompt:          consent
     connect:
         confirmation: true # should show confirmation page or not
         registration_form_handler: rz_o_auth.registration.form.handler.fosub_bridge

@@ -15,6 +15,7 @@ fos_user:
     service:
         user_manager: sonata.user.orm.user_manager
 
+    #required for SonataUserBundle or RzUserbundle
     registration:
         confirmation:
             enabled:    true
@@ -23,10 +24,16 @@ fos_user:
                 sender_name:    rzamora-sandbox Registration
             enabled:    true # change to true for required email confirmation
             template:   FOSUserBundle:Registration:email.txt.twig
-        form:
-            type:               rz_o_auth_user_registration
-            name:               rz_o_auth_registration_form
-            validation_groups:  [Registration, Default]
+#        form:
+#            type:               rz_o_auth_user_registration
+#            name:               rz_o_auth_registration_form
+#            validation_groups:  [Registration, Default]
+#    profile:
+#        form:
+#            type:               rz_o_auth_user_profile
+#            name:               rz_o_auth_user_profile_form
+#            validation_groups:  [Profile, Default]
+
 #fos_user:
 #    db_driver:      orm # can be orm or odm
 #    firewall_name:  main
@@ -72,11 +79,11 @@ fos_user:
 #        user_manager:           fos_user.user_manager.default
 
 # Enable Doctrine to map the provided entities
-doctrine:
-    orm:
-        entity_managers:
-            default:
-                mappings:
-                    FOSUserBundle: ~
-                    ApplicationSonataUserBundle: ~
-                    SonataUserBundle: ~
+#doctrine:
+#    orm:
+#        entity_managers:
+#            default:
+#                mappings:
+#                    FOSUserBundle: ~
+#                    ApplicationSonataUserBundle: ~
+#                    SonataUserBundle: ~

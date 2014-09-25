@@ -40,6 +40,7 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
 
         //Create Default Context
         $context = $this->getContextManager()->create();
+        $context->setId('default');
         $context->setEnabled(true);
         $context->setName('Default');
         $this->getContextManager()->save($context);
