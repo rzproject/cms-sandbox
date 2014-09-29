@@ -1,7 +1,53 @@
 rz_user:
     templates:
-      login: 'RzOAuthBundle:Security:login.html.twig'
+      #login: 'RzOAuthBundle:Security:login.html.twig'
+      login: RzUserBundle:Security:login.html.twig
     admin:
       user:
         templates:
             edit: 'RzUserBundle:Admin:CRUD/edit.html.twig'
+    registration:
+      form:
+          type:               rz_user_registration
+          name:               rz_user_registration_form
+          handler:            rz.user.registration.form.handler.default
+          validation_groups:  [Registration, Default]
+
+    profile:
+        form:
+            type:               rz_user_profile
+            name:               rz_user_profile_form
+            handler:            rz.user.profile.form.handler.default
+            validation_groups:  [Profile, Default]
+
+        update_password:
+            form:
+                type:               rz_user_profile_update_password
+                name:               rz_user_profile_update_password_form
+                handler:            rz.user.profile.update_password.form.handler.default
+                validation_groups:  [UpdatePassword, Default]
+
+    change_password:
+        form:
+            type:               rz_user_change_password
+            name:               rz_user_change_password_form
+            handler:            rz.user.change_password.form.handler.default
+            validation_groups:  [ChangePassword, Default]
+
+    resetting:
+        form:
+            type:               rz_user_resetting
+            name:               rz_user_resetting_form
+            handler:            rz.user.resetting.form.handler.default
+            validation_groups:  [Resetting]
+
+    password_security:
+      requirement:
+        min_length: 8
+        require_letters: true
+        require_case_diff: true
+        require_numbers: true
+        require_special_character: true
+      strength:
+        min_length: 8
+        min_strength: 3
