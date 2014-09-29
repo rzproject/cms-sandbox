@@ -73,7 +73,7 @@
         "rz/formatter-bundle":  "~1.0",
         "rz/admin-bundle":  "~1.0",
         "rz/block-bundle":  "~1.0",
-        "rz/user-bundle":  "~1.0",
+        "rz/user-bundle":  "1.0.0",
         "rz/page-bundle":  "~1.0",
         "rz/media-bundle":  "~1.0",
         "rz/news-bundle":  "~1.0",
@@ -82,7 +82,7 @@
         "rz/seo-bundle": "~1.0",
         "rz/timeline-bundle": "~1.0",
         "rz/search-bundle": "~1.0",
-        "rz/oauth-bundle": "~1.0",
+        "rz/oauth-bundle": "1.0.0",
 
         "liip/imagine-bundle": "0.9.*@stable",
 
