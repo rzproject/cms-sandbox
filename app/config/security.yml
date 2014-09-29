@@ -20,6 +20,7 @@ security:
     providers:
         fos_userbundle:
             id: fos_user.user_provider.username
+            #id: hwi_oauth.user.provider.fosub_bridge
 
     firewalls:
         # Disabling the security for the web debug toolbar, the profiler and Assetic.
@@ -70,6 +71,7 @@ security:
 #                path: /
 #                domain: ~
             oauth:
+              provider:   fos_userbundle
               resource_owners:
                 facebook:      /login/check-facebook
                 twitter:       /login/check-twitter

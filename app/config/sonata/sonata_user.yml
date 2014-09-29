@@ -1,12 +1,12 @@
 # Enable Doctrine to map the provided entities
-doctrine:
-    orm:
-        entity_managers:
-            default:
-                mappings:
-                    FOSUserBundle: ~
-                    ApplicationSonataUserBundle: ~
-                    SonataUserBundle: ~
+#doctrine:
+#    orm:
+#        entity_managers:
+#            default:
+#                mappings:
+#                    FOSUserBundle: ~
+#                    ApplicationSonataUserBundle: ~
+#                    SonataUserBundle: ~
 
 
 sonata_user:
@@ -25,18 +25,13 @@ sonata_user:
 
     manager_type:             orm
 
-    profile:  # Profile Form (firstname, lastname, etc ...)
-        form:
-            type:               rz_o_auth_user_profile
-            name:               rz_o_auth_user_profile_form
-            validation_groups:
-                # Defaults:
-                - Profile
-                - Default
-#        update_password:
-#                type:               rz_user_update_password
-#                name:               rz_user_update_password_form
-
+    profile:
+        register:
+            confirm:
+              redirect:
+                  # Set it to false to disable redirection
+                  route: 'fos_user_profile_show'
+                  route_parameters: ~
         # Profile show page is a dashboard as in SonataAdminBundle
         dashboard:
             blocks:
@@ -46,7 +41,7 @@ sonata_user:
                 - { position: right, type: sonata.news.block.recent_comments, settings: { title: Recent Comments, number: 5, mode: public }}
         # Customize user portal menu by setting links
         menu:
-            - { route: 'sonata_user_profile_show', label: 'sonata_profile_title', domain: 'SonataUserBundle'}
-            - { route: 'sonata_user_profile_edit', label: 'link_edit_profile', domain: 'SonataUserBundle'}
-            - { route: 'sonata_user_profile_edit_authentication', label: 'link_edit_authentication', domain: 'SonataUserBundle'}
+            - { route: 'fos_user_profile_show', label: 'sonata_profile_title', domain: 'SonataUserBundle'}
+            - { route: 'fos_user_profile_edit', label: 'link_edit_profile', domain: 'SonataUserBundle'}
+            - { route: 'fos_user_profile_edit_authentication', label: 'link_edit_authentication', domain: 'SonataUserBundle'}
             - { route: 'fos_user_security_logout', label: 'Logout', domain: 'SonataUserBundle'}
