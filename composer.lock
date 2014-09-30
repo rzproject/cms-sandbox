@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b8c94939f2c65d8f80bbf8075eb52308",
+    "hash": "96b7a85da54e70a83f9588b223bc4117",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -5099,16 +5099,16 @@
         },
         {
             "name": "rz/oauth-bundle",
-            "version": "1.0.0",
+            "version": "1.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/OAuthBundle.git",
-                "reference": "ca8752d62fa6c202cee205c871c3a50a48de6c49"
+                "reference": "6d20a7554538f474ee29c472f0841cbd66c54eb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/OAuthBundle/zipball/ca8752d62fa6c202cee205c871c3a50a48de6c49",
-                "reference": "ca8752d62fa6c202cee205c871c3a50a48de6c49",
+                "url": "https://api.github.com/repos/rzproject/OAuthBundle/zipball/6d20a7554538f474ee29c472f0841cbd66c54eb6",
+                "reference": "6d20a7554538f474ee29c472f0841cbd66c54eb6",
                 "shasum": ""
             },
             "require": {
@@ -5144,7 +5144,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-05-16 11:21:06"
+            "time": "2014-09-29 09:42:44"
         },
         {
             "name": "rz/page-bundle",
@@ -5369,16 +5369,16 @@
         },
         {
             "name": "rz/user-bundle",
-            "version": "1.0.0",
+            "version": "1.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/UserBundle.git",
-                "reference": "c50e6778f743395be6467228605387267b944c3c"
+                "reference": "70fbf7efd7117d9da7505ba343bdf3b8bff8e332"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/UserBundle/zipball/c50e6778f743395be6467228605387267b944c3c",
-                "reference": "c50e6778f743395be6467228605387267b944c3c",
+                "url": "https://api.github.com/repos/rzproject/UserBundle/zipball/70fbf7efd7117d9da7505ba343bdf3b8bff8e332",
+                "reference": "70fbf7efd7117d9da7505ba343bdf3b8bff8e332",
                 "shasum": ""
             },
             "require": {
@@ -5415,7 +5415,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-09-16 10:12:49"
+            "time": "2014-09-29 09:21:27"
         },
         {
             "name": "sensio/distribution-bundle",
