@@ -18,6 +18,7 @@ sonata_media:
 
             formats:
                 small: { width: 234, height: 155,  quality: 100}
+                big: { width: 680 , height: 480,  quality: 100}
 
         news:
             download:
