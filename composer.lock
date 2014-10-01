@@ -4749,12 +4749,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/ClassificationBundle.git",
-                "reference": "15d46085d2e2492b3f5258f9c2a7716d8385d398"
+                "reference": "ac77207190d185d43c64facaac7dbb9c3a605a05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/15d46085d2e2492b3f5258f9c2a7716d8385d398",
-                "reference": "15d46085d2e2492b3f5258f9c2a7716d8385d398",
+                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/ac77207190d185d43c64facaac7dbb9c3a605a05",
+                "reference": "ac77207190d185d43c64facaac7dbb9c3a605a05",
                 "shasum": ""
             },
             "require": {
@@ -4791,7 +4791,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-10-01 02:05:19"
+            "time": "2014-10-01 04:34:26"
         },
         {
             "name": "rz/codemirror-bundle",
