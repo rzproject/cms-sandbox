@@ -6,9 +6,9 @@ rzproject cms-sandbox - CMS sandbox based on SonataProject and RzBundles
 Versions
 --------
 
-*2.0-dev - Refactored admin bundle using Bootstrap3
-*1.0-dev - [BC Break] applies context on RzClassification Bundle and Major changes affects RzMediaBundle, RzNewsBundle and RzClassificationBundle
-*1.0.0 First Stable Version
+* 2.0-dev - Refactored admin bundle using Bootstrap3
+* 1.0-dev - [BC Break] applies context on RzClassification Bundle and Major changes affects RzMediaBundle, RzNewsBundle and RzClassificationBundle
+* 1.0.0 First Stable Version
 
 
 What's inside?
