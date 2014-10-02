@@ -5102,12 +5102,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/OAuthBundle.git",
-                "reference": "3e12e11e8fbc16164b5847a926fa46afe42a0048"
+                "reference": "797e7206029e897eb7e463577faa819887aa1807"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/OAuthBundle/zipball/3e12e11e8fbc16164b5847a926fa46afe42a0048",
-                "reference": "3e12e11e8fbc16164b5847a926fa46afe42a0048",
+                "url": "https://api.github.com/repos/rzproject/OAuthBundle/zipball/797e7206029e897eb7e463577faa819887aa1807",
+                "reference": "797e7206029e897eb7e463577faa819887aa1807",
                 "shasum": ""
             },
             "require": {
@@ -5143,7 +5143,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-10-01 09:50:47"
+            "time": "2014-10-02 06:22:15"
         },
         {
             "name": "rz/page-bundle",
@@ -8627,55 +8627,6 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2014-05-14 04:53:35"
-        },
-        {
-            "name": "symfony/icu",
-            "version": "1.2.x-dev",
-            "target-dir": "Symfony/Component/Icu",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/Icu.git",
-                "reference": "d4d85d6055b87f394d941b45ddd3a9173e1e3d2a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Icu/zipball/d4d85d6055b87f394d941b45ddd3a9173e1e3d2a",
-                "reference": "d4d85d6055b87f394d941b45ddd3a9173e1e3d2a",
-                "shasum": ""
-            },
-            "require": {
-                "ext-intl": "*",
-                "lib-icu": ">=4.4",
-                "php": ">=5.3.3",
-                "symfony/intl": "~2.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\Icu\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                }
-            ],
-            "description": "Contains an excerpt of the ICU data and classes to load it.",
-            "homepage": "http://symfony.com",
-            "keywords": [
-                "icu",
-                "intl"
-            ],
-            "time": "2014-07-25 09:58:17"
         }
     ],
     "aliases": [],
