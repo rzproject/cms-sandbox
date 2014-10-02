@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d7fefd6c200b3322a47000b903505430",
+    "hash": "6a644a5fc4e33d2c6c221a79324f48bd",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -45,6 +45,72 @@
                 "transliterator"
             ],
             "time": "2014-09-04 13:06:40"
+        },
+        {
+            "name": "codeconsortium/ccdn-user-security-bundle",
+            "version": "dev-master",
+            "target-dir": "CCDNUser/SecurityBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codeconsortium/CCDNUserSecurityBundle.git",
+                "reference": "83f9349296aeb93da7d95cf34d2432b6d62721a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codeconsortium/CCDNUserSecurityBundle/zipball/83f9349296aeb93da7d95cf34d2432b6d62721a6",
+                "reference": "83f9349296aeb93da7d95cf34d2432b6d62721a6",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/doctrine-bundle": "~1.2",
+                "doctrine/orm": "~2.2,>=2.2.3",
+                "php": ">=5.3.3",
+                "symfony/symfony": "2.5.*"
+            },
+            "require-dev": {
+                "behat/behat": "2.5.*@stable",
+                "behat/mink": "v1.5.0",
+                "behat/mink-browserkit-driver": "*",
+                "behat/mink-extension": "*",
+                "behat/mink-goutte-driver": "*",
+                "behat/mink-selenium2-driver": "*",
+                "behat/symfony2-extension": "*",
+                "doctrine/doctrine-fixtures-bundle": "dev-master",
+                "friendsofsymfony/user-bundle": "~2.0@dev",
+                "phpunit/phpunit": "3.7.*",
+                "raulfraile/ladybug-bundle": "dev-master",
+                "symfony/monolog-bundle": "~2.4",
+                "symfony/swiftmailer-bundle": "~2.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "CCDNUser\\SecurityBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Reece Fowell",
+                    "email": "reece@codeconsortium.com",
+                    "homepage": "http://www.reecefowell.com"
+                }
+            ],
+            "description": "CCDN User Security Bundle",
+            "homepage": "http://github.com/codeconsortium/CCDNUserSecurityBundle",
+            "keywords": [
+                "brute force",
+                "ccdn",
+                "codeconsortium",
+                "dictionary attack",
+                "login",
+                "security",
+                "user"
+            ],
+            "time": "2014-08-31 22:07:38"
         },
         {
             "name": "dflydev/markdown",
@@ -6724,16 +6790,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "dev-master",
+            "version": "2.5.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "6acf3e74ae5a87a91c29aa6934befe1f83dc5db2"
+                "reference": "adbde8ac7a27b934c73578220d5ed6318fd41796"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/6acf3e74ae5a87a91c29aa6934befe1f83dc5db2",
-                "reference": "6acf3e74ae5a87a91c29aa6934befe1f83dc5db2",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/adbde8ac7a27b934c73578220d5ed6318fd41796",
+                "reference": "adbde8ac7a27b934c73578220d5ed6318fd41796",
                 "shasum": ""
             },
             "require": {
@@ -6749,7 +6815,6 @@
                 "symfony/console": "self.version",
                 "symfony/css-selector": "self.version",
                 "symfony/debug": "self.version",
-                "symfony/debug-bundle": "self.version",
                 "symfony/dependency-injection": "self.version",
                 "symfony/doctrine-bridge": "self.version",
                 "symfony/dom-crawler": "self.version",
@@ -6784,25 +6849,23 @@
                 "symfony/twig-bridge": "self.version",
                 "symfony/twig-bundle": "self.version",
                 "symfony/validator": "self.version",
-                "symfony/var-dumper": "self.version",
                 "symfony/web-profiler-bundle": "self.version",
                 "symfony/yaml": "self.version"
             },
             "require-dev": {
                 "doctrine/data-fixtures": "1.0.*",
                 "doctrine/dbal": "~2.2",
-                "doctrine/doctrine-bundle": "~1.2",
                 "doctrine/orm": "~2.2,>=2.2.3",
                 "egulias/email-validator": "~1.2",
                 "ircmaxell/password-compat": "1.0.*",
-                "monolog/monolog": "~1.11",
+                "monolog/monolog": "~1.3",
                 "ocramius/proxy-manager": ">=0.3.1,<0.6-dev",
                 "propel/propel1": "1.6.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -6836,7 +6899,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-10-01 05:53:11"
+            "time": "2014-10-02 05:56:02"
         },
         {
             "name": "twig/extensions",
@@ -8646,7 +8709,8 @@
         "liip/imagine-bundle": 0,
         "videlalvaro/php-amqplib": 20,
         "stephpy/timelinebundle": 20,
-        "stephpy/timeline": 20
+        "stephpy/timeline": 20,
+        "codeconsortium/ccdn-user-security-bundle": 20
     },
     "prefer-stable": false,
     "platform": {
