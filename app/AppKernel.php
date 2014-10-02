@@ -141,6 +141,8 @@ class AppKernel extends Kernel
             new Rz\SeoBundle\RzSeoBundle(),
             new Rz\TimelineBundle\RzTimelineBundle(),
             new Rz\SearchBundle\RzSearchBundle(),
+
+            new CCDNUser\SecurityBundle\CCDNUserSecurityBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

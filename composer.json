@@ -96,7 +96,9 @@
 
         "incenteev/composer-parameter-handler": "~2.0",
         "nelmio/api-doc-bundle": "~2.4",
-        "willdurand/hateoas-bundle": "0.2.*"
+        "willdurand/hateoas-bundle": "0.2.*",
+
+        "codeconsortium/ccdn-user-security-bundle": "dev-master"
 
     },
 
