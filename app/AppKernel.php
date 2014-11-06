@@ -28,6 +28,14 @@ class AppKernel extends Kernel
         bcscale(3);
     }
 
+    protected function initializeContainer() {
+        parent::initializeContainer();
+        if (PHP_SAPI == 'cli') {
+            $this->getContainer()->enterScope('request');
+            $this->getContainer()->set('request', new \Symfony\Component\HttpFoundation\Request(), 'request');
+        }
+    }
+
     public function registerBundles()
     {
         $bundles = array(
@@ -130,7 +138,6 @@ class AppKernel extends Kernel
             new Rmzamora\SandboxInitDataBundle\RmzamoraSandboxInitDataBundle(),
             new Rmzamora\BootstrapBundle\RmzamoraBootstrapBundle(),
             new Rmzamora\JqueryBundle\RmzamoraJqueryBundle(),
-            //new Rz\CkeditorBundle\RzCkeditorBundle(),
             new Rz\CodemirrorBundle\RzCodemirrorBundle(),
             new Rz\AdminBundle\RzAdminBundle(),
             new Rz\BlockBundle\RzBlockBundle(),
@@ -141,6 +148,10 @@ class AppKernel extends Kernel
             new Rz\SeoBundle\RzSeoBundle(),
             new Rz\TimelineBundle\RzTimelineBundle(),
             new Rz\SearchBundle\RzSearchBundle(),
+
+            #CCDN Security
+            new CCDNUser\SecurityBundle\CCDNUserSecurityBundle(),
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -44,6 +44,9 @@ imports:
     - { resource: egeloen/ckeditor.yml }
     #- { resource: egeloen/lucene.yml }
 
+    #CCDN
+    - { resource: ccdn/ccdn_user_security.yml }
+
 framework:
     trusted_proxies: ['127.0.0.1'] # a list of proxy IPs you trust
     trusted_hosts: ['.*\.?rmzamora.com$']
@@ -64,6 +67,8 @@ framework:
     session:
       name: %session_name%
       cookie_lifetime: %cookie_lifetime%
+      cookie_secure: false
+      cookie_httponly: true
     fragments:       ~
     http_method_override: true
 
