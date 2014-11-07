@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2f8d0d4cc9d675529606ddd4c0dd1a5a",
+    "hash": "8add4e0d29889b027dfeef1b7f6e9ef7",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -498,12 +498,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "6458b0bd6e62817e961a9611959a67b5f8622b59"
+                "reference": "ec6da750f9d3ee83f26fe921a9c57fdda73f07a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/6458b0bd6e62817e961a9611959a67b5f8622b59",
-                "reference": "6458b0bd6e62817e961a9611959a67b5f8622b59",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/ec6da750f9d3ee83f26fe921a9c57fdda73f07a0",
+                "reference": "ec6da750f9d3ee83f26fe921a9c57fdda73f07a0",
                 "shasum": ""
             },
             "require": {
@@ -561,7 +561,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2014-11-05 14:17:28"
+            "time": "2014-11-07 10:05:10"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -1341,12 +1341,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "a5173723d226531a35fc17982661e5dc256b9dcc"
+                "reference": "9d5f88edac5b8a5e7938c38aa00d75cd17aa88e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/a5173723d226531a35fc17982661e5dc256b9dcc",
-                "reference": "a5173723d226531a35fc17982661e5dc256b9dcc",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/9d5f88edac5b8a5e7938c38aa00d75cd17aa88e2",
+                "reference": "9d5f88edac5b8a5e7938c38aa00d75cd17aa88e2",
                 "shasum": ""
             },
             "require": {
@@ -1410,7 +1410,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2014-11-05 13:02:55"
+            "time": "2014-11-07 06:06:56"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -1485,12 +1485,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "a845fa37a6c38000c9061aa9afc329057d502eec"
+                "reference": "8f673c9e31c1aa5ce1e4d289be55c2384ee0ffd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/a845fa37a6c38000c9061aa9afc329057d502eec",
-                "reference": "a845fa37a6c38000c9061aa9afc329057d502eec",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/8f673c9e31c1aa5ce1e4d289be55c2384ee0ffd2",
+                "reference": "8f673c9e31c1aa5ce1e4d289be55c2384ee0ffd2",
                 "shasum": ""
             },
             "require": {
@@ -1527,7 +1527,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2014-11-04 21:37:14"
+            "time": "2014-11-07 08:38:46"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -3100,12 +3100,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataAdminBundle.git",
-                "reference": "9b05fd951a3f94b35c95eb9e4008b4cd78e072fd"
+                "reference": "47c5b5f3d3a0f3fd8810027e29a575702c811abc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/9b05fd951a3f94b35c95eb9e4008b4cd78e072fd",
-                "reference": "9b05fd951a3f94b35c95eb9e4008b4cd78e072fd",
+                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/47c5b5f3d3a0f3fd8810027e29a575702c811abc",
+                "reference": "47c5b5f3d3a0f3fd8810027e29a575702c811abc",
                 "shasum": ""
             },
             "require": {
@@ -3177,7 +3177,7 @@
                 "rmzamora fork",
                 "sonata"
             ],
-            "time": "2014-11-03 06:25:39"
+            "time": "2014-11-07 04:21:50"
         },
         {
             "name": "rmzamora/block-bundle",
@@ -3655,12 +3655,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataDoctrineORMAdminBundle.git",
-                "reference": "1affd8db216860649419da9d771d13c06af68142"
+                "reference": "6dc2e23fd1a052ece9cdfdcc1ef3eefcc3e2dc55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataDoctrineORMAdminBundle/zipball/1affd8db216860649419da9d771d13c06af68142",
-                "reference": "1affd8db216860649419da9d771d13c06af68142",
+                "url": "https://api.github.com/repos/rmzamora/SonataDoctrineORMAdminBundle/zipball/6dc2e23fd1a052ece9cdfdcc1ef3eefcc3e2dc55",
+                "reference": "6dc2e23fd1a052ece9cdfdcc1ef3eefcc3e2dc55",
                 "shasum": ""
             },
             "require": {
@@ -3723,7 +3723,7 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2014-10-17 02:23:31"
+            "time": "2014-11-07 04:23:07"
         },
         {
             "name": "rmzamora/entity-audit-bundle",
@@ -4387,12 +4387,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataPageBundle.git",
-                "reference": "581abe89f463f7877bd9759b3168fa6abec90dc0"
+                "reference": "7a43c6014ddb4b7c503e70bb9622d0422bb2962c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataPageBundle/zipball/581abe89f463f7877bd9759b3168fa6abec90dc0",
-                "reference": "581abe89f463f7877bd9759b3168fa6abec90dc0",
+                "url": "https://api.github.com/repos/rmzamora/SonataPageBundle/zipball/7a43c6014ddb4b7c503e70bb9622d0422bb2962c",
+                "reference": "7a43c6014ddb4b7c503e70bb9622d0422bb2962c",
                 "shasum": ""
             },
             "require": {
@@ -4455,7 +4455,7 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2014-11-05 02:04:27"
+            "time": "2014-11-06 01:04:18"
         },
         {
             "name": "rmzamora/rest-bundle",
@@ -5481,12 +5481,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/UserBundle.git",
-                "reference": "c668d7f38b522822faee127bdf8cf12389f2bf99"
+                "reference": "9f06772f90eab2ac65a6b1fd2499b9b8cc3db9e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/UserBundle/zipball/c668d7f38b522822faee127bdf8cf12389f2bf99",
-                "reference": "c668d7f38b522822faee127bdf8cf12389f2bf99",
+                "url": "https://api.github.com/repos/rzproject/UserBundle/zipball/9f06772f90eab2ac65a6b1fd2499b9b8cc3db9e1",
+                "reference": "9f06772f90eab2ac65a6b1fd2499b9b8cc3db9e1",
                 "shasum": ""
             },
             "require": {
@@ -5523,7 +5523,56 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-11-04 05:11:08"
+            "time": "2014-11-06 07:52:08"
+        },
+        {
+            "name": "rz/user-security-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rzproject/UserSecurityBundle.git",
+                "reference": "a573afaf77b1cedd739e8e9d6a7b78bf5c9b66c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rzproject/UserSecurityBundle/zipball/a573afaf77b1cedd739e8e9d6a7b78bf5c9b66c9",
+                "reference": "a573afaf77b1cedd739e8e9d6a7b78bf5c9b66c9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "rmzamora/ccdn-user-security-bundle": "dev-master",
+                "rz/user-bundle": "~1.0",
+                "symfony/symfony": "~2.5"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Rz\\UserSecurityBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mell M. Zamora",
+                    "email": "mell@rzproject.org",
+                    "homepage": "http://www.rzproject.org"
+                }
+            ],
+            "description": "Extension of CCDN User Security Bundle",
+            "homepage": "http://github.com/rzproject/RzUserSecurityBundle",
+            "keywords": [
+                "Rz Project",
+                "brute force",
+                "dictionary attack",
+                "login",
+                "security",
+                "user"
+            ],
+            "time": "2014-11-07 11:19:47"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -7119,12 +7168,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git",
-                "reference": "ac70d7dbb8bb1f193fd5c37d57506a46744911e8"
+                "reference": "81a939828228465e7a2bf38dbb1227640cfd5392"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/ac70d7dbb8bb1f193fd5c37d57506a46744911e8",
-                "reference": "ac70d7dbb8bb1f193fd5c37d57506a46744911e8",
+                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/81a939828228465e7a2bf38dbb1227640cfd5392",
+                "reference": "81a939828228465e7a2bf38dbb1227640cfd5392",
                 "shasum": ""
             },
             "require": {
@@ -7163,7 +7212,7 @@
                 "page",
                 "paging"
             ],
-            "time": "2014-09-17 11:12:29"
+            "time": "2014-11-06 20:05:47"
         },
         {
             "name": "willdurand/faker-bundle",
@@ -7220,12 +7269,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/willdurand/Hateoas.git",
-                "reference": "c06036b3e2687699a2e57f8b0694e33d0cfe09df"
+                "reference": "b09e66900e0098fb1d3c40951e3649eb50519830"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/willdurand/Hateoas/zipball/c06036b3e2687699a2e57f8b0694e33d0cfe09df",
-                "reference": "c06036b3e2687699a2e57f8b0694e33d0cfe09df",
+                "url": "https://api.github.com/repos/willdurand/Hateoas/zipball/b09e66900e0098fb1d3c40951e3649eb50519830",
+                "reference": "b09e66900e0098fb1d3c40951e3649eb50519830",
                 "shasum": ""
             },
             "require": {
@@ -7276,7 +7325,7 @@
                 }
             ],
             "description": "A PHP library to support implementing representations for HATEOAS REST web services",
-            "time": "2014-10-26 23:45:55"
+            "time": "2014-11-07 08:43:51"
         },
         {
             "name": "willdurand/hateoas-bundle",
@@ -8366,57 +8415,6 @@
             "time": "2014-10-05 19:43:51"
         },
         {
-            "name": "phpspec/prophecy-phpunit",
-            "version": "dev-master",
-            "target-dir": "Prophecy/PhpUnit",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpspec/prophecy-phpunit.git",
-                "reference": "7abfc68caf9ec4c36346d170cdf68e441c2b4c8b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy-phpunit/zipball/7abfc68caf9ec4c36346d170cdf68e441c2b4c8b",
-                "reference": "7abfc68caf9ec4c36346d170cdf68e441c2b4c8b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "phpspec/prophecy": "~1.0"
-            },
-            "suggest": {
-                "phpunit/phpunit": "if it is not installed globally"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Prophecy\\PhpUnit\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christophe Coevoet",
-                    "email": "stof@notk.org"
-                }
-            ],
-            "description": "PhpUnit test case integrating the Prophecy mocking library",
-            "homepage": "http://phpspec.net",
-            "keywords": [
-                "phpunit",
-                "prophecy"
-            ],
-            "time": "2014-08-06 14:25:57"
-        },
-        {
             "name": "phpunit/php-code-coverage",
             "version": "dev-master",
             "source": {
@@ -8666,12 +8664,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "6c21c66567031c863f207fb46b3c1c545d5589d1"
+                "reference": "247756f342dfb0a319f8985ef06f21a00d98b59c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6c21c66567031c863f207fb46b3c1c545d5589d1",
-                "reference": "6c21c66567031c863f207fb46b3c1c545d5589d1",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/247756f342dfb0a319f8985ef06f21a00d98b59c",
+                "reference": "247756f342dfb0a319f8985ef06f21a00d98b59c",
                 "shasum": ""
             },
             "require": {
@@ -8730,7 +8728,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-11-05 11:27:10"
+            "time": "2014-11-06 08:43:29"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -9163,11 +9161,11 @@
         "rmzamora/bootstrap-bundle": 20,
         "rmzamora/knp-menu-bundle": 20,
         "rmzamora/entity-audit-bundle": 20,
+        "rz/user-security-bundle": 20,
         "liip/imagine-bundle": 0,
         "videlalvaro/php-amqplib": 20,
         "stephpy/timelinebundle": 20,
-        "stephpy/timeline": 20,
-        "rmzamora/ccdn-user-security-bundle": 20
+        "stephpy/timeline": 20
     },
     "prefer-stable": false,
     "platform": {

@@ -26,7 +26,7 @@ ccdn_user_security:
             params:                []
         force_account_recovery:    # Specify all routes to block after attempt limit is reached, and account recovery route to force browser redirect.
             enabled:               true
-            after_attempts:        2
+            after_attempts:        3
             duration_in_minutes:   1
             route_recover_account:
                 name:              fos_user_resetting_request
@@ -38,7 +38,7 @@ ccdn_user_security:
         block_pages:               # Specify all routes to block after attempt limit is reached.
             enabled:               true
             after_attempts:        4
-            duration_in_minutes:   2
+            duration_in_minutes:   10
             routes:
                 - fos_user_security_login
                 - fos_user_security_check

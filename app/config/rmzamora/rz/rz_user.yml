@@ -43,11 +43,11 @@ rz_user:
 
     password_security:
       requirement:
-        min_length: 8
+        min_length: 5
         require_letters: true
-        require_case_diff: true
-        require_numbers: true
-        require_special_character: true
+        require_case_diff: false
+        require_numbers: false
+        require_special_character: false
       strength:
-        min_length: 8
-        min_strength: 3
+        min_length: 5
+        min_strength: 1

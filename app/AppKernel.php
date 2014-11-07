@@ -151,7 +151,7 @@ class AppKernel extends Kernel
 
             #CCDN Security
             new CCDNUser\SecurityBundle\CCDNUserSecurityBundle(),
-
+            new Rz\UserSecurityBundle\RzUserSecurityBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
