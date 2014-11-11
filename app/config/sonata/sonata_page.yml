@@ -38,15 +38,55 @@ sonata_page:
 
     default_template: default
     templates:
-        default: { path: 'RzPageBundle:theme\rzcms:layout.html.twig', name: 'Default' }
+        default:
+            path: 'RzPageBundle:theme\rzcms:layout.html.twig'
+            name: 'Default'
+            containers:
+                content:
+                    name: Content
+                footer:
+                    name: Footer
+            matrix:
+                layout: |
+                    CCCCCCCCCCCC
+                    FFFFFFFFFFFF
+                mapping:
+                    H: header
+                    C: content
+                    F: footer
         rzcms_homepage: { path: 'RzPageBundle:theme\rzcms:homepage.html.twig', name: 'Homepage' }
         rzcms_blog: { path: 'RzPageBundle:theme\rzcms:blog.html.twig', name: 'Blog' }
         rzcms_blog_post: { path: 'RzPageBundle:theme\rzcms:blog_post.html.twig', name: 'Blog Post' }
         rzcms_gallery: { path: 'RzPageBundle:theme\rzcms:gallery.html.twig', name: 'Gallery' }
         rzcms_user_profile: { path: 'RzPageBundle:theme\rzcms:profile.html.twig', name: 'User Profile' }
+        rzcms_full: { path: 'RzPageBundle:theme\rzcms:full.html.twig', name: 'Generic Page' }
+        rz_user_security: { path: 'RzUserSecurityBundle:Layout:security.html.twig', name: 'Security Template' }
+        rzcms_exception_404:
+            path: 'RzPageBundle:theme\rzcms:error404.html.twig'
+            name: 'Exception 404'
+        rzcms_exception_500:
+            path: 'RzPageBundle:theme\rzcms:error500.html.twig'
+            name: 'Exception 500'
 
     page_defaults:
         homepage: {decorate: false, enabled: true}
+
+#    assets:
+#        stylesheets:
+#            # Defaults:
+#            - assetic/sonata_front_css.css
+#            - assetic/sonata_front_font_css.css
+#            - assetic/sonata_front_edit_css.css
+#            - assetic/sonata_front_edit2_css.css
+#            - assetic/sonata_front_theme_css.css
+#            - assetic/sonata_front_theme2_css.css
+#            - assetic/sonata_front_theme_override_css.css
+#
+#        javascripts:
+#            # Defaults:
+#            - assetic/sonata_front_js.js
+#            - assetic/sonata_front_edit_js.js
+#            - assetic/sonata_front_theme_js.js
 
     caches:
          esi:

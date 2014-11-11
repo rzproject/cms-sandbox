@@ -10,7 +10,7 @@ sonata_api_news:
 sonata_api_media:
     type:         rest
     prefix:       /media
-    resource:     "@SonataMediaBundle/Resources/config/routing/api.xml"
+    resource:     "@RzMediaBundle/Resources/config/routing/api.xml"
 
 sonata_api_notification:
     type:         rest

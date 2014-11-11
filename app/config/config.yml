@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+#    - { resource: assetic.yml }
     - { resource: fos/fos_user.yml }
     - { resource: fos/fos_rest.yml }
     - { resource: fos/fos_js.yml }
@@ -18,6 +19,10 @@ imports:
     - { resource: sonata/sonata_user.yml }
     - { resource: sonata/sonata_classification.yml }
     - { resource: sonata/sonata_timeline.yml }
+    - { resource: sonata/sonata_intl.yml }
+
+    # liip
+    #- { resource: liip/liip_monitor.yml }
 
     # stof
     - { resource: stof/doctrine_extension.yml }
@@ -26,16 +31,21 @@ imports:
     - { resource: pagerfanta/views.yml }
 
     # rmzamora
-    - { resource: rmzamora/ckeditor.yml }
+#    - { resource: rmzamora/ckeditor.yml }
     - { resource: rmzamora/rz/rz_user.yml }
+    - { resource: rmzamora/rz/rz_news.yml }
 #    - { resource: rmzamora/solr.yml }
-#    - { resource: rmzamora/rz/rz_search.yml }
+    - { resource: rmzamora/rz/rz_search.yml }
 
     #HWI
     - { resource: rmzamora/hwi.yml }
 
     #  egeloen
     - { resource: egeloen/ckeditor.yml }
+    #- { resource: egeloen/lucene.yml }
+
+    #CCDN
+    - { resource: ccdn/ccdn_user_security.yml }
 
 framework:
     trusted_proxies: ['127.0.0.1'] # a list of proxy IPs you trust
@@ -51,11 +61,14 @@ framework:
     form:            true
     csrf_protection: true
     validation:      { enable_annotations: true }
+    #templating:      { engines: ['twig'], assets_version_format: %%s?v=%%s, assets_version: demo-0.4.1 }
     templating:      { engines: ['twig'] }
     default_locale: %locale%
     session:
       name: %session_name%
       cookie_lifetime: %cookie_lifetime%
+      cookie_secure: false
+      cookie_httponly: true
     fragments:       ~
     http_method_override: true
 
@@ -69,8 +82,11 @@ twig:
     strict_variables: %kernel.debug%
     form:
         resources:
-            - 'SonataAdminBundle:Form:silex_form_div_layout.html.twig'
+            #- 'SonataAdminBundle:Form:silex_form_div_layout.html.twig'
             - 'SonataFormatterBundle:Form:formatter.html.twig'
+
+    base_template_class: Sonata\CacheBundle\Twig\TwigTemplate13
+    base_template_class: Sonata\CacheBundle\Twig\TwigTemplate14
 
 # Assetic Configuration
 assetic:
@@ -117,11 +133,24 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: %mailer_transport%
-    auth_mode: %mailer_auth_mode%
-    host:      %mailer_host%
-    username:  %mailer_user%
-    password:  %mailer_password%
+    transport:  %mailer_transport%
+    host:       %mailer_host%
+    username:   %mailer_user%
+    password:   %mailer_password%
 
 jms_security_extra:
     secure_all_services: false
+
+jms_serializer:
+    metadata:
+        directories:
+            - { path: %kernel.root_dir%/../vendor/sonata-project/user-bundle/Resources/config/serializer/FOSUserBundle, namespace_prefix: 'FOS\UserBundle' }
+#            - { path: %kernel.root_dir%/../vendor/sonata-project/ecommerce/src/BasketBundle/Resources/config/serializer/Component, namespace_prefix: 'Sonata\Component\Basket' }
+            - { path: %kernel.root_dir%/../vendor/sonata-project/datagrid-bundle/Resources/config/serializer, namespace_prefix: 'Sonata\DatagridBundle' }
+
+nelmio_api_doc: ~
+
+sensio_framework_extra:
+    view:    { annotations: false }
+    router:  { annotations: true }
+    request: { converters:  true }

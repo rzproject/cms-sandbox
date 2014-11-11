@@ -1,0 +1,240 @@
+# Assetic Configuration
+assetic:
+    debug:          %kernel.debug% #false
+    use_controller: false
+    java:           "/usr/bin/java"
+    read_from:      %kernel.root_dir%/../web
+    write_to:       %kernel.root_dir%/../web
+    #bundles:        [] # disable bundles parsing
+
+    filters:
+        cssrewrite: ~
+        yui_js:  { jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.8.rmzamora-build.jar" }
+        yui_css: { jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.8.rmzamora-build.jar" }
+        closure: { jar: "%kernel.root_dir%/Resources/java/google.closure.jar" }
+
+    assets:
+        # see http://sonata-project.org/blog/2012/5/15/assetic-package-configuration
+        #
+        sonata_admin_js:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/rzadmin/js/modernizr.custom.42016.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery/jquery.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jqueryui/jquery-ui.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/browser-detect/jquery.browser.detect.js
+                - %kernel.root_dir%/../web/bundles/fosjsrouting/js/router.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/js/bootstrap.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/select/js/select.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/tabdrop/js/tabdrop.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/datepicker/js/bootstrap-datepicker.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/timepicker/js/timepicker.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/datetimepicker/js/datetimepicker.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/modal/js/modalmanager.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/modal/js/modal.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/uniform/uniform.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/foo-table/js/footable.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/multi-select/js/multiselect.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/multi-select/js/quicksearch.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/blockui/jquery.blockui.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/gritter/js/gritter.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/qtip2/js/qtip.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/form/jquery.form.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/nicescroll/jquery.nicescroll.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/touch-punch/jquery.touch-punch.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/slimscroll/jquery.slimscroll.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/jquery.icheck.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/masonry/masonry.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/imagesloaded/imagesloaded.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/select2/select2.js
+                - %kernel.root_dir%/../web/bundles/rzadmin/js/lib/sprintf.js
+                - %kernel.root_dir%/../web/bundles/rzadmin/js/rzadmin-base.js
+                - %kernel.root_dir%/../web/bundles/rzfieldtype/js/rzadmin-fieldtype.js
+                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-many-assoc.js
+                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-one-assoc.js
+            filters:
+                - closure
+
+
+        sonata_admin_css:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/css/bootstrap.min.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/css/bootstrap-responsive.min.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/modal/css/modal.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/tabdrop/css/tabdrop.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/modal/css/modal.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/select/css/select.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/datepicker/css/datepicker.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/timepicker/css/timepicker.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/datetimepicker/css/datetimepicker.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/multi-select/css/multiselect.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/gritter/css/gritter.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/qtip2/css/qtip.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/select2/select2.css
+                - %kernel.root_dir%/../web/bundles/rzadmin/css/style.css
+                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-style.css
+                - %kernel.root_dir%/../web/bundles/rzadmin/css/themes.css
+                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-theme.css
+            filters:
+                - cssrewrite
+                - yui_css
+
+        sonata_front_js:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery/jquery.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jqueryui/js/jqueryui.custom.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/js/bootstrap.min.js
+            filters:
+                - closure
+
+        sonata_front_edit_js:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/fosjsrouting/js/router.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/select/js/select.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/tabdrop/js/tabdrop.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/datepicker/js/bootstrap-datepicker.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/timepicker/js/timepicker.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/datetimepicker/js/datetimepicker.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/modal/js/modalmanager.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/modal/js/modal.js
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/fileupload/js/fileupload.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/gritter/js/gritter.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/hoverintent/js/hoverintent.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/easing/js/easing.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/blockui/jquery.blockui.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/uniform/uniform.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/foo-table/js/footable.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/multi-select/js/multiselect.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/multi-select/js/quicksearch.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/blockui/jquery.blockui.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/gritter/js/gritter.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/qtip2/js/qtip.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/form/jquery.form.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/nicescroll/jquery.nicescroll.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/touch-punch/jquery.touch-punch.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/slimscroll/jquery.slimscroll.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/jquery.icheck.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/masonry/masonry.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/imagesloaded/imagesloaded.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/select2/select2.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/form/jquery.form.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/chosen/chosen.jquery.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/uniform/uniform.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/hovercontent/js/contenthover.min.js
+                - %kernel.root_dir%/../web/bundles/rzckeditor/ckeditor.js
+                - %kernel.root_dir%/../web/bundles/rzadmin/js/rz/blockui.js
+                - %kernel.root_dir%/../web/bundles/rzadmin/js/rz/gritter.js
+                - %kernel.root_dir%/../web/bundles/rzadmin/js/lib/sprintf.js
+#                - %kernel.root_dir%/../web/bundles/rzadmin/js/rzadmin-base.js
+#                - %kernel.root_dir%/../web/bundles/rzfieldtype/js/rzadmin-fieldtype.js
+#                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-many-assoc.js
+#                - %kernel.root_dir%/../web/bundles/rzdoctrineormadmin/js/rzadmin-one-assoc.js
+#                - %kernel.root_dir%/../web/bundles/rzpage/rzcms/js/custom.js
+#                - %kernel.root_dir%/../web/bundles/rzpage/rzcms/js/page.js
+            filters:
+                - closure
+
+        sonata_front_theme_js:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/bxslider/jquery.bxslider.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/imgLiquid/js/imgLiquid.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/eqheight/jquery.eqheight.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/masonry/masonry.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/imagesloaded/imagesloaded.min.js
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/fitvids/jquery.fitvids.js
+                - %kernel.root_dir%/../web/bundles/rzmedia/js/block/rzmedia-bxslider.js
+                - %kernel.root_dir%/../web/bundles/rzmedia/js/block/rzmedia-featured-gallery.js
+                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/js/jquery.themepunch.revolution.min.js
+                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/js/jquery.themepunch.plugins.min.js
+                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/js/dzsportfolio.js
+                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/js/scroller.js
+                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/js/prettyphoto.js
+#                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/js/scripts.js
+
+            filters:
+                - closure
+
+        sonata_front_css:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/css/bootstrap.min.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/css/bootstrap-responsive.min.css
+#                - %kernel.root_dir%/../web/bundles/rzpage/sonata/css/default.css
+            filters:
+                - cssrewrite
+                - yui_css
+
+        sonata_front_edit_css:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/modal/css/modal.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/tabdrop/css/tabdrop.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/switch/css/switch.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/select/css/select.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/datepicker/css/datepicker.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/timepicker/css/timepicker.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/datetimepicker/css/datetimepicker.css
+                - %kernel.root_dir%/../web/bundles/rmzamorabootstrap/plugins/fileupload/css/fileupload.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/gritter/css/gritter.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/breadcrumbs/css/breadcrumb.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/uniform/themes/default/css/uniform.default.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/foo-table/css/footable.min.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/foo-table/css/footable.sortable.min.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/multi-select/css/multiselect.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/qtip2/css/qtip.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/minimal/_all.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/square/_all.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/flat/_all.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/line/_all.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/polaris/polaris.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/icheck/skins/futurico/futurico.css
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/select2/select2.css
+            filters:
+                - cssrewrite
+                - yui_css
+
+        sonata_front_edit2_css:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/rmzamorajquery/jquery-plugins/bxslider/jquery.bxslider.css
+                - %kernel.root_dir%/../web/bundles/sonatamedia/blocks/feature_media/theme.css
+#                - %kernel.root_dir%/../web/bundles/rzmedia/css/block/rzmedia-bxslider.css
+#                - %kernel.root_dir%/../web/bundles/rzmedia/css/block/rzmedia-featured-gallery.css
+#                - %kernel.root_dir%/../web/bundles/rznews/css/featured_post_block.css
+            filters:
+                - cssrewrite
+                - yui_css
+
+        sonata_front_font_css:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/font-awesome.min.css
+                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/fontello.css
+            filters:
+                - cssrewrite
+
+        sonata_front_theme_css:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/rzadmin/css/font.css
+#                - %kernel.root_dir%/../web/bundles/rzadmin/css/style.css
+#                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-style.css
+#                - %kernel.root_dir%/../web/bundles/rzadmin/css/rz-theme.css
+#                - %kernel.root_dir%/../web/bundles/rzpage/rzcms/css/rzcms-sidebar.css
+#                - %kernel.root_dir%/../web/bundles/rzpage/rzcms/css/rzcms-blocks.css
+            filters:
+                - cssrewrite
+                - yui_css
+
+        sonata_front_theme2_css:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/icon-effect.css
+                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/prettyphoto.css
+                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/dzsportfolio.css
+#                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/style.css
+#                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/settings.css
+            filters:
+                - cssrewrite
+                - yui_css
+
+        sonata_front_theme_override_css:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/style-override.css
+                - %kernel.root_dir%/../web/bundles/rzpage/theme/rzcms/css/theme-override.css
+            filters:
+                - cssrewrite
+                - yui_css

@@ -1,40 +1,111 @@
 rz_search:
-    search:
+    engine:
       solr:
-        endpoints:
-            default:
-                host: localhost
-                port: 8080
-                path: /solr
-                core: rmzamora_sandbox
-                timeout: 5
+        enabled: false
+#        endpoints:
+#            default:
+#                host: localhost
+#                port: 8080
+#                path: /solr
+#                core: cms_sandbox
+#                timeout: 5
+#        clients:
+#          sonata.news.post:
+#              endpoints: [default]
+
+      zend_lucene:
+        enabled: true
+        settings:
+            sonata.news.post:
+                    # Path to store the index (Required)
+                    path: "%kernel.root_dir%/lucene/sonata.news"
+
+                    # Index analyser (Optional)
+                    # See http://framework.zend.com/manual/en/zend.search.lucene.charset.html
+                    analyzer: ZendSearch\Lucene\Analysis\Analyzer\Common\Text\CaseInsensitive
+
+                    # Max Buffered documents (Optional)
+                    # See http://framework.zend.com/manual/en/zend.search.lucene.index-creation.html#zend.search.lucene.index-creation.optimization.maxbuffereddocs
+                    max_buffered_docs: 10
+
+                    # Max merge documents (Optional)
+                    # See http://framework.zend.com/manual/en/zend.search.lucene.index-creation.html#zend.search.lucene.index-creation.optimization.maxmergedocs
+                    max_merge_docs: 10000 # (default: PHP_INT_MAX)
+
+                    # Merge factor (Optional)
+                    # See http://framework.zend.com/manual/en/zend.search.lucene.index-creation.html#zend.search.lucene.index-creation.optimization.mergefactor
+                    merge_factor: 10
+
+                    # Index directory permission (Optional)
+                    # See http://framework.zend.com/manual/en/zend.search.lucene.index-creation.html#zend.search.lucene.index-creation.permissions
+                    permissions: 0777
+
+                    # Auto optmized flag (Optional)
+                    # If this flag is true, each time you request an index, it will be optmized
+                    # See http://framework.zend.com/manual/en/zend.search.lucene.index-creation.html#zend.search.lucene.index-creation.optimization
+                    auto_optimized: true
+                    #identifier used on the configs
+                    mapping_config: sonata.news.post
     configs:
       # Identifier can by any word with no space replace space using . or _
       sonata.news.post:
-          model_class: Application\Sonata\NewsBundle\Entity\Post
-          model_manager: sonata.news.manager.post
-          field_mapping:
-                title : title
-                description : abstract
-                content : content
-                tags : tags
-                comments : comments
-                author : author
-          field_map_settings:
-                tags:
-                  fields : name
-                  filter : ~
-                comments:
-                  fields:
-                    - message
-                    - name
-                    - email
-                  filter:
-                    status:
-                      operand: =
-                      value: 1
-                author:
-                  fields:
-                    - username
-                    - email
-                  filter: ~
+                label: Sonata News
+                model_class: Application\Sonata\NewsBundle\Entity\Post
+                model_manager: sonata.news.manager.post
+                route_generator: sonata.news.permalink.date
+                model_identifier: sonata.news.post
+                route: sonata_news_view
+                template:
+                  result:
+                    #solr: RzSearchBundle:Search:news_solr_results.html.twig
+                    solr: ~
+                    lucene: RzSearchBundle:Search:news_lucene_results.html.twig
+                    #lucene: ~
+                  search: { 'RzSearchBundle:Block:block_search.html.twig': 'RzSearchBundle default template'}
+                # filter to trigger if the record will be indexed
+                # only supports 1 filter for now!
+                model_index_filter: ~
+                field_mapping:
+                      title : title
+                      description : abstract
+                      content : content
+                      tags : tags
+                      comments : comments
+                      author : author
+                field_map_settings:
+                      title :
+                         fields : ~
+                         separator: ~
+                         filter : ~
+                         type : text
+                      description:
+                         fields : ~
+                         filter : ~
+                         type : text
+                      content:
+                         fields : ~
+                         separator: ~
+                         filter : ~
+                         type : unStored
+                      tags:
+                        fields : name
+                        filter : ~
+                        type : text
+                      comments:
+                        fields:
+                          - message
+                          - name
+                          - email
+                        separator: " "
+                        filter:
+                          status:
+                            operand: =
+                            value: 1
+                        type : unStored
+                      author:
+                        fields:
+                          - username
+                          - email
+                        separator: " "
+                        filter: ~
+                        type : text

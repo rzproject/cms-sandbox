@@ -1,6 +1,6 @@
 sonata_block:
     context_manager: sonata.page.block.context_manager
-    default_contexts: [cms]
+    default_contexts: [sonata_page_bundle]
 
     http_cache:
         listener: true
@@ -18,18 +18,30 @@ sonata_block:
         sonata.admin.block.search_result:
             contexts:   [admin]
 
-        sonata.block.service.container:
         sonata.block.service.text:
+              cache: sonata.cache.mongo
         sonata.page.block.container:
-            #cache: sonata.cache.memcached
+              cache: sonata.cache.mongo
         sonata.page.block.children_pages:
+              cache: sonata.cache.mongo
         sonata.block.service.rss:
+              cache: sonata.cache.mongo
+        sonata.block.service.template:
+              cache: sonata.cache.mongo
+        sonata.block.service.menu:
+              cache: sonata.cache.mongo
         sonata.media.block.media:
+              cache: sonata.cache.mongo
         sonata.media.block.gallery:
+              cache: sonata.cache.mongo
         sonata.media.block.feature_media:
+              cache: sonata.cache.mongo
         sonata.news.block.recent_comments:
+              cache: sonata.cache.mongo
         sonata.news.block.recent_posts:
+              cache: sonata.cache.mongo
         sonata.timeline.block.timeline:
+              cache: sonata.cache.mongo
         sonata.user.block.account:
             cache: sonata.page.cache.js_async
 #            cache: sonata.page.cache.esi
@@ -37,23 +49,38 @@ sonata_block:
         sonata.user.block.menu:
             contexts: [user]
         rz_media.block.media_bxslider:
+            cache: sonata.cache.mongo
         rz_media.block.featured_galleries:
+            cache: sonata.cache.mongo
         rz_news.block.featured_posts:
+            cache: sonata.cache.mongo
         rz_news.block.tags:
+            cache: sonata.cache.mongo
         rz_news.block.collection:
-        #sonata.seo.block.social.container:
+            cache: sonata.cache.mongo
         sonata.seo.block.email.share_button:
         sonata.seo.block.facebook.like_box:
         sonata.seo.block.facebook.like_button:
         sonata.seo.block.facebook.send_button:
         sonata.seo.block.facebook.share_button:
-        sonata.seo.block.pinterest.pin_button:
         sonata.seo.block.twitter.share_button:
         sonata.seo.block.twitter.follow_button:
         sonata.seo.block.twitter.hashtag_button:
         sonata.seo.block.twitter.mention_button:
+        sonata.seo.block.pinterest.pin_button:
+        rz.seo.block.facebook.share_button:
+        rz.seo.block.twitter.share_button:
+        rz.seo.block.pinterest.share_button:
+        rz.seo.block.google.share_button:
+        rz.search.block.search:
+            contexts: [user]
 
-        sonata.page.block.breadcrumb:
+    container:
+        types: [sonata.block.service.container, sonata.page.block.container]
+        templates:  { 'SonataPageBundle:Block:block_container.html.twig': 'SonataPageBundle default template', 'SonataSeoBundle:Block:block_social_container.html.twig': 'SonataSeoBundle (to contain social buttons)'}
+
+    menus:
+        "ApplicationSonataPageBundle:Builder:mainMenu": "Main Menu"
 
     exception:
         default:

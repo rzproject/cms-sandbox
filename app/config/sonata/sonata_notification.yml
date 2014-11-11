@@ -1,5 +1,5 @@
 sonata_notification:
-    backend: sonata.notification.backend.rabbitmq
+    backend: sonata.notification.backend.runtime
 
     backends:
 #        doctrine:
@@ -11,15 +11,15 @@ sonata_notification:
 #                open:        100
 #                done:        10000
 
-        rabbitmq:
-           exchange:     router
-           connection:
-               host:         %rabbitmq_host%
-               user:         %rabbitmq_user%
-               pass:         %rabbitmq_pass%
-               port:         %rabbitmq_port%
-               vhost:        %rabbitmq_vhost%
-               console_url : http://rmzamora-sandbox.rmzamora.com:15672/api
+#        rabbitmq:
+#           exchange:     router
+#           connection:
+#               host:         %rabbitmq_host%
+#               user:         %rabbitmq_user%
+#               pass:         %rabbitmq_pass%
+#               port:         %rabbitmq_port%
+#               vhost:        %rabbitmq_vhost%
+#               console_url : http://rmzamora-sandbox.rmzamora.com:15672/api
 
     queues:
        - { queue: defaultQueue, recover: true, default: true, routing_key: the_routing_key, dead_letter_exchange: 'my.dead.letter.exchange'}

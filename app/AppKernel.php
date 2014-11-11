@@ -5,6 +5,37 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kernel
 {
+
+    /**
+     * Constructor.
+     *
+     * @param string  $environment The environment
+     * @param bool    $debug       Whether to enable debugging or not
+     *
+     * @api
+     */
+    public function __construct($environment, $debug)
+    {
+        $this->environment = $environment;
+        $this->debug = (bool) $debug;
+        $this->rootDir = $this->getRootDir();
+        $this->name = $this->getName();
+
+        if ($this->debug) {
+            $this->startTime = microtime(true);
+        }
+
+        bcscale(3);
+    }
+
+    protected function initializeContainer() {
+        parent::initializeContainer();
+        if (PHP_SAPI == 'cli') {
+            $this->getContainer()->enterScope('request');
+            $this->getContainer()->set('request', new \Symfony\Component\HttpFoundation\Request(), 'request');
+        }
+    }
+
     public function registerBundles()
     {
         $bundles = array(
@@ -71,6 +102,7 @@ class AppKernel extends Kernel
             new FOS\CommentBundle\FOSCommentBundle(),
             new Sonata\CommentBundle\SonataCommentBundle(),
             new Application\Sonata\CommentBundle\ApplicationSonataCommentBundle(),
+            new Sonata\DatagridBundle\SonataDatagridBundle(),
 
             // Enable this if you want to audit backend action
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
@@ -100,12 +132,12 @@ class AppKernel extends Kernel
             new Spy\TimelineBundle\SpyTimelineBundle(),
             new Sonata\TimelineBundle\SonataTimelineBundle(),
             new Application\Sonata\TimelineBundle\ApplicationSonataTimelineBundle(), // easy extends integration
+            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
 
             //RZ & RMZAMORA bundles
             new Rmzamora\SandboxInitDataBundle\RmzamoraSandboxInitDataBundle(),
             new Rmzamora\BootstrapBundle\RmzamoraBootstrapBundle(),
             new Rmzamora\JqueryBundle\RmzamoraJqueryBundle(),
-            new Rz\CkeditorBundle\RzCkeditorBundle(),
             new Rz\CodemirrorBundle\RzCodemirrorBundle(),
             new Rz\AdminBundle\RzAdminBundle(),
             new Rz\BlockBundle\RzBlockBundle(),
@@ -113,6 +145,13 @@ class AppKernel extends Kernel
             new Rz\FieldTypeBundle\RzFieldTypeBundle(),
             new Rz\FormatterBundle\RzFormatterBundle(),
             new Rz\OAuthBundle\RzOAuthBundle(),
+            new Rz\SeoBundle\RzSeoBundle(),
+            new Rz\TimelineBundle\RzTimelineBundle(),
+            new Rz\SearchBundle\RzSearchBundle(),
+
+            #CCDN Security
+            new CCDNUser\SecurityBundle\CCDNUserSecurityBundle(),
+            new Rz\UserSecurityBundle\RzUserSecurityBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

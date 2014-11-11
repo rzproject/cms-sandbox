@@ -23,13 +23,13 @@ sonata_admin:
 
     dashboard:
         blocks:
+            - { position: top, type: sonata.block.service.text, settings: { content: "<h2>rzproject cms-sandbox</h2> <p>CMS built on top of Synfony2 and SonataBundles.</p>"} }
             - { position: left, type: sonata.admin.block.admin_list }
 #            - { position: right, type: sonata.admin_doctrine_orm.block.audit}
-            - { position: center, type: sonata.block.service.text, settings: { content: "<h2>rzproject cms-sandbox</h2> <p>CMS built on top of Synfony2 and SonataBundles.</p>"} }
+            - { position: center, type: sonata.news.block.recent_posts, settings: { title: Recent Posts, number: 5, mode: admin }}
+            - { position: center, type: sonata.news.block.recent_comments, settings: { title: Recent Comments, number: 5, mode: admin }}
             - { position: center, type: sonata.timeline.block.timeline, settings: { context: SONATA_ADMIN, max_per_page: 10 }}
-            - { position: center, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: http://sonata-project.org/blog/archive.rss }}
-            - { position: right, type: sonata.news.block.recent_posts, settings: { title: Recent Posts, number: 5, mode: admin }}
-            - { position: right, type: sonata.news.block.recent_comments, settings: { title: Recent Comments, number: 5, mode: admin }}
+            - { position: right, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: http://sonata-project.org/blog/archive.rss, mode: admin }}
 
         groups:
             CMS:
@@ -42,11 +42,22 @@ sonata_admin:
                    - sonata.news.admin.comment
             System:
                 items:
+                   - sonata.classification.admin.context
                    - sonata.classification.admin.collection
-                   - sonata.classification.admin.tag
                    - sonata.classification.admin.category
+                   - sonata.classification.admin.tag
                    - sonata.notification.admin.message
             User:
                 items:
                    - sonata.user.admin.user
                    - sonata.user.admin.group
+#    assets:
+#        stylesheets:
+#            # The sandbox includes default pre-optimized version of some css and js
+#            # So you can either use them, and add your custom assets here
+#            #   ~ or ~
+#            # tweak the assetic.yml and the following lines
+#            - assetic/sonata_admin_css.css
+#
+#        javascripts:
+#            - assetic/sonata_admin_js.js

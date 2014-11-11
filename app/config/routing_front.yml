@@ -1,12 +1,25 @@
-hwi_oauth_redirect:
-    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
-    prefix:   /login
+rz_user_security:
+    resource: "@RzUserSecurityBundle/Resources/config/routing/lockout.xml"
+    prefix:   /security
 
-#hwi_oauth_connect:
-#    resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
+rz_oauth_redirect:
+    resource: "@RzOAuthBundle/Resources/config/routing/redirect.xml"
+    prefix:   /connect
 
 rz_oauth_connect:
     resource: "@RzOAuthBundle/Resources/config/routing/connect.xml"
+    prefix:   /connect
+
+rz_oauth_security:
+    resource: "@RzOAuthBundle/Resources/config/routing/security.xml"
+
+rz_oauth_profile:
+    resource: "@RzOAuthBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+rz_oauth_register:
+    resource: "@RzOAuthBundle/Resources/config/routing/registration.xml"
+    prefix: /register
 
 facebook_login:
     pattern: /login/check-facebook
@@ -17,26 +30,74 @@ twitter_login:
 google_login:
     pattern: /login/check-google
 
-fos_user_security:
-    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+#Rz
+#rz_user_security:
+#    resource: "@RzUserBundle/Resources/config/routing/security.xml"
 
-#Sonata Profile Edition
-sonata_user_profile:
-    #use oauth controller
-    resource: "@RzOAuthBundle/Resources/config/routing/profile.xml"
-    prefix: /profile
-
-fos_user_register:
-    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
-    prefix: /register
-
-fos_user_resetting:
-    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+rz_user_resetting:
+    resource: "@RzUserBundle/Resources/config/routing/resetting.xml"
     prefix: /resetting
 
-fos_user_change_password:
-    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+#rz_user_profile:
+#    resource: "@RzUserBundle/Resources/config/routing/profile.xml"
+#    prefix: /profile
+#
+#rz_user_register:
+#    resource: "@RzUserBundle/Resources/config/routing/registration.xml"
+#    prefix: /register
+
+rz_user_change_password:
+    resource: "@RzUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
+
+#Sonata
+#sonata_user_security:
+#    resource: "@SonataUserBundle/Resources/config/routing/sonata_security_1.xml"
+#
+#sonata_user_resetting:
+#    resource: "@SonataUserBundle/Resources/config/routing/sonata_resetting_1.xml"
+#    prefix: /resetting
+#
+#sonata_user_profile:
+#    resource: "@SonataUserBundle/Resources/config/routing/sonata_profile_1.xml"
+#    prefix: /profile
+#
+#sonata_user_register:
+#    resource: "@SonataUserBundle/Resources/config/routing/sonata_registration_1.xml"
+#    prefix: /register
+#
+#sonata_user_change_password:
+#    resource: "@SonataUserBundle/Resources/config/routing/sonata_change_password_1.xml"
+#    prefix: /profile
+
+
+#FOS
+#fos_user_security:
+#    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+#
+#fos_user_resetting:
+#    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+#    prefix: /resetting
+#
+#fos_user_profile:
+#    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+#    prefix: /profile
+#
+#fos_user_register:
+#    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+#    prefix: /register
+#
+#fos_user_change_password:
+#    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+#    prefix: /profile
+
+
+#sonata_user_profile:
+#    #use oauth controller
+#    resource: "@RzOAuthBundle/Resources/config/routing/profile.xml"
+#    prefix: /profile
+
+
 
 sonata_media_gallery:
     resource: '@RzMediaBundle/Resources/config/routing/gallery.xml'
@@ -89,3 +150,7 @@ fos_comment:
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+rz_seach:
+    resource: "@RzSearchBundle/Resources/config/routing/search.xml"
+    prefix: /search
