@@ -7,12 +7,12 @@
         }
     },
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.3.9",
 
         "twig/twig": "~1.12",
         "twig/extensions": "~1.0",
 
-        "symfony/symfony": "~2.4",
+        "symfony/symfony": "~2.5",
         "symfony/assetic-bundle": "~2.4",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
@@ -58,7 +58,7 @@
         "rmzamora/seo-bundle": "~1.1",
         "rmzamora/comment-bundle": "~2.3",
 
-        "rmzamora/jquery-bundle": "~1.10.1",
+        "rmzamora/jquery-bundle": "~1.11",
         "rmzamora/bootstrap-bundle": "2.3.*@dev",
 
         "rmzamora/news-bundle": "~2.3",
@@ -79,8 +79,10 @@
         "rz/news-bundle":  "~2.0",
         "rz/doctrine-orm-admin-bundle":  "~2.0",
         "rz/classification-bundle": "~2.0",
-
-
+        "rz/seo-bundle": "~2.0",
+        "rz/timeline-bundle": "~2.0",
+        "rz/search-bundle": "~2.0",
+        "rz/oauth-bundle": "~2.0",
         "rz/oauth-bundle": "~2.0",
 
         "liip/imagine-bundle": "0.9.*@stable",
@@ -88,7 +90,7 @@
         "dflydev/markdown": "~1.0",
         "willdurand/faker-bundle": "~1.0",
         "videlalvaro/php-amqplib"  : "dev-master",
-        "stof/doctrine-extensions-bundle": "1.1.*",
+        "stof/doctrine-extensions-bundle": "~1.2",
         "stephpy/TimelineBundle": "2.0.*@dev",
         "stephpy/timeline": "~1.0@dev",
         "white-october/pagerfanta-bundle": "~1.0",
@@ -100,7 +102,7 @@
     },
 
     "require-dev": {
-        "phpunit/phpunit": "~3.7",
+        "phpunit/phpunit": "~4.2",
         "behat/behat": "~2.4",
         "behat/mink-extension": "~1.2",
         "behat/mink-goutte-driver": "~1.0",
