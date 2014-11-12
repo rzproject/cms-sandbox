@@ -33,7 +33,6 @@ imports:
     # rmzamora
 #    - { resource: rmzamora/ckeditor.yml }
     - { resource: rmzamora/rz/rz_user.yml }
-    - { resource: rmzamora/rz/rz_news.yml }
 #    - { resource: rmzamora/solr.yml }
     - { resource: rmzamora/rz/rz_search.yml }
 
@@ -133,11 +132,10 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: %mailer_transport%
-    auth_mode: %mailer_auth_mode%
-    host:      %mailer_host%
-    username:  %mailer_user%
-    password:  %mailer_password%
+    transport:  %mailer_transport%
+    host:       %mailer_host%
+    username:   %mailer_user%
+    password:   %mailer_password%
 
 jms_security_extra:
     secure_all_services: false
