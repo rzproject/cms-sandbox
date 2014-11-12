@@ -1082,12 +1082,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "ab62914f8774af0a2f1222f9f31d77d009e36358"
+                "reference": "e7be0c4dc98715ab1154a11bafd1a3967ce6970c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/ab62914f8774af0a2f1222f9f31d77d009e36358",
-                "reference": "ab62914f8774af0a2f1222f9f31d77d009e36358",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/e7be0c4dc98715ab1154a11bafd1a3967ce6970c",
+                "reference": "e7be0c4dc98715ab1154a11bafd1a3967ce6970c",
                 "shasum": ""
             },
             "require": {
@@ -1149,7 +1149,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2014-11-11 15:22:51"
+            "time": "2014-11-12 09:31:52"
         },
         {
             "name": "egeloen/ckeditor-bundle",
@@ -4754,12 +4754,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/AdminBundle.git",
-                "reference": "a93c69a15c9cc0dd5368b305c57e5d0000f42c21"
+                "reference": "a9e3b563616eb0c460f7dae28c8cd46daa3b331e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/a93c69a15c9cc0dd5368b305c57e5d0000f42c21",
-                "reference": "a93c69a15c9cc0dd5368b305c57e5d0000f42c21",
+                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/a9e3b563616eb0c460f7dae28c8cd46daa3b331e",
+                "reference": "a9e3b563616eb0c460f7dae28c8cd46daa3b331e",
                 "shasum": ""
             },
             "require": {
@@ -4800,7 +4800,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-11-10 04:25:14"
+            "time": "2014-11-12 07:43:23"
         },
         {
             "name": "rz/block-bundle",
@@ -5156,12 +5156,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "91ca59e48bf93d39fe87e587dd28a679011ca24f"
+                "reference": "fa7eb35918d6e4e4c0a78ca957da0dac1ad40065"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/91ca59e48bf93d39fe87e587dd28a679011ca24f",
-                "reference": "91ca59e48bf93d39fe87e587dd28a679011ca24f",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/fa7eb35918d6e4e4c0a78ca957da0dac1ad40065",
+                "reference": "fa7eb35918d6e4e4c0a78ca957da0dac1ad40065",
                 "shasum": ""
             },
             "require": {
@@ -5204,7 +5204,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-11-11 13:56:25"
+            "time": "2014-11-12 03:17:03"
         },
         {
             "name": "rz/oauth-bundle",
@@ -5261,12 +5261,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/PageBundle.git",
-                "reference": "6e1827e2c9ae5c45d61de604fcd96d0dbf22efea"
+                "reference": "07706c6b561243a32b4241a7dffccc9eed6dbe93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/6e1827e2c9ae5c45d61de604fcd96d0dbf22efea",
-                "reference": "6e1827e2c9ae5c45d61de604fcd96d0dbf22efea",
+                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/07706c6b561243a32b4241a7dffccc9eed6dbe93",
+                "reference": "07706c6b561243a32b4241a7dffccc9eed6dbe93",
                 "shasum": ""
             },
             "require": {
@@ -5303,7 +5303,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-11-11 13:26:38"
+            "time": "2014-11-12 10:30:53"
         },
         {
             "name": "rz/search-bundle",
@@ -5730,12 +5730,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/basdenooijer/solarium.git",
-                "reference": "01199e831274da80d79af5c2cd2147421de9b550"
+                "reference": "a9d8a52ba9fd8add04b2294fad997a004c1f2fab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/basdenooijer/solarium/zipball/01199e831274da80d79af5c2cd2147421de9b550",
-                "reference": "01199e831274da80d79af5c2cd2147421de9b550",
+                "url": "https://api.github.com/repos/basdenooijer/solarium/zipball/a9d8a52ba9fd8add04b2294fad997a004c1f2fab",
+                "reference": "a9d8a52ba9fd8add04b2294fad997a004c1f2fab",
                 "shasum": ""
             },
             "require": {
@@ -5776,7 +5776,7 @@
                 "search",
                 "solr"
             ],
-            "time": "2014-11-11 20:48:27"
+            "time": "2014-11-12 06:53:41"
         },
         {
             "name": "sonata-project/core-bundle",

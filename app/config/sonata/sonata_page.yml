@@ -51,16 +51,178 @@ sonata_page:
                     CCCCCCCCCCCC
                     FFFFFFFFFFFF
                 mapping:
-                    H: header
                     C: content
                     F: footer
-        rzcms_homepage: { path: 'RzPageBundle:theme\rzcms:homepage.html.twig', name: 'Homepage' }
-        rzcms_blog: { path: 'RzPageBundle:theme\rzcms:blog.html.twig', name: 'Blog' }
-        rzcms_blog_post: { path: 'RzPageBundle:theme\rzcms:blog_post.html.twig', name: 'Blog Post' }
-        rzcms_gallery: { path: 'RzPageBundle:theme\rzcms:gallery.html.twig', name: 'Gallery' }
-        rzcms_user_profile: { path: 'RzPageBundle:theme\rzcms:profile.html.twig', name: 'User Profile' }
-        rzcms_full: { path: 'RzPageBundle:theme\rzcms:full.html.twig', name: 'Generic Page' }
-        rz_user_security: { path: 'RzUserSecurityBundle:Layout:security.html.twig', name: 'Security Template' }
+        rzcms_homepage:
+            path: 'RzPageBundle:theme\rzcms:homepage.html.twig'
+            name: 'Homepage'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: Footer
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    F: footer
+        rzcms_blog:
+            path: 'RzPageBundle:theme\rzcms:blog.html.twig'
+            name: 'Blog'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                content_right:
+                    name: Content Right
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: Footer
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCRRR
+                    CCCCCCCCCRRR
+                    CCCCCCCCCRRR
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    F: footer
+                    R: content_right
+        rzcms_blog_post:
+            path: 'RzPageBundle:theme\rzcms:blog_post.html.twig'
+            name: 'Blog Post'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: Footer
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    F: footer
+        rzcms_gallery:
+            path: 'RzPageBundle:theme\rzcms:gallery.html.twig'
+            name: 'Gallery'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: Footer
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    F: footer
+        rzcms_user_profile:
+            path: 'RzPageBundle:theme\rzcms:profile.html.twig'
+            name: 'User Profile'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: Footer
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    F: footer
+        rzcms_full:
+            path: 'RzPageBundle:theme\rzcms:full.html.twig'
+            name: 'Generic Page'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: Footer
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    F: footer
+        rz_user_security:
+            path: 'RzUserSecurityBundle:Layout:security.html.twig'
+            name: 'Security Template'
+            containers:
+                content:
+                    name: Main Content
+                footer:
+                    name: Footer
+            matrix:
+                layout: |
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    FFFFFFFFFFFF
+                mapping:
+                    C: content
+                    F: footer
         rzcms_exception_404:
             path: 'RzPageBundle:theme\rzcms:error404.html.twig'
             name: 'Exception 404'
