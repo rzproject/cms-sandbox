@@ -74,6 +74,8 @@ sonata_block:
         rz.seo.block.google.share_button:
         rz.search.block.search:
             contexts: [user]
+        # Formatter
+        sonata.formatter.block.formatter:
 
     container:
         types: [sonata.block.service.container, sonata.page.block.container]

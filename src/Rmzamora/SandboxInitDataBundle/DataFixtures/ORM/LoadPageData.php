@@ -176,8 +176,8 @@ CONTENT
             'page' => $global,
             'code' => 'footer',
         )));
-
-        $footer->setName('global-footer');
+        $footer->setName('footer');
+        $blockManager->save($footer);
 
         $footer->addChildren($text = $blockManager->create());
 
