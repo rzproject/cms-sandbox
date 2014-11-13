@@ -59,12 +59,17 @@ sonata_page:
             containers:
                 content_top:
                     name: Content Top
+#                    blocks:
+#                      - sonata.media.block.media
+#                      - sonata.media.block.gallery
+#                      - sonata.media.block.feature_media
                 content:
                     name: Main Content
                 content_bottom:
                     name: Content Bottom
                 footer:
-                    name: Footer
+                    name: footer
+                    shared: true
             matrix:
                 layout: |
                     AAAAAAAAAAAA
@@ -91,7 +96,8 @@ sonata_page:
                 content_bottom:
                     name: Content Bottom
                 footer:
-                    name: Footer
+                    name: footer
+                    shared: true
             matrix:
                 layout: |
                     AAAAAAAAAAAA
@@ -104,8 +110,8 @@ sonata_page:
                     A: content_top
                     C: content
                     E: content_bottom
-                    F: footer
                     R: content_right
+                    F: footer
         rzcms_blog_post:
             path: 'RzPageBundle:theme\rzcms:blog_post.html.twig'
             name: 'Blog Post'
@@ -117,7 +123,8 @@ sonata_page:
                 content_bottom:
                     name: Content Bottom
                 footer:
-                    name: Footer
+                    name: footer
+                    shared: true
             matrix:
                 layout: |
                     AAAAAAAAAAAA
@@ -142,7 +149,8 @@ sonata_page:
                 content_bottom:
                     name: Content Bottom
                 footer:
-                    name: Footer
+                    name: footer
+                    shared: true
             matrix:
                 layout: |
                     AAAAAAAAAAAA
@@ -167,7 +175,8 @@ sonata_page:
                 content_bottom:
                     name: Content Bottom
                 footer:
-                    name: Footer
+                    name: footer
+                    shared: true
             matrix:
                 layout: |
                     AAAAAAAAAAAA
@@ -192,7 +201,8 @@ sonata_page:
                 content_bottom:
                     name: Content Bottom
                 footer:
-                    name: Footer
+                    name: footer
+                    shared: true
             matrix:
                 layout: |
                     AAAAAAAAAAAA
@@ -213,7 +223,8 @@ sonata_page:
                 content:
                     name: Main Content
                 footer:
-                    name: Footer
+                    name: footer
+                    shared: true
             matrix:
                 layout: |
                     CCCCCCCCCCCC

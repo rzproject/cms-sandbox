@@ -91,7 +91,7 @@
                                 <ul class="dropdown-menu">
                                     {% if page is defined %}
                                         <li><a href="{{ path('admin_sonata_page_page_edit', {'id': page.id }) }}" target="_new">{{ "header.edit_page"|trans({}, 'SonataPageBundle') }}</a></li>
-                                        {% if not page.isDynamic and not page.isInternal  %}
+                                        {% if not page.isInternal  %}
                                         <li><a href="{{ path('admin_sonata_page_page_compose', {'id': page.id }) }}" target="_new">{{ "header.compose_page"|trans({}, 'SonataPageBundle') }}</a></li>
                                         {% endif %}
                                         <li><a href="{{ path('admin_sonata_page_page_snapshot_create', {'id': page.id }) }}" target="_new">{{ "header.create_snapshot"|trans({}, 'SonataPageBundle') }}</a></li>
