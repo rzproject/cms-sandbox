@@ -260,15 +260,6 @@
                     <div class="span12 center">
                         <img src="{{  asset('bundles/rzpage/theme/rzcms/img/diamond.png')}}" alt="" />
                         <div class="copyright" style="text-align: center !important;">
-                            {#{% if page is defined and not page.isHybrid %}#}
-                             {#<p>#}
-                                {#{{ sonata_block_render({ 'type': 'rz.seo.block.facebook.share_button', 'settings': {'default_url':url(rz_render_page_url(page.name), {}, true), 'default_title':rz_seo_title(), 'layout':'footer' } }) }}#}
-                                {#{{ sonata_block_render({ 'type': 'rz.seo.block.twitter.share_button', 'settings': {'default_url':url(rz_render_page_url(page.name), {}, true), 'default_title':rz_seo_title(), 'layout':'footer' } }) }}#}
-                                {#{{ sonata_block_render({ 'type': 'rz.seo.block.pinterest.share_button', 'settings': {'default_url':url(rz_render_page_url(page.name), {}, true), 'default_title':rz_seo_title(), 'layout':'footer', 'is_video':false, 'default_media_url':app.request.scheme ~'://' ~ app.request.httpHost ~ asset('bundles/rzpage/theme/rzcms/img/sandbox-logo.png') } }) }}#}
-                                {#{{ sonata_block_render({ 'type': 'rz.seo.block.google.share_button', 'settings': {'default_url':url(rz_render_page_url(page.name), {}, true), 'layout':'footer' } }) }}#}
-                             {#</p>#}
-                            {#{% else %}#}
-                            {#{% sonata_template_box 'Override the Block' 'RzPageBundle' %}#}
                             <p class="a2a_kit">
                                 <a class="a2a_button_facebook"><i class="icon icon-facebook marg-right5"></i></a>
                                 <a class="a2a_button_twitter"><i class="icon icon-twitter marg-right5"></i></a>
@@ -280,9 +271,9 @@
                             {% if page is defined %}
                             <p>
                                 {% if sonata_page.isEditor or (app.security is defined and app.security and app.security.token and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
-                                    {{ sonata_page_render_container('footer',page,{ 'use_cache': false})}}
+                                    {{ sonata_page_render_container('footer', 'global', { 'use_cache': false})}}
                                 {% else %}
-                                    {{ sonata_page_render_container('footer', page,{ 'use_cache': true}) }}
+                                    {{ sonata_page_render_container('footer', 'global', { 'use_cache': true}) }}
                                 {% endif %}
                             </p>
                             {% endif %}

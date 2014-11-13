@@ -17,23 +17,10 @@
             %}
             <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
             {% endstylesheets %}
-            {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
+
+            {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.token and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
                 {% stylesheets
-                'bundles/rmzamorabootstrap/plugins/modal/css/modal.css'
-                'bundles/rmzamorabootstrap/plugins/tabdrop/css/tabdrop.css'
-                'bundles/rmzamorabootstrap/plugins/switch/css/switch.css'
-                'bundles/rmzamorabootstrap/plugins/select/css/select.css'
-                'bundles/rmzamorabootstrap/plugins/datepicker/css/datepicker.css'
-                'bundles/rmzamorabootstrap/plugins/timepicker/css/timepicker.css'
-                'bundles/rmzamorabootstrap/plugins/datetimepicker/css/datetimepicker.css'
-                'bundles/rmzamorabootstrap/plugins/fileupload/css/fileupload.css'
-                'bundles/rmzamorajquery/jquery-plugins/breadcrumbs/css/breadcrumb.css'
-                'bundles/rmzamorajquery/jquery-plugins/uniform/themes/default/css/uniform.default.css'
-                'bundles/rmzamorajquery/jquery-plugins/foo-table/css/footable.min.css'
-                'bundles/rmzamorajquery/jquery-plugins/foo-table/css/footable.sortable.min.css'
-                'bundles/rmzamorajquery/jquery-plugins/multi-select/css/multiselect.css'
-                'bundles/rmzamorajquery/jquery-plugins/qtip2/css/qtip.css'
-                'bundles/rmzamorajquery/jquery-plugins/select2/select2.css'
+                'bundles/rzpage/rzcms/css/rzcms-sidebar.css'
                 filter='?yui_css'
                 %}
                 <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
@@ -42,22 +29,7 @@
             <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rmzamorajquery/jquery-plugins/gritter/css/gritter.css') }}" />
             <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rzadmin/css/font.css') }}" />
             <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rmzamorajquery/jquery-plugins/icheck/skins/all.css') }}" />
-
-
             {% block rz_page_theme_stylesheets %}{% endblock %}
-            {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
-                {% stylesheets
-                'bundles/rzadmin/css/style.css'
-                'bundles/rzadmin/css/rz-style.css'
-                'bundles/rzadmin/css/themes.css'
-                'bundles/rzadmin/css/rz-theme.css'
-                'bundles/rzpage/rzcms/css/rzcms-sidebar.css'
-                'bundles/rzpage/rzcms/css/rzcms-blocks.css'
-                filter='?yui_css'
-                %}
-                <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
-                {% endstylesheets %}
-            {% endif %}
         {% endblock %}
 
         {% block sonata_page_javascripts %}
@@ -73,57 +45,14 @@
             %}
             <script type="text/javascript" src="{{ asset_url }}"></script>
             {% endjavascripts %}
-            {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
-            {% javascripts
-            '@FOSJsRoutingBundle/Resources/public/js/router.js'
-            '@RmzamoraBootstrapBundle/Resources/public/plugins/select/js/select.js'
-            '@RmzamoraBootstrapBundle/Resources/public/plugins/tabdrop/js/tabdrop.js'
-            '@RmzamoraBootstrapBundle/Resources/public/plugins/datepicker/js/bootstrap-datepicker.js'
-            '@RmzamoraBootstrapBundle/Resources/public/plugins/timepicker/js/timepicker.js'
-            '@RmzamoraBootstrapBundle/Resources/public/plugins/datetimepicker/js/datetimepicker.js'
-            '@RmzamoraBootstrapBundle/Resources/public/plugins/modal/js/modalmanager.js'
-            '@RmzamoraBootstrapBundle/Resources/public/plugins/modal/js/modal.js'
-            '@RmzamoraBootstrapBundle/Resources/public/plugins/fileupload/js/fileupload.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/gritter/js/gritter.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/hoverintent/js/hoverintent.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/easing/js/easing.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/blockui/jquery.blockui.min.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/uniform/uniform.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/foo-table/js/footable.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/multi-select/js/multiselect.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/multi-select/js/quicksearch.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/blockui/jquery.blockui.min.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/gritter/js/gritter.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/qtip2/js/qtip.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/form/jquery.form.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/nicescroll/jquery.nicescroll.min.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/touch-punch/jquery.touch-punch.min.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/slimscroll/jquery.slimscroll.min.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/icheck/jquery.icheck.min.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/masonry/masonry.min.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/imagesloaded/imagesloaded.min.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/select2/select2.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/form/jquery.form.min.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/chosen/chosen.jquery.min.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/uniform/uniform.js'
-            '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/hovercontent/js/contenthover.min.js'
-            '@RzAdminBundle/Resources/public/js/rz/blockui.js'
-            '@RzAdminBundle/Resources/public/js/rz/gritter.js'
-            '@RzAdminBundle/Resources/public/js/lib/sprintf.js'
-            '@RzAdminBundle/Resources/public/js/rzadmin-base.js'
-            '@RzFieldTypeBundle/Resources/public/js/rzadmin-fieldtype.js'
-            '@RzDoctrineORMAdminBundle/Resources/public/js/rzadmin-many-assoc.js'
-            '@RzDoctrineORMAdminBundle/Resources/public/js/rzadmin-one-assoc.js'
-            '@RzPageBundle/Resources/public/rzcms/js/custom.js'
-            '@RzPageBundle/Resources/public/rzcms/js/page.js'
-            filter='?closure'
-            %}
-            <script type="text/javascript" src="{{ asset_url }}"></script>
-            {% endjavascripts %}
-            {#<script src="{{ asset('bundles/rzckeditor/ckeditor.js') }}" type="text/javascript"></script>#}
-            <script type="text/javascript" src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
-            {% endif %}
 
+            {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.token and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
+                {% javascripts
+                    '@RzPageBundle/Resources/public/rzcms/js/custom.js'
+                    filter='?closure' %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>
+                {% endjavascripts %}
+            {% endif %}
             {% block rz_page_theme_javascripts %}{% endblock %}
         {% endblock %}
     </head>
@@ -136,27 +65,9 @@
 
         {% block sonata_page_top_bar %}
             {% if sonata_page.isEditor or (app.user is not null and app.security and app.security.token and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
-                {% if sonata_page.isEditor and sonata_page.isInlineEditionOn %}
-                    <!-- CMS specific variables -->
-                    <script>
-                        jQuery(document).ready(function() {
-                            Sonata.Page.init({
-                                debug: true,
-                                {#rmz_editor_config: {{ rz_ckeditor_config('inline_editor') | json_encode | raw }},#}
-                                url: {
-                                    block_save_position: '{{ path('admin_sonata_page_block_savePosition') }}',
-                                    block_edit:          '{{ path('admin_sonata_page_block_edit', {'id': 'BLOCK_ID'}) }}',
-                                    block_child_edit:    '{{ path('admin_sonata_page_page_block_edit', {'id': 'PAGE_ID', 'childId': 'BLOCK_ID' }) }}',
-                                    block_delete:        '{{ path('admin_sonata_page_block_delete', {'id': 'BLOCK_ID'}) }}'
-                                }
-                            });
-
-                        });
-                    </script>
-                {% endif %}
                 <div class="rzcms-admin-cmsmenu">
                     <div class="arrow-box"><a class="switch-button closed"><div class="arrow-button-container"><i class="icon-cogs"></i></div></a></div>
-                    <h6>CMS Administration</h6>
+                    <h4>CMS-ADMIN</h4>
                     <ul>
                         {%  if app.user is not null and app.security and app.security.token and app.security.isGranted('ROLE_SONATA_ADMIN') %}
                             <li><a href="{{ path('sonata_admin_dashboard') }}">{{ "header.sonata_admin_dashboard"|trans({}, 'SonataPageBundle') }}</a></li>
@@ -180,6 +91,9 @@
                                 <ul class="dropdown-menu">
                                     {% if page is defined %}
                                         <li><a href="{{ path('admin_sonata_page_page_edit', {'id': page.id }) }}" target="_new">{{ "header.edit_page"|trans({}, 'SonataPageBundle') }}</a></li>
+                                        {% if not page.isDynamic and not page.isInternal  %}
+                                        <li><a href="{{ path('admin_sonata_page_page_compose', {'id': page.id }) }}" target="_new">{{ "header.compose_page"|trans({}, 'SonataPageBundle') }}</a></li>
+                                        {% endif %}
                                         <li><a href="{{ path('admin_sonata_page_page_snapshot_create', {'id': page.id }) }}" target="_new">{{ "header.create_snapshot"|trans({}, 'SonataPageBundle') }}</a></li>
                                         <li class="divider"></li>
                                     {% endif %}
@@ -195,77 +109,9 @@
                             {% if page is defined and not page.enabled %}
                                 <li class="page-disabled">Status: <span class="label label-important">{{ 'header.page_is_disabled'|trans([], 'SonataPageBundle') }}</span></li>
                             {% endif %}
-
-                            {% if page is defined %}
-                                <li class="action-buttons">
-                                    <div class="btn-group" data-toggle="buttons-radio">
-                                        <button id="page-action-enabled-preview" class="btn btn-danger active"><i class="icon-eye-open"></i></button>
-                                        <button id="page-action-enabled-edit" class="btn btn-danger"><i class="icon-list-alt"></i></button>
-                                        <button id="page-action-enabled-editable" class="btn btn-danger"><i class="icon-edit"></i></button>
-                                    </div>
-                                    <form class="form-inline">
-                                        <button type="submit" class="btn btn-success" id="page-action-save-position" style='display:none;' /><i class="icon-save"></i> Position</button>
-                                        <button type="submit" class="btn btn-success" id="page-action-save" style='display:none;' /><i class="icon-save"></i> Text Edit</button>
-                                    </form>
-                                </li>
-
-                                {#<li class="block-buttons">#}
-                                    {#<h6>Core CMS Blocks</h6>#}
-                                    {#<div id="rzcms-admin-blocks" class="carousel slide">#}
-                                        {#<div class="carousel-inner">#}
-                                            {#<div class="item active">#}
-                                                {#<a id="page-action-enabled-preview" class="btn btn-success btn-draggable">Container</a>#}
-                                            {#</div>#}
-                                            {#<div class="item">#}
-                                                {#<a id="page-action-enabled-preview" class="btn btn-success btn-draggable">Text Block</a>#}
-                                            {#</div>#}
-                                            {#<div class="item">#}
-                                                {#<a id="page-action-enabled-preview" class="btn btn-success btn-draggable">Media</a>#}
-                                            {#</div>#}
-                                            {#<div class="item">#}
-                                                {#<a id="page-action-enabled-preview" class="btn btn-success btn-draggable">Featured Media</a>#}
-                                            {#</div>#}
-                                            {#<div class="item">#}
-                                                {#<a id="page-action-enabled-preview" class="btn btn-success btn-draggable">Gallery</a>#}
-                                            {#</div>#}
-                                        {#</div><!-- .carousel-inner -->#}
-                                              {#<!--  next and previous controls here#}
-                                                    {#href values must reference the id for this carousel -->#}
-                                        {#<a class="carousel-control left" href="#rzcms-admin-blocks" data-slide="prev"><i class="icon-angle-left"></i></a>#}
-                                        {#<a class="carousel-control right" href="#rzcms-admin-blocks" data-slide="next"><i class="icon-angle-right"></i></a>#}
-                                    {#</div><!-- .carousel -->#}
-                                    {#<!-- end carousel -->#}
-                                {#</li>#}
-
-                                {#<li class="block-buttons">#}
-                                    {#<h6>Custom Blocks</h6>#}
-                                    {#<div id="rzcms-admin-blocks-custom" class="carousel slide">#}
-                                        {#<div class="carousel-inner">#}
-                                            {#<div class="item active">#}
-                                                {#<a id="page-action-enabled-preview" class="btn btn-primary btn-draggable">Container</a>#}
-                                            {#</div>#}
-                                            {#<div class="item">#}
-                                                {#<a id="page-action-enabled-preview" class="btn btn-primary btn-draggable">Text Block</a>#}
-                                            {#</div>#}
-                                            {#<div class="item">#}
-                                                {#<a id="page-action-enabled-preview" class="btn btn-primary btn-draggable">Media</a>#}
-                                            {#</div>#}
-                                            {#<div class="item">#}
-                                                {#<a id="page-action-enabled-preview" class="btn btn-primary btn-draggable">Featured Media</a>#}
-                                            {#</div>#}
-                                            {#<div class="item">#}
-                                                {#<a id="page-action-enabled-preview" class="btn btn-primary btn-draggable">Gallery</a>#}
-                                            {#</div>#}
-                                        {#</div><!-- .carousel-inner -->#}
-                                              {#<!--  next and previous controls here#}
-                                                    {#href values must reference the id for this carousel -->#}
-                                        {#<a class="carousel-control left" href="#rzcms-admin-blocks-custom" data-slide="prev"><i class="icon-angle-left"></i></a>#}
-                                        {#<a class="carousel-control right" href="#rzcms-admin-blocks-custom" data-slide="next"><i class="icon-angle-right"></i></a>#}
-                                    {#</div><!-- .carousel -->#}
-                                          {#<!-- end carousel -->#}
-                                {#</li>#}
-                            {% endif %}
-
+                        {% endif %}
+                        {%  if app.user is not null and app.security and app.security.token and app.security.isGranted('ROLE_SONATA_ADMIN') %}
+                            <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
                         {% endif %}
                     </ul>
                     <div class="clearfix"></div>
@@ -285,11 +131,6 @@
                     {{ page.stylesheet|raw }}
                 </style>
             {% endif %}
-            {#
-                These includes can be done only at this point as all blocks are loaded,
-                Limition : this does not work if a global page is loaded from an ESI tag inside a container block
-            #}
-
             {% if not sonata_page.isEditor%}
                 <!--loaded only if not edit mode//-->
                 {{ sonata_block_include_stylesheets('screen') }}

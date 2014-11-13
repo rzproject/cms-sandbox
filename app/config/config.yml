@@ -70,6 +70,9 @@ framework:
       cookie_httponly: true
     fragments:       ~
     http_method_override: true
+    serializer:
+      enabled: true
+
 
 # Twig Configuration
 twig:
