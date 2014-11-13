@@ -72,7 +72,7 @@
 
         "rz/formatter-bundle":  "~1.0",
         "rz/admin-bundle":  "~1.0",
-        "rz/block-bundle":  "~1.0",
+        "rz/block-bundle":  "~1.1",
         "rz/user-bundle":  "~1.0",
         "rz/page-bundle":  "~1.1",
         "rz/media-bundle":  "~1.1",
@@ -150,7 +150,7 @@
         "symfony-web-dir": "web",
         "symfony-assets-install": "symlink",
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "1.1.x-dev"
         },
         "incenteev-parameters": [{
             "file": "app/config/parameters.yml",
