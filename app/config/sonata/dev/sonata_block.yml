@@ -16,27 +16,49 @@ sonata_block:
             contexts:   [admin]
         sonata.admin.block.search_result:
             contexts:   [admin]
+
+        # Builtin Block
         sonata.block.service.text:
-        sonata.page.block.container:
-        sonata.page.block.children_pages:
         sonata.block.service.rss:
         sonata.block.service.template:
         sonata.block.service.menu:
+
+        # PageBundle's Blocks
+        sonata.page.block.container:
+            # cache: sonata.cache.memcached
+            # cache: sonata.cache.predis
+            # cache: sonata.page.cache.esi # if you are using the PageBundle
+            # cache: sonata.block.cache.esi # if you are using the BlockBundle without the PageBundle
+        sonata.page.block.children_pages:
+        sonata.page.block.breadcrumb:
+
+        # MediaBundle's Blocks
         sonata.media.block.media:
         sonata.media.block.gallery:
         sonata.media.block.feature_media:
+        rz_media.block.media_bxslider:
+        rz_media.block.featured_galleries:
+
+        # NewsBundle's Blocks
         sonata.news.block.recent_comments:
         sonata.news.block.recent_posts:
+        rz_news.block.featured_posts:
+        rz_news.block.tags:
+        rz_news.block.collection:
+
+
+        # TimelineBundle's Blocks
         sonata.timeline.block.timeline:
+        sonata.timeline.block.timeline:
+            contexts:   [admin]
+
+        # UserBundle's Blocks
         sonata.user.block.account:
             contexts: [user]
         sonata.user.block.menu:
             contexts: [user]
-        rz_media.block.media_bxslider:
-        rz_media.block.featured_galleries:
-        rz_news.block.featured_posts:
-        rz_news.block.tags:
-        rz_news.block.collection:
+
+        # SeoBundle's Blocks
         sonata.seo.block.email.share_button:
         sonata.seo.block.facebook.like_box:
         sonata.seo.block.facebook.like_button:
@@ -53,6 +75,7 @@ sonata_block:
         rz.seo.block.google.share_button:
         rz.search.block.search:
             contexts: [user]
+
         # Formatter
         sonata.formatter.block.formatter:
 

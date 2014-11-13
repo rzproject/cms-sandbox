@@ -14,43 +14,46 @@ sonata_block:
     blocks:
         sonata.admin.block.admin_list:
             contexts:   [admin]
-
         sonata.admin.block.search_result:
             contexts:   [admin]
 
+        # Builtin Block
         sonata.block.service.text:
-              cache: sonata.cache.mongo
-        sonata.page.block.container:
-              cache: sonata.cache.mongo
-        sonata.page.block.children_pages:
-              cache: sonata.cache.mongo
+            cache: sonata.cache.mongo
         sonata.block.service.rss:
-              cache: sonata.cache.mongo
+            cache: sonata.cache.mongo
         sonata.block.service.template:
-              cache: sonata.cache.mongo
+            cache: sonata.cache.mongo
         sonata.block.service.menu:
-              cache: sonata.cache.mongo
+            cache: sonata.cache.mongo
+
+        # PageBundle's Blocks
+        sonata.page.block.container:
+            cache: sonata.cache.mongo
+            # cache: sonata.cache.memcached
+            # cache: sonata.cache.predis
+            # cache: sonata.page.cache.esi # if you are using the PageBundle
+            # cache: sonata.block.cache.esi # if you are using the BlockBundle without the PageBundle
+        sonata.page.block.children_pages:
+        sonata.page.block.breadcrumb:
+            cache: sonata.cache.mongo
+
+        # MediaBundle's Blocks
         sonata.media.block.media:
-              cache: sonata.cache.mongo
+            cache: sonata.cache.mongo
         sonata.media.block.gallery:
-              cache: sonata.cache.mongo
+            cache: sonata.cache.mongo
         sonata.media.block.feature_media:
-              cache: sonata.cache.mongo
-        sonata.news.block.recent_comments:
-              cache: sonata.cache.mongo
-        sonata.news.block.recent_posts:
-              cache: sonata.cache.mongo
-        sonata.timeline.block.timeline:
-              cache: sonata.cache.mongo
-        sonata.user.block.account:
-            cache: sonata.page.cache.js_async
-#            cache: sonata.page.cache.esi
-            contexts: [user]
-        sonata.user.block.menu:
-            contexts: [user]
+            cache: sonata.cache.mongo
         rz_media.block.media_bxslider:
             cache: sonata.cache.mongo
         rz_media.block.featured_galleries:
+            cache: sonata.cache.mongo
+
+        # NewsBundle's Blocks
+        sonata.news.block.recent_comments:
+            cache: sonata.cache.mongo
+        sonata.news.block.recent_posts:
             cache: sonata.cache.mongo
         rz_news.block.featured_posts:
             cache: sonata.cache.mongo
@@ -58,6 +61,19 @@ sonata_block:
             cache: sonata.cache.mongo
         rz_news.block.collection:
             cache: sonata.cache.mongo
+
+        # TimelineBundle's Blocks
+        sonata.timeline.block.timeline:
+        sonata.timeline.block.timeline:
+            contexts:   [admin]
+
+        # UserBundle's Blocks
+        sonata.user.block.account:
+            contexts: [user]
+        sonata.user.block.menu:
+            contexts: [user]
+
+        # SeoBundle's Blocks
         sonata.seo.block.email.share_button:
         sonata.seo.block.facebook.like_box:
         sonata.seo.block.facebook.like_button:
@@ -74,8 +90,10 @@ sonata_block:
         rz.seo.block.google.share_button:
         rz.search.block.search:
             contexts: [user]
+
         # Formatter
         sonata.formatter.block.formatter:
+            cache: sonata.cache.mongo
 
     container:
         types: [sonata.block.service.container, sonata.page.block.container]
