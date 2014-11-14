@@ -40,6 +40,7 @@ security:
                 check_path:     /admin/login_check
                 failure_path:   null
                 remember_me: false
+                default_target_path: sonata_admin_default
 #            remember_me:
 #                key: mellzamora_001
 #                lifetime: 31536000

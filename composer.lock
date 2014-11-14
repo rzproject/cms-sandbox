@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ad0be03c01c365696583a8d6b63e184c",
+    "hash": "69f21c5efc208411a31070535cdb0613",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -4754,12 +4754,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/AdminBundle.git",
-                "reference": "efb55f4b49f3835a07e31c34b2899d9653e37183"
+                "reference": "716f93518afbaaf9d644adb68a4bcff2e29cfe6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/efb55f4b49f3835a07e31c34b2899d9653e37183",
-                "reference": "efb55f4b49f3835a07e31c34b2899d9653e37183",
+                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/716f93518afbaaf9d644adb68a4bcff2e29cfe6e",
+                "reference": "716f93518afbaaf9d644adb68a4bcff2e29cfe6e",
                 "shasum": ""
             },
             "require": {
@@ -4800,20 +4800,20 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-11-13 08:30:19"
+            "time": "2014-11-13 12:37:59"
         },
         {
             "name": "rz/block-bundle",
-            "version": "1.0.x-dev",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/BlockBundle.git",
-                "reference": "b858f8719e802e6f4f1458af73510dddf41ad28d"
+                "reference": "e0d218781c2cfceeb0ce8b2019dc66f4d2edb3f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/BlockBundle/zipball/b858f8719e802e6f4f1458af73510dddf41ad28d",
-                "reference": "b858f8719e802e6f4f1458af73510dddf41ad28d",
+                "url": "https://api.github.com/repos/rzproject/BlockBundle/zipball/e0d218781c2cfceeb0ce8b2019dc66f4d2edb3f1",
+                "reference": "e0d218781c2cfceeb0ce8b2019dc66f4d2edb3f1",
                 "shasum": ""
             },
             "require": {
@@ -4824,7 +4824,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.0": "1.0-dev"
+                    "dev-1.1": "1.1-dev"
                 }
             },
             "autoload": {
@@ -4850,7 +4850,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-09-23 08:25:45"
+            "time": "2014-11-13 12:31:49"
         },
         {
             "name": "rz/classification-bundle",
@@ -5261,12 +5261,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/PageBundle.git",
-                "reference": "912ea1445156ef81155dbb2472a0dcf7354497c0"
+                "reference": "0476c42ca712fa6a5fe3c1dff30f8698773fe5d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/912ea1445156ef81155dbb2472a0dcf7354497c0",
-                "reference": "912ea1445156ef81155dbb2472a0dcf7354497c0",
+                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/0476c42ca712fa6a5fe3c1dff30f8698773fe5d1",
+                "reference": "0476c42ca712fa6a5fe3c1dff30f8698773fe5d1",
                 "shasum": ""
             },
             "require": {
@@ -5303,7 +5303,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-11-13 09:19:29"
+            "time": "2014-11-13 12:30:39"
         },
         {
             "name": "rz/search-bundle",
