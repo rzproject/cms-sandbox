@@ -6,6 +6,7 @@ cmf_routing:
             # enable the symfony default router with a lower priority
             sonata.page.router: 150
             router.default: 100
+#            rz_news.router: 20
 #
 # more information can be found here http://sonata-project.org/bundles/page
 #
@@ -91,8 +92,9 @@ sonata_page:
                     name: Content Top
                 content:
                     name: Main Content
-                content_right:
+                news_content_right:
                     name: Content Right
+                    shared: true
                 content_bottom:
                     name: Content Bottom
                 footer:
@@ -110,7 +112,7 @@ sonata_page:
                     A: content_top
                     C: content
                     E: content_bottom
-                    R: content_right
+                    R: news_content_right
                     F: footer
         rzcms_blog_post:
             path: 'RzPageBundle:theme\rzcms:blog_post.html.twig'

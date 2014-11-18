@@ -23,7 +23,7 @@
     {% endstylesheets %}
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rmzamorajquery/jquery-plugins/bxslider/jquery.bxslider.css') }}"/>
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rzpage/theme/rzcms/css/font-awesome.min.css') }}"/>
-    {% if sonata_page.isEditor or (app.security is defined and app.security and app.security.token and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
+    {% if sonata_page.isEditor or (app.user is defined and app.user and is_granted('ROLE_PREVIOUS_ADMIN')) %}
         {% stylesheets
             'bundles/sonatamedia/blocks/feature_media/theme.css'
             'bundles/rzmedia/css/block/rzmedia-bxslider.css'
@@ -133,7 +133,7 @@
                                         <a href="{{ path(url) }}">Gallery</a>
                                     </li>
                                 {% endif %}
-                                {% if (app.security is defined and app.security and app.security.token and app.security.isGranted('IS_AUTHENTICATED_FULLY')) %}
+                                {% if (app.user is defined and app.user and is_granted('IS_AUTHENTICATED_FULLY')) %}
                                 <li class="has-submenu">
                                     {% set url = rz_render_page_url('fos_user_profile_show') %}
                                     {% if  url %}
@@ -197,7 +197,7 @@
                                     <a href="{{ path(url) }}">Gallery</a>
                                 </li>
                                 {% endif %}
-                                {% if (app.security is defined and app.security and app.security.token and app.security.isGranted('IS_AUTHENTICATED_FULLY')) %}
+                                {% if (app.user is defined and app.user and is_granted('IS_AUTHENTICATED_FULLY')) %}
                                     {% set url = rz_render_page_url('fos_user_profile_show') %}
                                     {% if  url %}
                                     <li class="has-submenu">
@@ -238,7 +238,7 @@
                         {% if content|length > 0 %}
                             {{ content|raw }}
                         {% elseif page is defined %}
-                            {% if sonata_page.isEditor or (app.security is defined and app.security and app.security.token and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
+                            {% if sonata_page.isEditor or (app.user is defined and app.user and is_granted('ROLE_PREVIOUS_ADMIN')) %}
                                 {{ sonata_page_render_container('content',page,{ 'use_cache': false})}}
                             {% else %}
                                 {{ sonata_page_render_container('content', page,{ 'use_cache': true}) }}
@@ -270,7 +270,7 @@
                             {#{% endif %}#}
                             {% if page is defined %}
                             <p>
-                                {% if sonata_page.isEditor or (app.security is defined and app.security and app.security.token and app.security.isGranted('ROLE_PREVIOUS_ADMIN')) %}
+                                {% if sonata_page.isEditor or (app.user is defined and app.user and is_granted('ROLE_PREVIOUS_ADMIN')) %}
                                     {{ sonata_page_render_container('footer', 'global', { 'use_cache': false})}}
                                 {% else %}
                                     {{ sonata_page_render_container('footer', 'global', { 'use_cache': true}) }}

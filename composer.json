@@ -76,7 +76,7 @@
         "rz/user-bundle":  "~1.0",
         "rz/page-bundle":  "~1.1",
         "rz/media-bundle":  "~1.1",
-        "rz/news-bundle":  "~1.1",
+        "rz/news-bundle":  "~1.2",
         "rz/doctrine-orm-admin-bundle":  "~1.0",
         "rz/classification-bundle": "~1.1",
         "rz/seo-bundle": "~1.0",
