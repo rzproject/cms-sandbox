@@ -129,18 +129,19 @@ sonata_qa:
 #    resource: .
 #    type:     imagine
 
-rz_media_rest_service:
-    type: rest
-    resource: '@RzMediaBundle/Resources/config/REST/media_service_rest.yml'
-    prefix: /admin/api/rzmedia
+#blog:
+#    resource: '@SonataNewsBundle/Resources/config/routing/news.xml'
+#    prefix: /blog
 
+# FORCE HTML EXTESION
 blog:
-    resource: '@SonataNewsBundle/Resources/config/routing/news.xml'
+    resource: '@RzNewsBundle/Resources/config/routing/news.xml'
     prefix: /blog
 
-blog:
-    resource: '@SonataNewsBundle/Resources/config/routing/news.xml'
-    prefix: /blog
+# NO HTML EXTESION
+#blog:
+#    resource: '@RzNewsBundle/Resources/config/routing/news_no_html.xml'
+#    prefix: /blog
 
 fos_comment:
     type: rest
