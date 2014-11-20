@@ -3976,12 +3976,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/JqueryBundle.git",
-                "reference": "1e61b48a610fa2beb4e5e72eebccf02040dada5f"
+                "reference": "ee5ce0e8e9738c63daefa78329e6cac06eb5717e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/JqueryBundle/zipball/1e61b48a610fa2beb4e5e72eebccf02040dada5f",
-                "reference": "1e61b48a610fa2beb4e5e72eebccf02040dada5f",
+                "url": "https://api.github.com/repos/rmzamora/JqueryBundle/zipball/ee5ce0e8e9738c63daefa78329e6cac06eb5717e",
+                "reference": "ee5ce0e8e9738c63daefa78329e6cac06eb5717e",
                 "shasum": ""
             },
             "require": {
@@ -4019,7 +4019,7 @@
                 "jQueryUI",
                 "jquery"
             ],
-            "time": "2014-09-10 03:40:53"
+            "time": "2014-11-20 07:15:35"
         },
         {
             "name": "rmzamora/jsrouting-bundle",
@@ -5007,12 +5007,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/FieldTypeBundle.git",
-                "reference": "fd0d5376806a52717237b4820df2c13cb36a7b6a"
+                "reference": "459761763392edf7d07e7edea24b3688dddcf045"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/FieldTypeBundle/zipball/fd0d5376806a52717237b4820df2c13cb36a7b6a",
-                "reference": "fd0d5376806a52717237b4820df2c13cb36a7b6a",
+                "url": "https://api.github.com/repos/rzproject/FieldTypeBundle/zipball/459761763392edf7d07e7edea24b3688dddcf045",
+                "reference": "459761763392edf7d07e7edea24b3688dddcf045",
                 "shasum": ""
             },
             "require": {
@@ -5047,7 +5047,7 @@
                 "RZProject",
                 "Symfony2"
             ],
-            "time": "2014-11-11 13:27:19"
+            "time": "2014-11-20 07:16:50"
         },
         {
             "name": "rz/formatter-bundle",
