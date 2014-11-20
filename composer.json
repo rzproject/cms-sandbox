@@ -67,7 +67,6 @@
 
         "rmzamora/knp-menu-bundle": "2.0.x-dev",
         "rmzamora/entity-audit-bundle": "0.*@dev",
-        "rmzamora/jsrouting-bundle": "~1.5",
         "rmzamora/rest-bundle": "~1.4",
 
         "rz/formatter-bundle":  "~1.0",

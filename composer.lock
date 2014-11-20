@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dda34b66c4ab97fb170c102970e5d73c",
+    "hash": "3c2f22161207de744bd4988b2afbc8d0",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1343,12 +1343,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "a984147938a3ac8e5f73bdecc89c3bb88781c029"
+                "reference": "a20cb84f59d150cb91859f05716e97e4f288ff09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/a984147938a3ac8e5f73bdecc89c3bb88781c029",
-                "reference": "a984147938a3ac8e5f73bdecc89c3bb88781c029",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/a20cb84f59d150cb91859f05716e97e4f288ff09",
+                "reference": "a20cb84f59d150cb91859f05716e97e4f288ff09",
                 "shasum": ""
             },
             "require": {
@@ -1412,7 +1412,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2014-11-19 06:57:53"
+            "time": "2014-11-20 08:59:15"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -4022,68 +4022,6 @@
             "time": "2014-11-20 07:15:35"
         },
         {
-            "name": "rmzamora/jsrouting-bundle",
-            "version": "1.x-dev",
-            "target-dir": "FOS/JsRoutingBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rmzamora/FOSJsRoutingBundle.git",
-                "reference": "8dac920f9ceeaa8d9f4a2c3811b5d3fc38b944c9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/FOSJsRoutingBundle/zipball/8dac920f9ceeaa8d9f4a2c3811b5d3fc38b944c9",
-                "reference": "8dac920f9ceeaa8d9f4a2c3811b5d3fc38b944c9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "symfony/console": "~2.0",
-                "symfony/framework-bundle": "~2.0",
-                "symfony/serializer": "~2.0",
-                "willdurand/jsonp-callback-validator": "~1.0"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "FOS\\JsRoutingBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "William Durand",
-                    "email": "william.durand1@gmail.com",
-                    "homepage": "http://www.willdurand.fr"
-                },
-                {
-                    "name": "FriendsOfSymfony Community",
-                    "homepage": "https://github.com/friendsofsymfony/FOSJsRoutingBundle/contributors"
-                },
-                {
-                    "name": "mell zamora",
-                    "email": "mell@rzproject.org",
-                    "homepage": "http://www.rzproject.org"
-                }
-            ],
-            "description": "A pretty nice way to expose your Symfony2 routing to client applications.",
-            "homepage": "http://friendsofsymfony.github.com",
-            "keywords": [
-                "Js Routing",
-                "javascript",
-                "routing"
-            ],
-            "time": "2014-01-29 02:32:54"
-        },
-        {
             "name": "rmzamora/knp-menu-bundle",
             "version": "dev-master",
             "target-dir": "Knp/Bundle/MenuBundle",
@@ -4756,12 +4694,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/AdminBundle.git",
-                "reference": "4802b998f627c7341f22a6f03c032636975f4b9a"
+                "reference": "6fccd830cacf7bbe00f852ab010509756ea6bb6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/4802b998f627c7341f22a6f03c032636975f4b9a",
-                "reference": "4802b998f627c7341f22a6f03c032636975f4b9a",
+                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/6fccd830cacf7bbe00f852ab010509756ea6bb6b",
+                "reference": "6fccd830cacf7bbe00f852ab010509756ea6bb6b",
                 "shasum": ""
             },
             "require": {
@@ -4802,7 +4740,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-11-17 00:37:53"
+            "time": "2014-11-20 10:17:18"
         },
         {
             "name": "rz/block-bundle",
@@ -5055,12 +4993,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/FormatterBundle.git",
-                "reference": "d33eaa3cefcb29a371443126ec677c6762b742a1"
+                "reference": "cad92697b3976542d9a97e33137753f09fd08d19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/FormatterBundle/zipball/d33eaa3cefcb29a371443126ec677c6762b742a1",
-                "reference": "d33eaa3cefcb29a371443126ec677c6762b742a1",
+                "url": "https://api.github.com/repos/rzproject/FormatterBundle/zipball/cad92697b3976542d9a97e33137753f09fd08d19",
+                "reference": "cad92697b3976542d9a97e33137753f09fd08d19",
                 "shasum": ""
             },
             "require": {
@@ -5096,7 +5034,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-11-13 06:25:52"
+            "time": "2014-11-20 07:53:23"
         },
         {
             "name": "rz/media-bundle",
@@ -5104,12 +5042,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/MediaBundle.git",
-                "reference": "950abd877c5dc89a1d9c038d0eca73bd9a6e2ff7"
+                "reference": "25731835690a7dd5f2297dd00b17b0744ed0339c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/MediaBundle/zipball/950abd877c5dc89a1d9c038d0eca73bd9a6e2ff7",
-                "reference": "950abd877c5dc89a1d9c038d0eca73bd9a6e2ff7",
+                "url": "https://api.github.com/repos/rzproject/MediaBundle/zipball/25731835690a7dd5f2297dd00b17b0744ed0339c",
+                "reference": "25731835690a7dd5f2297dd00b17b0744ed0339c",
                 "shasum": ""
             },
             "require": {
@@ -5150,7 +5088,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2014-11-19 15:35:04"
+            "time": "2014-11-20 09:45:18"
         },
         {
             "name": "rz/news-bundle",
@@ -6650,12 +6588,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony-cmf/RoutingBundle.git",
-                "reference": "f64a355e0e5d22cdf9ddf85ed022be51b6456c70"
+                "reference": "816585d06fc141814e7e13c406b582274aca7e55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony-cmf/RoutingBundle/zipball/f64a355e0e5d22cdf9ddf85ed022be51b6456c70",
-                "reference": "f64a355e0e5d22cdf9ddf85ed022be51b6456c70",
+                "url": "https://api.github.com/repos/symfony-cmf/RoutingBundle/zipball/816585d06fc141814e7e13c406b582274aca7e55",
+                "reference": "816585d06fc141814e7e13c406b582274aca7e55",
                 "shasum": ""
             },
             "require": {
@@ -6707,7 +6645,7 @@
                 "database",
                 "routing"
             ],
-            "time": "2014-11-15 12:48:25"
+            "time": "2014-11-20 07:31:48"
         },
         {
             "name": "symfony/assetic-bundle",

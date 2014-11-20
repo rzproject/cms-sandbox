@@ -149,8 +149,8 @@ fos_comment:
     prefix: /comments
     defaults: { _format: html }
 
-fos_js_routing:
-    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+#fos_js_routing:
+#    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
 
 rz_seach:
     resource: "@RzSearchBundle/Resources/config/routing/search.xml"
