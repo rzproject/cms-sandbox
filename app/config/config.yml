@@ -97,6 +97,19 @@ assetic:
     debug:          %kernel.debug%
     use_controller: false
     java: "/usr/bin/java"
+    assets:
+      fontawesome-webfont-eot:
+        inputs: '%kernel.root_dir%/../vendor/rz/admin-bundle/Resources/public/css/font/fontawesome-webfont.eot'
+        output: 'css/font/fontawesome-webfont.eot'
+      fontawesome-webfont-svg:
+        inputs: '%kernel.root_dir%/../vendor/rz/admin-bundle/Resources/public/css/font/fontawesome-webfont.svg'
+        output: 'css/font/fontawesome-webfont.svg'
+      fontawesome-webfont-ttf:
+        inputs: '%kernel.root_dir%/../vendor/rz/admin-bundle/Resources/public/css/font/fontawesome-webfont.ttf'
+        output: 'css/font/fontawesome-webfont.ttf'
+      fontawesome-webfont-woff:
+        inputs: '%kernel.root_dir%/../vendor/rz/admin-bundle/Resources/public/css/font/fontawesome-webfont.woff'
+        output: 'css/font/fontawesome-webfont.woff'
     filters:
         cssrewrite: ~
         yui_css:
