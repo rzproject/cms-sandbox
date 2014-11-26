@@ -1,3 +1,26 @@
 rz_news:
   settings:
     news_pager_max_per_page: 10
+  default_collection: default
+  collections:
+      default:  # the default context is mandatory
+          provider: rz_news.provider.default
+          default_template: default
+          templates:
+              default:
+                  path: RzNewsBundle:Post:view.html.twig
+                  name: Default
+      blog:
+          provider: rz_news.provider.default
+          default_template: default
+          templates:
+              default:
+                  path: RzNewsBundle:Post:view.html.twig
+                  name: Default
+      event:
+          provider: rz_news.provider.event
+          default_template: default
+          templates:
+              default:
+                  path: RzNewsBundle:Post:view.html.twig
+                  name: Default
