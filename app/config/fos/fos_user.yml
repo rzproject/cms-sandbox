@@ -6,10 +6,10 @@ fos_user:
     firewall_name:  main
 
     # if you change the class configuration, please also alter the sonata_user.yml file
-    user_class:     Application\Sonata\UserBundle\Entity\User
+    user_class:     %fos_user_user_class%
 
     group:
-        group_class:   Application\Sonata\UserBundle\Entity\Group
+        group_class:   %fos_user_group_class%
         group_manager: sonata.user.orm.group_manager
 
     service:
@@ -37,12 +37,12 @@ fos_user:
 #fos_user:
 #    db_driver:      orm # can be orm or odm
 #    firewall_name:  main
-#    user_class:     Application\Sonata\UserBundle\Entity\User
+#    user_class:     %fos_user_user_class%
 #    use_listener:           true
 #    use_username_form_type: true
 #    model_manager_name:     null
 #    group:
-#        group_class: Application\Sonata\UserBundle\Entity\Group
+#        group_class: %fos_user_group_class%
 #
 #    registration:
 #        confirmation:

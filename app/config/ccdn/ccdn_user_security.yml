@@ -4,7 +4,7 @@
 ccdn_user_security:
     entity:
         user:
-            class: Application\Sonata\UserBundle\Entity\User # Required
+            class: %ccdn_user_security_entity_user%  # Required
     route_referer:
         enabled: true
         route_ignore_list:

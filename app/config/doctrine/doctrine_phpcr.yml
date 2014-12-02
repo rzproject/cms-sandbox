@@ -4,7 +4,7 @@ doctrine_phpcr:
             type: doctrinedbal
             connection: doctrine.dbal.default_connection
         workspace: default
-        username: admin
-        password: admin
+        username: %doctrine_phpcr_username%
+        password: %doctrine_phpcr_password%
     odm:
         auto_mapping: true

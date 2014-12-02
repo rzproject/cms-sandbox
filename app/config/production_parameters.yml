@@ -13,7 +13,7 @@ parameters:
 
     locale:             en
 
-    secret:             secret
+    secret:             d4b3a896a53437307b062a8d229e0c97
 
     # Sonata Admin Options
     sonata_admin.title:             cms-sandbox

@@ -12,7 +12,7 @@ parameters:
 
     locale:             en
 
-    secret:             ThisTokenIsNotSoSecretChangeIt
+    secret:             %secret%
 
     # Sonata Admin Options
     sonata_admin.title:             Sonata Project
