@@ -35,6 +35,7 @@ imports:
 #    - { resource: rmzamora/solr.yml }
     - { resource: rmzamora/rz/rz_search.yml }
     - { resource: rmzamora/rz/rz_news.yml }
+    - { resource: rmzamora/rz/rz_classification.yml }
 
     #HWI
     - { resource: rmzamora/hwi.yml }

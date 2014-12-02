@@ -1,0 +1,53 @@
+rz_classification:
+  providers:
+    category:
+      default_context: default
+      contexts:
+          default:  # the default context is mandatory
+              provider: rz_classification.provider.category.default
+              default_template: default
+              templates:
+                  default:
+                      path: RzClassificationBundle:Category:list.html.twig
+                      name: Default
+          news:
+              provider: rz_classification.provider.category.default
+              default_template: default
+              templates:
+                  default:
+                      path: RzClassificationBundle:Category:list.html.twig
+                      name: Default
+    collection:
+      default_context: default
+      contexts:
+          default:  # the default context is mandatory
+              provider: rz_classification.provider.collection.default
+              default_template: default
+              templates:
+                  default:
+                      path: RzClassificationBundle:Collection:list.html.twig
+                      name: Default
+          news:
+              provider: rz_classification.provider.collection.default
+              default_template: default
+              templates:
+                  default:
+                      path: RzClassificationBundle:Collection:list.html.twig
+                      name: Default
+    tag:
+      default_context: default
+      contexts:
+          default:  # the default context is mandatory
+              provider: rz_classification.provider.tag.default
+              default_template: default
+              templates:
+                  default:
+                      path: RzClassificationBundle:Tag:list.html.twig
+                      name: Default
+          news:
+              provider: rz_classification.provider.tag.default
+              default_template: default
+              templates:
+                  default:
+                      path: RzClassificationBundle:Tag:list.html.twig
+                      name: Default
