@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2a476b1e5fafcf647483758621cfdd40",
+    "hash": "75f5ea4cfab4d51d6928259e04701b66",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -2128,12 +2128,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/serializer.git",
-                "reference": "ba3f4401b5a7b697da18c39968fd9b16cdd2d720"
+                "reference": "47cb819658f0c2d1672eb8e3613db562eafb2d75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/ba3f4401b5a7b697da18c39968fd9b16cdd2d720",
-                "reference": "ba3f4401b5a7b697da18c39968fd9b16cdd2d720",
+                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/47cb819658f0c2d1672eb8e3613db562eafb2d75",
+                "reference": "47cb819658f0c2d1672eb8e3613db562eafb2d75",
                 "shasum": ""
             },
             "require": {
@@ -2147,6 +2147,7 @@
                 "doctrine/orm": "~2.1",
                 "doctrine/phpcr-odm": "~1.0.1",
                 "jackalope/jackalope-doctrine-dbal": "1.0.*",
+                "phpunit/phpunit": "~4.0",
                 "propel/propel1": "~1.7",
                 "symfony/filesystem": "2.*",
                 "symfony/form": "~2.1",
@@ -2188,7 +2189,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2014-11-16 21:01:59"
+            "time": "2014-12-03 15:35:26"
         },
         {
             "name": "jms/serializer-bundle",
@@ -5526,12 +5527,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "715fcb65f9a4841ffaf40c0bf050329d74c84cad"
+                "reference": "ddcfeaeb504ece5de546dbefd5c527eed7453048"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/715fcb65f9a4841ffaf40c0bf050329d74c84cad",
-                "reference": "715fcb65f9a4841ffaf40c0bf050329d74c84cad",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/ddcfeaeb504ece5de546dbefd5c527eed7453048",
+                "reference": "ddcfeaeb504ece5de546dbefd5c527eed7453048",
                 "shasum": ""
             },
             "require": {
@@ -5563,7 +5564,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2014-09-03 12:25:05"
+            "time": "2014-12-03 13:50:45"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -6833,16 +6834,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.6.0",
+            "version": "v2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "645bb3248db50d653d18929eb0c92b131b4f35ad"
+                "reference": "d805dfd67950848ec0338b4acd75777b340977b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/645bb3248db50d653d18929eb0c92b131b4f35ad",
-                "reference": "645bb3248db50d653d18929eb0c92b131b4f35ad",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/d805dfd67950848ec0338b4acd75777b340977b7",
+                "reference": "d805dfd67950848ec0338b4acd75777b340977b7",
                 "shasum": ""
             },
             "require": {
@@ -6903,7 +6904,7 @@
                 "doctrine/doctrine-bundle": "~1.2",
                 "doctrine/orm": "~2.2,>=2.2.3",
                 "egulias/email-validator": "~1.2",
-                "ircmaxell/password-compat": "1.0.*",
+                "ircmaxell/password-compat": "~1.0",
                 "monolog/monolog": "~1.11",
                 "ocramius/proxy-manager": ">=0.3.1,<0.6-dev",
                 "propel/propel1": "~1.6"
@@ -6945,7 +6946,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-11-28 15:59:01"
+            "time": "2014-12-03 16:40:43"
         },
         {
             "name": "twig/extensions",
@@ -8369,12 +8370,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "b8781bdc6379749fd3f3f76aa5109957f46bc9e6"
+                "reference": "818d3a4c09cfecb86f9521600ee5c72f701efcd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/b8781bdc6379749fd3f3f76aa5109957f46bc9e6",
-                "reference": "b8781bdc6379749fd3f3f76aa5109957f46bc9e6",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/818d3a4c09cfecb86f9521600ee5c72f701efcd8",
+                "reference": "818d3a4c09cfecb86f9521600ee5c72f701efcd8",
                 "shasum": ""
             },
             "require": {
@@ -8426,7 +8427,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-12-02 13:16:21"
+            "time": "2014-12-03 18:22:21"
         },
         {
             "name": "phpunit/php-file-iterator",
