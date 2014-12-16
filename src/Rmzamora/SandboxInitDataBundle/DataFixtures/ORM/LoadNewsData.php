@@ -45,7 +45,7 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
         $tags =  array('blog', 'article', 'event', 'promo');
 
         $i = 0;
-        foreach (range(1, 20) as $id) {
+        foreach (range(1, 5) as $id) {
             $post = $postManager->create();
             $post->setAuthor($this->getReference('user-admin'));
 
@@ -55,6 +55,11 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
             $post->setTitle($faker->sentence(6));
             $post->setPublicationDateStart($faker->dateTimeBetween('-30 days', '-1 days'));
 
+            $categories = array('technology', 'travel', 'entertainment', 'finance', 'business');
+            foreach($categories as $cat) {
+                $this->addCategory($post, $this->getReference(sprintf('news-classification-category-news-blog-%s', $cat)));
+            }
+
             $raw = null;
 
             $raw .= sprintf("%s\n\n%s\n\n %s\n\n%s",
@@ -70,8 +75,11 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
             $post->setContent($this->getPoolFormatter()->transform($post->getContentFormatter(), $post->getRawContent()));
             $post->setCommentsDefaultStatus(CommentInterface::STATUS_VALID);
 
+            $settings = array('template'=>'RzNewsBundle:Post:view.html.twig');
+            $post->setSettings($settings);
+
             foreach($tags as $key=>$tag) {
-                $post->addTags($this->getReference(sprintf('default-classification-tag-%s', $tag)));
+                $post->addTags($this->getReference(sprintf('news-classification-tag-%s', $tag)));
             }
 
             foreach(range(1, $faker->randomDigit + 2) as $commentId) {
@@ -91,7 +99,7 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
         }
 
 
-        foreach (range(1, 10) as $id) {
+        foreach (range(1, 3) as $id) {
             $post = $postManager->create();
             $post->setAuthor($this->getReference('user-admin'));
 
@@ -101,6 +109,11 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
             $post->setTitle($faker->sentence(6));
             $post->setPublicationDateStart($faker->dateTimeBetween('-30 days', '-1 days'));
 
+            $categories = array('trade fair', 'travel show', 'press conference', 'product launches', 'business conference', 'award', 'weddings', 'birthday', 'anniversary');
+            foreach($categories as $cat) {
+                $this->addCategory($post, $this->getReference(sprintf('news-classification-category-news-event-%s', $cat)));
+            }
+
             $raw = null;
 
             $raw .= sprintf("%s\n\n%s\n\n %s\n\n%s",
@@ -116,8 +129,31 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
             $post->setContent($this->getPoolFormatter()->transform($post->getContentFormatter(), $post->getRawContent()));
             $post->setCommentsDefaultStatus(CommentInterface::STATUS_VALID);
 
+            //set event settings
+            $end_day = null;
+            $month = $faker->numberBetween(1, 12);
+
+            if($month == 2) {
+                $day = $faker->numberBetween(1, 20);
+                $end_day = $faker->numberBetween(21, 28);
+            } else {
+                $day = $faker->numberBetween(1, 20);
+                $end_day = $faker->numberBetween(21, 30);
+            }
+
+
+            $year = $faker->numberBetween(2014, 2016);
+            $settings = array('template'=>'RzNewsBundle:Post:view_event.html.twig',
+                              'start_date'=>array("year"=>$year,"month"=>$month,"day"=>$day),
+                              'end_date'=>array("year"=>$year,"month"=>$month,"day"=>$end_day),
+                              "location"=>array("lat"=>"16.0432998","lng"=>"120.33331240000007"),
+                              "address"=>$faker->address
+            );
+
+            $post->setSettings($settings);
+
             foreach($tags as $key=>$tag) {
-                $post->addTags($this->getReference(sprintf('default-classification-tag-%s', $tag)));
+                $post->addTags($this->getReference(sprintf('news-classification-tag-%s', $tag)));
             }
 
             foreach(range(1, $faker->randomDigit + 2) as $commentId) {
@@ -135,6 +171,16 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
 
             $postManager->save($post);
         }
+    }
+
+    public function addCategory($post, $category) {
+        $postHasCategory = new \Application\Sonata\NewsBundle\Entity\PostHasCategory();
+        $postHasCategory->setCategory($category);
+        $postHasCategory->setPost($post);
+        $postHasCategory->setPosition(count($post->getPostHasCategory()) + 1);
+        $postHasCategory->setEnabled(true);
+
+        $post->addPostHasCategory($postHasCategory);
     }
 
     public function getPoolFormatter()

@@ -79,6 +79,7 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
             $category->setName(ucwords($cat));
             $category->setContext( $this->getReference('news-classification-context'));
             $category->setParent( $this->getReference('news-classification-category-news'));
+            $category->setSettings(array('template'=>sprintf('RzNewsBundle:Post:category_list_%s.html.twig', $cat)));
             $this->getCategoryManager()->save($category);
             $this->addReference(sprintf('news-classification-category-news-%s', $cat), $category);
         }
@@ -91,6 +92,7 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
             $category->setName(ucwords($cat));
             $category->setContext( $this->getReference('news-classification-context'));
             $category->setParent( $this->getReference('news-classification-category-news-blog'));
+            $category->setSettings(array('template'=>'RzNewsBundle:Post:category_list_blog.html.twig'));
             $this->getCategoryManager()->save($category);
             $this->addReference(sprintf('news-classification-category-news-blog-%s', $cat), $category);
         }
@@ -103,16 +105,12 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
             $category->setName(ucwords($cat));
             $category->setContext( $this->getReference('news-classification-context'));
             $category->setParent( $this->getReference('news-classification-category-news-event'));
+            $category->setSettings(array('template'=>'RzNewsBundle:Post:category_list_event.html.twig'));
             $this->getCategoryManager()->save($category);
             $this->addReference(sprintf('news-classification-category-news-event-%s', $cat), $category);
         }
 
-        $tags = array(
-            'blog' => null,
-            'article' => null,
-            'event' => null,
-            'promo' => null,
-        );
+        $tags = array('general' => null);
 
         foreach($tags as $tagName => $null) {
             $tag = $this->getTagManager()->create();
@@ -122,6 +120,19 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
             $tags[$tagName] = $tag;
             $this->getTagManager()->save($tag);
             $this->addReference(sprintf('default-classification-tag-%s', $tagName), $tag);
+        }
+
+        $tags = array('blog' => null, 'article' => null, 'event' => null, 'promo' => null);
+
+        foreach($tags as $tagName => $null) {
+            $tag = $this->getTagManager()->create();
+            $tag->setEnabled(true);
+            $tag->setName($tagName);
+            $tag->setContext($this->getReference('news-classification-context'));
+            $category->setSettings(array('template'=>'RzNewsBundle:Post:tag_list_default.html.twig'));
+            $tags[$tagName] = $tag;
+            $this->getTagManager()->save($tag);
+            $this->addReference(sprintf('news-classification-tag-%s', $tagName), $tag);
         }
 
         // Default Collection
@@ -137,6 +148,7 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
         $collection->setEnabled(true);
         $collection->setName('Blog');
         $collection->setContext($this->getReference('news-classification-context'));
+        $category->setSettings(array('template'=>'RzNewsBundle:Post:collection_list_blog.html.twig'));
         $this->getCollectionManager()->save($collection);
         $this->addReference('news-classification-collection-blog', $collection);
 
@@ -145,6 +157,7 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
         $collection->setEnabled(true);
         $collection->setName('Event');
         $collection->setContext($this->getReference('news-classification-context'));
+        $category->setSettings(array('template'=>'RzNewsBundle:Post:collection_list_event.html.twig'));
         $this->getCollectionManager()->save($collection);
         $this->addReference('news-classification-collection-event', $collection);
 
