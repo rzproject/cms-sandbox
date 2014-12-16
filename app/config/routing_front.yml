@@ -133,15 +133,27 @@ sonata_qa:
 #    resource: '@SonataNewsBundle/Resources/config/routing/news.xml'
 #    prefix: /blog
 
-# FORCE HTML EXTESION
-blog:
-    resource: '@RzNewsBundle/Resources/config/routing/news.xml'
+#FOLLOW EXACT ORDER
+
+blog_category:
+    resource: '@RzNewsBundle/Resources/config/routing/news_category.xml'
     prefix: /blog
 
-# NO HTML EXTESION
-#blog:
-#    resource: '@RzNewsBundle/Resources/config/routing/news_no_html.xml'
-#    prefix: /blog
+blog_collection:
+    resource: '@RzNewsBundle/Resources/config/routing/news_collection.xml'
+    prefix: /blog
+
+blog_tag:
+    resource: '@RzNewsBundle/Resources/config/routing/news_tag.xml'
+    prefix: /blog
+
+blog_default:
+    resource: '@RzNewsBundle/Resources/config/routing/news_default.xml'
+    prefix: /blog
+
+blog_comment:
+    resource: '@RzNewsBundle/Resources/config/routing/news_comment.xml'
+    prefix: /blog
 
 fos_comment:
     type: rest

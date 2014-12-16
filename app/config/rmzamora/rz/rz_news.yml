@@ -1,7 +1,7 @@
 rz_news:
   settings:
     news_pager_max_per_page: 10
-  default_collection: default
+  default_collection: event
   collections:
       default:  # the default context is mandatory
           provider: rz_news.provider.default
@@ -24,3 +24,6 @@ rz_news:
               default:
                   path: RzNewsBundle:Post:view.html.twig
                   name: Default
+              Event:
+                  path: RzNewsBundle:Post:view_event.html.twig
+                  name: Event

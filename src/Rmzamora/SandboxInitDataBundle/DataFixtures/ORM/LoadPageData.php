@@ -183,7 +183,7 @@ CONTENT
 
         $text->setType('sonata.block.service.text');
         $text->setSetting('content', <<<FOOTER
-        <p>cms-sandbox (c) rzproject.org &nbsp;2014.</p>
+        <p>cms-sandbox (c) rzproject.org &nbsp;2015.</p>
 FOOTER
         );
         $text->setPosition(1);

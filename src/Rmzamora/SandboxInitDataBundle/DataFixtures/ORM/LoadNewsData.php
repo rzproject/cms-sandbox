@@ -27,7 +27,7 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
 
     function getOrder()
     {
-        return 3;
+        return 4;
     }
 
     public function setContainer(ContainerInterface $container = null)
@@ -42,44 +42,76 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
 
         $faker = $this->getFaker();
 
-        $tags = array('symfony', 'form', 'general', 'web2');
+        $tags =  array('blog', 'article', 'event', 'promo');
 
         $i = 0;
-        foreach (range(1, 3) as $id) {
+        foreach (range(1, 20) as $id) {
             $post = $postManager->create();
             $post->setAuthor($this->getReference('user-admin'));
 
-            $post->setCollection($this->getReference('default-classification-collection-general'));
+            $post->setCollection($this->getReference('news-classification-collection-blog'));
             $post->setAbstract($faker->sentence(30));
             $post->setEnabled(true);
             $post->setTitle($faker->sentence(6));
             $post->setPublicationDateStart($faker->dateTimeBetween('-30 days', '-1 days'));
 
-            $raw =<<<RAW
-### Gist Formatter
+            $raw = null;
 
-Now a specific gist from github
-
-<% gist '1552362', 'gistfile1.txt' %>
-
-### Media Formatter
-
-Load a media from a <code>SonataMediaBundle</code> with a specific format
-
-<% media $id, 'big' %>
-
-RAW
-            ;
-
-            $raw .= sprintf("### %s\n\n%s\n\n### %s\n\n%s",
-                            $faker->sentence(rand(3, 6)),
-                            $faker->text(1000),
-                            $faker->sentence(rand(3, 6)),
-                            $faker->text(1000)
+            $raw .= sprintf("%s\n\n%s\n\n %s\n\n%s",
+                $faker->sentence(rand(3, 6)),
+                $faker->text(1000),
+                $faker->sentence(rand(3, 6)),
+                $faker->text(1000)
             );
 
             $post->setRawContent($raw);
-            $post->setContentFormatter('markdown');
+            $post->setContentFormatter('richhtml');
+
+            $post->setContent($this->getPoolFormatter()->transform($post->getContentFormatter(), $post->getRawContent()));
+            $post->setCommentsDefaultStatus(CommentInterface::STATUS_VALID);
+
+            foreach($tags as $key=>$tag) {
+                $post->addTags($this->getReference(sprintf('default-classification-tag-%s', $tag)));
+            }
+
+            foreach(range(1, $faker->randomDigit + 2) as $commentId) {
+                $comment = $this->getCommentManager()->create();
+                $comment->setEmail($faker->email);
+                $comment->setName($faker->name);
+                $comment->setStatus(CommentInterface::STATUS_VALID);
+                $comment->setMessage($faker->sentence(25));
+                $comment->setUrl($faker->url);
+
+                $post->addComments($comment);
+            }
+
+            $this->addReference('sonata-news-'.($i++), $post);
+
+            $postManager->save($post);
+        }
+
+
+        foreach (range(1, 10) as $id) {
+            $post = $postManager->create();
+            $post->setAuthor($this->getReference('user-admin'));
+
+            $post->setCollection($this->getReference('news-classification-collection-event'));
+            $post->setAbstract($faker->sentence(30));
+            $post->setEnabled(true);
+            $post->setTitle($faker->sentence(6));
+            $post->setPublicationDateStart($faker->dateTimeBetween('-30 days', '-1 days'));
+
+            $raw = null;
+
+            $raw .= sprintf("%s\n\n%s\n\n %s\n\n%s",
+                $faker->sentence(rand(3, 6)),
+                $faker->text(1000),
+                $faker->sentence(rand(3, 6)),
+                $faker->text(1000)
+            );
+
+            $post->setRawContent($raw);
+            $post->setContentFormatter('richhtml');
 
             $post->setContent($this->getPoolFormatter()->transform($post->getContentFormatter(), $post->getRawContent()));
             $post->setCommentsDefaultStatus(CommentInterface::STATUS_VALID);

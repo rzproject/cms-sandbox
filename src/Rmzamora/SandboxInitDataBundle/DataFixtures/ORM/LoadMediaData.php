@@ -29,7 +29,7 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
 
     function getOrder()
     {
-        return 4;
+        return 3;
     }
 
     public function setContainer(ContainerInterface $container = null)
@@ -45,8 +45,8 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
         $faker = $this->getFaker();
 
         $files = Finder::create()
-            ->name('*.jpeg')
-            ->in(__DIR__.'/../data/files');
+            ->name('*.jpg')
+            ->in(__DIR__.'/../data/files/slides');
 
         $i = 0;
         foreach ($files as $pos => $file) {
@@ -62,21 +62,21 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
             $this->addMedia($gallery, $media);
         }
 
-        $videos = array(
-            'ythUVU31Y18' => 'sonata.media.provider.youtube'
-//            'xdw0tz'      => 'sonata.media.provider.dailymotion',
-//            '9636197'     => 'sonata.media.provider.vimeo'
-        );
-
-        foreach ($videos as $video => $provider) {
-            $media = $manager->create();
-            $media->setBinaryContent($video);
-            $media->setEnabled(true);
-
-            $manager->save($media, 'default', $provider);
-
-            $this->addMedia($gallery, $media);
-        }
+//        $videos = array(
+//            'ythUVU31Y18' => 'sonata.media.provider.youtube'
+////            'xdw0tz'      => 'sonata.media.provider.dailymotion',
+////            '9636197'     => 'sonata.media.provider.vimeo'
+//        );
+//
+//        foreach ($videos as $video => $provider) {
+//            $media = $manager->create();
+//            $media->setBinaryContent($video);
+//            $media->setEnabled(true);
+//
+//            $manager->save($media, 'default', $provider);
+//
+//            $this->addMedia($gallery, $media);
+//        }
 
         $gallery->setEnabled(true);
         $gallery->setName($faker->sentence(4));
@@ -86,6 +86,43 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
         $this->getGalleryManager()->update($gallery);
 
         $this->addReference('media-gallery', $gallery);
+
+
+        //add news data
+        $i = 0;
+        $files = Finder::create()
+            ->name('*.*')
+            ->in(__DIR__.'/../data/files/news');
+
+        foreach ($files as $pos => $file) {
+            $media = $manager->create();
+            $media->setBinaryContent($file);
+            $media->setEnabled(true);
+            $media->setDescription($faker->sentence(15));
+
+            $this->addReference('sonata-media-news-'.($i++), $media);
+
+            $manager->save($media, 'news', 'sonata.media.provider.image');
+        }
+
+        //add logos
+        $i = 0;
+        $files = Finder::create()
+            ->name('*.*')
+            ->in(__DIR__.'/../data/files/logos');
+
+        foreach ($files as $pos => $file) {
+            $media = $manager->create();
+            $media->setBinaryContent($file);
+            $media->setEnabled(true);
+            $media->setDescription($faker->sentence(15));
+
+            $this->addReference('sonata-media-logos-'.($i++), $media);
+
+            $manager->save($media, 'default', 'sonata.media.provider.image');
+        }
+
+
     }
 
     /**

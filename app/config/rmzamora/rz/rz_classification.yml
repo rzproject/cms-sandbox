@@ -17,6 +17,12 @@ rz_classification:
                   default:
                       path: RzClassificationBundle:Category:list.html.twig
                       name: Default
+                  blog:
+                      path: RzNewsBundle:Post:category_blog.html.twig
+                      name: Blog
+                  event:
+                      path: RzNewsBundle:Post:category_event.html.twig
+                      name: Event
     collection:
       default_context: default
       contexts:
@@ -32,8 +38,14 @@ rz_classification:
               default_template: default
               templates:
                   default:
-                      path: RzClassificationBundle:Collection:list.html.twig
+                      path: RzNewsBundle:Post:collection.html.twig
                       name: Default
+                  blog:
+                      path: RzNewsBundle:Post:collection_blog.html.twig
+                      name: Blog
+                  event:
+                      path: RzNewsBundle:Post:collection_event.html.twig
+                      name: Event
     tag:
       default_context: default
       contexts:

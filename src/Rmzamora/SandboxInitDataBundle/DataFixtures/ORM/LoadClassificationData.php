@@ -44,23 +44,39 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
         $context->setEnabled(true);
         $context->setName('Default');
         $this->getContextManager()->save($context);
-
         $this->addReference('default-classification-context', $context);
 
-
+        // Default Category
         $category = $this->getCategoryManager()->create();
         $category->setEnabled(true);
         $category->setName('Default');
         $category->setContext( $this->getReference('default-classification-context'));
         $this->getCategoryManager()->save($category);
-
         $this->addReference('default-classification-category-default', $category);
 
+        // Create News Context
+        $context = $this->getContextManager()->create();
+        $context->setId('news');
+        $context->setEnabled(true);
+        $context->setName('News');
+        $this->getContextManager()->save($context);
+        $this->addReference('news-classification-context', $context);
+
+        // News Category
+        $category = $this->getCategoryManager()->create();
+        $category->setEnabled(true);
+        $category->setName('News');
+        $category->setContext( $this->getReference('news-classification-context'));
+        $this->getCategoryManager()->save($category);
+        $this->addReference('news-classification-category-news', $category);
+
+
+
         $tags = array(
-            'symfony' => null,
-            'form' => null,
-            'general' => null,
-            'web2' => null,
+            'blog' => null,
+            'article' => null,
+            'event' => null,
+            'promo' => null,
         );
 
         foreach($tags as $tagName => $null) {
@@ -73,12 +89,29 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
             $this->addReference(sprintf('default-classification-tag-%s', $tagName), $tag);
         }
 
+        // Default Collection
         $collection = $this->getCollectionManager()->create();
         $collection->setEnabled(true);
         $collection->setName('General');
         $collection->setContext($this->getReference('default-classification-context'));
         $this->getCollectionManager()->save($collection);
         $this->addReference('default-classification-collection-general', $collection);
+
+        // News Collection
+        $collection = $this->getCollectionManager()->create();
+        $collection->setEnabled(true);
+        $collection->setName('Blog');
+        $collection->setContext($this->getReference('news-classification-context'));
+        $this->getCollectionManager()->save($collection);
+        $this->addReference('news-classification-collection-blog', $collection);
+
+        // News Collection
+        $collection = $this->getCollectionManager()->create();
+        $collection->setEnabled(true);
+        $collection->setName('Event');
+        $collection->setContext($this->getReference('news-classification-context'));
+        $this->getCollectionManager()->save($collection);
+        $this->addReference('news-classification-collection-event', $collection);
 
     }
 
