@@ -71,6 +71,41 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
         $this->addReference('news-classification-category-news', $category);
 
 
+        $categories = array('blog', 'event');
+
+        foreach($categories as $cat) {
+            $category = $this->getCategoryManager()->create();
+            $category->setEnabled(true);
+            $category->setName(ucwords($cat));
+            $category->setContext( $this->getReference('news-classification-context'));
+            $category->setParent( $this->getReference('news-classification-category-news'));
+            $this->getCategoryManager()->save($category);
+            $this->addReference(sprintf('news-classification-category-news-%s', $cat), $category);
+        }
+
+        // News Child Category BLOG
+        $categories = array('technology', 'travel', 'entertainment', 'finance', 'business');
+        foreach($categories as $cat) {
+            $category = $this->getCategoryManager()->create();
+            $category->setEnabled(true);
+            $category->setName(ucwords($cat));
+            $category->setContext( $this->getReference('news-classification-context'));
+            $category->setParent( $this->getReference('news-classification-category-news-blog'));
+            $this->getCategoryManager()->save($category);
+            $this->addReference(sprintf('news-classification-category-news-blog-%s', $cat), $category);
+        }
+
+        // News Child Category EVENT
+        $categories = array('trade fair', 'travel show', 'press conference', 'product launches', 'business conference', 'award', 'weddings', 'birthday', 'anniversary');
+        foreach($categories as $cat) {
+            $category = $this->getCategoryManager()->create();
+            $category->setEnabled(true);
+            $category->setName(ucwords($cat));
+            $category->setContext( $this->getReference('news-classification-context'));
+            $category->setParent( $this->getReference('news-classification-category-news-event'));
+            $this->getCategoryManager()->save($category);
+            $this->addReference(sprintf('news-classification-category-news-event-%s', $cat), $category);
+        }
 
         $tags = array(
             'blog' => null,
