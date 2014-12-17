@@ -54,6 +54,7 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
             $post->setEnabled(true);
             $post->setTitle($faker->sentence(6));
             $post->setPublicationDateStart($faker->dateTimeBetween('-30 days', '-1 days'));
+            $post->setImage($this->getReference('sonata-media-news-'.$faker->numberBetween(0,2)));
 
             $categories = array('technology', 'travel', 'entertainment', 'finance', 'business');
             foreach($categories as $cat) {
@@ -108,6 +109,7 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
             $post->setEnabled(true);
             $post->setTitle($faker->sentence(6));
             $post->setPublicationDateStart($faker->dateTimeBetween('-30 days', '-1 days'));
+            $post->setImage($this->getReference('sonata-media-news-'.$faker->numberBetween(0,2)));
 
             $categories = array('trade fair', 'travel show', 'press conference', 'product launches', 'business conference', 'award', 'weddings', 'birthday', 'anniversary');
             foreach($categories as $cat) {
