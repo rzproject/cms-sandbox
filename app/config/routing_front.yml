@@ -135,21 +135,21 @@ sonata_qa:
 
 #FOLLOW EXACT ORDER
 
+blog_default:
+    resource: '@RzNewsBundle/Resources/config/routing/news_default.xml'
+    prefix: /article
+
 blog_category:
     resource: '@RzNewsBundle/Resources/config/routing/news_category.xml'
-    prefix: /blog
+    prefix: /
 
 blog_collection:
     resource: '@RzNewsBundle/Resources/config/routing/news_collection.xml'
-    prefix: /blog
+    prefix: /
 
 blog_tag:
     resource: '@RzNewsBundle/Resources/config/routing/news_tag.xml'
-    prefix: /blog
-
-blog_default:
-    resource: '@RzNewsBundle/Resources/config/routing/news_default.xml'
-    prefix: /blog
+    prefix: /
 
 blog_comment:
     resource: '@RzNewsBundle/Resources/config/routing/news_comment.xml'
