@@ -4278,12 +4278,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataPageBundle.git",
-                "reference": "f60b8449b0ed29010443c198b48b06e24df3751f"
+                "reference": "1245a71ec61115a5033ed875d2988fe67279d584"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataPageBundle/zipball/f60b8449b0ed29010443c198b48b06e24df3751f",
-                "reference": "f60b8449b0ed29010443c198b48b06e24df3751f",
+                "url": "https://api.github.com/repos/rmzamora/SonataPageBundle/zipball/1245a71ec61115a5033ed875d2988fe67279d584",
+                "reference": "1245a71ec61115a5033ed875d2988fe67279d584",
                 "shasum": ""
             },
             "require": {
@@ -4346,7 +4346,7 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2015-01-09 00:38:53"
+            "time": "2015-01-13 01:25:35"
         },
         {
             "name": "rmzamora/rest-bundle",
