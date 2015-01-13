@@ -41,7 +41,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
         $site = $this->createSite();
         $this->createGlobalPage($site);
         $this->createHomePage($site);
-        $this->createBlogIndex($site);
+//        $this->createBlogIndex($site);
         $this->createGalleryIndex($site);
     }
 
