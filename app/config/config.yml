@@ -36,6 +36,7 @@ imports:
     - { resource: rmzamora/rz/rz_search.yml }
     - { resource: rmzamora/rz/rz_news.yml }
     - { resource: rmzamora/rz/rz_classification.yml }
+    - { resource: rmzamora/rz/rz_seo.yml }
 
     #HWI
     - { resource: rmzamora/hwi.yml }
