@@ -54,7 +54,7 @@ rz_search:
                 model_manager: sonata.news.manager.post
                 route_generator: sonata.news.permalink.date
                 model_identifier: sonata.news.post
-                route: sonata_news_view
+                route: rz_news_view
                 template:
                   result:
                     #solr: RzSearchBundle:Search:news_solr_results.html.twig
