@@ -49,7 +49,7 @@
         "rmzamora/cache-bundle": "~2.2",
         "rmzamora/notification-bundle": "~2.3",
         "rmzamora/admin-bundle": "~2.3",
-        "rmzamora/block-bundle": "2.3.*@dev",
+        "rmzamora/block-bundle": "~2.3",
         "rmzamora/user-bundle": "~2.3",
         "rmzamora/media-bundle": "~2.3",
         "rmzamora/doctrine-orm-admin-bundle": "~2.3",
