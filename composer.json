@@ -71,7 +71,7 @@
 
         "rz/formatter-bundle":  "~1.0",
         "rz/admin-bundle":  "~1.0",
-        "rz/block-bundle":  "~1.1",
+        "rz/block-bundle": "1.1.*@dev",
         "rz/user-bundle":  "~1.0",
         "rz/page-bundle":  "~1.1",
         "rz/media-bundle":  "~1.1",
