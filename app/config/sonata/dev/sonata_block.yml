@@ -31,6 +31,7 @@ sonata_block:
             # cache: sonata.block.cache.esi # if you are using the BlockBundle without the PageBundle
         sonata.page.block.children_pages:
         sonata.page.block.breadcrumb:
+        sonata.page.block.shared_block:
 
         # MediaBundle's Blocks
         sonata.media.block.media:

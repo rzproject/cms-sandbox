@@ -37,6 +37,8 @@ sonata_block:
         sonata.page.block.children_pages:
         sonata.page.block.breadcrumb:
             cache: sonata.cache.mongo
+        sonata.page.block.shared_block:
+            cache: sonata.cache.mongo
 
         # MediaBundle's Blocks
         sonata.media.block.media:
