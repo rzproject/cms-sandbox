@@ -5256,12 +5256,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/SeoBundle.git",
-                "reference": "68fbbdef0684d9f375cf9b1471bee18da73dea10"
+                "reference": "f6635ce60543118db868585206eb50d215ad5b16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/SeoBundle/zipball/68fbbdef0684d9f375cf9b1471bee18da73dea10",
-                "reference": "68fbbdef0684d9f375cf9b1471bee18da73dea10",
+                "url": "https://api.github.com/repos/rzproject/SeoBundle/zipball/f6635ce60543118db868585206eb50d215ad5b16",
+                "reference": "f6635ce60543118db868585206eb50d215ad5b16",
                 "shasum": ""
             },
             "require": {
@@ -5271,7 +5271,7 @@
             },
             "require-dev": {
                 "guzzle/guzzle": "3.*",
-                "rmzamora/seo-bundle": "2.3.*",
+                "rmzamora/seo-bundle": "1.2.*",
                 "rz/admin-bundle": "1.0.*",
                 "rz/block-bundle": "1.1.*"
             },
@@ -5318,7 +5318,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-03-11 09:20:28"
+            "time": "2015-03-12 06:13:50"
         },
         {
             "name": "rz/timeline-bundle",
