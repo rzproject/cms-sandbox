@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "655af43a9e0d31ca637f272fc06b07da",
+    "hash": "d61424ffb304448e3de2c14718302ef4",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -514,12 +514,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "cde0cd8c1cc5c097ad9483c32f9bd3fcfa22361a"
+                "reference": "7c4b0145bbff1454a5241e47718a9033af39a4db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/cde0cd8c1cc5c097ad9483c32f9bd3fcfa22361a",
-                "reference": "cde0cd8c1cc5c097ad9483c32f9bd3fcfa22361a",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/7c4b0145bbff1454a5241e47718a9033af39a4db",
+                "reference": "7c4b0145bbff1454a5241e47718a9033af39a4db",
                 "shasum": ""
             },
             "require": {
@@ -583,7 +583,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2015-03-04 14:33:30"
+            "time": "2015-03-11 15:51:41"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -966,12 +966,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/migrations.git",
-                "reference": "fca67c4a5a6f4334e8b6a57410f7b386b012ab01"
+                "reference": "efe104057657c5d62f714e00ae30fa2a51e688e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/migrations/zipball/fca67c4a5a6f4334e8b6a57410f7b386b012ab01",
-                "reference": "fca67c4a5a6f4334e8b6a57410f7b386b012ab01",
+                "url": "https://api.github.com/repos/doctrine/migrations/zipball/efe104057657c5d62f714e00ae30fa2a51e688e3",
+                "reference": "efe104057657c5d62f714e00ae30fa2a51e688e3",
                 "shasum": ""
             },
             "require": {
@@ -1016,7 +1016,7 @@
                 "database",
                 "migrations"
             ],
-            "time": "2015-03-06 20:53:13"
+            "time": "2015-03-11 16:28:22"
         },
         {
             "name": "doctrine/orm",
@@ -1432,12 +1432,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "40426f77f030b6fb45951be920ff1036b2f423d2"
+                "reference": "5f91d63d78036ee445601ce0c606cdceb0be55d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/40426f77f030b6fb45951be920ff1036b2f423d2",
-                "reference": "40426f77f030b6fb45951be920ff1036b2f423d2",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/5f91d63d78036ee445601ce0c606cdceb0be55d2",
+                "reference": "5f91d63d78036ee445601ce0c606cdceb0be55d2",
                 "shasum": ""
             },
             "require": {
@@ -1476,7 +1476,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-02-27 08:30:07"
+            "time": "2015-03-11 13:17:18"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -3046,16 +3046,16 @@
         },
         {
             "name": "rmzamora/admin-bundle",
-            "version": "2.3.x-dev",
+            "version": "2.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataAdminBundle.git",
-                "reference": "be21d29b4cfef14d0ca1dfbb2b85f6f9ff5b99a6"
+                "reference": "ceb464d27932de81b4f43e49ee8225665ef45d5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/be21d29b4cfef14d0ca1dfbb2b85f6f9ff5b99a6",
-                "reference": "be21d29b4cfef14d0ca1dfbb2b85f6f9ff5b99a6",
+                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/ceb464d27932de81b4f43e49ee8225665ef45d5a",
+                "reference": "ceb464d27932de81b4f43e49ee8225665ef45d5a",
                 "shasum": ""
             },
             "require": {
@@ -3092,7 +3092,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-2.3": "2.3.x-dev"
+                    "dev-2.4": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -3129,20 +3129,20 @@
                 "rmzamora fork",
                 "sonata"
             ],
-            "time": "2015-03-11 05:45:21"
+            "time": "2015-03-12 05:25:16"
         },
         {
             "name": "rmzamora/block-bundle",
-            "version": "2.3.x-dev",
+            "version": "2.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataBlockBundle.git",
-                "reference": "71f32289430b02b81d56b8edce31e5057f599c2d"
+                "reference": "b69a365e1d3f0e40c7509385a26db89ad2cbba18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataBlockBundle/zipball/71f32289430b02b81d56b8edce31e5057f599c2d",
-                "reference": "71f32289430b02b81d56b8edce31e5057f599c2d",
+                "url": "https://api.github.com/repos/rmzamora/SonataBlockBundle/zipball/b69a365e1d3f0e40c7509385a26db89ad2cbba18",
+                "reference": "b69a365e1d3f0e40c7509385a26db89ad2cbba18",
                 "shasum": ""
             },
             "require": {
@@ -3157,14 +3157,14 @@
                 "rmzamora/knp-menu-bundle": "2.0.x-dev"
             },
             "suggest": {
-                "rmzamora/admin-bundle": "2.3.*",
+                "rmzamora/admin-bundle": "2.4.*",
                 "rmzamora/cache-bundle": "~2.2",
                 "rmzamora/knp-menu-bundle": "2.0.x-dev"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-2.3": "2.3.x-dev"
+                    "dev-2.4": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -3199,7 +3199,7 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2015-03-11 05:53:30"
+            "time": "2015-03-12 05:28:58"
         },
         {
             "name": "rmzamora/bootstrap-bundle",
@@ -3463,21 +3463,21 @@
         },
         {
             "name": "rmzamora/classification-bundle",
-            "version": "2.3.x-dev",
+            "version": "2.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataClassificationBundle.git",
-                "reference": "f17acf1156beb56d2660c8d7b916a3492beaf44b"
+                "reference": "41bbcc9d4612a47d466c53c6381a1436d650a86c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataClassificationBundle/zipball/f17acf1156beb56d2660c8d7b916a3492beaf44b",
-                "reference": "f17acf1156beb56d2660c8d7b916a3492beaf44b",
+                "url": "https://api.github.com/repos/rmzamora/SonataClassificationBundle/zipball/41bbcc9d4612a47d466c53c6381a1436d650a86c",
+                "reference": "41bbcc9d4612a47d466c53c6381a1436d650a86c",
                 "shasum": ""
             },
             "require": {
-                "rmzamora/doctrine-orm-admin-bundle": "2.3.*",
-                "rmzamora/media-bundle": "2.3.*",
+                "rmzamora/doctrine-orm-admin-bundle": "2.4.*",
+                "rmzamora/media-bundle": "2.4.*",
                 "sonata-project/datagrid-bundle": "~2.2@dev",
                 "symfony/form": "~2.3",
                 "symfony/framework-bundle": "~2.3"
@@ -3487,12 +3487,12 @@
                 "rmzamora/rest-bundle": "~1.3"
             },
             "suggest": {
-                "rmzamora/media-bundle": "2.3.*"
+                "rmzamora/media-bundle": "2.4.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-2.3": "2.3.x-dev"
+                    "dev-2.4": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -3528,20 +3528,20 @@
                 "tag",
                 "taxonomy"
             ],
-            "time": "2015-03-11 05:35:07"
+            "time": "2015-03-11 03:00:56"
         },
         {
             "name": "rmzamora/comment-bundle",
-            "version": "2.3.x-dev",
+            "version": "2.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataCommentBundle.git",
-                "reference": "182464471095e5073395a97e380940850fd85bf1"
+                "reference": "242895d99951014e975ecbf198e65a79419e4701"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataCommentBundle/zipball/182464471095e5073395a97e380940850fd85bf1",
-                "reference": "182464471095e5073395a97e380940850fd85bf1",
+                "url": "https://api.github.com/repos/rmzamora/SonataCommentBundle/zipball/242895d99951014e975ecbf198e65a79419e4701",
+                "reference": "242895d99951014e975ecbf198e65a79419e4701",
                 "shasum": ""
             },
             "require": {
@@ -3555,16 +3555,16 @@
                 "symfony/security": "~2.4"
             },
             "require-dev": {
-                "rmzamora/classification-bundle": "2.3.*",
-                "rmzamora/media-bundle": "2.3.*"
+                "rmzamora/classification-bundle": "2.4.*",
+                "rmzamora/media-bundle": "2.4.*"
             },
             "suggest": {
-                "rmzamora/doctrine-orm-admin-bundle": "2.3.*"
+                "rmzamora/doctrine-orm-admin-bundle": "2.4.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-2.3": "2.3.x-dev"
+                    "dev-2.4": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -3599,25 +3599,25 @@
                 "rmzamora fork",
                 "sonata"
             ],
-            "time": "2015-03-11 05:18:10"
+            "time": "2015-03-11 05:16:03"
         },
         {
             "name": "rmzamora/doctrine-orm-admin-bundle",
-            "version": "2.3.x-dev",
+            "version": "2.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataDoctrineORMAdminBundle.git",
-                "reference": "65c62457fed160ed211279be25342557d3d1aebe"
+                "reference": "86b09d5c1517869b0faaba84b71f3cb3e6b6d9ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataDoctrineORMAdminBundle/zipball/65c62457fed160ed211279be25342557d3d1aebe",
-                "reference": "65c62457fed160ed211279be25342557d3d1aebe",
+                "url": "https://api.github.com/repos/rmzamora/SonataDoctrineORMAdminBundle/zipball/86b09d5c1517869b0faaba84b71f3cb3e6b6d9ba",
+                "reference": "86b09d5c1517869b0faaba84b71f3cb3e6b6d9ba",
                 "shasum": ""
             },
             "require": {
                 "doctrine/orm": "~2.3",
-                "rmzamora/admin-bundle": "2.3.*",
+                "rmzamora/admin-bundle": "2.4.*",
                 "sonata-project/exporter": "~1.3,>=1.3.1",
                 "symfony/console": "~2.4",
                 "symfony/doctrine-bridge": "~2.4",
@@ -3637,7 +3637,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-2.3": "2.3-dev"
+                    "dev-2.4": "2.4-dev"
                 }
             },
             "autoload": {
@@ -3675,7 +3675,7 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2015-03-11 06:21:53"
+            "time": "2015-03-12 05:30:23"
         },
         {
             "name": "rmzamora/entity-audit-bundle",
@@ -3734,22 +3734,22 @@
         },
         {
             "name": "rmzamora/formatter-bundle",
-            "version": "2.3.x-dev",
+            "version": "2.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataFormatterBundle.git",
-                "reference": "441b6b8d848d6bc8139d5de0f8789dd92bfc1fdf"
+                "reference": "0b3196cd56f946733a0694c00b0b86766094b901"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataFormatterBundle/zipball/441b6b8d848d6bc8139d5de0f8789dd92bfc1fdf",
-                "reference": "441b6b8d848d6bc8139d5de0f8789dd92bfc1fdf",
+                "url": "https://api.github.com/repos/rmzamora/SonataFormatterBundle/zipball/0b3196cd56f946733a0694c00b0b86766094b901",
+                "reference": "0b3196cd56f946733a0694c00b0b86766094b901",
                 "shasum": ""
             },
             "require": {
                 "egeloen/ckeditor-bundle": "~2.2",
                 "knplabs/knp-markdown-bundle": "~1.3",
-                "rmzamora/block-bundle": "2.3.*",
+                "rmzamora/block-bundle": "2.4.*",
                 "sonata-project/core-bundle": "~2.2",
                 "symfony/form": "~2.3",
                 "symfony/framework-bundle": "~2.3",
@@ -3761,7 +3761,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-2.3": "2.3.x-dev"
+                    "dev-2.4": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -3799,7 +3799,7 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2015-03-11 06:54:02"
+            "time": "2015-03-12 05:31:18"
         },
         {
             "name": "rmzamora/hwi-oauth-bundle",
@@ -4033,16 +4033,16 @@
         },
         {
             "name": "rmzamora/media-bundle",
-            "version": "2.3.x-dev",
+            "version": "2.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataMediaBundle.git",
-                "reference": "8c2313f6d2f1591dd266953a9feb6aac1815cc7e"
+                "reference": "3ffa0df96a19733470159de8e0a6f34f420e6453"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataMediaBundle/zipball/8c2313f6d2f1591dd266953a9feb6aac1815cc7e",
-                "reference": "8c2313f6d2f1591dd266953a9feb6aac1815cc7e",
+                "url": "https://api.github.com/repos/rmzamora/SonataMediaBundle/zipball/3ffa0df96a19733470159de8e0a6f34f420e6453",
+                "reference": "3ffa0df96a19733470159de8e0a6f34f420e6453",
                 "shasum": ""
             },
             "require": {
@@ -4051,8 +4051,8 @@
                 "knplabs/gaufrette": ">=0.1.6",
                 "kriswallsmith/buzz": "0.*",
                 "nelmio/api-doc-bundle": "~2.4",
-                "rmzamora/classification-bundle": "2.3.*",
-                "rmzamora/notification-bundle": "2.3.*",
+                "rmzamora/classification-bundle": "2.4.*",
+                "rmzamora/notification-bundle": "2.4.*",
                 "rmzamora/rest-bundle": "~1.3",
                 "sonata-project/core-bundle": "~2.2",
                 "sonata-project/doctrine-extensions": "~1.0",
@@ -4064,8 +4064,8 @@
                 "aws/aws-sdk-php": "~2.7",
                 "doctrine/mongodb-odm": "~1.0@dev",
                 "jackalope/jackalope-doctrine-dbal": "~1.1",
-                "rmzamora/doctrine-orm-admin-bundle": "2.3.*",
-                "rmzamora/formatter-bundle": "2.3.*",
+                "rmzamora/doctrine-orm-admin-bundle": "2.4.*",
+                "rmzamora/formatter-bundle": "2.4.*",
                 "rmzamora/seo-bundle": "~1.1",
                 "sonata-project/core-bundle": "~2.2@dev",
                 "sonata-project/datagrid-bundle": "~2.2@dev"
@@ -4073,13 +4073,13 @@
             "suggest": {
                 "liip/imagine-bundle": "0.9.*",
                 "rackspace/php-opencloud": "~1.6",
-                "rmzamora/doctrine-orm-admin-bundle": "2.3.*",
+                "rmzamora/doctrine-orm-admin-bundle": "2.4.*",
                 "tilleuls/ckeditor-sonata-mediabundle": "~1.0"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-2.3": "2.3.x-dev"
+                    "dev-2.4": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -4119,31 +4119,31 @@
                 "vimeo",
                 "youtube"
             ],
-            "time": "2015-03-11 07:22:16"
+            "time": "2015-03-11 07:30:49"
         },
         {
             "name": "rmzamora/news-bundle",
-            "version": "2.3.x-dev",
+            "version": "2.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataNewsBundle.git",
-                "reference": "63aa045ccd8fad5b332d5bb65db1f0426e96937d"
+                "reference": "d1150fc613ed9adcf381e3f7e824c5e64941acef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataNewsBundle/zipball/63aa045ccd8fad5b332d5bb65db1f0426e96937d",
-                "reference": "63aa045ccd8fad5b332d5bb65db1f0426e96937d",
+                "url": "https://api.github.com/repos/rmzamora/SonataNewsBundle/zipball/d1150fc613ed9adcf381e3f7e824c5e64941acef",
+                "reference": "d1150fc613ed9adcf381e3f7e824c5e64941acef",
                 "shasum": ""
             },
             "require": {
                 "jms/serializer-bundle": "~0.11",
                 "nelmio/api-doc-bundle": "~2.4",
-                "rmzamora/admin-bundle": "2.3.*",
-                "rmzamora/classification-bundle": "2.3.*",
-                "rmzamora/formatter-bundle": "2.3.*",
-                "rmzamora/media-bundle": "2.3.*",
+                "rmzamora/admin-bundle": "2.4.*",
+                "rmzamora/classification-bundle": "2.4.*",
+                "rmzamora/formatter-bundle": "2.4.*",
+                "rmzamora/media-bundle": "2.4.*",
                 "rmzamora/rest-bundle": "~1.4",
-                "rmzamora/user-bundle": "2.3.*",
+                "rmzamora/user-bundle": "2.4.*",
                 "sonata-project/core-bundle": "~2.2",
                 "sonata-project/datagrid-bundle": "~2.2@dev",
                 "sonata-project/easy-extends-bundle": "~2.1",
@@ -4152,13 +4152,13 @@
             },
             "require-dev": {
                 "doctrine/orm": "*",
-                "rmzamora/doctrine-orm-admin-bundle": "2.3.*",
-                "rmzamora/notification-bundle": "2.3.*"
+                "rmzamora/doctrine-orm-admin-bundle": "2.4.*",
+                "rmzamora/notification-bundle": "2.4.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-2.3": "2.3.x-dev"
+                    "dev-2.4": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -4195,20 +4195,20 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2015-03-11 07:35:16"
+            "time": "2015-03-11 07:33:03"
         },
         {
             "name": "rmzamora/notification-bundle",
-            "version": "2.3.x-dev",
+            "version": "2.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataNotificationBundle.git",
-                "reference": "dbb95499650c81d3a4d55252a40e46949c13270d"
+                "reference": "75b03e978d48bd0e2924522c5350b7310687f515"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataNotificationBundle/zipball/dbb95499650c81d3a4d55252a40e46949c13270d",
-                "reference": "dbb95499650c81d3a4d55252a40e46949c13270d",
+                "url": "https://api.github.com/repos/rmzamora/SonataNotificationBundle/zipball/75b03e978d48bd0e2924522c5350b7310687f515",
+                "reference": "75b03e978d48bd0e2924522c5350b7310687f515",
                 "shasum": ""
             },
             "require": {
@@ -4224,20 +4224,20 @@
             "require-dev": {
                 "guzzle/guzzle": "3.*",
                 "liip/monitor-bundle": "~2.0",
-                "rmzamora/doctrine-orm-admin-bundle": "2.3.*",
+                "rmzamora/doctrine-orm-admin-bundle": "2.4.*",
                 "sonata-project/core-bundle": "dev-master",
                 "videlalvaro/php-amqplib": "~2.0"
             },
             "suggest": {
                 "guzzle/guzzle": "3.*",
                 "liip/monitor-bundle": "~1.0",
-                "rmzamora/doctrine-orm-admin-bundle": "2.3.*",
+                "rmzamora/doctrine-orm-admin-bundle": "2.4.*",
                 "videlalvaro/php-amqplib": "2.0.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-2.3": "2.3.x-dev"
+                    "dev-2.4": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -4273,29 +4273,29 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2015-03-11 07:39:14"
+            "time": "2015-03-11 07:37:08"
         },
         {
             "name": "rmzamora/page-bundle",
-            "version": "2.3.x-dev",
+            "version": "2.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataPageBundle.git",
-                "reference": "4f29d156393ed4b5504d8daf3a08b5a02820d6f0"
+                "reference": "56800c82e8098346f3b358c7d17fa4b1e8b84dac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataPageBundle/zipball/4f29d156393ed4b5504d8daf3a08b5a02820d6f0",
-                "reference": "4f29d156393ed4b5504d8daf3a08b5a02820d6f0",
+                "url": "https://api.github.com/repos/rmzamora/SonataPageBundle/zipball/56800c82e8098346f3b358c7d17fa4b1e8b84dac",
+                "reference": "56800c82e8098346f3b358c7d17fa4b1e8b84dac",
                 "shasum": ""
             },
             "require": {
                 "jms/serializer-bundle": "~0.13",
                 "nelmio/api-doc-bundle": "~2.4",
-                "rmzamora/admin-bundle": "2.3.*",
+                "rmzamora/admin-bundle": "2.4.*",
                 "rmzamora/cache": "~1.0@dev",
                 "rmzamora/cache-bundle": "~2.2",
-                "rmzamora/notification-bundle": "2.3.*",
+                "rmzamora/notification-bundle": "2.4.*",
                 "rmzamora/rest-bundle": "~1.3",
                 "rmzamora/seo-bundle": "~1.1",
                 "sonata-project/core-bundle": "~2.2",
@@ -4305,15 +4305,15 @@
                 "symfony/symfony": "~2.4"
             },
             "require-dev": {
-                "rmzamora/doctrine-orm-admin-bundle": "2.3.*"
+                "rmzamora/doctrine-orm-admin-bundle": "2.4.*"
             },
             "suggest": {
-                "rmzamora/doctrine-orm-admin-bundle": "2.3.*"
+                "rmzamora/doctrine-orm-admin-bundle": "2.4.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-2.3": "2.3.x-dev"
+                    "dev-2.4": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -4349,7 +4349,7 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2015-03-11 07:43:50"
+            "time": "2015-03-11 07:41:10"
         },
         {
             "name": "rmzamora/rest-bundle",
@@ -4436,16 +4436,16 @@
         },
         {
             "name": "rmzamora/seo-bundle",
-            "version": "1.1.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataSeoBundle.git",
-                "reference": "b1e10fa3edc4c61f8852f5efa74196dd0144e946"
+                "reference": "825beea535863c52f93e07c41bb56c59e6d75274"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataSeoBundle/zipball/b1e10fa3edc4c61f8852f5efa74196dd0144e946",
-                "reference": "b1e10fa3edc4c61f8852f5efa74196dd0144e946",
+                "url": "https://api.github.com/repos/rmzamora/SonataSeoBundle/zipball/825beea535863c52f93e07c41bb56c59e6d75274",
+                "reference": "825beea535863c52f93e07c41bb56c59e6d75274",
                 "shasum": ""
             },
             "require": {
@@ -4455,8 +4455,8 @@
             },
             "require-dev": {
                 "guzzle/guzzle": "3.*",
-                "rmzamora/admin-bundle": "~2.3",
-                "rmzamora/block-bundle": "~2.3"
+                "rmzamora/admin-bundle": "2.4.*",
+                "rmzamora/block-bundle": "2.4.*"
             },
             "suggest": {
                 "guzzle/guzzle": "3.*",
@@ -4466,7 +4466,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.1": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -4501,31 +4501,31 @@
                 "seo",
                 "sonata"
             ],
-            "time": "2015-01-29 10:16:18"
+            "time": "2015-03-12 06:13:28"
         },
         {
             "name": "rmzamora/timeline-bundle",
-            "version": "2.3.x-dev",
+            "version": "2.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataTimelineBundle.git",
-                "reference": "e03680f6725f6655d6ed67449dca0f08613c91e7"
+                "reference": "366122816079e0c4909182e526484c537f1ce04f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataTimelineBundle/zipball/e03680f6725f6655d6ed67449dca0f08613c91e7",
-                "reference": "e03680f6725f6655d6ed67449dca0f08613c91e7",
+                "url": "https://api.github.com/repos/rmzamora/SonataTimelineBundle/zipball/366122816079e0c4909182e526484c537f1ce04f",
+                "reference": "366122816079e0c4909182e526484c537f1ce04f",
                 "shasum": ""
             },
             "require": {
-                "rmzamora/block-bundle": "~2.3",
+                "rmzamora/block-bundle": "2.4.*",
                 "sonata-project/core-bundle": "~2.2",
                 "stephpy/timeline-bundle": "~2.0"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-2.3": "2.3.x-dev"
+                    "dev-2.4": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -4561,27 +4561,27 @@
                 "time",
                 "wall"
             ],
-            "time": "2015-03-10 01:35:29"
+            "time": "2015-03-11 07:48:57"
         },
         {
             "name": "rmzamora/user-bundle",
-            "version": "2.3.x-dev",
+            "version": "2.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataUserBundle.git",
-                "reference": "01a875fad55711d65a0f7f8525e9b54bac987351"
+                "reference": "d8772ba55fe816a5f30bb454a8bd3f7df560ca1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataUserBundle/zipball/01a875fad55711d65a0f7f8525e9b54bac987351",
-                "reference": "01a875fad55711d65a0f7f8525e9b54bac987351",
+                "url": "https://api.github.com/repos/rmzamora/SonataUserBundle/zipball/d8772ba55fe816a5f30bb454a8bd3f7df560ca1e",
+                "reference": "d8772ba55fe816a5f30bb454a8bd3f7df560ca1e",
                 "shasum": ""
             },
             "require": {
                 "friendsofsymfony/user-bundle": "~1.3",
                 "jms/serializer-bundle": "~0.11",
                 "nelmio/api-doc-bundle": "~2.4",
-                "rmzamora/admin-bundle": "2.3.*",
+                "rmzamora/admin-bundle": "2.4.*",
                 "rmzamora/rest-bundle": "~1.4",
                 "sonata-project/core-bundle": "~2.2",
                 "sonata-project/datagrid-bundle": "~2.2@dev",
@@ -4598,13 +4598,13 @@
                 "sonata-project/seo-bundle": "~1.1"
             },
             "suggest": {
-                "rmzamora/doctrine-orm-admin-bundle": "2.3.*",
+                "rmzamora/doctrine-orm-admin-bundle": "2.4.*",
                 "sonata-project/seo-bundle": "~1.1"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-2.3": "2.3.x-dev"
+                    "dev-2.4": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -4640,35 +4640,35 @@
                 "sonata",
                 "user"
             ],
-            "time": "2015-03-11 07:51:56"
+            "time": "2015-03-11 07:54:14"
         },
         {
             "name": "rz/admin-bundle",
-            "version": "1.0.x-dev",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/AdminBundle.git",
-                "reference": "461cffd53fc2b073b3042c8f0ff3af245cf61977"
+                "reference": "352656df4a443ee79835303e781083e5cfa1835b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/461cffd53fc2b073b3042c8f0ff3af245cf61977",
-                "reference": "461cffd53fc2b073b3042c8f0ff3af245cf61977",
+                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/352656df4a443ee79835303e781083e5cfa1835b",
+                "reference": "352656df4a443ee79835303e781083e5cfa1835b",
                 "shasum": ""
             },
             "require": {
                 "egeloen/ckeditor-bundle": "~2.5",
-                "rmzamora/admin-bundle": "2.3.*",
+                "rmzamora/admin-bundle": "2.4.*",
                 "rmzamora/bootstrap-bundle": "~2.3.1",
                 "rmzamora/jquery-bundle": ">=1.11.0,<2.0",
-                "rz/block-bundle": "1.1.*",
+                "rz/block-bundle": "1.2.*",
                 "rz/codemirror-bundle": "1.0.*",
                 "rz/field-type-bundle": "1.0.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.0": "1.0.x-dev"
+                    "dev-1.1": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -4694,31 +4694,31 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-03-11 08:44:07"
+            "time": "2015-03-12 03:11:12"
         },
         {
             "name": "rz/block-bundle",
-            "version": "1.1.x-dev",
+            "version": "1.2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/BlockBundle.git",
-                "reference": "9148981c2609ea6fb5dce2d33c387b705acb2cd5"
+                "reference": "38c9b3d763873adbe07e3beed8c01cfe7febf04c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/BlockBundle/zipball/9148981c2609ea6fb5dce2d33c387b705acb2cd5",
-                "reference": "9148981c2609ea6fb5dce2d33c387b705acb2cd5",
+                "url": "https://api.github.com/repos/rzproject/BlockBundle/zipball/38c9b3d763873adbe07e3beed8c01cfe7febf04c",
+                "reference": "38c9b3d763873adbe07e3beed8c01cfe7febf04c",
                 "shasum": ""
             },
             "require": {
-                "rmzamora/block-bundle": "2.3.*",
-                "rz/admin-bundle": "1.0.*",
-                "rz/doctrine-orm-admin-bundle": "1.0.*"
+                "rmzamora/block-bundle": "2.4.*",
+                "rz/admin-bundle": "1.1.*",
+                "rz/doctrine-orm-admin-bundle": "1.1.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.1": "1.1-dev"
+                    "dev-1.2": "1.2-dev"
                 }
             },
             "autoload": {
@@ -4744,31 +4744,31 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-03-11 08:51:09"
+            "time": "2015-03-12 05:52:45"
         },
         {
             "name": "rz/classification-bundle",
-            "version": "1.3.x-dev",
+            "version": "1.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/ClassificationBundle.git",
-                "reference": "c1c77e06a6d33f8e030cf9d56c5029ba18b7f358"
+                "reference": "123f3b8db27046eff3f70d64ec426c381ba63bab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/c1c77e06a6d33f8e030cf9d56c5029ba18b7f358",
-                "reference": "c1c77e06a6d33f8e030cf9d56c5029ba18b7f358",
+                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/123f3b8db27046eff3f70d64ec426c381ba63bab",
+                "reference": "123f3b8db27046eff3f70d64ec426c381ba63bab",
                 "shasum": ""
             },
             "require": {
-                "rmzamora/classification-bundle": "2.3.*",
-                "rz/admin-bundle": "1.0.*",
-                "rz/doctrine-orm-admin-bundle": "1.0.*"
+                "rmzamora/classification-bundle": "2.4.*",
+                "rz/admin-bundle": "1.1.*",
+                "rz/doctrine-orm-admin-bundle": "1.1.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.3": "1.3.x-dev"
+                    "dev-1.4": "1.4-dev"
                 }
             },
             "autoload": {
@@ -4794,7 +4794,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-03-11 08:56:30"
+            "time": "2015-03-12 05:56:03"
         },
         {
             "name": "rz/codemirror-bundle",
@@ -4846,26 +4846,26 @@
         },
         {
             "name": "rz/doctrine-orm-admin-bundle",
-            "version": "1.0.x-dev",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/DoctrineORMAdminBundle.git",
-                "reference": "03f4343ccf344900fff469fa38d0cd6dee0f4af2"
+                "reference": "3a2accb7f663ecfde5bcb8c0cab7e0697c5b9b8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/DoctrineORMAdminBundle/zipball/03f4343ccf344900fff469fa38d0cd6dee0f4af2",
-                "reference": "03f4343ccf344900fff469fa38d0cd6dee0f4af2",
+                "url": "https://api.github.com/repos/rzproject/DoctrineORMAdminBundle/zipball/3a2accb7f663ecfde5bcb8c0cab7e0697c5b9b8a",
+                "reference": "3a2accb7f663ecfde5bcb8c0cab7e0697c5b9b8a",
                 "shasum": ""
             },
             "require": {
-                "rmzamora/doctrine-orm-admin-bundle": "2.3.*",
-                "rz/admin-bundle": "1.0.*"
+                "rmzamora/doctrine-orm-admin-bundle": "2.4.*",
+                "rz/admin-bundle": "1.1.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.0": "1.0.x-dev"
+                    "dev-1.1": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -4891,7 +4891,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-03-11 08:59:04"
+            "time": "2015-03-12 03:39:25"
         },
         {
             "name": "rz/field-type-bundle",
@@ -4943,26 +4943,26 @@
         },
         {
             "name": "rz/formatter-bundle",
-            "version": "1.0.x-dev",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/FormatterBundle.git",
-                "reference": "f68d714b26128406336c6bd8af0e2042f922f549"
+                "reference": "9544ef0bccdcbd2274a6c5d7c5810b18480c7898"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/FormatterBundle/zipball/f68d714b26128406336c6bd8af0e2042f922f549",
-                "reference": "f68d714b26128406336c6bd8af0e2042f922f549",
+                "url": "https://api.github.com/repos/rzproject/FormatterBundle/zipball/9544ef0bccdcbd2274a6c5d7c5810b18480c7898",
+                "reference": "9544ef0bccdcbd2274a6c5d7c5810b18480c7898",
                 "shasum": ""
             },
             "require": {
-                "rmzamora/formatter-bundle": "2.3.*",
-                "rz/block-bundle": "1.1.*"
+                "rmzamora/formatter-bundle": "2.4.*",
+                "rz/block-bundle": "1.2.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.0": "1.0.x-dev"
+                    "dev-1.0": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -4988,35 +4988,35 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-03-11 09:02:07"
+            "time": "2015-03-12 03:03:28"
         },
         {
             "name": "rz/media-bundle",
-            "version": "1.1.x-dev",
+            "version": "1.2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/MediaBundle.git",
-                "reference": "2a4c09eb2b7c9dac3ec4ac98981443f4cdac14f0"
+                "reference": "41347eca5ab3e5400198bb2dfaf6fd894aabb60f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/MediaBundle/zipball/2a4c09eb2b7c9dac3ec4ac98981443f4cdac14f0",
-                "reference": "2a4c09eb2b7c9dac3ec4ac98981443f4cdac14f0",
+                "url": "https://api.github.com/repos/rzproject/MediaBundle/zipball/41347eca5ab3e5400198bb2dfaf6fd894aabb60f",
+                "reference": "41347eca5ab3e5400198bb2dfaf6fd894aabb60f",
                 "shasum": ""
             },
             "require": {
-                "rmzamora/media-bundle": "2.3.*",
-                "rz/admin-bundle": "1.0.*",
-                "rz/doctrine-orm-admin-bundle": "1.0.*",
+                "rmzamora/media-bundle": "2.4.*",
+                "rz/admin-bundle": "1.1.*",
+                "rz/doctrine-orm-admin-bundle": "1.1.*",
                 "stof/doctrine-extensions-bundle": "~1.2"
             },
             "require-dev": {
-                "rz/formatter-bundle": "1.0.*"
+                "rz/formatter-bundle": "1.1.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.1": "1.1.x-dev"
+                    "dev-1.2": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -5042,37 +5042,37 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-03-11 09:06:14"
+            "time": "2015-03-12 06:00:45"
         },
         {
             "name": "rz/news-bundle",
-            "version": "1.3.x-dev",
+            "version": "1.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "a41911388f1d443ef5c643c08735837975df3af8"
+                "reference": "fa651344113401a0050e1a870d4210608cce157b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/a41911388f1d443ef5c643c08735837975df3af8",
-                "reference": "a41911388f1d443ef5c643c08735837975df3af8",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/fa651344113401a0050e1a870d4210608cce157b",
+                "reference": "fa651344113401a0050e1a870d4210608cce157b",
                 "shasum": ""
             },
             "require": {
-                "rmzamora/news-bundle": "2.3.*",
-                "rz/admin-bundle": "1.0.*",
-                "rz/classification-bundle": "1.3.*",
-                "rz/doctrine-orm-admin-bundle": "1.0.*",
-                "rz/media-bundle": "1.1.*",
-                "rz/user-bundle": "1.0.*"
+                "rmzamora/news-bundle": "2.4.*",
+                "rz/admin-bundle": "1.1.*",
+                "rz/classification-bundle": "1.4.*",
+                "rz/doctrine-orm-admin-bundle": "1.1.*",
+                "rz/media-bundle": "1.2.*",
+                "rz/user-bundle": "1.1.*"
             },
             "require-dev": {
-                "rz/block-bundle": "1.1.*"
+                "rz/block-bundle": "1.2.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.3": "1.3.x-dev"
+                    "dev-1.4": "1.4.x-dev"
                 }
             },
             "autoload": {
@@ -5098,30 +5098,30 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-03-11 09:09:52"
+            "time": "2015-03-12 06:04:24"
         },
         {
             "name": "rz/oauth-bundle",
-            "version": "1.0.x-dev",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/OAuthBundle.git",
-                "reference": "9ad64d24e2accfc4c823f99cc6107190d5ca224f"
+                "reference": "72fdf11ec2c1333885b7a9c600d8b5042aaccf9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/OAuthBundle/zipball/9ad64d24e2accfc4c823f99cc6107190d5ca224f",
-                "reference": "9ad64d24e2accfc4c823f99cc6107190d5ca224f",
+                "url": "https://api.github.com/repos/rzproject/OAuthBundle/zipball/72fdf11ec2c1333885b7a9c600d8b5042aaccf9c",
+                "reference": "72fdf11ec2c1333885b7a9c600d8b5042aaccf9c",
                 "shasum": ""
             },
             "require": {
                 "rmzamora/hwi-oauth-bundle": "~0.3",
-                "rz/user-bundle": "1.0.*"
+                "rz/user-bundle": "1.1.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.0": "1.0.x-dev"
+                    "dev-1.1": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -5147,31 +5147,31 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-03-11 09:15:34"
+            "time": "2015-03-12 03:47:40"
         },
         {
             "name": "rz/page-bundle",
-            "version": "1.1.x-dev",
+            "version": "1.2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/PageBundle.git",
-                "reference": "369945544bdba4c1c47eb89c2c0e94d650ae9042"
+                "reference": "66229d0a7d2cec94b707b729d039115f332a37eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/369945544bdba4c1c47eb89c2c0e94d650ae9042",
-                "reference": "369945544bdba4c1c47eb89c2c0e94d650ae9042",
+                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/66229d0a7d2cec94b707b729d039115f332a37eb",
+                "reference": "66229d0a7d2cec94b707b729d039115f332a37eb",
                 "shasum": ""
             },
             "require": {
-                "rmzamora/page-bundle": "2.3.*",
-                "rz/admin-bundle": "1.0.*",
-                "rz/doctrine-orm-admin-bundle": "1.0.*"
+                "rmzamora/page-bundle": "2.4.*",
+                "rz/admin-bundle": "1.1.*",
+                "rz/doctrine-orm-admin-bundle": "1.1.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.1": "1.1.x-dev"
+                    "dev-1.2": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -5197,20 +5197,20 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-03-11 09:18:31"
+            "time": "2015-03-12 06:05:53"
         },
         {
             "name": "rz/search-bundle",
-            "version": "1.0.x-dev",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/SearchBundle.git",
-                "reference": "5b27c75fbbe6cca0487afcf4eae4b1d8d38435e2"
+                "reference": "365e6f5f1e2a871d565979e7ff43074bc92d8a43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/SearchBundle/zipball/5b27c75fbbe6cca0487afcf4eae4b1d8d38435e2",
-                "reference": "5b27c75fbbe6cca0487afcf4eae4b1d8d38435e2",
+                "url": "https://api.github.com/repos/rzproject/SearchBundle/zipball/365e6f5f1e2a871d565979e7ff43074bc92d8a43",
+                "reference": "365e6f5f1e2a871d565979e7ff43074bc92d8a43",
                 "shasum": ""
             },
             "require": {
@@ -5223,7 +5223,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.0": "1.0.x-dev"
+                    "dev-1.0": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -5248,20 +5248,20 @@
                 "RZProject",
                 "Symfony2"
             ],
-            "time": "2015-03-11 09:21:42"
+            "time": "2015-03-12 06:07:45"
         },
         {
             "name": "rz/seo-bundle",
-            "version": "1.0.x-dev",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/SeoBundle.git",
-                "reference": "68fbbdef0684d9f375cf9b1471bee18da73dea10"
+                "reference": "02fc8ecdd242775918e7a763221bd2890e1b7773"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/SeoBundle/zipball/68fbbdef0684d9f375cf9b1471bee18da73dea10",
-                "reference": "68fbbdef0684d9f375cf9b1471bee18da73dea10",
+                "url": "https://api.github.com/repos/rzproject/SeoBundle/zipball/02fc8ecdd242775918e7a763221bd2890e1b7773",
+                "reference": "02fc8ecdd242775918e7a763221bd2890e1b7773",
                 "shasum": ""
             },
             "require": {
@@ -5271,9 +5271,9 @@
             },
             "require-dev": {
                 "guzzle/guzzle": "3.*",
-                "rmzamora/seo-bundle": "2.3.*",
-                "rz/admin-bundle": "1.0.*",
-                "rz/block-bundle": "1.1.*"
+                "rmzamora/seo-bundle": "1.2.*",
+                "rz/admin-bundle": "1.1.*",
+                "rz/block-bundle": "1.2.*"
             },
             "suggest": {
                 "guzzle/guzzle": "3.*",
@@ -5283,7 +5283,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.0": "1.0.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -5318,29 +5318,29 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-03-11 09:20:28"
+            "time": "2015-03-12 06:12:33"
         },
         {
             "name": "rz/timeline-bundle",
-            "version": "1.0.x-dev",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/TimelineBundle.git",
-                "reference": "0ee36276b18f01b30484fcccd4608a371423b18f"
+                "reference": "3d4a37e8fc0ba7803cef89c44bfb3d446cdda963"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/TimelineBundle/zipball/0ee36276b18f01b30484fcccd4608a371423b18f",
-                "reference": "0ee36276b18f01b30484fcccd4608a371423b18f",
+                "url": "https://api.github.com/repos/rzproject/TimelineBundle/zipball/3d4a37e8fc0ba7803cef89c44bfb3d446cdda963",
+                "reference": "3d4a37e8fc0ba7803cef89c44bfb3d446cdda963",
                 "shasum": ""
             },
             "require": {
-                "rmzamora/timeline-bundle": "2.3.*"
+                "rmzamora/timeline-bundle": "2.4.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.0": "1.0.x-dev"
+                    "dev-1.1": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -5368,31 +5368,31 @@
                 "time",
                 "wall"
             ],
-            "time": "2015-03-11 09:23:07"
+            "time": "2015-03-12 03:46:03"
         },
         {
             "name": "rz/user-bundle",
-            "version": "1.0.x-dev",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/UserBundle.git",
-                "reference": "5e3fd38b855072269bcc4f36b11565228a343df4"
+                "reference": "7fd78195437120e1950c4ab59325792f1904b773"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/UserBundle/zipball/5e3fd38b855072269bcc4f36b11565228a343df4",
-                "reference": "5e3fd38b855072269bcc4f36b11565228a343df4",
+                "url": "https://api.github.com/repos/rzproject/UserBundle/zipball/7fd78195437120e1950c4ab59325792f1904b773",
+                "reference": "7fd78195437120e1950c4ab59325792f1904b773",
                 "shasum": ""
             },
             "require": {
-                "rmzamora/user-bundle": "2.3.*",
-                "rz/admin-bundle": "1.0.*",
-                "rz/doctrine-orm-admin-bundle": "1.0.*"
+                "rmzamora/user-bundle": "2.4.*",
+                "rz/admin-bundle": "1.1.*",
+                "rz/doctrine-orm-admin-bundle": "1.1.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.0": "1.0.x-dev"
+                    "dev-1.1": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -5418,7 +5418,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-03-11 09:24:45"
+            "time": "2015-03-12 06:16:58"
         },
         {
             "name": "rz/user-security-bundle",
@@ -5426,21 +5426,26 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/UserSecurityBundle.git",
-                "reference": "6a38f737e5c7ab7d9994016e2472202ff7af0d32"
+                "reference": "e844f78a2d33648c76593e111e3d456962c97280"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/UserSecurityBundle/zipball/6a38f737e5c7ab7d9994016e2472202ff7af0d32",
-                "reference": "6a38f737e5c7ab7d9994016e2472202ff7af0d32",
+                "url": "https://api.github.com/repos/rzproject/UserSecurityBundle/zipball/e844f78a2d33648c76593e111e3d456962c97280",
+                "reference": "e844f78a2d33648c76593e111e3d456962c97280",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
                 "rmzamora/ccdn-user-security-bundle": "dev-master",
-                "rz/user-bundle": "1.0.*",
+                "rz/user-bundle": "1.1.*",
                 "symfony/symfony": "~2.5"
             },
             "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Rz\\UserSecurityBundle\\": ""
@@ -5467,7 +5472,7 @@
                 "security",
                 "user"
             ],
-            "time": "2015-03-11 09:26:51"
+            "time": "2015-03-12 03:56:11"
         },
         {
             "name": "sensio/distribution-bundle",
