@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "655af43a9e0d31ca637f272fc06b07da",
+    "hash": "98ea9e106ca123f2d65eb90fd6973b21",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -514,12 +514,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "cde0cd8c1cc5c097ad9483c32f9bd3fcfa22361a"
+                "reference": "7c4b0145bbff1454a5241e47718a9033af39a4db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/cde0cd8c1cc5c097ad9483c32f9bd3fcfa22361a",
-                "reference": "cde0cd8c1cc5c097ad9483c32f9bd3fcfa22361a",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/7c4b0145bbff1454a5241e47718a9033af39a4db",
+                "reference": "7c4b0145bbff1454a5241e47718a9033af39a4db",
                 "shasum": ""
             },
             "require": {
@@ -583,7 +583,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2015-03-04 14:33:30"
+            "time": "2015-03-11 15:51:41"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -966,12 +966,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/migrations.git",
-                "reference": "fca67c4a5a6f4334e8b6a57410f7b386b012ab01"
+                "reference": "efe104057657c5d62f714e00ae30fa2a51e688e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/migrations/zipball/fca67c4a5a6f4334e8b6a57410f7b386b012ab01",
-                "reference": "fca67c4a5a6f4334e8b6a57410f7b386b012ab01",
+                "url": "https://api.github.com/repos/doctrine/migrations/zipball/efe104057657c5d62f714e00ae30fa2a51e688e3",
+                "reference": "efe104057657c5d62f714e00ae30fa2a51e688e3",
                 "shasum": ""
             },
             "require": {
@@ -1016,7 +1016,7 @@
                 "database",
                 "migrations"
             ],
-            "time": "2015-03-06 20:53:13"
+            "time": "2015-03-11 16:28:22"
         },
         {
             "name": "doctrine/orm",
@@ -1432,12 +1432,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "40426f77f030b6fb45951be920ff1036b2f423d2"
+                "reference": "5f91d63d78036ee445601ce0c606cdceb0be55d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/40426f77f030b6fb45951be920ff1036b2f423d2",
-                "reference": "40426f77f030b6fb45951be920ff1036b2f423d2",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/5f91d63d78036ee445601ce0c606cdceb0be55d2",
+                "reference": "5f91d63d78036ee445601ce0c606cdceb0be55d2",
                 "shasum": ""
             },
             "require": {
@@ -1476,7 +1476,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-02-27 08:30:07"
+            "time": "2015-03-11 13:17:18"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -4440,12 +4440,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataSeoBundle.git",
-                "reference": "b1e10fa3edc4c61f8852f5efa74196dd0144e946"
+                "reference": "a8c8cf383728df57fe021704e13d5b6d532cce41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataSeoBundle/zipball/b1e10fa3edc4c61f8852f5efa74196dd0144e946",
-                "reference": "b1e10fa3edc4c61f8852f5efa74196dd0144e946",
+                "url": "https://api.github.com/repos/rmzamora/SonataSeoBundle/zipball/a8c8cf383728df57fe021704e13d5b6d532cce41",
+                "reference": "a8c8cf383728df57fe021704e13d5b6d532cce41",
                 "shasum": ""
             },
             "require": {
@@ -4455,8 +4455,8 @@
             },
             "require-dev": {
                 "guzzle/guzzle": "3.*",
-                "rmzamora/admin-bundle": "~2.3",
-                "rmzamora/block-bundle": "~2.3"
+                "rmzamora/admin-bundle": "2.3.*",
+                "rmzamora/block-bundle": "2.3.*"
             },
             "suggest": {
                 "guzzle/guzzle": "3.*",
@@ -4501,7 +4501,7 @@
                 "seo",
                 "sonata"
             ],
-            "time": "2015-01-29 10:16:18"
+            "time": "2015-03-12 05:35:43"
         },
         {
             "name": "rmzamora/timeline-bundle",
@@ -5422,16 +5422,16 @@
         },
         {
             "name": "rz/user-security-bundle",
-            "version": "dev-master",
+            "version": "1.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/UserSecurityBundle.git",
-                "reference": "6a38f737e5c7ab7d9994016e2472202ff7af0d32"
+                "reference": "eb7e548e76a2c003965657ab2e8f858ac6e81d47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/UserSecurityBundle/zipball/6a38f737e5c7ab7d9994016e2472202ff7af0d32",
-                "reference": "6a38f737e5c7ab7d9994016e2472202ff7af0d32",
+                "url": "https://api.github.com/repos/rzproject/UserSecurityBundle/zipball/eb7e548e76a2c003965657ab2e8f858ac6e81d47",
+                "reference": "eb7e548e76a2c003965657ab2e8f858ac6e81d47",
                 "shasum": ""
             },
             "require": {
@@ -5441,6 +5441,11 @@
                 "symfony/symfony": "~2.5"
             },
             "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Rz\\UserSecurityBundle\\": ""
@@ -5467,7 +5472,7 @@
                 "security",
                 "user"
             ],
-            "time": "2015-03-11 09:26:51"
+            "time": "2015-03-12 03:53:54"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -8919,7 +8924,6 @@
         "rmzamora/bootstrap-bundle": 20,
         "rmzamora/knp-menu-bundle": 20,
         "rmzamora/entity-audit-bundle": 20,
-        "rz/user-security-bundle": 20,
         "liip/imagine-bundle": 0,
         "videlalvaro/php-amqplib": 20,
         "behat/common-contexts": 20
