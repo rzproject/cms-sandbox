@@ -2,7 +2,8 @@
 # more information can be found here http://sonata-project.org/bundles/page
 #
 sonata_seo:
-    default:          sonata.seo.page.default
+    page:
+      default:          sonata.seo.page.default
     encoding:             UTF-8
     page:
         title:            cms-sandbox
