@@ -72,6 +72,7 @@ framework:
       cookie_lifetime: %cookie_lifetime%
       cookie_secure: false
       cookie_httponly: true
+      save_path: %kernel.root_dir%/cache/sessions
     fragments:       ~
     http_method_override: true
     serializer:
