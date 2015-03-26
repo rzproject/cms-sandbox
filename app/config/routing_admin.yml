@@ -7,7 +7,7 @@ _sonata_admin:
     type:     sonata_admin
 
 soanata_user_admin:
-    resource: '@RzUserBundle/Resources/config/routing/admin_security.xml'
+    resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
 
 sonata_media_pixlr:
     resource: '@SonataMediaBundle/Resources/config/routing/pixlr.xml'

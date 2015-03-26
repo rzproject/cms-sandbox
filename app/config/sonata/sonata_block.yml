@@ -61,7 +61,7 @@ sonata_block:
             cache: sonata.cache.mongo
         rz_news.block.tags:
             cache: sonata.cache.mongo
-        rz_news.block.collection:
+        rz_news.block.post_by_collection:
             cache: sonata.cache.mongo
 
         # TimelineBundle's Blocks

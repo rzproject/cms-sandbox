@@ -123,17 +123,17 @@
                                         <a href="{{ path(url) }}">Home</a>
                                     </li>
                                 {% endif %}
-                                {% set url = rz_render_page_url('rz_news_collection') %}
+                                {% set url = rz_render_page_alias_url('_page_alias_blog') %}
                                 {% if  url %}
                                     <li class="has-submenu-no">
-                                        <a href="{{ path(url, {'collection': 'blog'}) }}">News</a>
+                                        <a href="{{ path(url) }}">News</a>
                                     </li>
                                 {% endif %}
 
-                                {% set url = rz_render_page_url('rz_news_collection') %}
+                                {% set url = rz_render_page_alias_url('_page_alias_event') %}
                                 {% if  url %}
                                     <li class="has-submenu-no">
-                                        <a href="{{ path(url, {'collection': 'event'}) }}">Events</a>
+                                        <a href="{{ path(url) }}">Events</a>
                                     </li>
                                 {% endif %}
 
@@ -195,17 +195,17 @@
                                     <a href="{{ path(url) }}">Home</a>
                                 </li>
                                 {% endif %}
-                                {% set url = rz_render_page_url('rz_news_collection') %}
+                                {% set url = rz_render_page_alias_url('_page_alias_blog') %}
                                 {% if  url %}
                                 <li class="has-submenu-no">
-                                    <a href="{{ path(url, {'collection': 'blog'}) }}">News</a>
+                                    <a href="{{ path(url) }}">News</a>
                                 </li>
                                 {% endif %}
 
-                                {% set url = rz_render_page_url('rz_news_collection') %}
+                                {% set url = rz_render_page_alias_url('_page_alias_event') %}
                                 {% if  url %}
                                     <li class="has-submenu-no">
-                                        <a href="{{ path(url, {'collection': 'event'}) }}">Events</a>
+                                        <a href="{{ path(url) }}">Events</a>
                                     </li>
                                 {% endif %}
 
