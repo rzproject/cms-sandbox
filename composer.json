@@ -22,6 +22,7 @@
         "sensio/generator-bundle": "~2.3",
 
         "doctrine/orm": "~2.4",
+        "doctrine/dbal": "~2.4",
         "doctrine/doctrine-bundle": "~1.2",
         "doctrine/doctrine-migrations-bundle": "dev-master",
         "doctrine/migrations": "dev-master",
