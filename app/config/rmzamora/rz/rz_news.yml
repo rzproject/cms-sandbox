@@ -1,11 +1,20 @@
 rz_news:
   blocks:
-    collection:
-        class: Rz\NewsBundle\Block\PostByCollectionBlockService
+    post_by_category_list:
+        class: Rz\NewsBundle\Block\PostByCategoryBlockService
         templates:
-          collection_default_block:
-            name: Default Collection Block Template
-            path: RzNewsBundle:Block:post_by_collection_list.html.twig
+          category_default_block:
+            name: Post By Category
+            path: RzNewsBundle:Block:post_by_category_list.html.twig
+        ajax_templates:
+          category_default_ajax:
+            name: Ajax | Post By Category
+            path: RzNewsBundle:Block:post_by_category_ajax.html.twig
+
+        ajax_pager_templates:
+          category_default_ajax_pager:
+            name: Pager Ajax | Post By Category
+            path: RzNewsBundle:Block:post_by_category_ajax_pager.html.twig
   settings:
     news_pager_max_per_page: 2
     ajax_pagination: true

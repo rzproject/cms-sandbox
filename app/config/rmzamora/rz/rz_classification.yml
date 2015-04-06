@@ -1,4 +1,22 @@
 rz_classification:
+  enable_controllers: false # true - will convert controller to use page
+  blocks:
+    category:
+        class: Rz\ClassificationBundle\Block\CategoryBlockService
+        category_pager_max_per_page: 5
+        templates:
+          category_default_block:
+            name: Category List
+            path: RzClassificationBundle:Block:category_list.html.twig
+        ajax_templates:
+          category_default_ajax:
+            name: Ajax | Category List
+            path: RzClassificationBundle:Block:category_ajax.html.twig
+
+        ajax_pager_templates:
+          category_default_ajax_pager:
+            name: Pager Ajax | Category List
+            path: RzClassificationBundle:Block:category_ajax_pager.html.twig
   providers:
     category:
       default_context: default
@@ -23,29 +41,29 @@ rz_classification:
                   event:
                       path: RzNewsBundle:Post:category_list_event.html.twig
                       name: Event
-    collection:
-      default_context: default
-      contexts:
-          default:  # the default context is mandatory
-              provider: rz_classification.provider.collection.default
-              default_template: default
-              templates:
-                  default:
-                      path: RzNewsBundle:Collection:list.html.twig
-                      name: Default
-          news:
-              provider: rz_classification.provider.collection.news
-              default_template: default
-              templates:
-                  default:
-                      path: RzNewsBundle:Post:collection_list_default.html.twig
-                      name: Default
-                  blog:
-                      path: RzNewsBundle:Post:collection_list_blog.html.twig
-                      name: Blog
-                  event:
-                      path: RzNewsBundle:Post:collection_list_event.html.twig
-                      name: Event
+#    collection:
+#      default_context: default
+#      contexts:
+#          default:  # the default context is mandatory
+#              provider: rz_classification.provider.collection.default
+#              default_template: default
+#              templates:
+#                  default:
+#                      path: RzNewsBundle:Collection:list.html.twig
+#                      name: Default
+#          news:
+#              provider: rz_classification.provider.collection.news
+#              default_template: default
+#              templates:
+#                  default:
+#                      path: RzNewsBundle:Post:collection_list_default.html.twig
+#                      name: Default
+#                  blog:
+#                      path: RzNewsBundle:Post:collection_list_blog.html.twig
+#                      name: Blog
+#                  event:
+#                      path: RzNewsBundle:Post:collection_list_event.html.twig
+#                      name: Event
     tag:
       default_context: default
       contexts:
