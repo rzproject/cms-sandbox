@@ -71,7 +71,7 @@
         "rmzamora/rest-bundle": "~1.4",
 
         "rz/formatter-bundle":  "1.1.0",
-        "rz/admin-bundle":  "1.1.0",
+        "rz/admin-bundle":  "1.1.0.*",
         "rz/block-bundle": "1.2.0",
         "rz/user-bundle":  "1.1.0",
         "rz/page-bundle":  "1.2.*",

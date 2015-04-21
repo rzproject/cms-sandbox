@@ -136,7 +136,6 @@ class AppKernel extends Kernel
             new Rmzamora\SandboxInitDataBundle\RmzamoraSandboxInitDataBundle(),
             new Rmzamora\BootstrapBundle\RmzamoraBootstrapBundle(),
             new Rmzamora\JqueryBundle\RmzamoraJqueryBundle(),
-            new Rz\CodemirrorBundle\RzCodemirrorBundle(),
             new Rz\AdminBundle\RzAdminBundle(),
             new Rz\BlockBundle\RzBlockBundle(),
             new Rz\DoctrineORMAdminBundle\RzDoctrineORMAdminBundle(),
