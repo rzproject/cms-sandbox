@@ -72,6 +72,7 @@ rz_search:
                       tags : tags
                       comments : comments
                       author : author
+                      settings: settings
                 field_map_settings:
                       title :
                          fields : ~
@@ -109,3 +110,9 @@ rz_search:
                         separator: " "
                         filter: ~
                         type : text
+                      settings:
+                        fields:
+                          - address
+                        separator: " "
+                        filter: ~
+                        type : unStored

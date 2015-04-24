@@ -91,3 +91,8 @@ blog_tag:
 blog_category_view:
     resource: '@RzNewsBundle/Resources/config/routing/news_category_view.xml'
     prefix: /
+
+# Rmove if controller for category is disabled
+blog_category:
+    resource: '@RzNewsBundle/Resources/config/routing/news_category.xml'
+    prefix: /

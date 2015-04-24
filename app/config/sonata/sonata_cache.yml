@@ -3,13 +3,13 @@
 #
 sonata_cache:
     caches:
-       esi:
-          token: %sonata_cache_esi_token%
-          version: 3
-          servers:
-              - varnishadm -T 127.0.0.1:2000 {{ COMMAND }} "{{ EXPRESSION }}"
-       ssi:
-          token: %sonata_cache_ssi_token%
+#       esi:
+#          token: %sonata_cache_esi_token%
+#          version: 3
+#          servers:
+#              - varnishadm -T 127.0.0.1:2000 {{ COMMAND }} "{{ EXPRESSION }}"
+#       ssi:
+#          token: %sonata_cache_ssi_token%
 
        mongo:
           database:   cache
