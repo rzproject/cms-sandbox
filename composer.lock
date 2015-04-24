@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1cc2348d9e61abb28445cd7a68f063b7",
+    "hash": "a1f159cfc898e0d0218a94043b244bdd",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -4765,16 +4765,16 @@
         },
         {
             "name": "rz/classification-bundle",
-            "version": "1.3.x-dev",
+            "version": "1.3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/ClassificationBundle.git",
-                "reference": "a10431726b87e671849dfb1dfb48d42dbf651953"
+                "reference": "b340a3dfb77f219fcc5323ad05d796aec3a25961"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/a10431726b87e671849dfb1dfb48d42dbf651953",
-                "reference": "a10431726b87e671849dfb1dfb48d42dbf651953",
+                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/b340a3dfb77f219fcc5323ad05d796aec3a25961",
+                "reference": "b340a3dfb77f219fcc5323ad05d796aec3a25961",
                 "shasum": ""
             },
             "require": {
@@ -4785,7 +4785,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.3": "1.3.x-dev"
+                    "dev-1.3.0": "1.3.0.x-dev"
                 }
             },
             "autoload": {
@@ -4811,7 +4811,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-04-20 04:00:35"
+            "time": "2015-04-24 05:11:15"
         },
         {
             "name": "rz/codemirror-bundle",
@@ -5063,16 +5063,16 @@
         },
         {
             "name": "rz/news-bundle",
-            "version": "1.3.x-dev",
+            "version": "1.3.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "9dc81d3e31c425d4b671239c440ab3d8f57e0bc0"
+                "reference": "a69ef14cbf160a33a95cbaa9cdb0155684818aea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/9dc81d3e31c425d4b671239c440ab3d8f57e0bc0",
-                "reference": "9dc81d3e31c425d4b671239c440ab3d8f57e0bc0",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/a69ef14cbf160a33a95cbaa9cdb0155684818aea",
+                "reference": "a69ef14cbf160a33a95cbaa9cdb0155684818aea",
                 "shasum": ""
             },
             "require": {
@@ -5089,7 +5089,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.3": "1.3.x-dev"
+                    "dev-1.3.1": "1.3.1.x-dev"
                 }
             },
             "autoload": {
@@ -5115,7 +5115,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-04-06 07:32:22"
+            "time": "2015-04-24 05:12:58"
         },
         {
             "name": "rz/oauth-bundle",
@@ -5168,16 +5168,16 @@
         },
         {
             "name": "rz/page-bundle",
-            "version": "1.1.x-dev",
+            "version": "1.1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/PageBundle.git",
-                "reference": "d1c5fa8d1bd27eb5f7b8887946ab8b860b0b45b0"
+                "reference": "ccd1cb34eb833d2e8bbbc524331b8842fb8ca6f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/d1c5fa8d1bd27eb5f7b8887946ab8b860b0b45b0",
-                "reference": "d1c5fa8d1bd27eb5f7b8887946ab8b860b0b45b0",
+                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/ccd1cb34eb833d2e8bbbc524331b8842fb8ca6f9",
+                "reference": "ccd1cb34eb833d2e8bbbc524331b8842fb8ca6f9",
                 "shasum": ""
             },
             "require": {
@@ -5188,7 +5188,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.1": "1.1.x-dev"
+                    "dev-1.1.1": "1.1.1.x-dev"
                 }
             },
             "autoload": {
@@ -5214,7 +5214,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-03-24 23:48:54"
+            "time": "2015-04-24 05:15:09"
         },
         {
             "name": "rz/search-bundle",

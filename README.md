@@ -10,7 +10,10 @@ Versions
 
 1.3.x-dev - Development version (Code Cleanup removing depricated methods)
 
-1.2.x-dev - Latest stable version based on Sonata 2.3 
+1.2.x-dev - Latest stable version based on Sonata 2.3
+ 
+1.2.0-dev - Deprecated version based on Sonata 2.3 won't be supported
+---------------------------------------------------------------------
 
 1.1.x-dev - Removed front-editing in favor of page composer from backend
 
