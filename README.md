@@ -6,13 +6,13 @@ rzproject cms-sandbox - CMS sandbox based on SonataProject and RzBundles
 Versions
 --------
 
-*2.0-dev - Refactored admin bundle using Bootstrap3
-*1.3.x-dev - Development version (Code Cleanup removing depricated methods)
-*1.2.x-dev - Latest stable version based on Sonata 2.3
-*1.2.0-dev - Deprecated version based on Sonata 2.3 won't be supported
-*1.1.x-dev - Removed front-editing in favor of page composer from backend
-*1.0.x-dev - [BC Break] applies context on RzClassification Bundle and Major changes affects RzMediaBundle, RzNewsBundle and RzClassificationBundle
-*1.0.0 First Stable Version
+* 2.0-dev - Refactored admin bundle using Bootstrap3
+* 1.3.x-dev - Development version (Code Cleanup removing depricated methods)
+* 1.2.x-dev - Latest stable version based on Sonata 2.3
+* 1.2.0-dev - Deprecated version based on Sonata 2.3 won't be supported
+* 1.1.x-dev - Removed front-editing in favor of page composer from backend
+* 1.0.x-dev - [BC Break] applies context on RzClassification Bundle and Major changes affects RzMediaBundle, RzNewsBundle and RzClassificationBundle
+* 1.0.0 First Stable Version
 
 
 What's inside?
