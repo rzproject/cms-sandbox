@@ -1,8 +1,72 @@
 rz_news:
+  #####################
+  # blocks configuration
+  #####################
+  blocks:
+    # Post By Category Block Configuration
+    post_by_category_list:
+        class: Rz\NewsBundle\Block\PostByCategoryBlockService
+        templates:
+          category_default_block:
+            name: Post By Category
+            path: RzNewsBundle:Block:post_by_category_list.html.twig
+        ajax_templates:
+          category_default_ajax:
+            name: Ajax | Post By Category
+            path: RzNewsBundle:Block:post_by_category_ajax.html.twig
+
+        ajax_pager_templates:
+          category_default_ajax_pager:
+            name: Pager Ajax | Post By Category
+            path: RzNewsBundle:Block:post_by_category_ajax_pager.html.twig
+
+    # Featured Post Block Configuration
+    featured_post:
+        class: Rz\NewsBundle\Block\FeaturedPostBlockService
+        templates:
+          default:
+            name: Default Template
+            path: RzNewsBundle:Block:featured_post.html.twig
+
+    # Recent Post Block Configuration
+    recent_posts:
+        class: Rz\NewsBundle\Block\RecentPostsBlockService
+        templates:
+          default:
+            name: Default Template
+            path: RzNewsBundle:Block:recent_posts.html.twig
+
+    # Recent Comments Block Configuration
+    recent_comments:
+        class: Rz\NewsBundle\Block\RecentCommentsBlockService
+        templates:
+          default:
+            name: Default Template
+            path: RzNewsBundle:Block:recent_comments.html.twig
+
+    # Tags Block Configuration
+    tags:
+        class: Rz\NewsBundle\Block\TagsBlockService
+        templates:
+          default:
+            name: Default Template
+            path: RzNewsBundle:Block:tags.html.twig
+
+  #####################
+  # news configuration
+  #####################
   settings:
     news_pager_max_per_page: 2
     ajax_pagination: true
+
+  #####################
+  # default collection
+  #####################
   default_collection: event
+
+  #####################
+  # Post collection configuration
+  #####################
   collections:
       default:  # the default context is mandatory
           provider: rz_news.provider.default

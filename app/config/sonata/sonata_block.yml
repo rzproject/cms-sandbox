@@ -5,12 +5,6 @@ sonata_block:
     http_cache:
         listener: true
 
-    profiler:
-        enabled:        %kernel.debug%
-        container_types:
-            sonata.page.block.container: sonata.page.block.container
-        template:       SonataBlockBundle:Profiler:block.html.twig
-
     blocks:
         sonata.admin.block.admin_list:
             contexts:   [admin]
@@ -37,6 +31,8 @@ sonata_block:
         sonata.page.block.children_pages:
         sonata.page.block.breadcrumb:
             cache: sonata.cache.mongo
+        sonata.page.block.shared_block:
+            cache: sonata.cache.mongo
 
         # MediaBundle's Blocks
         sonata.media.block.media:
@@ -55,11 +51,11 @@ sonata_block:
             cache: sonata.cache.mongo
         sonata.news.block.recent_posts:
             cache: sonata.cache.mongo
-        rz_news.block.featured_posts:
+        rz_news.block.featured_post:
             cache: sonata.cache.mongo
         rz_news.block.tags:
             cache: sonata.cache.mongo
-        rz_news.block.collection:
+        rz_news.block.post_by_category:
             cache: sonata.cache.mongo
 
         # TimelineBundle's Blocks
@@ -88,6 +84,8 @@ sonata_block:
         rz.seo.block.twitter.share_button:
         rz.seo.block.pinterest.share_button:
         rz.seo.block.google.share_button:
+
+        # Search Block
         rz.search.block.search:
             contexts: [user]
 
@@ -95,9 +93,23 @@ sonata_block:
         sonata.formatter.block.formatter:
             cache: sonata.cache.mongo
 
+        # classification
+        rz_classification.block.category:
+            cache: sonata.cache.mongo
+
     container:
         types: [sonata.block.service.container, sonata.page.block.container]
         templates:  { 'SonataPageBundle:Block:block_container.html.twig': 'SonataPageBundle default template', 'SonataSeoBundle:Block:block_social_container.html.twig': 'SonataSeoBundle (to contain social buttons)'}
+
+    profiler:
+        enabled:        %kernel.debug%
+        container_types: [sonata.block.service.container, sonata.page.block.container]
+        template:       SonataBlockBundle:Profiler:block.html.twig
+
+
+    menus:
+        "ApplicationSonataPageBundle:Builder:userMainMenu": "User Main Menu"
+        "ApplicationSonataPageBundle:Builder:anonymousMainMenu": "User Main Menu"
 
     exception:
         default:

@@ -1,4 +1,0 @@
-rmzamora_sonata_ext_page:
-      #enable block based caching SonataCacheBundle
-      cache:
-        enabled: false

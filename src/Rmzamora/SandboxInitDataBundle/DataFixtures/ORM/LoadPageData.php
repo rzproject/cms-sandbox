@@ -117,7 +117,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
         $this->addReference('page-homepage', $homepage = $pageManager->create());
         $homepage->setSlug('/');
         $homepage->setUrl('/');
-        $homepage->setName('homepage');
+        $homepage->setName('home');
         $homepage->setEnabled(true);
         $homepage->setDecorate(0);
         $homepage->setRequestMethod('GET|POST|HEAD|DELETE|PUT');
