@@ -45,7 +45,7 @@ sonata_block:
         sonata.news.block.recent_posts:
         rz_news.block.featured_posts:
         rz_news.block.tags:
-        rz_news.block.collection:
+        rz_news.block.post_by_category:
 
 
         # TimelineBundle's Blocks
@@ -79,6 +79,9 @@ sonata_block:
 
         # Formatter
         sonata.formatter.block.formatter:
+
+        # classification
+        rz_classification.block.category:
 
     container:
         types: [sonata.block.service.container, sonata.page.block.container]

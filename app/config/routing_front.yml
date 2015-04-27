@@ -134,6 +134,9 @@ sonata_qa:
 #    prefix: /blog
 
 #FOLLOW EXACT ORDER
+blog_category_ajax:
+    resource: '@RzNewsBundle/Resources/config/routing/post_by_category.xml'
+    prefix: /
 
 blog_default:
     resource: '@RzNewsBundle/Resources/config/routing/news_default.xml'

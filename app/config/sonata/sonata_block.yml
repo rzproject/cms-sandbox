@@ -61,7 +61,7 @@ sonata_block:
             cache: sonata.cache.mongo
         rz_news.block.tags:
             cache: sonata.cache.mongo
-        rz_news.block.collection:
+        rz_news.block.post_by_category:
             cache: sonata.cache.mongo
 
         # TimelineBundle's Blocks
@@ -95,6 +95,10 @@ sonata_block:
 
         # Formatter
         sonata.formatter.block.formatter:
+            cache: sonata.cache.mongo
+
+        # classification
+        rz_classification.block.category:
             cache: sonata.cache.mongo
 
     container:
