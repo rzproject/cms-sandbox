@@ -116,58 +116,22 @@
                         <!--menu-->
                         <a class="menu-link" href="#menu"><i class="icon-reorder white"></i></a>
                         <nav id="menu2" class="menu">
-                            <ul>
-                                {% set url = rz_render_page_url('homepage') %}
-                                {% if  url %}
-                                    <li class="has-submenu-no">
-                                        <a href="{{ path(url) }}">Home</a>
-                                    </li>
-                                {% endif %}
-                                {% set url = rz_render_page_url('rz_news_collection') %}
-                                {% if  url %}
-                                    <li class="has-submenu-no">
-                                        <a href="{{ path(url, {'collection': 'blog'}) }}">News</a>
-                                    </li>
-                                {% endif %}
-
-                                {% set url = rz_render_page_url('rz_news_collection') %}
-                                {% if  url %}
-                                    <li class="has-submenu-no">
-                                        <a href="{{ path(url, {'collection': 'event'}) }}">Events</a>
-                                    </li>
-                                {% endif %}
-
-                                {% set url = rz_render_page_url('gallery') %}
-                                {% if  url %}
-                                    <li class="has-submenu-no">
-                                        <a href="{{ path(url) }}">Gallery</a>
-                                    </li>
-                                {% endif %}
-                                {% if (app.user is defined and app.user and is_granted('IS_AUTHENTICATED_FULLY')) %}
-                                <li class="has-submenu">
-                                    {% set url = rz_render_page_url('fos_user_profile_show') %}
-                                    {% if  url %}
-                                        <li class="has-submenu">
-                                            <a href="{{ path(url) }}"><i class="icon-user"></i> {{ app.user }}</a>
-                                            {{ sonata_block_render({'type': 'sonata.user.block.menu', 'settings' : {'template':'RzUserBundle:Block:block_profile_menu.html.twig'} }, {'current_uri': app.request.requestUri}) }}
-                                        </li>
-                                    {% endif %}
-                                </li>
-                                {% else %}
-                                    {% set url = rz_render_page_url('fos_user_security_login') %}
-                                    {% if  url %}
-                                    <li class="has-submenu-no">
-                                        <a href="{{ path(url) }}">Login</a>
-                                    </li>
-                                    {% endif %}
-                                    {% set url = rz_render_page_url('fos_user_registration_register') %}
-                                    {% if  url %}
-                                    <li class="has-submenu-no">
-                                        <a href="{{ path(url) }}">Register</a>
-                                    </li>
-                                    {% endif %}
-                                {% endif %}
-                            </ul>
+                            {% if (app.user is defined and app.user and is_granted('IS_AUTHENTICATED_FULLY')) %}
+                                {{ sonata_block_render({ 'type' : 'sonata.block.service.menu',
+                                    'settings' : { 'title' : 'Header Menu',
+                                        'cache_policy' : 0,
+                                        'template' : 'SonataBlockBundle:Block:block_core_menu.html.twig',
+                                        'menu_name' : 'ApplicationSonataPageBundle:Builder:userMainMenu',
+                                        'safe_labels' : true} }) }}
+                            {% else %}
+                                {{ sonata_block_render({ 'type' : 'sonata.block.service.menu',
+                                                         'settings' : { 'title' : 'Header Menu',
+                                                                        'cache_policy' : 0,
+                                                                        'template' : 'SonataBlockBundle:Block:block_core_menu.html.twig',
+                                                                        'menu_name' : 'ApplicationSonataPageBundle:Builder:anonymousMainMenu',
+                                                                        'safe_labels' : true} }
+                                                      ) }}
+                            {% endif %}
                         </nav>
                     </div>
                 </div>
@@ -188,51 +152,21 @@
                         </div>
                         <!--menu-->
                         <nav id="menu" class="menu menu-sticky">
-                            <ul>
-                                {% set url = rz_render_page_url('homepage') %}
-                                {% if  url %}
-                                <li class="has-submenu-no">
-                                    <a href="{{ path(url) }}">Home</a>
-                                </li>
-                                {% endif %}
-                                {% set url = rz_render_page_url('rz_news_collection') %}
-                                {% if  url %}
-                                <li class="has-submenu-no">
-                                    <a href="{{ path(url, {'collection': 'blog'}) }}">News</a>
-                                </li>
-                                {% endif %}
-
-                                {% set url = rz_render_page_url('rz_news_collection') %}
-                                {% if  url %}
-                                    <li class="has-submenu-no">
-                                        <a href="{{ path(url, {'collection': 'event'}) }}">Events</a>
-                                    </li>
-                                {% endif %}
-
-                                {% set url = rz_render_page_url('gallery') %}
-                                {% if  url %}
-                                <li class="has-submenu-no">
-                                    <a href="{{ path(url) }}">Gallery</a>
-                                </li>
-                                {% endif %}
-                                {% if (app.user is defined and app.user and is_granted('IS_AUTHENTICATED_FULLY')) %}
-                                    {% set url = rz_render_page_url('fos_user_profile_show') %}
-                                    {% if  url %}
-                                    <li class="has-submenu">
-                                        <a href="{{ path(url) }}"><i class="icon-user"></i> {{ app.user }}</a>
-                                        {{ sonata_block_render({'type': 'sonata.user.block.menu', 'settings' : {'template':'RzUserBundle:Block:block_profile_menu.html.twig'} }, {'current_uri': app.request.requestUri}) }}
-                                    </li>
-                                    {% endif %}
-                                {% else %}
-                                    <li class="has-submenu-no">
-                                        <a href="{{ path(rz_render_page_url('fos_user_security_login')) }}">Login</a>
-                                    </li>
-                                    <li class="has-submenu-no">
-                                        <a href="{{ path(rz_render_page_url('fos_user_registration_register')) }}">Register</a>
-                                    </li>
-
-                                {% endif %}
-                            </ul>
+                            {% if (app.user is defined and app.user and is_granted('IS_AUTHENTICATED_FULLY')) %}
+                                {{ sonata_block_render({ 'type' : 'sonata.block.service.menu',
+                                    'settings' : { 'title' : 'Header Menu',
+                                        'cache_policy' : 0,
+                                        'template' : 'SonataBlockBundle:Block:block_core_menu.html.twig',
+                                        'menu_name' : 'ApplicationSonataPageBundle:Builder:userMainMenu',
+                                        'safe_labels' : true} }) }}
+                            {% else %}
+                                {{ sonata_block_render({ 'type' : 'sonata.block.service.menu',
+                                    'settings' : { 'title' : 'Header Menu',
+                                        'cache_policy' : 0,
+                                        'template' : 'SonataBlockBundle:Block:block_core_menu.html.twig',
+                                        'menu_name' : 'ApplicationSonataPageBundle:Builder:anonymousMainMenu',
+                                        'safe_labels' : true} }) }}
+                            {% endif %}
                         </nav>
                     </div>
                 </div>
@@ -242,6 +176,11 @@
     <!-- // header -->
     {% endblock rzcms_header %}
 
+    {% block sonata_page_breadcrumb %}
+        <div class="container">
+            {{ sonata_block_render_event('breadcrumb', { 'settings': {'include_homepage_link': true},  'context': 'page', 'current_uri': app.request.requestUri, 'container_attr': {'class': 'breadcrumb'}, 'separator': '<i class="icon-angle-right"></i>', 'current_class': 'active' }) }}
+        </div>
+    {% endblock %}
 
     {% block rzcms_body %}
     <div class="container">

@@ -16,60 +16,78 @@ class Builder extends ContainerAware
      */
     public function mainMenu(FactoryInterface $factory, array $options)
     {
-        $isFooter = array_key_exists('is_footer', $options) ? $options['is_footer'] : false;
+        $categoryManager = $this->container->get('sonata.classification.manager.category');
+        $isEnabledController = $this->container->getParameter('rz_classification.enable_controllers');
+        $newsParentCategory = $categoryManager->findOneBy(array('enabled' => true, 'slug'=>'news'));
 
-        $shopCategories = $this->container->get('sonata.classification.manager.category')->findBy(array('enabled' => true, 'parent' => null));
+        if($newsParentCategory) {
+            $categories = $categoryManager->getSubCategories($newsParentCategory->getId());
+        }
 
-        $menuOptions = array_merge($options, array(
-            'childrenAttributes' => array('class' => 'nav nav-pills'),
-        ));
-
+        $menuOptions = $options;
         $menu = $factory->createItem('main', $menuOptions);
 
-        $menu->addChild('News', array('route' => 'sonata_news_home'));
-
-        $dropdownExtrasOptions = $isFooter ? array(
-            'uri' => "#",
-            'attributes' => array('class' => 'span2'),
-            'childrenAttributes' => array('class' => 'nav'),
-        ) : array(
-            'uri' => "#",
-            'attributes' => array('class' => 'dropdown'),
-            'childrenAttributes' => array('class' => 'dropdown-menu'),
-            'linkAttributes' => array('class' => 'dropdown-toggle', 'data-toggle' => 'dropdown', 'data-target' => '#'),
-            'label' => 'Solutions <b class="caret caret-menu"></b>',
-            'extras' => array(
-                'safe_label' => true,
-            )
-        );
-        $extras = $factory->createItem('Discover', $dropdownExtrasOptions);
-
-        $extras->addChild('Api', array('route' => 'page_slug', 'routeParameters' => array('path' => '/api-landing')));
-        $extras->addChild('Gallery', array('route' => 'sonata_media_gallery_index'));
-
-        $menu->addChild($extras);
-
-        $menu->addChild('Admin', array(
+        $menu->addChild('Home', array(
             'route' => 'page_slug',
             'routeParameters' => array(
-                'path' => '/user'
+                'path' => '/'
             )
         ));
 
-//        if ($isFooter) {
-//            $menu->addChild('Legal notes', array(
-//                'route' => 'page_slug',
-//                'routeParameters' => array(
-//                    'path' => '/legal-notes',
-//                )
-//            ));
-//        }
+        foreach($categories as $cat){
+            if ($isEnabledController) {
+                $menu->addChild($cat->getName(), array(
+                    'route'           => 'rz_news_category',
+                    'routeParameters' => array(
+                        'permalink' => $categoryManager->getPermalinkGenerator()->generate($cat)
+                    ),
+                ));
+            } elseif($page = $cat->getPage()) {
+                $menu->addChild($cat->getName(), array(
+                    'route'           => 'page_slug',
+                    'routeParameters' => array(
+                        'path' => $page->getUrl()
+                    ),
+                ));
+            } else {
+                $menu->addChild($cat->getName(), array('uri' => '#'));
+            }
+        }
+
+        if(array_key_exists('authenticated', $options) && $options['authenticated']) {
+            $menuBuilder = $this->container->get('sonata.user.profile.menu_builder');
+            $childOptions = array(
+                'uri' => "#",
+                'extras' => array(
+                    'safe_label' => true,
+                ));
+
+            $menu->addChild($menuBuilder->createProfileMenu($childOptions));
+            $user = $this->container->get('security.context')->getToken()->getUser();
+            $menu['profile']->setAttribute('class', 'has-submenu');
+            if($user) {
+                $menu['profile']->setLabel('<i class="icon-user"></i> Hi '.$user->getUsername().'!');
+            } else {
+                $menu['profile']->setLabel($this->container->get('translator')->trans('rz_my_profile', array(), 'RzUserBundle'));
+            }
+
+        } else {
+            $menu->addChild('Register', array('route' => 'fos_user_registration_register'));
+            $menu->addChild('Login', array('route' => 'fos_user_security_login'));
+        }
 
         return $menu;
     }
 
-    public function footerMenu(FactoryInterface $factory, array $options)
-    {
+    public function userMainMenu(FactoryInterface $factory, array $options) {
+        return $this->mainMenu($factory, array_merge($options, array('authenticated' => true)));
+    }
+
+    public function anonymousMainMenu(FactoryInterface $factory, array $options) {
+        return $this->mainMenu($factory, array_merge($options, array('authenticated' => false)));
+    }
+
+    public function footerMenu(FactoryInterface $factory, array $options) {
         return $this->mainMenu($factory, array_merge($options, array('is_footer' => true)));
     }
 }
