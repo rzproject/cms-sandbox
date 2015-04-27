@@ -8,11 +8,11 @@ Versions
 
 * 2.0-dev - Refactored admin bundle using Bootstrap3
 
-* 1.3.x-dev - Development version with updated page, classification and news bundle
+* 1.3.x-dev - Stable version with updated page, classification and news bundle
 
-* 1.3.0.x-dev - Development version before page, classification and news bundle refactor
+* 1.3.0.x-dev - Stable version before page, classification and news bundle refactor
 
-* 1.2.x-dev - Latest stable version based on Sonata 2.3 
+* 1.2.x-dev - Deprecated stable version with updated page, classification and news bundle
 
 * 1.2.0-dev - Deprecated stable version based on Sonata 2.3 
 
