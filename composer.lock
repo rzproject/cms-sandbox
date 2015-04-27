@@ -4666,6 +4666,47 @@
             "time": "2015-04-21 01:00:19"
         },
         {
+            "name": "rmzamora/zendsearch",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmzamora/ZendSearch.git",
+                "reference": "31a7d512cb189944a7c6d65cedc0a72ef3915604"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rmzamora/ZendSearch/zipball/31a7d512cb189944a7c6d65cedc0a72ef3915604",
+                "reference": "31a7d512cb189944a7c6d65cedc0a72ef3915604",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-stdlib": "2.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "ZendSearch": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "a general purpose text search engine written entirely in PHP 5",
+            "homepage": "http://packages.zendframework.com/",
+            "keywords": [
+                "lucene",
+                "zf2"
+            ],
+            "time": "2015-04-27 04:13:27"
+        },
+        {
             "name": "rz/admin-bundle",
             "version": "1.1.x-dev",
             "source": {
@@ -4774,12 +4815,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/ClassificationBundle.git",
-                "reference": "47619e960704794a825b9f5eeeed957fdc4252bf"
+                "reference": "326af21cf3336cf4ce1731c06562a3e7e76c63ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/47619e960704794a825b9f5eeeed957fdc4252bf",
-                "reference": "47619e960704794a825b9f5eeeed957fdc4252bf",
+                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/326af21cf3336cf4ce1731c06562a3e7e76c63ed",
+                "reference": "326af21cf3336cf4ce1731c06562a3e7e76c63ed",
                 "shasum": ""
             },
             "require": {
@@ -4816,7 +4857,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-04-27 01:36:02"
+            "time": "2015-04-27 02:50:41"
         },
         {
             "name": "rz/doctrine-orm-admin-bundle",
@@ -5024,12 +5065,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "a389229d0eb31e3de17be3ef30daa7dc244daf98"
+                "reference": "a0ea5ed728f4a22d8232a7bed77fbc1b0a0727bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/a389229d0eb31e3de17be3ef30daa7dc244daf98",
-                "reference": "a389229d0eb31e3de17be3ef30daa7dc244daf98",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/a0ea5ed728f4a22d8232a7bed77fbc1b0a0727bb",
+                "reference": "a0ea5ed728f4a22d8232a7bed77fbc1b0a0727bb",
                 "shasum": ""
             },
             "require": {
@@ -5072,7 +5113,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-04-24 10:05:53"
+            "time": "2015-04-27 02:27:30"
         },
         {
             "name": "rz/oauth-bundle",
@@ -5179,20 +5220,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/SearchBundle.git",
-                "reference": "f319f3138d607884ac0f51c823927f4cbaef2d2b"
+                "reference": "1dcaaa02b36bfb5e966bae8dba5e9bbb922e4dea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/SearchBundle/zipball/f319f3138d607884ac0f51c823927f4cbaef2d2b",
-                "reference": "f319f3138d607884ac0f51c823927f4cbaef2d2b",
+                "url": "https://api.github.com/repos/rzproject/SearchBundle/zipball/1dcaaa02b36bfb5e966bae8dba5e9bbb922e4dea",
+                "reference": "1dcaaa02b36bfb5e966bae8dba5e9bbb922e4dea",
                 "shasum": ""
             },
             "require": {
+                "rmzamora/zendsearch": "dev-master",
                 "solarium/solarium": "~3.0",
                 "symfony/filesystem": "~2.1",
                 "symfony/framework-bundle": "~2.4",
-                "white-october/pagerfanta-bundle": "~1.0",
-                "zendframework/zendsearch": "dev-master"
+                "white-october/pagerfanta-bundle": "~1.0"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -5222,7 +5263,7 @@
                 "RZProject",
                 "Symfony2"
             ],
-            "time": "2015-04-08 14:34:55"
+            "time": "2015-04-27 04:15:28"
         },
         {
             "name": "rz/seo-bundle",
@@ -7224,42 +7265,6 @@
                 "zf2"
             ],
             "time": "2015-04-01 18:09:29"
-        },
-        {
-            "name": "zendframework/zendsearch",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/ZendSearch.git",
-                "reference": "c8de2508d3413bf9d701b40c1092c1ffbdd8fc63"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/ZendSearch/zipball/c8de2508d3413bf9d701b40c1092c1ffbdd8fc63",
-                "reference": "c8de2508d3413bf9d701b40c1092c1ffbdd8fc63",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "zendframework/zend-stdlib": "2.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "ZendSearch": "library/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "a general purpose text search engine written entirely in PHP 5",
-            "homepage": "http://packages.zendframework.com/",
-            "keywords": [
-                "lucene",
-                "zf2"
-            ],
-            "time": "2015-01-21 16:24:14"
         }
     ],
     "packages-dev": [
