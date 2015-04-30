@@ -2,6 +2,7 @@ CHANGELOG
 =========
 
 ### 2015-05-01
+--------------
 
 #### RzFormatterBundle ####
 * Added config file for RzFormatterBundle to configure block classes and templates
@@ -10,7 +11,9 @@ CHANGELOG
 #### RzAdminBundle ####
 * added configureClassesToCompile
 
+
 ### 2015-04-30
+--------------
 
 #### cms-sanbox ####
 * Added config file for RzBlockBundle to configure block classes and templates
