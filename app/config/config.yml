@@ -36,6 +36,8 @@ imports:
     - { resource: rmzamora/rz/rz_classification.yml }
     - { resource: rmzamora/rz/rz_seo.yml }
     - { resource: rmzamora/rz/rz_block.yml }
+    - { resource: rmzamora/rz/rz_formatter.yml }
+    - { resource: rmzamora/rz/rz_media.yml }
 
     #HWI
     - { resource: rmzamora/hwi.yml }
