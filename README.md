@@ -1,7 +1,7 @@
 cms-sandbox
 ===========
 
-rzproject cms-sandbox - CMS sandbox based on SonataProject and RzBundles
+[rzproject](http://rzproject.github.io) cms-sandbox - CMS sandbox based on SonataProject and RzBundles
 
 CHANGELOG
 ---------
