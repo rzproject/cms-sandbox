@@ -41,10 +41,6 @@ sonata_block:
             cache: sonata.cache.mongo
         sonata.media.block.feature_media:
             cache: sonata.cache.mongo
-        rz_media.block.media_bxslider:
-            cache: sonata.cache.mongo
-        rz_media.block.featured_galleries:
-            cache: sonata.cache.mongo
 
         # NewsBundle's Blocks
         sonata.news.block.recent_comments:
