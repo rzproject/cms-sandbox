@@ -26,7 +26,6 @@
     {% if sonata_page.isEditor or (app.user is defined and app.user and is_granted('ROLE_PREVIOUS_ADMIN')) %}
         {% stylesheets
             'bundles/sonatamedia/blocks/feature_media/theme.css'
-            'bundles/rzmedia/css/block/rzmedia-bxslider.css'
             'bundles/rzmedia/css/block/rzmedia-featured-gallery.css'
             'bundles/rznews/css/featured_post_block.css'
             filter='?yui_css'
@@ -60,7 +59,6 @@
     '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/fitvids/jquery.fitvids.js'
     '@RmzamoraJqueryBundle/Resources/public/lib/sprintf.js'
     '@RzNewsBundle/Resources/public/js/post_loadmore.js'
-    '@RzMediaBundle/Resources/public/js/block/rzmedia-bxslider.js'
     '@RzMediaBundle/Resources/public/js/block/rzmedia-featured-gallery.js'
     '@RzPageBundle/Resources/public/theme/rzcms/js/jquery.themepunch.revolution.min.js'
     '@RzPageBundle/Resources/public/theme/rzcms/js/jquery.themepunch.plugins.min.js'
