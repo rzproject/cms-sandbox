@@ -6,8 +6,10 @@ CHANGELOG
 --------------
 
 ###### [cms-sanbox](https://github.com/rzproject/cms-sandbox/commits/1.3) ######
-updated lockfile latest stable build.
-updated config files in relation to [RzMediaBundle](https://github.com/rzproject/MediaBundle/commit/424abd771f77efbe32f422bf43ad2c5da78c2876) changes.
+* updated lockfile latest stable build.
+* updated config files in relation to [RzMediaBundle](https://github.com/rzproject/MediaBundle/commit/424abd771f77efbe32f422bf43ad2c5da78c2876) changes.
+* added formatter and media config files
+* removed bxslider and featured galleries blocks from config (sonnata_block.yml)
 
 ###### [RzMediaBundle](https://github.com/rzproject/MediaBundle/commit/424abd771f77efbe32f422bf43ad2c5da78c2876) ######
 * cleanup block services
