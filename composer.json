@@ -82,7 +82,7 @@
         "rz/seo-bundle": "1.1.*",
         "rz/timeline-bundle": "1.1.*",
         "rz/search-bundle": "1.1.*",
-        "rz/oauth-bundle": "1.1.*",
+        "rz/oauth-bundle": "1.2.*",
         "rz/user-security-bundle": "dev-master",
 
         "liip/imagine-bundle": "0.9.*@stable",
