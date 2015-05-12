@@ -137,12 +137,12 @@
                                     </li>
                                 {% endif %}
 
-                                {% set url = rz_render_page_url('gallery') %}
-                                {% if  url %}
-                                    <li class="has-submenu-no">
-                                        <a href="{{ path(url) }}">Gallery</a>
-                                    </li>
-                                {% endif %}
+                                {#{% set url = rz_render_page_url('gallery') %}#}
+                                {#{% if  url %}#}
+                                    {#<li class="has-submenu-no">#}
+                                        {#<a href="{{ path(url) }}">Gallery</a>#}
+                                    {#</li>#}
+                                {#{% endif %}#}
                                 {% if (app.user is defined and app.user and is_granted('IS_AUTHENTICATED_FULLY')) %}
                                 <li class="has-submenu">
                                     {% set url = rz_render_page_url('fos_user_profile_show') %}
@@ -209,12 +209,12 @@
                                     </li>
                                 {% endif %}
 
-                                {% set url = rz_render_page_url('gallery') %}
-                                {% if  url %}
-                                <li class="has-submenu-no">
-                                    <a href="{{ path(url) }}">Gallery</a>
-                                </li>
-                                {% endif %}
+                                {#{% set url = rz_render_page_url('gallery') %}#}
+                                {#{% if  url %}#}
+                                {#<li class="has-submenu-no">#}
+                                    {#<a href="{{ path(url) }}">Gallery</a>#}
+                                {#</li>#}
+                                {#{% endif %}#}
                                 {% if (app.user is defined and app.user and is_granted('IS_AUTHENTICATED_FULLY')) %}
                                     {% set url = rz_render_page_url('fos_user_profile_show') %}
                                     {% if  url %}
