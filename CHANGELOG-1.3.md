@@ -2,6 +2,14 @@ CHANGELOG
 =========
 
 --------------
+### 2015-05-13
+--------------
+
+###### [RzSearchBundle](https://github.com/rzproject/SearchBundle/commit/1ca27d429818ce65dd11990305aca5bde1cfb427) ######
+* added array checks for LuceneIndexer and Config Manager
+* fixed error when indexing News Comments for Persistent Collection instance
+
+--------------
 ### 2015-05-12
 --------------
 
