@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a05dd5de4c6250fc4a2ccdeaa0184655",
+    "hash": "6505f8f6ed6cbc9ef658a225eadfb5fa",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1297,12 +1297,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "19575ef7ff64a3e58dad813a58012dde14994b40"
+                "reference": "941569e523d6dc90bc97ded78c02aaf25b85d331"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/19575ef7ff64a3e58dad813a58012dde14994b40",
-                "reference": "19575ef7ff64a3e58dad813a58012dde14994b40",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/941569e523d6dc90bc97ded78c02aaf25b85d331",
+                "reference": "941569e523d6dc90bc97ded78c02aaf25b85d331",
                 "shasum": ""
             },
             "require": {
@@ -1372,7 +1372,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2015-05-08 07:32:36"
+            "time": "2015-05-12 14:13:22"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -2710,12 +2710,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "72123e3d6c7bf8f1454fe12deb69db2f783dd220"
+                "reference": "bf2bff61743f20a13dc46ff1e3bbd0f19c997d2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/72123e3d6c7bf8f1454fe12deb69db2f783dd220",
-                "reference": "72123e3d6c7bf8f1454fe12deb69db2f783dd220",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bf2bff61743f20a13dc46ff1e3bbd0f19c997d2b",
+                "reference": "bf2bff61743f20a13dc46ff1e3bbd0f19c997d2b",
                 "shasum": ""
             },
             "require": {
@@ -2777,7 +2777,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-05-09 17:17:49"
+            "time": "2015-05-11 14:51:05"
         },
         {
             "name": "nelmio/api-doc-bundle",
@@ -3949,17 +3949,17 @@
         },
         {
             "name": "rmzamora/jquery-bundle",
-            "version": "1.11.0.x-dev",
+            "version": "1.11.3.x-dev",
             "target-dir": "Rmzamora/JqueryBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/JqueryBundle.git",
-                "reference": "26d7f32419f539a80aa6570df3065367d38a853f"
+                "reference": "827ee31f27e3f9bf88fbdef96803972245710c33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/JqueryBundle/zipball/26d7f32419f539a80aa6570df3065367d38a853f",
-                "reference": "26d7f32419f539a80aa6570df3065367d38a853f",
+                "url": "https://api.github.com/repos/rmzamora/JqueryBundle/zipball/827ee31f27e3f9bf88fbdef96803972245710c33",
+                "reference": "827ee31f27e3f9bf88fbdef96803972245710c33",
                 "shasum": ""
             },
             "require": {
@@ -3971,7 +3971,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.11.0": "1.11.0-dev"
+                    "dev-1.11.3": "1.11.3-dev"
                 }
             },
             "autoload": {
@@ -3997,7 +3997,7 @@
                 "jQueryUI",
                 "jquery"
             ],
-            "time": "2015-01-06 11:50:25"
+            "time": "2015-05-12 14:20:24"
         },
         {
             "name": "rmzamora/knp-menu-bundle",
@@ -5178,12 +5178,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/PageBundle.git",
-                "reference": "a88e856653f92154421a3b16fa47f96fa86443e7"
+                "reference": "d01998649541c1e88141ac55fdd43b28b96e998e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/a88e856653f92154421a3b16fa47f96fa86443e7",
-                "reference": "a88e856653f92154421a3b16fa47f96fa86443e7",
+                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/d01998649541c1e88141ac55fdd43b28b96e998e",
+                "reference": "d01998649541c1e88141ac55fdd43b28b96e998e",
                 "shasum": ""
             },
             "require": {
@@ -5220,7 +5220,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-04-30 07:32:36"
+            "time": "2015-05-12 14:54:32"
         },
         {
             "name": "rz/search-bundle",
@@ -6160,12 +6160,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/stephpy/timeline-bundle.git",
-                "reference": "c990839bf21029391095bc76939724160f720e14"
+                "reference": "2fd9e717ad05789a2655e60ecfc4cebffb0204b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stephpy/timeline-bundle/zipball/c990839bf21029391095bc76939724160f720e14",
-                "reference": "c990839bf21029391095bc76939724160f720e14",
+                "url": "https://api.github.com/repos/stephpy/timeline-bundle/zipball/2fd9e717ad05789a2655e60ecfc4cebffb0204b3",
+                "reference": "2fd9e717ad05789a2655e60ecfc4cebffb0204b3",
                 "shasum": ""
             },
             "require": {
@@ -6215,7 +6215,7 @@
                 "symfony",
                 "timeline"
             ],
-            "time": "2015-03-25 13:55:00"
+            "time": "2015-05-11 08:27:58"
         },
         {
             "name": "stof/doctrine-extensions-bundle",
@@ -8052,12 +8052,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "d1da796ba5565789a623052eb9f2cf59d57fec60"
+                "reference": "ae15da2ce234d3ffe5d7fafcdad19c7f1acf3568"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/d1da796ba5565789a623052eb9f2cf59d57fec60",
-                "reference": "d1da796ba5565789a623052eb9f2cf59d57fec60",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/ae15da2ce234d3ffe5d7fafcdad19c7f1acf3568",
+                "reference": "ae15da2ce234d3ffe5d7fafcdad19c7f1acf3568",
                 "shasum": ""
             },
             "require": {
@@ -8067,7 +8067,6 @@
                 "phpunit/phpunit": "~4.0"
             },
             "suggest": {
-                "dflydev/markdown": "~1.0",
                 "erusev/parsedown": "~1.0",
                 "league/commonmark": "*"
             },
@@ -8094,7 +8093,7 @@
                     "email": "mike.vanriel@naenius.com"
                 }
             ],
-            "time": "2015-02-27 09:28:18"
+            "time": "2015-05-12 07:21:12"
         },
         {
             "name": "phpspec/prophecy",
