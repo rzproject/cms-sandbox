@@ -151,7 +151,7 @@
         "symfony-web-dir": "web",
         "symfony-assets-install": "symlink",
         "branch-alias": {
-            "dev-master": "1.1.x-dev"
+            "dev-1.2.0": "1.2.0.x-dev"
         },
         "incenteev-parameters": [{
             "file": "app/config/parameters.yml",
