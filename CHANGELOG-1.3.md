@@ -2,6 +2,13 @@ CHANGELOG
 =========
 
 --------------
+### 2015-05-12
+--------------
+
+###### [RmzamoraJqueryBundle](https://github.com/rmzamora/JqueryBundle/commits/1.11.3) ######
+* updated jquery to 1.11.3 and jquery-ui to 1.11.4
+
+--------------
 ### 2015-05-04
 --------------
 
