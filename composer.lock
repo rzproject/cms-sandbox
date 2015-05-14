@@ -4784,12 +4784,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/BlockBundle.git",
-                "reference": "9cd578f15dcee64a0d5b20186b4b671942238bc7"
+                "reference": "d1523b52db15e7fa4c6c22cba9305fc6f7e67731"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/BlockBundle/zipball/9cd578f15dcee64a0d5b20186b4b671942238bc7",
-                "reference": "9cd578f15dcee64a0d5b20186b4b671942238bc7",
+                "url": "https://api.github.com/repos/rzproject/BlockBundle/zipball/d1523b52db15e7fa4c6c22cba9305fc6f7e67731",
+                "reference": "d1523b52db15e7fa4c6c22cba9305fc6f7e67731",
                 "shasum": ""
             },
             "require": {
@@ -4826,7 +4826,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-05-06 04:54:02"
+            "time": "2015-05-14 08:44:59"
         },
         {
             "name": "rz/classification-bundle",
@@ -5189,12 +5189,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/PageBundle.git",
-                "reference": "d01998649541c1e88141ac55fdd43b28b96e998e"
+                "reference": "a50359b35267bc2a09f3f1e7509a3abdfd33f8b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/d01998649541c1e88141ac55fdd43b28b96e998e",
-                "reference": "d01998649541c1e88141ac55fdd43b28b96e998e",
+                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/a50359b35267bc2a09f3f1e7509a3abdfd33f8b3",
+                "reference": "a50359b35267bc2a09f3f1e7509a3abdfd33f8b3",
                 "shasum": ""
             },
             "require": {
@@ -5231,7 +5231,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-05-12 14:54:32"
+            "time": "2015-05-14 08:44:14"
         },
         {
             "name": "rz/search-bundle",

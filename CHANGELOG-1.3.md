@@ -5,6 +5,12 @@ CHANGELOG
 ### 2015-05-14
 --------------
 
+###### [RzBlockBundle](https://github.com/rzproject/BlockBundle/commit/d1523b52db15e7fa4c6c22cba9305fc6f7e67731) ######
+* fixed use statement for inherited class on php 5.4
+ 
+###### [RzPageBundle](https://github.com/rzproject/PageBundle/commit/a50359b35267bc2a09f3f1e7509a3abdfd33f8b3) ######
+* fixed use statement for inherited class on php 5.4
+
 ###### [CCDNUserSecurityBundle](https://github.com/rmzamora/CCDNUserSecurityBundle/commit/6aa1b33e23521ef76ac96b5bdaf6ca3abf81efb5) ######
 * added new 2.1 branch to prevent [BC-BREAK] 
 * dev-master is now the development branch
