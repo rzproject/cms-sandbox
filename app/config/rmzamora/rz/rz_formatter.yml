@@ -1,7 +1,5 @@
 rz_formatter:
-
-# Uncomment below if you want to override the following block
-
+  # Uncomment below if you want to override the following block
   blocks:
     formatter:
       class: Rz\FormatterBundle\Block\FormatterBlockService

@@ -5,6 +5,12 @@ CHANGELOG
 ### 2015-05-14
 --------------
 
+###### [RzSearchBundle](https://github.com/rzproject/SearchBundle/commit/44e76c00aa112ecceb42c6b2979d8739445da7ec) ######
+* added block settings to allow override of BlockService class and added configuration for block template
+
+###### [RzNewsBundle](https://github.com/rzproject/NewsBundle/commit/617818a463b15a153771780fcd579ef9d2dec0cf) ######
+* removed duplicate validation
+
 ###### [RzNewsBundle](https://github.com/rzproject/NewsBundle/commit/617818a463b15a153771780fcd579ef9d2dec0cf) ######
 * removed duplicate validation
 
@@ -13,6 +19,7 @@ CHANGELOG
  
 ###### [RzPageBundle](https://github.com/rzproject/PageBundle/commit/a50359b35267bc2a09f3f1e7509a3abdfd33f8b3) ######
 * fixed use statement for inherited class on php 5.4
+* added default template for search result
 
 ###### [CCDNUserSecurityBundle](https://github.com/rmzamora/CCDNUserSecurityBundle/commit/6aa1b33e23521ef76ac96b5bdaf6ca3abf81efb5) ######
 * added new 2.1 branch to prevent [BC-BREAK] 
