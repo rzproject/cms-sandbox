@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6505f8f6ed6cbc9ef658a225eadfb5fa",
+    "hash": "7693a002b96f7870c2cc1fdd82d92a41",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -115,12 +115,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "b5202eb9e83f8db52e0e58867e0a46e63be8332e"
+                "reference": "c8927ad70c6fce36b3af52c17ed996c9aa4de89b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/b5202eb9e83f8db52e0e58867e0a46e63be8332e",
-                "reference": "b5202eb9e83f8db52e0e58867e0a46e63be8332e",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/c8927ad70c6fce36b3af52c17ed996c9aa4de89b",
+                "reference": "c8927ad70c6fce36b3af52c17ed996c9aa4de89b",
                 "shasum": ""
             },
             "require": {
@@ -175,7 +175,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2014-12-23 22:40:37"
+            "time": "2015-05-13 13:47:35"
         },
         {
             "name": "doctrine/cache",
@@ -2786,12 +2786,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/NelmioApiDocBundle.git",
-                "reference": "a8f047c78ac22e3bbe961bb9251bb46a409f2e5d"
+                "reference": "1d7b45e1e721acae86e448b6d1f9cac00a92fd84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/a8f047c78ac22e3bbe961bb9251bb46a409f2e5d",
-                "reference": "a8f047c78ac22e3bbe961bb9251bb46a409f2e5d",
+                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/1d7b45e1e721acae86e448b6d1f9cac00a92fd84",
+                "reference": "1d7b45e1e721acae86e448b6d1f9cac00a92fd84",
                 "shasum": ""
             },
             "require": {
@@ -2855,7 +2855,7 @@
                 "documentation",
                 "rest"
             ],
-            "time": "2015-05-13 09:06:52"
+            "time": "2015-05-13 20:57:45"
         },
         {
             "name": "pagerfanta/pagerfanta",
@@ -3420,16 +3420,16 @@
         },
         {
             "name": "rmzamora/ccdn-user-security-bundle",
-            "version": "dev-master",
+            "version": "2.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/CCDNUserSecurityBundle.git",
-                "reference": "6aa1b33e23521ef76ac96b5bdaf6ca3abf81efb5"
+                "reference": "6b0567f1c4099b02cae0b8c3ef2559764f4cca56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/CCDNUserSecurityBundle/zipball/6aa1b33e23521ef76ac96b5bdaf6ca3abf81efb5",
-                "reference": "6aa1b33e23521ef76ac96b5bdaf6ca3abf81efb5",
+                "url": "https://api.github.com/repos/rmzamora/CCDNUserSecurityBundle/zipball/6b0567f1c4099b02cae0b8c3ef2559764f4cca56",
+                "reference": "6b0567f1c4099b02cae0b8c3ef2559764f4cca56",
                 "shasum": ""
             },
             "require": {
@@ -3454,6 +3454,11 @@
                 "symfony/swiftmailer-bundle": "~2.3"
             },
             "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.1": "2.1.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "CCDNUser\\SecurityBundle\\": ""
@@ -3483,7 +3488,7 @@
                 "security",
                 "user"
             ],
-            "time": "2015-03-25 00:02:57"
+            "time": "2015-05-14 02:06:33"
         },
         {
             "name": "rmzamora/classification-bundle",
@@ -4385,12 +4390,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/FOSRestBundle.git",
-                "reference": "d10716387ca3be1fb67ea2a5716be3ece1e421a9"
+                "reference": "e37e1f8bb9566409f8c53b87ba903a3c3ab42d36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/FOSRestBundle/zipball/d10716387ca3be1fb67ea2a5716be3ece1e421a9",
-                "reference": "d10716387ca3be1fb67ea2a5716be3ece1e421a9",
+                "url": "https://api.github.com/repos/rmzamora/FOSRestBundle/zipball/e37e1f8bb9566409f8c53b87ba903a3c3ab42d36",
+                "reference": "e37e1f8bb9566409f8c53b87ba903a3c3ab42d36",
                 "shasum": ""
             },
             "require": {
@@ -4398,16 +4403,22 @@
                 "php": ">=5.3.9",
                 "psr/log": "~1.0",
                 "symfony/framework-bundle": "~2.3",
+                "symfony/http-kernel": "~2.3,>=2.3.24",
                 "willdurand/jsonp-callback-validator": "~1.0",
                 "willdurand/negotiation": "~1.2"
             },
             "conflict": {
                 "jms/serializer": "<0.12",
-                "jms/serializer-bundle": "<0.11"
+                "jms/serializer-bundle": "<0.11",
+                "symfony/validator": ">=2.5.0,<2.5.5"
             },
             "require-dev": {
+                "jms/serializer": "~0.13",
                 "jms/serializer-bundle": "~0.12",
+                "phpoption/phpoption": "~1.1.0",
                 "sensio/framework-extra-bundle": "~2.4",
+                "symfony/browser-kit": "~2.4",
+                "symfony/dependency-injection": "~2.4",
                 "symfony/form": "~2.4",
                 "symfony/security": "~2.4",
                 "symfony/serializer": "~2.4",
@@ -4416,14 +4427,14 @@
             },
             "suggest": {
                 "jms/serializer-bundle": "Add support for advanced serialization capabilities, recommended, requires ~0.12",
-                "sensio/framework-extra-bundle": "Add support for route annotations and the view response listener",
-                "symfony/serializer": "Add support for basic serialization capabilities and xml decoding, requires ~2.2",
-                "symfony/validator": "Add support for validation capabilities in the ParamFetcher, requires ~2.2"
+                "sensio/framework-extra-bundle": "Add support for route annotations and the view response listener, requires ~3.0",
+                "symfony/serializer": "Add support for basic serialization capabilities and xml decoding, requires ~2.3",
+                "symfony/validator": "Add support for validation capabilities in the ParamFetcher, requires ~2.3"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.6.x-dev"
                 }
             },
             "autoload": {
@@ -4459,7 +4470,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2014-11-26 00:23:00"
+            "time": "2015-05-14 01:21:34"
         },
         {
             "name": "rmzamora/seo-bundle",
@@ -5073,12 +5084,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "5d71bc05605b5258ced9ce9f789394ace45e19c9"
+                "reference": "416733e6db04d78d45e443122404b3af089831f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/5d71bc05605b5258ced9ce9f789394ace45e19c9",
-                "reference": "5d71bc05605b5258ced9ce9f789394ace45e19c9",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/416733e6db04d78d45e443122404b3af089831f6",
+                "reference": "416733e6db04d78d45e443122404b3af089831f6",
                 "shasum": ""
             },
             "require": {
@@ -5121,7 +5132,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-05-11 03:04:16"
+            "time": "2015-05-14 00:30:33"
         },
         {
             "name": "rz/oauth-bundle",
@@ -5445,28 +5456,28 @@
         },
         {
             "name": "rz/user-security-bundle",
-            "version": "dev-master",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/UserSecurityBundle.git",
-                "reference": "ed071300f4fed348791e9dce15b0003c787ed091"
+                "reference": "5d8d3d1db771bd7f6778719f0ff8395df26f3999"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/UserSecurityBundle/zipball/ed071300f4fed348791e9dce15b0003c787ed091",
-                "reference": "ed071300f4fed348791e9dce15b0003c787ed091",
+                "url": "https://api.github.com/repos/rzproject/UserSecurityBundle/zipball/5d8d3d1db771bd7f6778719f0ff8395df26f3999",
+                "reference": "5d8d3d1db771bd7f6778719f0ff8395df26f3999",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "rmzamora/ccdn-user-security-bundle": "dev-master",
+                "rmzamora/ccdn-user-security-bundle": "2.1.*",
                 "rz/user-bundle": "1.1.*",
                 "symfony/symfony": "~2.5"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-1.1": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -5495,7 +5506,7 @@
                 "security",
                 "user"
             ],
-            "time": "2015-04-16 07:38:12"
+            "time": "2015-05-14 02:13:46"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -8913,7 +8924,6 @@
         "rmzamora/bootstrap-bundle": 20,
         "rmzamora/knp-menu-bundle": 20,
         "rmzamora/entity-audit-bundle": 20,
-        "rz/user-security-bundle": 20,
         "liip/imagine-bundle": 0,
         "videlalvaro/php-amqplib": 20,
         "behat/common-contexts": 20
