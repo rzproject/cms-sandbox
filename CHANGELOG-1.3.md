@@ -5,6 +5,9 @@ CHANGELOG
 ### 2015-05-14
 --------------
 
+###### [RzNewsBundle](https://github.com/rzproject/NewsBundle/commit/617818a463b15a153771780fcd579ef9d2dec0cf) ######
+* removed duplicate validation
+
 ###### [RzBlockBundle](https://github.com/rzproject/BlockBundle/commit/d1523b52db15e7fa4c6c22cba9305fc6f7e67731) ######
 * fixed use statement for inherited class on php 5.4
  
