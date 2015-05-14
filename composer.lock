@@ -1297,12 +1297,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "28853daaf36e872d7d1b01d6ffaa5dcfceabda85"
+                "reference": "7cb532ff72b4cc624fb0ec0da5412cee4b0c7af8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/28853daaf36e872d7d1b01d6ffaa5dcfceabda85",
-                "reference": "28853daaf36e872d7d1b01d6ffaa5dcfceabda85",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/7cb532ff72b4cc624fb0ec0da5412cee4b0c7af8",
+                "reference": "7cb532ff72b4cc624fb0ec0da5412cee4b0c7af8",
                 "shasum": ""
             },
             "require": {
@@ -1372,7 +1372,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2015-05-13 12:05:19"
+            "time": "2015-05-14 10:01:37"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -5239,12 +5239,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/SearchBundle.git",
-                "reference": "1ca27d429818ce65dd11990305aca5bde1cfb427"
+                "reference": "44e76c00aa112ecceb42c6b2979d8739445da7ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/SearchBundle/zipball/1ca27d429818ce65dd11990305aca5bde1cfb427",
-                "reference": "1ca27d429818ce65dd11990305aca5bde1cfb427",
+                "url": "https://api.github.com/repos/rzproject/SearchBundle/zipball/44e76c00aa112ecceb42c6b2979d8739445da7ec",
+                "reference": "44e76c00aa112ecceb42c6b2979d8739445da7ec",
                 "shasum": ""
             },
             "require": {
@@ -5282,7 +5282,7 @@
                 "RZProject",
                 "Symfony2"
             ],
-            "time": "2015-05-13 13:41:54"
+            "time": "2015-05-14 10:51:56"
         },
         {
             "name": "rz/seo-bundle",
