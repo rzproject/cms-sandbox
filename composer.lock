@@ -2786,12 +2786,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/NelmioApiDocBundle.git",
-                "reference": "b3e7c1498dbb7b695328d593ee3f7c9aa61712b9"
+                "reference": "94ba751848a40a1f238da71c5b3efc2a65b1da1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/b3e7c1498dbb7b695328d593ee3f7c9aa61712b9",
-                "reference": "b3e7c1498dbb7b695328d593ee3f7c9aa61712b9",
+                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/94ba751848a40a1f238da71c5b3efc2a65b1da1f",
+                "reference": "94ba751848a40a1f238da71c5b3efc2a65b1da1f",
                 "shasum": ""
             },
             "require": {
@@ -2855,7 +2855,7 @@
                 "documentation",
                 "rest"
             ],
-            "time": "2015-05-15 00:28:38"
+            "time": "2015-05-15 15:42:03"
         },
         {
             "name": "pagerfanta/pagerfanta",
@@ -4550,12 +4550,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/solarium.git",
-                "reference": "b400df16c26a5dec5b1d9bd90033e4711fc8cd96"
+                "reference": "9289143cb743448491e6c1ba3c51e5f3d9436922"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/solarium/zipball/b400df16c26a5dec5b1d9bd90033e4711fc8cd96",
-                "reference": "b400df16c26a5dec5b1d9bd90033e4711fc8cd96",
+                "url": "https://api.github.com/repos/rmzamora/solarium/zipball/9289143cb743448491e6c1ba3c51e5f3d9436922",
+                "reference": "9289143cb743448491e6c1ba3c51e5f3d9436922",
                 "shasum": ""
             },
             "require": {
@@ -4601,7 +4601,7 @@
                 "search",
                 "solr"
             ],
-            "time": "2015-05-15 01:13:03"
+            "time": "2015-05-15 10:18:59"
         },
         {
             "name": "rmzamora/timeline-bundle",
@@ -5298,12 +5298,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/SearchBundle.git",
-                "reference": "678bf8301f54f0d3bd877269df34035d4618851f"
+                "reference": "9d5f41e03fd85b54027efb338a65b46aa3c4322d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/SearchBundle/zipball/678bf8301f54f0d3bd877269df34035d4618851f",
-                "reference": "678bf8301f54f0d3bd877269df34035d4618851f",
+                "url": "https://api.github.com/repos/rzproject/SearchBundle/zipball/9d5f41e03fd85b54027efb338a65b46aa3c4322d",
+                "reference": "9d5f41e03fd85b54027efb338a65b46aa3c4322d",
                 "shasum": ""
             },
             "require": {
@@ -5341,7 +5341,7 @@
                 "RZProject",
                 "Symfony2"
             ],
-            "time": "2015-05-15 01:05:53"
+            "time": "2015-05-15 15:31:09"
         },
         {
             "name": "rz/seo-bundle",
