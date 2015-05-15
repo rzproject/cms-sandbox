@@ -2,6 +2,13 @@ CHANGELOG
 =========
 
 --------------
+### 2015-05-15
+--------------
+
+###### [RzSearchBundle](https://github.com/rzproject/SearchBundle/commit/678bf8301f54f0d3bd877269df34035d4618851f) ######
+* change source to forked version of solarium to fix curl error when using SOLR 5.1
+
+--------------
 ### 2015-05-14
 --------------
 
