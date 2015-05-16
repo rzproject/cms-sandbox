@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "46a0b24dd861a14949c080327bfdf4d5",
+    "hash": "0071bd48f8491f9afd30f9f35143c3b4",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1297,12 +1297,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "28853daaf36e872d7d1b01d6ffaa5dcfceabda85"
+                "reference": "d20cbc4eb60dff93f33ef7b55db31fd96d8c5aee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/28853daaf36e872d7d1b01d6ffaa5dcfceabda85",
-                "reference": "28853daaf36e872d7d1b01d6ffaa5dcfceabda85",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/d20cbc4eb60dff93f33ef7b55db31fd96d8c5aee",
+                "reference": "d20cbc4eb60dff93f33ef7b55db31fd96d8c5aee",
                 "shasum": ""
             },
             "require": {
@@ -1372,7 +1372,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2015-05-13 12:05:19"
+            "time": "2015-05-14 14:40:44"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -2786,12 +2786,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/NelmioApiDocBundle.git",
-                "reference": "1d7b45e1e721acae86e448b6d1f9cac00a92fd84"
+                "reference": "cc93ddb306bf883cde46dc43cecf14628aee7335"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/1d7b45e1e721acae86e448b6d1f9cac00a92fd84",
-                "reference": "1d7b45e1e721acae86e448b6d1f9cac00a92fd84",
+                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/cc93ddb306bf883cde46dc43cecf14628aee7335",
+                "reference": "cc93ddb306bf883cde46dc43cecf14628aee7335",
                 "shasum": ""
             },
             "require": {
@@ -2855,7 +2855,7 @@
                 "documentation",
                 "rest"
             ],
-            "time": "2015-05-13 20:57:45"
+            "time": "2015-05-16 11:19:05"
         },
         {
             "name": "pagerfanta/pagerfanta",
@@ -4541,6 +4541,65 @@
             "time": "2015-03-17 01:29:35"
         },
         {
+            "name": "rmzamora/solarium",
+            "version": "3.3.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmzamora/solarium.git",
+                "reference": "9289143cb743448491e6c1ba3c51e5f3d9436922"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rmzamora/solarium/zipball/9289143cb743448491e6c1ba3c51e5f3d9436922",
+                "reference": "9289143cb743448491e6c1ba3c51e5f3d9436922",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/event-dispatcher": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7",
+                "satooshi/php-coveralls": "~0.6",
+                "squizlabs/php_codesniffer": "~1.4",
+                "zendframework/zendframework1": "~1.12"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.3.0": "3.3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Solarium\\": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "NewBSD"
+            ],
+            "authors": [
+                {
+                    "name": "See GitHub contributors",
+                    "homepage": "https://github.com/basdenooijer/solarium/contributors"
+                },
+                {
+                    "name": "mell zamora",
+                    "email": "mell@rzproject.org",
+                    "homepage": "http://www.rzproject.org"
+                }
+            ],
+            "description": "Fork version of PHP Solr client",
+            "homepage": "http://www.solarium-project.org",
+            "keywords": [
+                "php",
+                "search",
+                "solr"
+            ],
+            "time": "2015-05-15 10:18:59"
+        },
+        {
             "name": "rmzamora/timeline-bundle",
             "version": "2.3.x-dev",
             "source": {
@@ -5283,17 +5342,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/SearchBundle.git",
-                "reference": "a4f9590f009fb152617c815dccb25e037d742234"
+                "reference": "8497a7b8728642492303cfb727dac107c1b3e0da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/SearchBundle/zipball/a4f9590f009fb152617c815dccb25e037d742234",
-                "reference": "a4f9590f009fb152617c815dccb25e037d742234",
+                "url": "https://api.github.com/repos/rzproject/SearchBundle/zipball/8497a7b8728642492303cfb727dac107c1b3e0da",
+                "reference": "8497a7b8728642492303cfb727dac107c1b3e0da",
                 "shasum": ""
             },
             "require": {
+                "rmzamora/solarium": "3.3.0.*",
                 "rmzamora/zendsearch": "dev-master",
-                "solarium/solarium": "~3.0",
                 "symfony/filesystem": "~2.1",
                 "symfony/framework-bundle": "~2.4",
                 "white-october/pagerfanta-bundle": "~1.0"
@@ -5326,7 +5385,7 @@
                 "RZProject",
                 "Symfony2"
             ],
-            "time": "2015-05-13 13:43:53"
+            "time": "2015-05-15 01:07:38"
         },
         {
             "name": "rz/seo-bundle",
@@ -5702,71 +5761,17 @@
             "time": "2015-05-05 01:52:20"
         },
         {
-            "name": "solarium/solarium",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/solariumphp/solarium.git",
-                "reference": "df2896774aad883e709ec4b17d0f6ac11a0f57bb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/df2896774aad883e709ec4b17d0f6ac11a0f57bb",
-                "reference": "df2896774aad883e709ec4b17d0f6ac11a0f57bb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "symfony/event-dispatcher": "~2.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7",
-                "satooshi/php-coveralls": "~0.6",
-                "squizlabs/php_codesniffer": "~1.4",
-                "zendframework/zendframework1": "~1.12"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop": "3.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Solarium\\": "library/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "NewBSD"
-            ],
-            "authors": [
-                {
-                    "name": "See GitHub contributors",
-                    "homepage": "https://github.com/basdenooijer/solarium/contributors"
-                }
-            ],
-            "description": "PHP Solr client",
-            "homepage": "http://www.solarium-project.org",
-            "keywords": [
-                "php",
-                "search",
-                "solr"
-            ],
-            "time": "2015-03-24 06:33:09"
-        },
-        {
             "name": "sonata-project/core-bundle",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataCoreBundle.git",
-                "reference": "b6cdc7d6c4980e589d013f2539809276b2509224"
+                "reference": "10d14e332ff56ede9541507d63abc33c794c98c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/b6cdc7d6c4980e589d013f2539809276b2509224",
-                "reference": "b6cdc7d6c4980e589d013f2539809276b2509224",
+                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/10d14e332ff56ede9541507d63abc33c794c98c9",
+                "reference": "10d14e332ff56ede9541507d63abc33c794c98c9",
                 "shasum": ""
             },
             "require": {
@@ -5818,7 +5823,7 @@
             "keywords": [
                 "sonata"
             ],
-            "time": "2015-05-13 11:41:22"
+            "time": "2015-05-14 21:28:11"
         },
         {
             "name": "sonata-project/datagrid-bundle",
@@ -6691,16 +6696,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.6.6",
+            "version": "v2.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "48c9e835a877adfb023b8b6d033d9dd14f342b4b"
+                "reference": "0449d0e1178bc8e934520b20432d1705c3b25e7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/48c9e835a877adfb023b8b6d033d9dd14f342b4b",
-                "reference": "48c9e835a877adfb023b8b6d033d9dd14f342b4b",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/0449d0e1178bc8e934520b20432d1705c3b25e7e",
+                "reference": "0449d0e1178bc8e934520b20432d1705c3b25e7e",
                 "shasum": ""
             },
             "require": {
@@ -6804,7 +6809,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-04-01 16:55:26"
+            "time": "2015-05-11 01:58:49"
         },
         {
             "name": "twig/extensions",
@@ -6864,12 +6869,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "206d54792002375a2d7a76f6988d21a064d133dd"
+                "reference": "c55e60394c461b7b298dddf56e83deca6b0ab8e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/206d54792002375a2d7a76f6988d21a064d133dd",
-                "reference": "206d54792002375a2d7a76f6988d21a064d133dd",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/c55e60394c461b7b298dddf56e83deca6b0ab8e3",
+                "reference": "c55e60394c461b7b298dddf56e83deca6b0ab8e3",
                 "shasum": ""
             },
             "require": {
@@ -6913,7 +6918,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-05-07 15:16:34"
+            "time": "2015-05-16 14:14:08"
         },
         {
             "name": "videlalvaro/php-amqplib",
@@ -7279,22 +7284,25 @@
         },
         {
             "name": "zendframework/zend-stdlib",
-            "version": "2.4.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/zendframework/Component_ZendStdlib.git",
-                "reference": "eab586f4c18af3fa63c977611939f1f4a3cf1030"
+                "url": "https://github.com/zendframework/zend-stdlib.git",
+                "reference": "e8d0fe50dbb6b1a104b4bfa5a46b11005ad6e1c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/eab586f4c18af3fa63c977611939f1f4a3cf1030",
-                "reference": "eab586f4c18af3fa63c977611939f1f4a3cf1030",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/e8d0fe50dbb6b1a104b4bfa5a46b11005ad6e1c0",
+                "reference": "e8d0fe50dbb6b1a104b4bfa5a46b11005ad6e1c0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.23"
             },
             "require-dev": {
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "dev-master",
                 "zendframework/zend-eventmanager": "self.version",
                 "zendframework/zend-filter": "self.version",
                 "zendframework/zend-serializer": "self.version",
@@ -7309,25 +7317,25 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev",
-                    "dev-develop": "2.4-dev"
+                    "dev-master": "2.4-dev",
+                    "dev-develop": "2.5-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Zend\\Stdlib\\": ""
+                    "Zend\\Stdlib\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
-            "homepage": "https://github.com/zendframework/zf2",
+            "homepage": "https://github.com/zendframework/zend-stdlib",
             "keywords": [
                 "stdlib",
                 "zf2"
             ],
-            "time": "2015-04-01 18:09:29"
+            "time": "2015-05-07 14:49:46"
         }
     ],
     "packages-dev": [
