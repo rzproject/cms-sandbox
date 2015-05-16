@@ -2786,12 +2786,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/NelmioApiDocBundle.git",
-                "reference": "94ba751848a40a1f238da71c5b3efc2a65b1da1f"
+                "reference": "cc93ddb306bf883cde46dc43cecf14628aee7335"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/94ba751848a40a1f238da71c5b3efc2a65b1da1f",
-                "reference": "94ba751848a40a1f238da71c5b3efc2a65b1da1f",
+                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/cc93ddb306bf883cde46dc43cecf14628aee7335",
+                "reference": "cc93ddb306bf883cde46dc43cecf14628aee7335",
                 "shasum": ""
             },
             "require": {
@@ -2855,7 +2855,7 @@
                 "documentation",
                 "rest"
             ],
-            "time": "2015-05-15 15:42:03"
+            "time": "2015-05-16 11:19:05"
         },
         {
             "name": "pagerfanta/pagerfanta",
@@ -7240,22 +7240,25 @@
         },
         {
             "name": "zendframework/zend-stdlib",
-            "version": "2.4.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/zendframework/Component_ZendStdlib.git",
-                "reference": "eab586f4c18af3fa63c977611939f1f4a3cf1030"
+                "url": "https://github.com/zendframework/zend-stdlib.git",
+                "reference": "e8d0fe50dbb6b1a104b4bfa5a46b11005ad6e1c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/eab586f4c18af3fa63c977611939f1f4a3cf1030",
-                "reference": "eab586f4c18af3fa63c977611939f1f4a3cf1030",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/e8d0fe50dbb6b1a104b4bfa5a46b11005ad6e1c0",
+                "reference": "e8d0fe50dbb6b1a104b4bfa5a46b11005ad6e1c0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.23"
             },
             "require-dev": {
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "dev-master",
                 "zendframework/zend-eventmanager": "self.version",
                 "zendframework/zend-filter": "self.version",
                 "zendframework/zend-serializer": "self.version",
@@ -7270,25 +7273,25 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev",
-                    "dev-develop": "2.4-dev"
+                    "dev-master": "2.4-dev",
+                    "dev-develop": "2.5-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Zend\\Stdlib\\": ""
+                    "Zend\\Stdlib\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
-            "homepage": "https://github.com/zendframework/zf2",
+            "homepage": "https://github.com/zendframework/zend-stdlib",
             "keywords": [
                 "stdlib",
                 "zf2"
             ],
-            "time": "2015-04-01 18:09:29"
+            "time": "2015-05-07 14:49:46"
         }
     ],
     "packages-dev": [
