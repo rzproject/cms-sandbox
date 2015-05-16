@@ -6869,12 +6869,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "c55e60394c461b7b298dddf56e83deca6b0ab8e3"
+                "reference": "d63ac2088e8d30137cde10f310ab89b06dab916b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/c55e60394c461b7b298dddf56e83deca6b0ab8e3",
-                "reference": "c55e60394c461b7b298dddf56e83deca6b0ab8e3",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d63ac2088e8d30137cde10f310ab89b06dab916b",
+                "reference": "d63ac2088e8d30137cde10f310ab89b06dab916b",
                 "shasum": ""
             },
             "require": {
@@ -6918,7 +6918,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-05-16 14:14:08"
+            "time": "2015-05-16 14:17:41"
         },
         {
             "name": "videlalvaro/php-amqplib",
