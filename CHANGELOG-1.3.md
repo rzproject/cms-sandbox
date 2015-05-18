@@ -2,15 +2,15 @@ CHANGELOG
 =========
 
 --------------
+### 2015-05-18
+--------------
+* reverted to FOSRestBundle from the forked version
+
+--------------
 ### 2015-05-16
 --------------
 
 ###### [Updated symfony2 to version 2.6.7](https://raw.githubusercontent.com/symfony/symfony/2.7/CHANGELOG-2.6.md) ######
-
---------------
-### 2015-05-18
---------------
-* reverted to FOSRestBundle from the forked version
 
 --------------
 ### 2015-05-15
