@@ -4,7 +4,11 @@ CHANGELOG
 --------------
 ### 2015-05-18
 --------------
+###### [cms-sanbox](https://github.com/rzproject/cms-sandbox/commits/1.3) ######
 * reverted to FOSRestBundle from the forked version
+
+###### [RzClassificationBundle](https://github.com/rzproject/ClassificationBundle/commit/232e818eaf871f4e0d28b39a277226bfa4b0746e) ######
+* fixed issue on getting query cache on Category Manager
 
 --------------
 ### 2015-05-16
