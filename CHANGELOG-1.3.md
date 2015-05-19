@@ -4,6 +4,10 @@ CHANGELOG
 --------------
 ### 2015-05-19
 --------------
+###### [RzMediaBundle](https://github.com/rzproject/MediaBundle/commit/f8873043a1b3c737eba8c60991681001aac9cf11) ######
+* Updated MediaAdmin Lookup Helper template
+
+
 ###### [RmzamoraCacheBundle](https://github.com/rmzamora/SonataCacheBundle/commit/e002157818d4d04fd860020e46794caa0afe375d) ######
 * Fixed default values if timeout node is not set
 
