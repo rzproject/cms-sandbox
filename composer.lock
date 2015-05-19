@@ -3951,12 +3951,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/JqueryBundle.git",
-                "reference": "827ee31f27e3f9bf88fbdef96803972245710c33"
+                "reference": "7d81aa6cb8cad409072992523c26a2fea30906b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/JqueryBundle/zipball/827ee31f27e3f9bf88fbdef96803972245710c33",
-                "reference": "827ee31f27e3f9bf88fbdef96803972245710c33",
+                "url": "https://api.github.com/repos/rmzamora/JqueryBundle/zipball/7d81aa6cb8cad409072992523c26a2fea30906b9",
+                "reference": "7d81aa6cb8cad409072992523c26a2fea30906b9",
                 "shasum": ""
             },
             "require": {
@@ -3994,7 +3994,7 @@
                 "jQueryUI",
                 "jquery"
             ],
-            "time": "2015-05-12 14:20:24"
+            "time": "2015-05-19 01:52:11"
         },
         {
             "name": "rmzamora/knp-menu-bundle",
