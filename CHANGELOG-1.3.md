@@ -2,6 +2,18 @@ CHANGELOG
 =========
 
 --------------
+### 2015-05-19
+--------------
+###### [RmzamoraCacheBundle](https://github.com/rmzamora/SonataCacheBundle/commit/e002157818d4d04fd860020e46794caa0afe375d) ######
+* Fixed default values if timeout node is not set
+
+###### [RmzamoraCache](https://github.com/rmzamora/cache/commit/0e305e30c145b7cf0be34e0e0a35368aa997962d) ######
+* Increase timeout
+
+###### [RzNewsBundle](https://github.com/rzproject/NewsBundle/commit/3b5d60fb2131ca2289461200b04428e8f2a6cf5e) ######
+* removed debug code
+
+--------------
 ### 2015-05-18
 --------------
 ###### [cms-sanbox](https://github.com/rzproject/cms-sandbox/commits/1.3) ######

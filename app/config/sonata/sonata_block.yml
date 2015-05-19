@@ -91,7 +91,7 @@ sonata_block:
 
         # classification
         rz_classification.block.category:
-            cache: sonata.cache.mongo
+            cache: sonata_cache_js_async
 
     container:
         types: [sonata.block.service.container, sonata.page.block.container]
