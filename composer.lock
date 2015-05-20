@@ -1219,12 +1219,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSCommentBundle.git",
-                "reference": "c2cff629233472702be0c424933407498705ff22"
+                "reference": "b82853ce76d7085d71a267a5008f9e372cfe434f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSCommentBundle/zipball/c2cff629233472702be0c424933407498705ff22",
-                "reference": "c2cff629233472702be0c424933407498705ff22",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSCommentBundle/zipball/b82853ce76d7085d71a267a5008f9e372cfe434f",
+                "reference": "b82853ce76d7085d71a267a5008f9e372cfe434f",
                 "shasum": ""
             },
             "require": {
@@ -1288,7 +1288,7 @@
                 "forum",
                 "threads"
             ],
-            "time": "2015-04-29 12:35:03"
+            "time": "2015-05-19 15:56:53"
         },
         {
             "name": "friendsofsymfony/rest-bundle",
@@ -1441,12 +1441,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "1dc7404280b32ee661ea65606efcf792be6fc4ca"
+                "reference": "7c4b939fd0ba771766386e1718b7e7006d04b1bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/1dc7404280b32ee661ea65606efcf792be6fc4ca",
-                "reference": "1dc7404280b32ee661ea65606efcf792be6fc4ca",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/7c4b939fd0ba771766386e1718b7e7006d04b1bf",
+                "reference": "7c4b939fd0ba771766386e1718b7e7006d04b1bf",
                 "shasum": ""
             },
             "require": {
@@ -1485,7 +1485,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-04-27 20:30:06"
+            "time": "2015-05-19 13:47:13"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -4061,12 +4061,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataMediaBundle.git",
-                "reference": "2ee0c69c66942430bfe0c94ab908162505ed9835"
+                "reference": "7104cf999364d14004a496ce7aa610ace59e44d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataMediaBundle/zipball/2ee0c69c66942430bfe0c94ab908162505ed9835",
-                "reference": "2ee0c69c66942430bfe0c94ab908162505ed9835",
+                "url": "https://api.github.com/repos/rmzamora/SonataMediaBundle/zipball/7104cf999364d14004a496ce7aa610ace59e44d3",
+                "reference": "7104cf999364d14004a496ce7aa610ace59e44d3",
                 "shasum": ""
             },
             "require": {
@@ -4143,7 +4143,7 @@
                 "vimeo",
                 "youtube"
             ],
-            "time": "2015-05-19 00:48:34"
+            "time": "2015-05-20 00:47:17"
         },
         {
             "name": "rmzamora/news-bundle",
@@ -5690,12 +5690,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataDatagridBundle.git",
-                "reference": "270ea2152fb57e5eb47604cf523b5942d097cd39"
+                "reference": "1c412dd3631dce794f2d4c55968b46c2bd9311d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDatagridBundle/zipball/270ea2152fb57e5eb47604cf523b5942d097cd39",
-                "reference": "270ea2152fb57e5eb47604cf523b5942d097cd39",
+                "url": "https://api.github.com/repos/sonata-project/SonataDatagridBundle/zipball/1c412dd3631dce794f2d4c55968b46c2bd9311d3",
+                "reference": "1c412dd3631dce794f2d4c55968b46c2bd9311d3",
                 "shasum": ""
             },
             "require-dev": {
@@ -5733,7 +5733,7 @@
                 "datagrid",
                 "sonata"
             ],
-            "time": "2015-03-26 12:06:26"
+            "time": "2015-05-19 12:20:56"
         },
         {
             "name": "sonata-project/doctrine-extensions",
