@@ -1441,12 +1441,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "7c4b939fd0ba771766386e1718b7e7006d04b1bf"
+                "reference": "bcc07d0cb56cf5ec4fb6e66dda5f5fb9e39e5c27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/7c4b939fd0ba771766386e1718b7e7006d04b1bf",
-                "reference": "7c4b939fd0ba771766386e1718b7e7006d04b1bf",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/bcc07d0cb56cf5ec4fb6e66dda5f5fb9e39e5c27",
+                "reference": "bcc07d0cb56cf5ec4fb6e66dda5f5fb9e39e5c27",
                 "shasum": ""
             },
             "require": {
@@ -1485,7 +1485,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-05-19 13:47:13"
+            "time": "2015-05-20 13:03:42"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -3224,12 +3224,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/BootstrapBundle.git",
-                "reference": "032d1023710bdfacf6404d6ca038e326acfc53be"
+                "reference": "d4edc892d765326906beafc0ca06d67d5758bf11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/BootstrapBundle/zipball/032d1023710bdfacf6404d6ca038e326acfc53be",
-                "reference": "032d1023710bdfacf6404d6ca038e326acfc53be",
+                "url": "https://api.github.com/repos/rmzamora/BootstrapBundle/zipball/d4edc892d765326906beafc0ca06d67d5758bf11",
+                "reference": "d4edc892d765326906beafc0ca06d67d5758bf11",
                 "shasum": ""
             },
             "require": {
@@ -3267,7 +3267,7 @@
                 "bootstrap",
                 "twiiter"
             ],
-            "time": "2014-11-11 13:18:44"
+            "time": "2015-05-21 03:23:56"
         },
         {
             "name": "rmzamora/cache",
@@ -4693,12 +4693,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/AdminBundle.git",
-                "reference": "690cdabeb02d75920787cc01d9c554fa01ce0256"
+                "reference": "00367b782142571666a82f9fdc9635bceba4339e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/690cdabeb02d75920787cc01d9c554fa01ce0256",
-                "reference": "690cdabeb02d75920787cc01d9c554fa01ce0256",
+                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/00367b782142571666a82f9fdc9635bceba4339e",
+                "reference": "00367b782142571666a82f9fdc9635bceba4339e",
                 "shasum": ""
             },
             "require": {
@@ -4738,7 +4738,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-04-30 18:28:49"
+            "time": "2015-05-21 03:22:43"
         },
         {
             "name": "rz/block-bundle",
@@ -8023,12 +8023,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373"
+                "reference": "5a355f91730c845301a9e28f91c8a5053353c496"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373",
-                "reference": "3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/5a355f91730c845301a9e28f91c8a5053353c496",
+                "reference": "5a355f91730c845301a9e28f91c8a5053353c496",
                 "shasum": ""
             },
             "require": {
@@ -8075,7 +8075,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2015-04-27 22:15:08"
+            "time": "2015-05-20 16:00:43"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -8329,12 +8329,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "13a957b45df0b04f2e3b1fabd4a83eb4e5e5046a"
+                "reference": "510c153fb4a8b995e4ef8da8168870f1c987f7bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/13a957b45df0b04f2e3b1fabd4a83eb4e5e5046a",
-                "reference": "13a957b45df0b04f2e3b1fabd4a83eb4e5e5046a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/510c153fb4a8b995e4ef8da8168870f1c987f7bf",
+                "reference": "510c153fb4a8b995e4ef8da8168870f1c987f7bf",
                 "shasum": ""
             },
             "require": {
@@ -8393,7 +8393,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-04-29 13:03:58"
+            "time": "2015-05-20 13:11:14"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

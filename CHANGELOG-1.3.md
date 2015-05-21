@@ -2,11 +2,19 @@ CHANGELOG
 =========
 
 --------------
+### 2015-05-21
+--------------
+###### [RzAdminBundle](https://github.com/rzproject/AdminBundle/commit/00367b782142571666a82f9fdc9635bceba4339e) ######
+* Fixed admin form label css
+
+###### [RmzamoraBootstrapBundle](https://github.com/rmzamora/BootstrapBundle/commit/d4edc892d765326906beafc0ca06d67d5758bf11) ######
+* Updated bootstrap datepicker plugin to version 1.4
+
+--------------
 ### 2015-05-19
 --------------
 ###### [RzMediaBundle](https://github.com/rzproject/MediaBundle/commit/f8873043a1b3c737eba8c60991681001aac9cf11) ######
 * Updated MediaAdmin Lookup Helper template
-
 
 ###### [RmzamoraCacheBundle](https://github.com/rmzamora/SonataCacheBundle/commit/e002157818d4d04fd860020e46794caa0afe375d) ######
 * Fixed default values if timeout node is not set
