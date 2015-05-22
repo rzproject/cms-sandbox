@@ -4,6 +4,10 @@ CHANGELOG
 --------------
 ### 2015-05-21
 --------------
+###### [RzOAuthBundle](https://github.com/rzproject/OAuthBundle/commits/1.2) ######
+* Configuration fixes [pull-request] from [awesemo](https://github.com/rzproject/OAuthBundle/commits/1.2?author=awesemo)
+
+
 ###### [RzAdminBundle](https://github.com/rzproject/AdminBundle/commit/00367b782142571666a82f9fdc9635bceba4339e) ######
 * Fixed admin form label css
 

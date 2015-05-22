@@ -1219,12 +1219,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSCommentBundle.git",
-                "reference": "b82853ce76d7085d71a267a5008f9e372cfe434f"
+                "reference": "52d25de4b5d0679c7ef5a1b356df4bc29241a73e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSCommentBundle/zipball/b82853ce76d7085d71a267a5008f9e372cfe434f",
-                "reference": "b82853ce76d7085d71a267a5008f9e372cfe434f",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSCommentBundle/zipball/52d25de4b5d0679c7ef5a1b356df4bc29241a73e",
+                "reference": "52d25de4b5d0679c7ef5a1b356df4bc29241a73e",
                 "shasum": ""
             },
             "require": {
@@ -1288,7 +1288,7 @@
                 "forum",
                 "threads"
             ],
-            "time": "2015-05-19 15:56:53"
+            "time": "2015-05-21 08:36:35"
         },
         {
             "name": "friendsofsymfony/rest-bundle",
@@ -1858,12 +1858,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSDiExtraBundle.git",
-                "reference": "cd1c5a439a9c636e4a120e760adfd35e61eb4469"
+                "reference": "36f8b06e34e55582be59c810eac855396fc57221"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSDiExtraBundle/zipball/cd1c5a439a9c636e4a120e760adfd35e61eb4469",
-                "reference": "cd1c5a439a9c636e4a120e760adfd35e61eb4469",
+                "url": "https://api.github.com/repos/schmittjoh/JMSDiExtraBundle/zipball/36f8b06e34e55582be59c810eac855396fc57221",
+                "reference": "36f8b06e34e55582be59c810eac855396fc57221",
                 "shasum": ""
             },
             "require": {
@@ -1914,7 +1914,7 @@
                 "annotations",
                 "dependency injection"
             ],
-            "time": "2015-04-30 06:25:22"
+            "time": "2015-05-21 14:28:38"
         },
         {
             "name": "jms/metadata",
@@ -5102,12 +5102,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/OAuthBundle.git",
-                "reference": "1d3b63e49dd29b65093a395a8d4fd705f383c666"
+                "reference": "23f588f21b3864ab752c773467bd2433d640606a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/OAuthBundle/zipball/1d3b63e49dd29b65093a395a8d4fd705f383c666",
-                "reference": "1d3b63e49dd29b65093a395a8d4fd705f383c666",
+                "url": "https://api.github.com/repos/rzproject/OAuthBundle/zipball/23f588f21b3864ab752c773467bd2433d640606a",
+                "reference": "23f588f21b3864ab752c773467bd2433d640606a",
                 "shasum": ""
             },
             "require": {
@@ -5143,7 +5143,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-05-07 01:38:48"
+            "time": "2015-05-21 09:31:50"
         },
         {
             "name": "rz/page-bundle",
@@ -6785,12 +6785,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/videlalvaro/php-amqplib.git",
-                "reference": "0b5cfa6f3aef99c9a568469f3ece7f39e1d79099"
+                "reference": "ab419f5ba74ad3b9791c97f4b6a8901b97bc0909"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/videlalvaro/php-amqplib/zipball/0b5cfa6f3aef99c9a568469f3ece7f39e1d79099",
-                "reference": "0b5cfa6f3aef99c9a568469f3ece7f39e1d79099",
+                "url": "https://api.github.com/repos/videlalvaro/php-amqplib/zipball/ab419f5ba74ad3b9791c97f4b6a8901b97bc0909",
+                "reference": "ab419f5ba74ad3b9791c97f4b6a8901b97bc0909",
                 "shasum": ""
             },
             "require": {
@@ -6831,7 +6831,7 @@
                 "queue",
                 "rabbitmq"
             ],
-            "time": "2015-03-31 10:44:35"
+            "time": "2015-05-21 12:20:02"
         },
         {
             "name": "white-october/pagerfanta-bundle",
@@ -6941,19 +6941,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/willdurand/Hateoas.git",
-                "reference": "dff17702bac4e00ed81e6ea6399c782f6d6d5660"
+                "reference": "fc0869381d6934e5d430084154584761297caa6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/willdurand/Hateoas/zipball/dff17702bac4e00ed81e6ea6399c782f6d6d5660",
-                "reference": "dff17702bac4e00ed81e6ea6399c782f6d6d5660",
+                "url": "https://api.github.com/repos/willdurand/Hateoas/zipball/fc0869381d6934e5d430084154584761297caa6c",
+                "reference": "fc0869381d6934e5d430084154584761297caa6c",
                 "shasum": ""
             },
             "require": {
                 "doctrine/annotations": "~1.0",
                 "doctrine/common": "~2.0",
                 "jms/metadata": "~1.1",
-                "jms/serializer": "~0.13@dev",
+                "jms/serializer": "~0.13",
                 "php": ">=5.3",
                 "symfony/expression-language": "~2.4"
             },
@@ -6998,7 +6998,7 @@
                 }
             ],
             "description": "A PHP library to support implementing representations for HATEOAS REST web services",
-            "time": "2015-04-27 13:25:30"
+            "time": "2015-05-21 21:57:34"
         },
         {
             "name": "willdurand/hateoas-bundle",
@@ -8329,12 +8329,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "510c153fb4a8b995e4ef8da8168870f1c987f7bf"
+                "reference": "77340ed950e26337cff024dea1669a00f43df5f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/510c153fb4a8b995e4ef8da8168870f1c987f7bf",
-                "reference": "510c153fb4a8b995e4ef8da8168870f1c987f7bf",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/77340ed950e26337cff024dea1669a00f43df5f6",
+                "reference": "77340ed950e26337cff024dea1669a00f43df5f6",
                 "shasum": ""
             },
             "require": {
@@ -8393,7 +8393,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-05-20 13:11:14"
+            "time": "2015-05-22 00:06:43"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
