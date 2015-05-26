@@ -2,6 +2,11 @@ CHANGELOG
 =========
 
 --------------
+### 2015-05-26
+--------------
+###### [Updated FOSRest Configuration](https://github.com/rzproject/cms-sandbox/commit/f7de0ad856427cd7cd4254b86aaa6b70e9cd28ca) ######
+
+--------------
 ### 2015-05-21
 --------------
 ###### [RzOAuthBundle](https://github.com/rzproject/OAuthBundle/commits/1.2) ######
