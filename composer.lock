@@ -5109,12 +5109,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/OAuthBundle.git",
-                "reference": "23f588f21b3864ab752c773467bd2433d640606a"
+                "reference": "53c52ee673d6cc77d3e80fbdf01fbf946623f225"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/OAuthBundle/zipball/23f588f21b3864ab752c773467bd2433d640606a",
-                "reference": "23f588f21b3864ab752c773467bd2433d640606a",
+                "url": "https://api.github.com/repos/rzproject/OAuthBundle/zipball/53c52ee673d6cc77d3e80fbdf01fbf946623f225",
+                "reference": "53c52ee673d6cc77d3e80fbdf01fbf946623f225",
                 "shasum": ""
             },
             "require": {
@@ -5150,7 +5150,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-05-21 09:31:50"
+            "time": "2015-05-26 04:23:53"
         },
         {
             "name": "rz/page-bundle",
@@ -5379,12 +5379,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/UserBundle.git",
-                "reference": "28a17ed100684dcb4f7411ed7bd2029c12c445f1"
+                "reference": "a6a95549c7461538deafc6244e85b52a91508086"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/UserBundle/zipball/28a17ed100684dcb4f7411ed7bd2029c12c445f1",
-                "reference": "28a17ed100684dcb4f7411ed7bd2029c12c445f1",
+                "url": "https://api.github.com/repos/rzproject/UserBundle/zipball/a6a95549c7461538deafc6244e85b52a91508086",
+                "reference": "a6a95549c7461538deafc6244e85b52a91508086",
                 "shasum": ""
             },
             "require": {
@@ -5421,7 +5421,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-05-22 08:52:02"
+            "time": "2015-05-26 04:22:53"
         },
         {
             "name": "rz/user-security-bundle",

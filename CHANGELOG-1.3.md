@@ -6,6 +6,13 @@ CHANGELOG
 --------------
 ###### [Updated FOSRest Configuration](https://github.com/rzproject/cms-sandbox/commit/f7de0ad856427cd7cd4254b86aaa6b70e9cd28ca) ######
 
+###### [RzOAuthBundle](https://github.com/rzproject/OAuthBundle/commits/1.2) ######
+* Fixed template inheritance
+
+###### [RzUserBundle](https://github.com/rzproject/UserBundle/commit/a6a95549c7461538deafc6244e85b52a91508086) ######
+* Fixed template inheritance and breadcrumbs
+
+
 --------------
 ### 2015-05-21
 --------------
