@@ -3070,19 +3070,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataAdminBundle.git",
-                "reference": "3de7b608661e9b6d8e05db97aa2464c711198f19"
+                "reference": "7b1ff0bb1d934e5e8cc240aa4f70b4c885fdaf0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/3de7b608661e9b6d8e05db97aa2464c711198f19",
-                "reference": "3de7b608661e9b6d8e05db97aa2464c711198f19",
+                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/7b1ff0bb1d934e5e8cc240aa4f70b4c885fdaf0b",
+                "reference": "7b1ff0bb1d934e5e8cc240aa4f70b4c885fdaf0b",
                 "shasum": ""
             },
             "require": {
                 "doctrine/common": "~2.4",
                 "knplabs/knp-menu-bundle": "~2.0",
                 "rmzamora/block-bundle": "~2.3",
-                "sensio/generator-bundle": "~2.3",
                 "sonata-project/core-bundle": "dev-master",
                 "sonata-project/exporter": "~1.0",
                 "symfony/class-loader": "~2.4",
@@ -3103,12 +3102,14 @@
             },
             "require-dev": {
                 "jms/translation-bundle": "~1.1",
+                "sensio/generator-bundle": "~2.3",
                 "sonata-project/intl-bundle": "~2.1",
                 "symfony/phpunit-bridge": "2.7.*@dev",
                 "symfony/yaml": "~2.3"
             },
             "suggest": {
                 "jms/translation-bundle": "Extract message keys from Admins",
+                "sensio/generator-bundle": "Add sonata:admin:generate command",
                 "sonata-project/intl-bundle": "Add localized date and number into the list"
             },
             "type": "symfony-bundle",
@@ -3151,7 +3152,7 @@
                 "rmzamora fork",
                 "sonata"
             ],
-            "time": "2015-05-13 06:53:21"
+            "time": "2015-05-26 00:10:48"
         },
         {
             "name": "rmzamora/block-bundle",
@@ -4157,12 +4158,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataNewsBundle.git",
-                "reference": "672ce2b486e50e5824c8d01abfa2f2bf98241587"
+                "reference": "ff3840fad18fae5fb5f1de2ec36ecf249fc3af48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataNewsBundle/zipball/672ce2b486e50e5824c8d01abfa2f2bf98241587",
-                "reference": "672ce2b486e50e5824c8d01abfa2f2bf98241587",
+                "url": "https://api.github.com/repos/rmzamora/SonataNewsBundle/zipball/ff3840fad18fae5fb5f1de2ec36ecf249fc3af48",
+                "reference": "ff3840fad18fae5fb5f1de2ec36ecf249fc3af48",
                 "shasum": ""
             },
             "require": {
@@ -4225,7 +4226,7 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2015-05-17 16:05:26"
+            "time": "2015-05-26 00:12:18"
         },
         {
             "name": "rmzamora/notification-bundle",
@@ -4579,12 +4580,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataUserBundle.git",
-                "reference": "83b5af38dcad64be1893fce83147e4cb121e2d43"
+                "reference": "1455a18a4624b86ed0fc9f171a4489b2c48c09b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataUserBundle/zipball/83b5af38dcad64be1893fce83147e4cb121e2d43",
-                "reference": "83b5af38dcad64be1893fce83147e4cb121e2d43",
+                "url": "https://api.github.com/repos/rmzamora/SonataUserBundle/zipball/1455a18a4624b86ed0fc9f171a4489b2c48c09b9",
+                "reference": "1455a18a4624b86ed0fc9f171a4489b2c48c09b9",
                 "shasum": ""
             },
             "require": {
@@ -4650,7 +4651,7 @@
                 "sonata",
                 "user"
             ],
-            "time": "2015-05-17 16:07:31"
+            "time": "2015-05-26 00:11:28"
         },
         {
             "name": "rmzamora/zendsearch",
