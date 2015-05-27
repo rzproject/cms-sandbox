@@ -2,6 +2,15 @@ CHANGELOG
 =========
 
 --------------
+### 2015-05-27
+--------------
+###### [Updated Symfony Version to 2.6.8](http://symfony.com/blog/cve-2015-4050-esi-unauthorized-access) ######
+* fix for esi-unauthorized-access
+
+###### [RzClassificationBundle](https://github.com/rzproject/ClassificationBundle/commit/c62aef04748be92b49aaace0207e230c8139b17a) ######
+* added findOneByContextAndSlug method
+
+--------------
 ### 2015-05-26
 --------------
 ###### [Updated FOSRest Configuration](https://github.com/rzproject/cms-sandbox/commit/f7de0ad856427cd7cd4254b86aaa6b70e9cd28ca) ######

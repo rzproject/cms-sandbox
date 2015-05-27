@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "62cc4919e6dfb8806044f2166f077b70",
+    "hash": "a29e4b31907cc9fb5f9e89d18afb9344",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -4804,12 +4804,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/ClassificationBundle.git",
-                "reference": "232e818eaf871f4e0d28b39a277226bfa4b0746e"
+                "reference": "c62aef04748be92b49aaace0207e230c8139b17a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/232e818eaf871f4e0d28b39a277226bfa4b0746e",
-                "reference": "232e818eaf871f4e0d28b39a277226bfa4b0746e",
+                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/c62aef04748be92b49aaace0207e230c8139b17a",
+                "reference": "c62aef04748be92b49aaace0207e230c8139b17a",
                 "shasum": ""
             },
             "require": {
@@ -4846,7 +4846,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-05-18 03:29:56"
+            "time": "2015-05-27 03:22:14"
         },
         {
             "name": "rz/doctrine-orm-admin-bundle",
@@ -5527,16 +5527,15 @@
         {
             "name": "sensio/framework-extra-bundle",
             "version": "dev-master",
-            "target-dir": "Sensio/Bundle/FrameworkExtraBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "98871b3397e258dd9d16d65023268e6baa0202cf"
+                "reference": "8cf9ba588534a3f910907c3093db1cfc9419a50f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/98871b3397e258dd9d16d65023268e6baa0202cf",
-                "reference": "98871b3397e258dd9d16d65023268e6baa0202cf",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/8cf9ba588534a3f910907c3093db1cfc9419a50f",
+                "reference": "8cf9ba588534a3f910907c3093db1cfc9419a50f",
                 "shasum": ""
             },
             "require": {
@@ -5558,8 +5557,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Sensio\\Bundle\\FrameworkExtraBundle": ""
+                "psr-4": {
+                    "Sensio\\Bundle\\FrameworkExtraBundle\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5577,7 +5576,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2015-05-02 15:39:08"
+            "time": "2015-05-27 01:08:48"
         },
         {
             "name": "sensio/generator-bundle",
@@ -6566,16 +6565,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.6.7",
+            "version": "v2.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "0449d0e1178bc8e934520b20432d1705c3b25e7e"
+                "reference": "7ae1934082d9ac299303b146e4a999274a723e94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/0449d0e1178bc8e934520b20432d1705c3b25e7e",
-                "reference": "0449d0e1178bc8e934520b20432d1705c3b25e7e",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/7ae1934082d9ac299303b146e4a999274a723e94",
+                "reference": "7ae1934082d9ac299303b146e4a999274a723e94",
                 "shasum": ""
             },
             "require": {
@@ -6666,20 +6665,20 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "The Symfony PHP framework",
-            "homepage": "http://symfony.com",
+            "homepage": "https://symfony.com",
             "keywords": [
                 "framework"
             ],
-            "time": "2015-05-11 01:58:49"
+            "time": "2015-05-27 00:17:10"
         },
         {
             "name": "twig/extensions",
