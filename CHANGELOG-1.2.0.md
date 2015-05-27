@@ -2,6 +2,12 @@ CHANGELOG
 =========
 
 --------------
+### 2015-05-27
+--------------
+###### [Updated Symfony Version to 2.6.8](https://github.com/rzproject/cms-sandbox/commit/71f9fdbaa0c235feee2cbd8fcca4a67a38b39c5e) ######
+* [CVE-2015-4050](http://symfony.com/blog/cve-2015-4050-esi-unauthorized-access): ESI unauthorized access
+
+--------------
 ### 2015-05-16
 --------------
 
