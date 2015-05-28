@@ -520,12 +520,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "37d2186d3b9b5344b9739cb31f52df6289fd3543"
+                "reference": "c573f1c3194681ebbb937bb9cea9c95d96048ff6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/37d2186d3b9b5344b9739cb31f52df6289fd3543",
-                "reference": "37d2186d3b9b5344b9739cb31f52df6289fd3543",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/c573f1c3194681ebbb937bb9cea9c95d96048ff6",
+                "reference": "c573f1c3194681ebbb937bb9cea9c95d96048ff6",
                 "shasum": ""
             },
             "require": {
@@ -533,6 +533,7 @@
                 "doctrine/doctrine-cache-bundle": "~1.0",
                 "jdorn/sql-formatter": "~1.1",
                 "php": ">=5.3.2",
+                "symfony/console": "~2.3",
                 "symfony/doctrine-bridge": "~2.2",
                 "symfony/framework-bundle": "~2.3"
             },
@@ -589,7 +590,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2015-05-22 15:31:09"
+            "time": "2015-05-27 15:27:57"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -3071,12 +3072,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataAdminBundle.git",
-                "reference": "d9b094c6280c034854c3d8f7d8bb6d900420bae2"
+                "reference": "0ae7da7be8b0de952e50873e8c7539b20921d8a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/d9b094c6280c034854c3d8f7d8bb6d900420bae2",
-                "reference": "d9b094c6280c034854c3d8f7d8bb6d900420bae2",
+                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/0ae7da7be8b0de952e50873e8c7539b20921d8a7",
+                "reference": "0ae7da7be8b0de952e50873e8c7539b20921d8a7",
                 "shasum": ""
             },
             "require": {
@@ -3153,7 +3154,7 @@
                 "rmzamora fork",
                 "sonata"
             ],
-            "time": "2015-05-27 00:24:35"
+            "time": "2015-05-28 02:45:48"
         },
         {
             "name": "rmzamora/block-bundle",
@@ -4069,12 +4070,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataMediaBundle.git",
-                "reference": "7104cf999364d14004a496ce7aa610ace59e44d3"
+                "reference": "98baf32f134b72787a4cb798c5d1cc6a5ddacfc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataMediaBundle/zipball/7104cf999364d14004a496ce7aa610ace59e44d3",
-                "reference": "7104cf999364d14004a496ce7aa610ace59e44d3",
+                "url": "https://api.github.com/repos/rmzamora/SonataMediaBundle/zipball/98baf32f134b72787a4cb798c5d1cc6a5ddacfc1",
+                "reference": "98baf32f134b72787a4cb798c5d1cc6a5ddacfc1",
                 "shasum": ""
             },
             "require": {
@@ -4151,7 +4152,7 @@
                 "vimeo",
                 "youtube"
             ],
-            "time": "2015-05-20 00:47:17"
+            "time": "2015-05-28 02:46:28"
         },
         {
             "name": "rmzamora/news-bundle",
