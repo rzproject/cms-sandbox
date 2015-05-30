@@ -4,7 +4,7 @@ CHANGELOG
 --------------
 ### 2015-05-27
 --------------
-###### [Updated Symfony Version to 2.6.8](https://github.com/rzproject/cms-sandbox/commit/71f9fdbaa0c235feee2cbd8fcca4a67a38b39c5e) ######
+###### [Updated Symfony Version to 2.6.9](https://github.com/rzproject/cms-sandbox/commit/71f9fdbaa0c235feee2cbd8fcca4a67a38b39c5e) ######
 * This releases fixes a huge performance regression in the development environment. The [#14262](https://github.com/symfony/symfony/pull/14262) was reverted.
 
 --------------
