@@ -5,6 +5,12 @@ CHANGELOG
 ### 2015-05-27
 --------------
 ###### [Updated Symfony Version to 2.6.8](https://github.com/rzproject/cms-sandbox/commit/71f9fdbaa0c235feee2cbd8fcca4a67a38b39c5e) ######
+* This releases fixes a huge performance regression in the development environment. The [#14262](https://github.com/symfony/symfony/pull/14262) was reverted.
+
+--------------
+### 2015-05-27
+--------------
+###### [Updated Symfony Version to 2.6.8](https://github.com/rzproject/cms-sandbox/commit/71f9fdbaa0c235feee2cbd8fcca4a67a38b39c5e) ######
 * [CVE-2015-4050](http://symfony.com/blog/cve-2015-4050-esi-unauthorized-access): ESI unauthorized access
 
 ###### [RzClassificationBundle](https://github.com/rzproject/ClassificationBundle/commit/c62aef04748be92b49aaace0207e230c8139b17a) ######
