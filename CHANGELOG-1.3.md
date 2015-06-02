@@ -2,6 +2,12 @@ CHANGELOG
 =========
 
 --------------
+### 2015-06-02
+--------------
+###### [Updated AppKernel](https://github.com/rzproject/cms-sandbox/commit/87c7833d6dc2b43c315c9038ae7be42cbe004608) ######
+
+
+--------------
 ### 2015-05-27
 --------------
 ###### [Updated Symfony Version to 2.6.9](https://github.com/rzproject/cms-sandbox/commit/71f9fdbaa0c235feee2cbd8fcca4a67a38b39c5e) ######
