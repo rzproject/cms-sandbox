@@ -88,6 +88,7 @@ class AppKernel extends Kernel
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Sonata\DoctrineMongoDBAdminBundle\SonataDoctrineMongoDBAdminBundle(),
             new Sonata\IntlBundle\SonataIntlBundle(),
             new Sonata\FormatterBundle\SonataFormatterBundle(),
             new Sonata\CacheBundle\SonataCacheBundle(),
@@ -137,7 +138,6 @@ class AppKernel extends Kernel
             new Rmzamora\BootstrapBundle\RmzamoraBootstrapBundle(),
             new Rmzamora\JqueryBundle\RmzamoraJqueryBundle(),
             new Rz\AdminBundle\RzAdminBundle(),
-            new Rz\BlockBundle\RzBlockBundle(),
             new Rz\DoctrineORMAdminBundle\RzDoctrineORMAdminBundle(),
             new Rz\FieldTypeBundle\RzFieldTypeBundle(),
             new Rz\FormatterBundle\RzFormatterBundle(),
@@ -145,10 +145,15 @@ class AppKernel extends Kernel
             new Rz\SeoBundle\RzSeoBundle(),
             new Rz\TimelineBundle\RzTimelineBundle(),
             new Rz\SearchBundle\RzSearchBundle(),
+            new Rz\BlockBundle\RzBlockBundle(),
 
             #CCDN Security
             new CCDNUser\SecurityBundle\CCDNUserSecurityBundle(),
             new Rz\UserSecurityBundle\RzUserSecurityBundle(),
+
+            #GMI
+            new GMI\Bundle\RecommendationBundle\GMIRecommendationBundle(),
+            new Application\GMI\Bundle\RecommendationBundle\ApplicationGMIRecommendationBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

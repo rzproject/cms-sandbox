@@ -48,10 +48,14 @@ sonata_admin:
                    - sonata.classification.admin.category
                    - sonata.classification.admin.tag
                    - sonata.notification.admin.message
-            User:
-                items:
                    - sonata.user.admin.user
                    - sonata.user.admin.group
+            Advance:
+                items:
+                   #- gmi_recommendation.admin.cloud
+                   - gmi_recommendation.admin.cloud_category
+                   - gmi_recommendation.admin.cloud_profile
+
 #    assets:
 #        stylesheets:
 #            # The sandbox includes default pre-optimized version of some css and js

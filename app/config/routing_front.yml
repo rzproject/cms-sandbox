@@ -81,7 +81,7 @@ blog_archive:
     prefix: /articles
 
 blog_default:
-    resource: '@RzNewsBundle/Resources/config/routing/news_default.xml'
+    resource: '@ApplicationSonataNewsBundle/Resources/config/routing/news_default.xml'
     prefix: /article
 
 blog_tag:

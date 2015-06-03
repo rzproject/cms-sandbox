@@ -230,6 +230,7 @@ sonata_page:
                     C: content
                     E: content_bottom
                     F: footer
+
         rzcms_gallery:
             path: 'RzPageBundle:theme\rzcms:gallery.html.twig'
             name: 'Gallery'
@@ -256,6 +257,7 @@ sonata_page:
                     C: content
                     E: content_bottom
                     F: footer
+
         rzcms_user_profile:
             path: 'RzPageBundle:theme\rzcms:profile.html.twig'
             name: 'User Profile'
@@ -332,6 +334,33 @@ sonata_page:
         rzcms_exception_500:
             path: 'RzPageBundle:theme\rzcms:error500.html.twig'
             name: 'Exception 500'
+
+        rzcms_search:
+            path: 'RzPageBundle:theme\rzcms:search.html.twig'
+            name: 'Search'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: footer
+                    shared: true
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    F: footer
 
     page_defaults:
         homepage: {decorate: false, enabled: true}

@@ -1,0 +1,23 @@
+rz_block:
+
+# Uncomment below if you want to override the following block
+
+  blocks:
+#    text:
+#      class: Rz\BlockBundle\Block\Service\TextBlockService
+#      templates:
+#        text_block:
+#          name: Default
+#          path: RzBlockBundle:Block:block_core_text.html.twig
+#    menu:
+#      class: Rz\BlockBundle\Block\Service\MenuBlockService
+#      templates:
+#        text_block:
+#          name: Default
+#          path: RzBlockBundle:Block:block_core_menu.html.twig
+    rss:
+      class: Rz\BlockBundle\Block\Service\RssBlockService
+      templates:
+        text_block:
+          name: Default
+          path: RzBlockBundle:Block:block_core_rss.html.twig

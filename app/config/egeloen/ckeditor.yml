@@ -130,7 +130,7 @@ ivory_ck_editor:
             full_toolbar  : [ "@full_document",  "@full_fstyles", "@full_basicstyles", "@colors", "@full_insert", "@full_pstyles", "@full_paragraph", "@full_paragraph_more",  "@full_clipboard" , "@full_editing",  ]
             bbcode_toolbar: [ "@bbcode_document", "@bbcode_link" , "@bbcode_editing", "/", "@bbcode_basicstyles", "@bbcode_paragraph" ]
             inline_toolbar:  [ "@inline_basicstyles", "@inline_insert", "@inline_link", "@inline_tool", "/", "@inline_styles", "@inline_clipboard"]
-            simple_toolbar:  [ "@simple_document", "@simple_styles", "@simple_basicstyles", "@simple_insert", @simple_clipboard ]
+            simple_toolbar:  [ "@simple_document", "@simple_styles", "@simple_basicstyles", "@simple_insert", @inline_clipboard ]
             minimal_toolbar:  [ "@minimal_document", "@minimal_basicstyles", "@minimal_clipboard"]
         items:
             full_document    : [ "Source", "-","Maximize", "ShowBlocks", "-","Templates" ]

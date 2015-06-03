@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+
+	<class name="GMI\ProfilerBundle\Entity\CloudCategory">
+		<property name="category">
+			<constraint name="NotNull">
+				<option name="message">Category is required</option>
+			</constraint>
+		</property>
+		<property name="priority">
+			<constraint name="NotBlank">
+				<option name="message">Weight is required</option>
+			</constraint>
+			<constraint name="Range">
+				<option name="min">1</option>
+				<option name="minMessage">Weight should be greater or equal 1</option>
+			</constraint>
+		</property>
+		<constraint name="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity">
+			<option name="fields">
+				<value>category</value>
+			</option>
+			<option name="ignoreNull">false</option>
+			<option name="errorPath">category</option>
+			<option name="message">validator.cloud_category.category.unique</option>
+		</constraint>
+			<property name="priority">
+				<constraint name="Range">
+					<option name="min">1</option>
+					<option name="minMessage">Weight should be greater than 1</option>
+				</constraint>
+           </property>
+    </class>
+</constraint-mapping>

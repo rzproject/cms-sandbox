@@ -41,10 +41,6 @@ sonata_block:
             cache: sonata.cache.mongo
         sonata.media.block.feature_media:
             cache: sonata.cache.mongo
-        rz_media.block.media_bxslider:
-            cache: sonata.cache.mongo
-        rz_media.block.featured_galleries:
-            cache: sonata.cache.mongo
 
         # NewsBundle's Blocks
         sonata.news.block.recent_comments:
@@ -56,6 +52,8 @@ sonata_block:
         rz_news.block.tags:
             cache: sonata.cache.mongo
         rz_news.block.post_by_category:
+            cache: sonata.cache.mongo
+        gmi_recommendation.block.post_by_recommendation:
             cache: sonata.cache.mongo
 
         # TimelineBundle's Blocks
@@ -87,7 +85,6 @@ sonata_block:
 
         # Search Block
         rz.search.block.search:
-            contexts: [user]
 
         # Formatter
         sonata.formatter.block.formatter:

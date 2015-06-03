@@ -31,8 +31,6 @@ sonata_block:
         sonata.media.block.media:
         sonata.media.block.gallery:
         sonata.media.block.feature_media:
-        rz_media.block.media_bxslider:
-        rz_media.block.featured_galleries:
 
         # NewsBundle's Blocks
         sonata.news.block.recent_comments:
@@ -40,6 +38,7 @@ sonata_block:
         rz_news.block.featured_post:
         rz_news.block.tags:
         rz_news.block.post_by_category:
+        gmi_recommendation.block.post_by_recommendation:
 
         # TimelineBundle's Blocks
         sonata.timeline.block.timeline:
@@ -70,7 +69,6 @@ sonata_block:
 
         # Search Block
         rz.search.block.search:
-            contexts: [user]
 
         # Formatter
         sonata.formatter.block.formatter:

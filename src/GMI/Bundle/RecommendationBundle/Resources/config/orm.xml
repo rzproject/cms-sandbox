@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+
+    <parameters>
+        <parameter key="gmi_recommendation.manager.cloud.class">GMI\Bundle\RecommendationBundle\Entity\CloudManager</parameter>
+        <parameter key="gmi_recommendation.manager.cloud_category.class">GMI\Bundle\RecommendationBundle\Entity\CloudCategoryManager</parameter>
+        <parameter key="gmi_recommendation.manager.cloud_profile.class">GMI\Bundle\RecommendationBundle\Entity\CloudProfileManager</parameter>
+        <parameter key="gmi_recommendation.manager.cloud_logs.class">GMI\Bundle\RecommendationBundle\Entity\CloudLogsManager</parameter>
+    </parameters>
+
+    <services>
+        <service id="gmi_recommendation.manager.cloud" class="%gmi_recommendation.manager.cloud.class%">
+	    	<argument type="service" id="doctrine.orm.default_entity_manager" />
+	    	<argument>%gmi_recommendation.entity.cloud.class%</argument>
+        </service>
+        <service id="gmi_recommendation.manager.cloud_category" class="%gmi_recommendation.manager.cloud_category.class%">
+	    	<argument type="service" id="doctrine.orm.default_entity_manager" />
+            <argument>%gmi_recommendation.entity.cloud_category.class%</argument>
+        </service>
+        <service id="gmi_recommendation.manager.cloud_profile" class="%gmi_recommendation.manager.cloud_profile.class%">
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <argument>%gmi_recommendation.entity.cloud_profile.class%</argument>
+        </service>
+        <service id="gmi_recommendation.manager.cloud_logs" class="%gmi_recommendation.manager.cloud_logs.class%">
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <argument>%gmi_recommendation.entity.cloud_logs.class%</argument>
+        </service>
+    </services>
+
+</container>

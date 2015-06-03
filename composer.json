@@ -54,6 +54,7 @@
         "rmzamora/user-bundle": "2.4.*",
         "rmzamora/media-bundle": "2.4.*",
         "rmzamora/doctrine-orm-admin-bundle": "2.4.*",
+        "rmzamora/doctrine-mongodb-admin-bundle": "2.4.*",
         "rmzamora/timeline-bundle": "2.4.*",
         "rmzamora/classification-bundle": "2.4.*",
         "rmzamora/seo-bundle": "2.0.*",

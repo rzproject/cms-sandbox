@@ -1,0 +1,36 @@
+{
+    "name": "gmi/recommendation-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 Recommendation Engine",
+    "keywords": ["symfony2", "GMI", "GroupM Interaction"],
+    "homepage": "https://bitbucket.org/gmi/RecommendationBundle",
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "andrew aculana",
+          "email": "andrew.aculana@groupm.com",
+          "homepage": "http://www.movent.com"
+        },
+        {
+            "name": "rommel m. zamora",
+            "email": "rommel.zamora@groupm.com",
+            "homepage": "http://www.movent.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "rz/admin-bundle": "1.1.*",
+        "rz/doctrine-orm-admin-bundle": "1.1.*",
+        "rz/classification-bundle": "1.4.*",
+        "rz/news-bundle":  "1.4.*",
+        "rz/user-bundle":  "1.1.*"
+    },
+    "autoload": {
+        "psr-4": { "GMI\\Bundle\\RecommendationBundle\\": "" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-1.0": "1.0.x-dev"
+        }
+    }
+}

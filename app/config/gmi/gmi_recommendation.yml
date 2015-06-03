@@ -1,0 +1,33 @@
+gmi_recommendation:
+    profiler:
+        page_routes:
+          - rz_news_view
+          - rz_news_category_view
+  #####################
+  # blocks configuration
+  #####################
+    blocks:
+      # Post By Category Block Configuration
+      post_by_recommendation_list:
+          class: GMI\Bundle\RecommendationBundle\Block\PostByRecommendationBlockService
+          templates:
+            recommendation_default_block:
+              name: Post By Recommendation
+              path: GMIRecommendationBundle:Block:post_by_recommendation_list.html.twig
+          ajax_templates:
+            recommendation_default_ajax:
+              name: Ajax | Post By Recommendation
+              path: GMIRecommendationBundle:Block:post_by_recommendation_ajax.html.twig
+
+          ajax_pager_templates:
+            recommendation_default_ajax_pager:
+              name: Pager Ajax | Post By Recommendation
+              path: GMIRecommendationBundle:Block:post_by_recommendation_ajax_pager.html.twig
+# Enable Doctrine to map the provided entities
+doctrine:
+    orm:
+      entity_managers:
+        default:
+          mappings:
+              ApplicationGMIRecommendationBundle: ~
+              GMIRecommendationBundle: ~

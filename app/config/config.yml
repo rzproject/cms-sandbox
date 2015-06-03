@@ -9,6 +9,7 @@ imports:
 
     # Sonata Bundles
     - { resource: sonata/sonata_admin.yml }
+    - { resource: sonata/sonata_mongodb.yml }
     - { resource: sonata/sonata_page.yml }
     - { resource: sonata/sonata_media.yml }
     - { resource: sonata/sonata_formatter.yml }
@@ -30,13 +31,18 @@ imports:
     - { resource: pagerfanta/views.yml }
 
     # rmzamora
-#    - { resource: rmzamora/ckeditor.yml }
     - { resource: rmzamora/rz/rz_user.yml }
-#    - { resource: rmzamora/solr.yml }
     - { resource: rmzamora/rz/rz_search.yml }
     - { resource: rmzamora/rz/rz_news.yml }
     - { resource: rmzamora/rz/rz_classification.yml }
     - { resource: rmzamora/rz/rz_seo.yml }
+    - { resource: rmzamora/rz/rz_block.yml }
+    - { resource: rmzamora/rz/rz_formatter.yml }
+    - { resource: rmzamora/rz/rz_media.yml }
+
+    # GMI
+    - { resource: gmi/gmi_recommendation.yml }
+
 
     #HWI
     - { resource: rmzamora/hwi.yml }
