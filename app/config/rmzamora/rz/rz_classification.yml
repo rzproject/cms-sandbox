@@ -1,4 +1,8 @@
 rz_classification:
+
+  #####################
+  # bundle configuration
+  #####################
   enable_controllers: false # true - will convert controller to use page
   settings:
     category:
