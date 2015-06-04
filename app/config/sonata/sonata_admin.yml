@@ -54,6 +54,7 @@ sonata_admin:
                 items:
                    #- gmi_recommendation.admin.cloud
                    - gmi_recommendation.admin.cloud_category
+                   - gmi_recommendation.admin.cloud_tag
                    - gmi_recommendation.admin.cloud_profile
 
 #    assets:

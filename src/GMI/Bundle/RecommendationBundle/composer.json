@@ -1,7 +1,7 @@
 {
     "name": "gmi/recommendation-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony2 Recommendation Engine",
+    "description": "Symfony2 Recommendation Engine Bundle",
     "keywords": ["symfony2", "GMI", "GroupM Interaction"],
     "homepage": "https://bitbucket.org/gmi/RecommendationBundle",
     "license": "MIT",

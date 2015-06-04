@@ -12,7 +12,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use GMI\Bundle\RecommendationBundle\Model\CloudableInterface;
 use GMI\Bundle\RecommendationBundle\Model\CloudInterface;
 use Sonata\CoreBundle\Model\ManagerInterface;
-use Doctrine\Common\Collections\ArrayCollection;
 
 class SessionManager
 {
@@ -23,7 +22,6 @@ class SessionManager
 	const CLOUD_TAG_ROOT_KEY      = "tag_root";
 	const CLOUD_SURVEY_KEY        = "survey";
 	const BASE_CATEGORY_WEIGHT    = 1;
-	const BASE_TAG_WEIGHT         = 1;
 
     protected $config;
     protected $session;
@@ -31,13 +29,11 @@ class SessionManager
     protected $securityContext;
     protected $cloudManager;
     protected $cloudCategoryManager;
-	protected $cloudTagManager;
     protected $cloudLogsManager;
 
 	protected $container;
 	protected $cloud;
-	protected $categoryData;
-	protected $tagData;
+	protected $data;
 	protected $dataKeyValueProcessed;
 	protected $cloudType;
 
@@ -50,7 +46,6 @@ class SessionManager
 	 * @param SecurityContextInterface $securityContext
 	 * @param ManagerInterface $cloudManager
 	 * @param ManagerInterface $cloudCategoryManager
-	 * @param ManagerInterface $cloudTagManager
 	 * @param ManagerInterface $cloudLogsManager
 	 */
     public function __construct(SessionInterface $session,
@@ -59,7 +54,6 @@ class SessionManager
                                 SecurityContextInterface $securityContext,
                                 ManagerInterface $cloudManager,
                                 ManagerInterface $cloudCategoryManager,
-                                ManagerInterface $cloudTagManager,
                                 ManagerInterface $cloudLogsManager)
     {
 
@@ -75,20 +69,14 @@ class SessionManager
         $this->cloudManager = $cloudManager;
         # Cloud Category Manager
         $this->cloudCategoryManager = $cloudCategoryManager;
-	    # Cloud Tag Manager
-	    $this->cloudTagManager = $cloudTagManager;
         # Cloud Logs Manager
         $this->cloudLogsManager = $cloudLogsManager;
 		# category cloud
 		$this->cloud      = null;
 		# category cloud weight mapping container
-		$this->categoryData       = array(self::CLOUD_CATEGORY_KEY => array());
+		$this->data       = array(self::CLOUD_CATEGORY_KEY => array());
 		// populate category cloud mapping
 		$this->loadCloudCategories();
-	    # tag cloud weight mapping container
-	    $this->tagData       = array(self::CLOUD_TAG_KEY => array());
-	    // populate tag cloud mapping
-	    $this->loadCloudTags();
 		// container to make sure categories are processed only once per request.
 		$this->dataKeyValueProcessed = array();
 	    $this->cloudType = array('category', 'tag');
@@ -161,64 +149,33 @@ class SessionManager
     {
 		if (($cloudCategories = $this->getCloudCategoryManagerService()->getActiveCloudCategories())) {
 			foreach ($cloudCategories as $cloudCategory) {
-				$this->categoryData[self::CLOUD_CATEGORY_KEY][$cloudCategory['id']] = array('priority' => (int)$cloudCategory['priority'], 'event' => $cloudCategory['slug']);
+				$this->data[self::CLOUD_CATEGORY_KEY][$cloudCategory['id']] = array('priority' => (int)$cloudCategory['priority'], 'event' => $cloudCategory['slug']);
 			}
 		}
 	}
-
-	/**
-	 * Load the category config array mapping
-	 *
-	 * @return null
-	 */
-	public function loadCloudTags()
-	{
-		if (($cloudTags = $this->getCloudTagManagerService()->getActiveCloudTags())) {
-			foreach ($cloudTags as $cloudTag) {
-				$this->tagData[self::CLOUD_TAG_KEY][$cloudTag['id']] = array('priority' => (int)$cloudTag['priority'], 'event' => $cloudTag['slug']);
-			}
-		}
-	}
-
+	
 	/**
 	 * Check if category is in category cloud config
 	 * category cloud config holds the category weight. This can be
 	 * defined in the backend
-	 *
+	 * 
 	 * @param string $key
-	 * @param string $type
-	 *
-	 * @return bool
+	 * @return boolean
 	 */
-	protected function isExistInCloudConfig($key, $type = 'category')
+	protected function isCategoryCloud($key)
 	{
-		if($type == 'category') {
-			if (isset($this->categoryData[self::CLOUD_CATEGORY_KEY][$key])) {
-				return true;
-			}
-		} elseif($type == 'tag') {
-			if (isset($this->tagData[self::CLOUD_TAG_KEY][$key])) {
-				return true;
-			}
+		if (isset($this->data[self::CLOUD_CATEGORY_KEY][$key])) {
+			return true;
 		}
 		return false;
 	}
 
-    protected function hasPriorityEvent($id , $event = 'view', $type = 'category') {
-
-	    if($type == 'category') {
-		    if (isset($this->categoryData[self::CLOUD_CATEGORY_KEY][$id])) {
-			    if(isset($this->categoryData[self::CLOUD_CATEGORY_KEY][$id]['event'])) {
-				    return ($this->categoryData[self::CLOUD_CATEGORY_KEY][$id]['event'] === $event) ? true : false;
-			    }
-		    }
-	    } elseif($type == 'tag') {
-		    if (isset($this->tagData[self::CLOUD_TAG_KEY][$id])) {
-			    if(isset($this->tagData[self::CLOUD_TAG_KEY][$id]['event'])) {
-				    return ($this->tagData[self::CLOUD_TAG_KEY][$id]['event'] === $event) ? true : false;
-			    }
-		    }
-	    }
+    protected function hasPriorityEvent($id , $event = 'view') {
+        if (isset($this->data[self::CLOUD_CATEGORY_KEY][$id])) {
+            if(isset($this->data[self::CLOUD_CATEGORY_KEY][$id]['event'])) {
+                return ($this->data[self::CLOUD_CATEGORY_KEY][$id]['event'] === $event) ? true : false;
+            }
+        }
         return false;
     }
 	
@@ -230,35 +187,23 @@ class SessionManager
 	 */
 	protected function getCategoryPriorityValue($id)
 	{
-		if (isset($this->categoryData[self::CLOUD_CATEGORY_KEY][$id])) {
-			return (float) (isset($this->categoryData[self::CLOUD_CATEGORY_KEY][$id]['priority'])?$this->categoryData[self::CLOUD_CATEGORY_KEY][$id]['priority']:0);
+		if (isset($this->data[self::CLOUD_CATEGORY_KEY][$id])) {
+			return (float) (isset($this->data[self::CLOUD_CATEGORY_KEY][$id]['priority'])?$this->data[self::CLOUD_CATEGORY_KEY][$id]['priority']:0);
 		}
 		return 0;
 	}
 
-	protected function getTagPriorityValue($id)
-	{
-		if (isset($this->tagData[self::CLOUD_TAG_KEY][$id])) {
-			return (float) (isset($this->tagData[self::CLOUD_TAG_KEY][$id]['priority'])?$this->tagData[self::CLOUD_TAG_KEY][$id]['priority']:0);
-		}
-		return 0;
-	}
-
-	/**
-	 * Get the category priority value
-	 *
-	 * @param integer $id
-	 * @param string $type
-	 *
-	 * @return float
-	 */
-    protected function getPriorityValue($id, $type = 'category')
+    /**
+     * Get the category priority value
+     *
+     * @param integer $id
+     * @return float
+     */
+    protected function getPriorityValue($id)
     {
-	    if ($type == 'category') {
-		    return $this->getCategoryPriorityValue($id);
-	    } elseif($type == 'tag') {
-		    return $this->getTagPriorityValue($id);
-	    }
+        if (isset($this->data[self::CLOUD_CATEGORY_KEY][$id])) {
+            return (float) (isset($this->data[self::CLOUD_CATEGORY_KEY][$id]['priority'])?$this->data[self::CLOUD_CATEGORY_KEY][$id]['priority']:0);
+        }
         return 0;
     }
     
@@ -472,84 +417,75 @@ class SessionManager
             return false;
         }
 
-	    if(!in_array($type = strtolower($type), $this->cloudType)) {
+	    if(!in_array(strtolower($type), $this->cloudType)) {
 		    return false;
 	    }
 
         if (($cloud = $this->cloud)) {
             if(is_array($cloudData)) {
                 foreach($cloudData as $cData) {
+                    $data = $cloud->getData();
                     if (empty($cData)) {
                         continue;
                     }
-                    $this->updateCloudData($type, $cData, $event);
+                    if($this->hasPriorityEvent($cData, $event)) {
+                        $this->updateCloudData($cData, $event, $data);
+                    }
                 }
             } else {
-                $this->updateCloudData($type, $cloudData, $event);
+                $data = $cloud->getData();
+                if($this->hasPriorityEvent($cloudData, $event)) {
+                    $this->updateCloudData($cloudData, $event, $data);
+                }
             }
         }
     }
 
+    protected function updateCloudData($cData, $event,  &$data) {
+        if (($cloud = $this->cloud)) {
+            $data = $cloud->getData();
+            if (!($data)) {
+                if (!isset($data[self::CLOUD_CATEGORY_KEY])) {
+                    $data[self::CLOUD_CATEGORY_KEY] = array();
+                }
+            }
+            $value = self::BASE_CATEGORY_WEIGHT;
+            if ($this->isCategoryCloud($cData)) {
+                $value += (float)$this->getPriorityValue($cData);
+            } else {
+                $value += (float)$this->getCategoryPriorityValue($cData);
+            };
 
-    protected function updateCloudData($type, $cData, $event) {
-	    #TODO: add support for Notification Bundle
-	    $cloud = $this->cloud;
-        $key = $type == 'tag' ? self::CLOUD_TAG_KEY : self::CLOUD_CATEGORY_KEY;
-        $data = $cloud->getData();
-
-        foreach(array(self::CLOUD_CATEGORY_KEY, self::CLOUD_TAG_KEY) as $tempKey) {
-	        if (!isset($data[$tempKey])) {
-		        $data[$tempKey] = array();
-	        }
+            $temp = $this->updateDataKeyValue($cData, $value, $data[self::CLOUD_CATEGORY_KEY]);
+            $data = array(self::CLOUD_CATEGORY_KEY=>$temp);
+            $this->logCloudData($cData, $value, $event, $this->cloud);
+            $this->cloud->setData($data);
         }
-
-        $value = $type == 'tag' ? self::BASE_TAG_WEIGHT : self::BASE_CATEGORY_WEIGHT;
-
-        if ($this->isExistInCloudConfig($cData, $type)) {
-	        $value += (float)$this->getPriorityValue($cData, $type);
-        }
-
-        $tempData = $data[$key];
-
-        $temp = $this->updateDataKeyValue($cData, $value, $tempData);
-	    dump($temp);
-	    dump($data);
-        $data[$key] = $temp;
-        $this->logCloudData($cData, $value, $event, $this->cloud, $type);
-        $this->cloud->setData($data);
-
-		if ($this->hasCloudDataForUpdate()) {
-			// persist cloud to storage
-			$cloudManager = $this->getCloudManagerService();
-			$cloudManager->save($this->cloud);
-		}
-
-
     }
 
-	public function updateDataKeyValue($cData, $value, $tempData)
-	{
-		if($tempData) {
-			if(array_key_exists($cData, $tempData)) {
-				$tempData[$cData] = (float)$tempData[$cData]+=$value;
-			} else {
-				$tempData[$cData] = (float)$value;
-			}
-		} else {
-			$tempData = array($cData=>(float)$value);
-		}
+    protected function logCloudData($cData, $value, $event, $cloud) {
 
-		return $tempData;
-	}
-
-    protected function logCloudData($cData, $value, $event, $cloud, $type = 'category') {
-	    $logs = $this->cloudLogsManager->create();
-	    $logs->setReferenceId($cData);
+        $logs = $this->cloudLogsManager->create();
         $logs->setCloud($cloud);
+        $logs->setCategory($cData);
         $logs->setEvent($event);
         $logs->setPoints($value);
-	    $logs->setType($type);
         $this->cloudLogsManager->save($logs);
+    }
+
+    public function updateDataKeyValue($cData, $value, $data)
+    {
+        if($data) {
+            if(array_key_exists($cData, $data)) {
+                $data[$cData] = $data[$cData]+=$value;
+            } else {
+                $data[$cData] = $value;
+            }
+        } else {
+            $data = array($cData=>$value);
+        }
+
+        return $data;
     }
 
     /**
@@ -562,7 +498,7 @@ class SessionManager
      */
     protected function isCloudData($key)
     {
-        if (isset($this->categoryData[self::CLOUD_CATEGORY_KEY][$key])) {
+        if (isset($this->data[self::CLOUD_CATEGORY_KEY][$key])) {
             return true;
         }
         return false;
@@ -601,7 +537,7 @@ class SessionManager
 //
 //			$value = self::BASE_CATEGORY_WEIGHT;
 //			// check if current category is defined in the category cloud config
-//			if ($this->isExistInCloudConfig($key)) {
+//			if ($this->isCategoryCloud($key)) {
 //				// add defined priority value for this category
 //				$value += (float)$this->getCategoryPriorityValue($key);
 //				// we need to pass this category as our reference category in case
@@ -612,7 +548,7 @@ class SessionManager
 //			} else {
 //				// basically this parent category has not been defined in the category cloud config,
 //				// use the passed child reference category priority value instead
-//				//if ($refCategory && $this->isExistInCloudConfig($refCategory->getId())) {
+//				//if ($refCategory && $this->isCategoryCloud($refCategory->getId())) {
 //				if ($refCategory && $refCategory->getId()) {
 //					$value += (float)$this->getCategoryPriorityValue($refCategory->getId());
 //				}
@@ -728,7 +664,7 @@ class SessionManager
 	}
 	
 	/**
-	 * @return \Sonata\CoreBundle\Model\ManagerInterface
+	 * @return \GMI\Bundle\RecommendationBundle\Entity\Manager\CloudManagerInterface
 	 */
 	protected function getCloudManagerService()
 	{
@@ -736,19 +672,11 @@ class SessionManager
 	}
 	
 	/**
-	 * @return \Sonata\CoreBundle\Model\ManagerInterface
+	 * @return \GMI\Bundle\RecommendationBundle\Entity\Manager\CloudCategoryManagerInterface
 	 */
 	protected function getCloudCategoryManagerService()
 	{
 		return $this->cloudCategoryManager;
-	}
-
-	/**
-	 * @return \Sonata\CoreBundle\Model\ManagerInterface
-	 */
-	protected function getCloudTagManagerService()
-	{
-		return $this->cloudTagManager;
 	}
 	
 	/**

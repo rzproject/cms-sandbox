@@ -146,6 +146,9 @@ class AppKernel extends Kernel
             #GMI
             new GMI\Bundle\RecommendationBundle\GMIRecommendationBundle(),
             new Application\GMI\Bundle\RecommendationBundle\ApplicationGMIRecommendationBundle(),
+
+	        #PIWIK
+	        new Webfactory\Bundle\PiwikBundle\WebfactoryPiwikBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

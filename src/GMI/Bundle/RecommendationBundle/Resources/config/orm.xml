@@ -8,26 +8,31 @@
     <parameters>
         <parameter key="gmi_recommendation.manager.cloud.class">GMI\Bundle\RecommendationBundle\Entity\CloudManager</parameter>
         <parameter key="gmi_recommendation.manager.cloud_category.class">GMI\Bundle\RecommendationBundle\Entity\CloudCategoryManager</parameter>
+        <parameter key="gmi_recommendation.manager.cloud_tag.class">GMI\Bundle\RecommendationBundle\Entity\CloudTagManager</parameter>
         <parameter key="gmi_recommendation.manager.cloud_profile.class">GMI\Bundle\RecommendationBundle\Entity\CloudProfileManager</parameter>
         <parameter key="gmi_recommendation.manager.cloud_logs.class">GMI\Bundle\RecommendationBundle\Entity\CloudLogsManager</parameter>
     </parameters>
 
     <services>
         <service id="gmi_recommendation.manager.cloud" class="%gmi_recommendation.manager.cloud.class%">
-	    	<argument type="service" id="doctrine.orm.default_entity_manager" />
-	    	<argument>%gmi_recommendation.entity.cloud.class%</argument>
+            <argument>%gmi_recommendation.manager.cloud.entity%</argument>
+            <argument type="service" id="doctrine" />
         </service>
         <service id="gmi_recommendation.manager.cloud_category" class="%gmi_recommendation.manager.cloud_category.class%">
-	    	<argument type="service" id="doctrine.orm.default_entity_manager" />
-            <argument>%gmi_recommendation.entity.cloud_category.class%</argument>
+            <argument>%gmi_recommendation.manager.cloud_category.entity%</argument>
+            <argument type="service" id="doctrine" />
+        </service>
+        <service id="gmi_recommendation.manager.cloud_tag" class="%gmi_recommendation.manager.cloud_tag.class%">
+            <argument>%gmi_recommendation.manager.cloud_tag.entity%</argument>
+            <argument type="service" id="doctrine" />
         </service>
         <service id="gmi_recommendation.manager.cloud_profile" class="%gmi_recommendation.manager.cloud_profile.class%">
-            <argument type="service" id="doctrine.orm.default_entity_manager" />
-            <argument>%gmi_recommendation.entity.cloud_profile.class%</argument>
+            <argument>%gmi_recommendation.manager.cloud_profile.entity%</argument>
+            <argument type="service" id="doctrine" />
         </service>
         <service id="gmi_recommendation.manager.cloud_logs" class="%gmi_recommendation.manager.cloud_logs.class%">
-            <argument type="service" id="doctrine.orm.default_entity_manager" />
-            <argument>%gmi_recommendation.entity.cloud_logs.class%</argument>
+            <argument>%gmi_recommendation.manager.cloud_logs.entity%</argument>
+            <argument type="service" id="doctrine" />
         </service>
     </services>
 

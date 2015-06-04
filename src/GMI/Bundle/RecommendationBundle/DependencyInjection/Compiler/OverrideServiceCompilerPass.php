@@ -16,8 +16,18 @@ class OverrideServiceCompilerPass implements CompilerPassInterface
         ####################
         $definition = $container->getDefinition('gmi_recommendation.admin.cloud_category');
         $this->fixTemplates($container, $definition, 'gmi_recommendation.configuration.cloud_category.templates');
+
+	    $definition = $container->getDefinition('gmi_recommendation.admin.cloud_tag');
+	    $this->fixTemplates($container, $definition, 'gmi_recommendation.configuration.cloud_tag.templates');
+
         $definition = $container->getDefinition('gmi_recommendation.admin.cloud_profile');
         $this->fixTemplates($container, $definition, 'gmi_recommendation.configuration.cloud_profile.templates');
+
+	    $definition = $container->getDefinition('gmi_recommendation.admin.cloud');
+	    $this->fixTemplates($container, $definition, 'gmi_recommendation.configuration.cloud.templates');
+
+	    $definition = $container->getDefinition('gmi_recommendation.admin.cloud_logs');
+	    $this->fixTemplates($container, $definition, 'gmi_recommendation.configuration.cloud_logs.templates');
 
         ####################
         # Override  profiler

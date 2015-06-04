@@ -51,22 +51,27 @@ class GMIRecommendationExtension extends Extension
     public function configureClass($config, ContainerBuilder $container)
     {
         $container->setParameter('gmi_recommendation.admin.cloud.entity', $config['class']['cloud']);
-        $container->setParameter('gmi_recommendation.entity.cloud.class', $config['class']['cloud']);
+        $container->setParameter('gmi_recommendation.manager.cloud.entity', $config['class']['cloud']);
         $container->setParameter('gmi_recommendation.model.cloud.class', $config['class']['cloud']);
         $container->setParameter('gmi_recommendation.manager.cloud.class', $config['class_manager']['cloud']);
 
         $container->setParameter('gmi_recommendation.admin.cloud_category.entity', $config['class']['cloud_category']);
-        $container->setParameter('gmi_recommendation.entity.cloud_category.class', $config['class']['cloud_category']);
+        $container->setParameter('gmi_recommendation.manager.cloud_category.entity', $config['class']['cloud_category']);
         $container->setParameter('gmi_recommendation.model.cloud_category.class', $config['class']['cloud_category']);
         $container->setParameter('gmi_recommendation.manager.cloud_category.class', $config['class_manager']['cloud_category']);
 
+	    $container->setParameter('gmi_recommendation.admin.cloud_tag.entity', $config['class']['cloud_tag']);
+	    $container->setParameter('gmi_recommendation.manager.cloud_tag.entity', $config['class']['cloud_tag']);
+	    $container->setParameter('gmi_recommendation.model.cloud_tag.class', $config['class']['cloud_tag']);
+	    $container->setParameter('gmi_recommendation.manager.cloud_tag.class', $config['class_manager']['cloud_tag']);
+
         $container->setParameter('gmi_recommendation.admin.cloud_profile.entity', $config['class']['cloud_profile']);
-        $container->setParameter('gmi_recommendation.entity.cloud_profile.class', $config['class']['cloud_profile']);
+        $container->setParameter('gmi_recommendation.manager.cloud_profile.entity', $config['class']['cloud_profile']);
         $container->setParameter('gmi_recommendation.model.cloud_profile.class', $config['class']['cloud_profile']);
         $container->setParameter('gmi_recommendation.manager.cloud_profile.class', $config['class_manager']['cloud_profile']);
 
         $container->setParameter('gmi_recommendation.admin.cloud_logs.entity', $config['class']['cloud_logs']);
-        $container->setParameter('gmi_recommendation.entity.cloud_logs.class', $config['class']['cloud_logs']);
+        $container->setParameter('gmi_recommendation.manager.cloud_logs.entity', $config['class']['cloud_logs']);
         $container->setParameter('gmi_recommendation.model.cloud_logs.class', $config['class']['cloud_logs']);
         $container->setParameter('gmi_recommendation.manager.cloud_logs.class', $config['class_manager']['cloud_logs']);
 
@@ -83,6 +88,7 @@ class GMIRecommendationExtension extends Extension
     {
         $container->setParameter('gmi_recommendation.admin.cloud.class', $config['admin']['cloud']['class']);
         $container->setParameter('gmi_recommendation.admin.cloud_category.class', $config['admin']['cloud_category']['class']);
+	    $container->setParameter('gmi_recommendation.admin.cloud_tag.class', $config['admin']['cloud_tag']['class']);
         $container->setParameter('gmi_recommendation.admin.cloud_profile.class', $config['admin']['cloud_profile']['class']);
         $container->setParameter('gmi_recommendation.admin.cloud_logs.class', $config['admin']['cloud_logs']['class']);
     }
@@ -97,6 +103,7 @@ class GMIRecommendationExtension extends Extension
     {
         $container->setParameter('gmi_recommendation.admin.cloud.translation_domain', $config['admin']['cloud']['translation']);
         $container->setParameter('gmi_recommendation.admin.cloud_category.translation_domain', $config['admin']['cloud_category']['translation']);
+	    $container->setParameter('gmi_recommendation.admin.cloud_tag.translation_domain', $config['admin']['cloud_tag']['translation']);
         $container->setParameter('gmi_recommendation.admin.cloud_profile.translation_domain', $config['admin']['cloud_profile']['translation']);
         $container->setParameter('gmi_recommendation.admin.cloud_logs.translation_domain', $config['admin']['cloud_logs']['translation']);
     }
@@ -111,6 +118,7 @@ class GMIRecommendationExtension extends Extension
     {
         $container->setParameter('gmi_recommendation.admin.cloud.controller', $config['admin']['cloud']['controller']);
         $container->setParameter('gmi_recommendation.admin.cloud_category.controller', $config['admin']['cloud_category']['controller']);
+	    $container->setParameter('gmi_recommendation.admin.cloud_tag.controller', $config['admin']['cloud_tag']['controller']);
         $container->setParameter('gmi_recommendation.admin.cloud_profile.controller', $config['admin']['cloud_profile']['controller']);
         $container->setParameter('gmi_recommendation.admin.cloud_logs.controller', $config['admin']['cloud_logs']['controller']);
     }
@@ -125,6 +133,7 @@ class GMIRecommendationExtension extends Extension
     {
         $container->setParameter('gmi_recommendation.configuration.cloud.templates', $config['admin']['cloud']['templates']);
         $container->setParameter('gmi_recommendation.configuration.cloud_category.templates', $config['admin']['cloud_category']['templates']);
+	    $container->setParameter('gmi_recommendation.configuration.cloud_tag.templates', $config['admin']['cloud_tag']['templates']);
         $container->setParameter('gmi_recommendation.configuration.cloud_profile.templates', $config['admin']['cloud_profile']['templates']);
         $container->setParameter('gmi_recommendation.configuration.cloud_logs.templates', $config['admin']['cloud_logs']['templates']);
     }
@@ -243,6 +252,27 @@ class GMIRecommendationExtension extends Extension
             ));
         }
 
+	    if(class_exists($config['class']['tag'])) {
+		    $collector->addAssociation($config['class']['cloud_tag'], 'mapManyToOne', array(
+			    'fieldName' => 'tag',
+			    'targetEntity' => $config['class']['tag'],
+			    'cascade' =>
+				    array(
+					    1 => 'detach',
+				    ),
+			    'mappedBy' => NULL,
+			    'inversedBy' => NULL,
+			    'joinColumns' =>
+				    array(
+					    array(
+						    'name' => 'tag_id',
+						    'referencedColumnName' => 'id',
+					    ),
+				    ),
+			    'orphanRemoval' => false,
+		    ));
+	    }
+
         if(class_exists($config['class']['collection'])) {
             $collector->addAssociation($config['class']['cloud_category'], 'mapManyToOne', array(
                 'fieldName' => 'event',
@@ -262,6 +292,25 @@ class GMIRecommendationExtension extends Extension
                     ),
                 'orphanRemoval' => false,
             ));
+
+	        $collector->addAssociation($config['class']['cloud_tag'], 'mapManyToOne', array(
+		        'fieldName' => 'event',
+		        'targetEntity' => $config['class']['collection'],
+		        'cascade' =>
+			        array(
+				        1 => 'detach',
+			        ),
+		        'mappedBy' => NULL,
+		        'inversedBy' => NULL,
+		        'joinColumns' =>
+			        array(
+				        array(
+					        'name' => 'event_id',
+					        'referencedColumnName' => 'id',
+				        ),
+			        ),
+		        'orphanRemoval' => false,
+	        ));
 
             $collector->addAssociation($config['class']['cloud_profile'], 'mapManyToOne', array(
                 'fieldName' => 'profileType',

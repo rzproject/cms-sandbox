@@ -48,6 +48,6 @@ class KernelEventSubscriber implements EventSubscriberInterface
 	
     public function onKernelResponsePost(FilterResponseEvent $event)
     {
-		$this->sessionManager->updateCloud($event->getResponse());
+//		$this->sessionManager->updateCloud($event->getResponse());
 	}
 }

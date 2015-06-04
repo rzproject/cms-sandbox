@@ -16,6 +16,7 @@
 			<argument type="service" id="security.context" />
             <argument type="service" id="gmi_recommendation.manager.cloud" />
             <argument type="service" id="gmi_recommendation.manager.cloud_category" />
+            <argument type="service" id="gmi_recommendation.manager.cloud_tag" />
             <argument type="service" id="gmi_recommendation.manager.cloud_logs" />
         </service>
     </services>

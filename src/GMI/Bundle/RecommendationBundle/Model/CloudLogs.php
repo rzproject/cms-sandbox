@@ -5,27 +5,44 @@ namespace GMI\Bundle\RecommendationBundle\Model;
 
 class CloudLogs implements CloudLogsInterface
 {
-    protected $category;
+    protected $referenceId;
+	protected $type;
     protected $event;
     protected $points;
     protected $createdAt;
     protected $updatedAt;
 
-    /**
-     * @return mixed
-     */
-    public function getCategory()
-    {
-        return $this->category;
-    }
+	/**
+	 * @return mixed
+	 */
+	public function getReferenceId()
+	{
+		return $this->referenceId;
+	}
 
-    /**
-     * @param mixed $category
-     */
-    public function setCategory($category)
-    {
-        $this->category = $category;
-    }
+	/**
+	 * @param mixed $referenceId
+	 */
+	public function setReferenceId($referenceId)
+	{
+		$this->referenceId = $referenceId;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getType()
+	{
+		return $this->type;
+	}
+
+	/**
+	 * @param mixed $type
+	 */
+	public function setType($type)
+	{
+		$this->type = $type;
+	}
 
     /**
      * @return mixed

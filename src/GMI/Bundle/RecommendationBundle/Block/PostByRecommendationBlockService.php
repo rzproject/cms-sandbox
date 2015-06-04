@@ -87,6 +87,7 @@ class PostByRecommendationBlockService extends BaseBlockService
                         'admin'  => 'admin'
                     )
                 )),
+	            array('noOfPost', 'integer', array('data' => 3)),
                 array('template', 'choice', array('choices' => $this->templates)),
                 array('ajaxTemplate', 'choice', array('choices' => $this->ajaxTemplates)),
                 array('ajaxPagerTemplate', 'choice', array('choices' => $this->ajaxPagerTemplates)),
@@ -133,43 +134,46 @@ class PostByRecommendationBlockService extends BaseBlockService
             throw new BlockNotFoundException(sprintf('Block "%s" is disabled.', $blockContext->getBlock()->getId()));
         }
 
-        $settings = $blockContext->getBlock()->getSettings('category');
+//        $blockSettings['category'] = $blockContext->getBlock()->getSettings('category');
+//	    $blockSettings['tag'] = $blockContext->getBlock()->getSettings('tag');
         ####
         # Get category cloud
         ###
-        $data = $this->sessionManager->getCloud()->getData();
-        if(isset($data['categories'])) {
-            $categories=$data['categories'];
-            arsort($categories);
-            $settings['category_id'] = array_keys($categories);
-        }
+	    $categoryData = $this->sessionManager->fetchRawProfile();
 
+	    if($categoryData) {
+		    $criteria['category_id'] = array_keys($categoryData);
+	    }
+
+
+
+	    $tagData = $this->sessionManager->fetchRawProfile('tags');
+
+	    if($tagData) {
+		    $criteria['tag_id'] = array_keys($tagData);
+	    }
+
+	    $settings = $blockContext->getSettings();
 
         $parameters = array(
             'block_context'  => $blockContext,
-            'settings'       => $blockContext->getSettings(),
+            'settings'       => $settings,
             'block'          => $blockContext->getBlock(),
             'enable_category_canonical_page' => $this->isCanonicalPageEnabled,
             'is_controller_enabled' => $this->isEnabledController,
         );
 
-        if(isset($settings['category_id'])) {
+	    $criteria['mode'] = $settings['mode'];
+	    $criteria['enabled'] = true;
+	    $noOfPost = isset($settings['noOfPost']) ?: 3;
 
-            dump($settings['category_id']);
+	    $sort = array('publicationDateStart'=>'DESC', 'tag'=>'DESC');
 
-            $criteria['mode'] = $settings['mode'];
-            $criteria['enabled'] = true;
-            $criteria['category_id'] = $settings['category_id'];
+	    $pager = $this->postManager->getCustomNewsPager($criteria, $sort);
+	    $pager->setMaxPerPage($noOfPost);
+	    $pager->setCurrentPage(1, false, true);
 
-            $pager = $this->postManager->getNewsPager($criteria);
-
-            //$pager->setMaxPerPage($this->maxPerPage ?: 5);
-            $pager->setMaxPerPage(5);
-            $pager->setCurrentPage(1, false, true);
-
-            $parameters['pager'] = $pager;
-            $parameters['category'] = $criteria['category_id'];
-        }
+	    $parameters['pager'] = $pager;
 
         if ($blockContext->getSetting('mode') !== 'public') {
             return $this->renderPrivateResponse($blockContext->getTemplate(), $parameters, $response);
@@ -199,6 +203,7 @@ class PostByRecommendationBlockService extends BaseBlockService
             'ajaxTemplate'   => 'GMIRecommendationBundle:Block:post_by_recommendation_ajax.html.twig',
             'ajaxPagerTemplate'   => 'GMIRecommendationBundle:Block:post_by_recommendation_ajax_pager.html.twig',
             'category' => null,
+            'tag' => null,
         ));
     }
 }
