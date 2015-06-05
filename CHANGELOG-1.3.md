@@ -2,6 +2,14 @@ CHANGELOG
 =========
 
 --------------
+### 2015-06-05
+--------------
+###### [RzNewsBundle](https://github.com/rzproject/NewsBundle/commit/d411ca0b32fe65b34f58280daac1a7fb496bfff8) ######
+* minor fixes for frontend controller templates
+* added admin template overrides
+
+
+--------------
 ### 2015-06-02
 --------------
 ###### [Updated AppKernel](https://github.com/rzproject/cms-sandbox/commit/87c7833d6dc2b43c315c9038ae7be42cbe004608) ######
