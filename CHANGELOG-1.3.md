@@ -8,6 +8,11 @@ CHANGELOG
 * minor fixes for frontend controller templates
 * added admin template overrides
 
+--------------
+### 2015-06-09
+--------------
+###### [RzUserBundle](https://github.com/rzproject/UserBundle/commit/1ff1f0ef391437d34b718ece533258c34606f747) ######
+* fix template error
 
 --------------
 ### 2015-06-02

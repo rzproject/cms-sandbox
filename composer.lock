@@ -2793,12 +2793,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/NelmioApiDocBundle.git",
-                "reference": "6be99b53cabcf66a21f456e7f8274200fcb88d3c"
+                "reference": "a679eb80891fc037c9356a381a92d090a83533cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/6be99b53cabcf66a21f456e7f8274200fcb88d3c",
-                "reference": "6be99b53cabcf66a21f456e7f8274200fcb88d3c",
+                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/a679eb80891fc037c9356a381a92d090a83533cb",
+                "reference": "a679eb80891fc037c9356a381a92d090a83533cb",
                 "shasum": ""
             },
             "require": {
@@ -2864,7 +2864,7 @@
                 "documentation",
                 "rest"
             ],
-            "time": "2015-06-07 16:02:34"
+            "time": "2015-06-08 12:24:59"
         },
         {
             "name": "pagerfanta/pagerfanta",
@@ -3082,12 +3082,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataAdminBundle.git",
-                "reference": "d7e723b4fd9879974c041458a60f716b149a76db"
+                "reference": "13b224bb7e9a4791953a80bfd1e7f0fbe68a45ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/d7e723b4fd9879974c041458a60f716b149a76db",
-                "reference": "d7e723b4fd9879974c041458a60f716b149a76db",
+                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/13b224bb7e9a4791953a80bfd1e7f0fbe68a45ee",
+                "reference": "13b224bb7e9a4791953a80bfd1e7f0fbe68a45ee",
                 "shasum": ""
             },
             "require": {
@@ -3116,7 +3116,7 @@
                 "jms/translation-bundle": "~1.1",
                 "sensio/generator-bundle": "~2.3",
                 "sonata-project/intl-bundle": "~2.1",
-                "symfony/phpunit-bridge": "2.7.*@dev",
+                "symfony/phpunit-bridge": "~2.7|~3.0",
                 "symfony/yaml": "~2.3"
             },
             "suggest": {
@@ -3164,7 +3164,7 @@
                 "rmzamora fork",
                 "sonata"
             ],
-            "time": "2015-06-08 02:00:39"
+            "time": "2015-06-09 01:22:35"
         },
         {
             "name": "rmzamora/block-bundle",
@@ -3172,12 +3172,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataBlockBundle.git",
-                "reference": "632eaaa7297460bec3d5417cfc683ef0684407b4"
+                "reference": "ae292f7f9be21ffbf231a9077f04f825d0472f61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataBlockBundle/zipball/632eaaa7297460bec3d5417cfc683ef0684407b4",
-                "reference": "632eaaa7297460bec3d5417cfc683ef0684407b4",
+                "url": "https://api.github.com/repos/rmzamora/SonataBlockBundle/zipball/ae292f7f9be21ffbf231a9077f04f825d0472f61",
+                "reference": "ae292f7f9be21ffbf231a9077f04f825d0472f61",
                 "shasum": ""
             },
             "require": {
@@ -3234,7 +3234,7 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2015-05-06 04:11:08"
+            "time": "2015-06-09 01:25:23"
         },
         {
             "name": "rmzamora/bootstrap-bundle",
@@ -3507,12 +3507,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataClassificationBundle.git",
-                "reference": "9e22e9241015c2669b02e0ef46b9274bddee3c8a"
+                "reference": "d92ec66654ffaf609318660beee6f32c7bb8e69e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataClassificationBundle/zipball/9e22e9241015c2669b02e0ef46b9274bddee3c8a",
-                "reference": "9e22e9241015c2669b02e0ef46b9274bddee3c8a",
+                "url": "https://api.github.com/repos/rmzamora/SonataClassificationBundle/zipball/d92ec66654ffaf609318660beee6f32c7bb8e69e",
+                "reference": "d92ec66654ffaf609318660beee6f32c7bb8e69e",
                 "shasum": ""
             },
             "require": {
@@ -3568,7 +3568,7 @@
                 "tag",
                 "taxonomy"
             ],
-            "time": "2015-05-17 16:04:10"
+            "time": "2015-06-09 01:23:56"
         },
         {
             "name": "rmzamora/comment-bundle",
@@ -3647,12 +3647,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataDoctrineORMAdminBundle.git",
-                "reference": "5ba2f7759987ef6743ed325db5cf6f5e3b3c497e"
+                "reference": "1222cc4055ec0daa8367a9d91319e11475e087b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataDoctrineORMAdminBundle/zipball/5ba2f7759987ef6743ed325db5cf6f5e3b3c497e",
-                "reference": "5ba2f7759987ef6743ed325db5cf6f5e3b3c497e",
+                "url": "https://api.github.com/repos/rmzamora/SonataDoctrineORMAdminBundle/zipball/1222cc4055ec0daa8367a9d91319e11475e087b4",
+                "reference": "1222cc4055ec0daa8367a9d91319e11475e087b4",
                 "shasum": ""
             },
             "require": {
@@ -3700,7 +3700,7 @@
                     "homepage": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle/contributors"
                 },
                 {
-                    "name": "mell m. zamora",
+                    "name": "Mell M. Zamora",
                     "email": "me@mellzamora.com",
                     "homepage": "http://mellzamora.com"
                 }
@@ -3715,7 +3715,7 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2015-06-08 01:56:24"
+            "time": "2015-06-09 01:24:25"
         },
         {
             "name": "rmzamora/entity-audit-bundle",
@@ -4592,12 +4592,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataUserBundle.git",
-                "reference": "e94b8676dda87e6be4d4c2f5892b8a10a28b4116"
+                "reference": "94f1c828b83bff23ad1eed18c3a5124fb9ef378c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataUserBundle/zipball/e94b8676dda87e6be4d4c2f5892b8a10a28b4116",
-                "reference": "e94b8676dda87e6be4d4c2f5892b8a10a28b4116",
+                "url": "https://api.github.com/repos/rmzamora/SonataUserBundle/zipball/94f1c828b83bff23ad1eed18c3a5124fb9ef378c",
+                "reference": "94f1c828b83bff23ad1eed18c3a5124fb9ef378c",
                 "shasum": ""
             },
             "require": {
@@ -4663,7 +4663,7 @@
                 "sonata",
                 "user"
             ],
-            "time": "2015-06-08 02:01:10"
+            "time": "2015-06-09 01:24:53"
         },
         {
             "name": "rmzamora/zendsearch",
@@ -5391,12 +5391,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/UserBundle.git",
-                "reference": "a6a95549c7461538deafc6244e85b52a91508086"
+                "reference": "1ff1f0ef391437d34b718ece533258c34606f747"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/UserBundle/zipball/a6a95549c7461538deafc6244e85b52a91508086",
-                "reference": "a6a95549c7461538deafc6244e85b52a91508086",
+                "url": "https://api.github.com/repos/rzproject/UserBundle/zipball/1ff1f0ef391437d34b718ece533258c34606f747",
+                "reference": "1ff1f0ef391437d34b718ece533258c34606f747",
                 "shasum": ""
             },
             "require": {
@@ -5433,7 +5433,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-05-26 04:22:53"
+            "time": "2015-06-09 02:28:26"
         },
         {
             "name": "rz/user-security-bundle",
@@ -8355,12 +8355,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b7132b35a150324ab25b20016c07ba2252f23402"
+                "reference": "2c1abada32236c49c8cb362293210b5a79d5c5a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b7132b35a150324ab25b20016c07ba2252f23402",
-                "reference": "b7132b35a150324ab25b20016c07ba2252f23402",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2c1abada32236c49c8cb362293210b5a79d5c5a9",
+                "reference": "2c1abada32236c49c8cb362293210b5a79d5c5a9",
                 "shasum": ""
             },
             "require": {
@@ -8419,7 +8419,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-06-06 05:55:15"
+            "time": "2015-06-08 13:36:02"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
