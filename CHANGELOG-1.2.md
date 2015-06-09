@@ -2,6 +2,12 @@ CHANGELOG
 =========
 
 --------------
+### 2015-06-09
+--------------
+###### [RzUserBundle](https://github.com/rzproject/UserBundle/commit/6f8952ebb2b5139411ea66cdfa5a622d1af9f9ca) ######
+* fix template error
+
+--------------
 ### 2015-05-27
 --------------
 ###### [Updated Symfony Version to 2.6.9](https://github.com/rzproject/cms-sandbox/commit/71f9fdbaa0c235feee2cbd8fcca4a67a38b39c5e) ######
