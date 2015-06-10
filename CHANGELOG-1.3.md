@@ -2,6 +2,12 @@ CHANGELOG
 =========
 
 --------------
+### 2015-06-10
+--------------
+###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/855479c6ac6e5e5f72c7bf10fa5d99d6339788d0) ######
+* removed unused bundles
+
+--------------
 ### 2015-06-05
 --------------
 ###### [RzNewsBundle](https://github.com/rzproject/NewsBundle/commit/d411ca0b32fe65b34f58280daac1a7fb496bfff8) ######
