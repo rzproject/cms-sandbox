@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "921ab58047608ad77cfb486cf30369ba",
+    "hash": "ee216126b8692d42b359237997d7fad9",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1729,206 +1729,6 @@
             "time": "2015-03-30 17:07:12"
         },
         {
-            "name": "jms/aop-bundle",
-            "version": "dev-master",
-            "target-dir": "JMS/AopBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/JMSAopBundle.git",
-                "reference": "a2ffe12932abe5bda25792e16c1a42763aedeaaf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSAopBundle/zipball/a2ffe12932abe5bda25792e16c1a42763aedeaaf",
-                "reference": "a2ffe12932abe5bda25792e16c1a42763aedeaaf",
-                "shasum": ""
-            },
-            "require": {
-                "jms/cg": "1.*",
-                "symfony/framework-bundle": "2.*"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "JMS\\AopBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Johannes M. Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "Adds AOP capabilities to Symfony2",
-            "keywords": [
-                "annotations",
-                "aop"
-            ],
-            "time": "2015-01-14 15:37:27"
-        },
-        {
-            "name": "jms/cg",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/cg-library.git",
-                "reference": "dd7acb4cd356ed5281b8f4bb346bff51b394c7b2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/cg-library/zipball/dd7acb4cd356ed5281b8f4bb346bff51b394c7b2",
-                "reference": "dd7acb4cd356ed5281b8f4bb346bff51b394c7b2",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "CG\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache2"
-            ],
-            "authors": [
-                {
-                    "name": "Johannes M. Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "Toolset for generating PHP code",
-            "keywords": [
-                "code generation"
-            ],
-            "time": "2015-01-26 09:49:13"
-        },
-        {
-            "name": "jms/command-bundle",
-            "version": "dev-master",
-            "target-dir": "JMS/CommandBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/JMSCommandBundle.git",
-                "reference": "5bdefbf0902bf45ab571c3a903ffb904cdb5c974"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSCommandBundle/zipball/5bdefbf0902bf45ab571c3a903ffb904cdb5c974",
-                "reference": "5bdefbf0902bf45ab571c3a903ffb904cdb5c974",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "symfony/framework-bundle": "~2.0"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "JMS\\CommandBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache2"
-            ],
-            "authors": [
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
-                    "role": "Developer of wrapped JMSSerializerBundle"
-                }
-            ],
-            "description": "Provides useful commands to ease development (with Symfony2).",
-            "homepage": "http://jmsyst.com/bundles/JMSCommandBundle",
-            "keywords": [
-                "development"
-            ],
-            "time": "2013-09-01 06:08:47"
-        },
-        {
-            "name": "jms/di-extra-bundle",
-            "version": "dev-master",
-            "target-dir": "JMS/DiExtraBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/JMSDiExtraBundle.git",
-                "reference": "36f8b06e34e55582be59c810eac855396fc57221"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSDiExtraBundle/zipball/36f8b06e34e55582be59c810eac855396fc57221",
-                "reference": "36f8b06e34e55582be59c810eac855396fc57221",
-                "shasum": ""
-            },
-            "require": {
-                "jms/aop-bundle": ">=1.0.0,<1.2-dev",
-                "jms/metadata": "1.*",
-                "symfony/finder": "~2.1",
-                "symfony/framework-bundle": "~2.1",
-                "symfony/process": "~2.1"
-            },
-            "require-dev": {
-                "doctrine/doctrine-bundle": "*",
-                "doctrine/orm": "*",
-                "jms/security-extra-bundle": "1.*",
-                "phpcollection/phpcollection": ">=0.1,<0.3-dev",
-                "sensio/framework-extra-bundle": "*",
-                "symfony/browser-kit": "*",
-                "symfony/class-loader": "*",
-                "symfony/form": "*",
-                "symfony/security-bundle": "*",
-                "symfony/twig-bundle": "*",
-                "symfony/validator": "*",
-                "symfony/yaml": "*"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "JMS\\DiExtraBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache"
-            ],
-            "authors": [
-                {
-                    "name": "Johannes M. Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "Allows to configure dependency injection using annotations",
-            "homepage": "http://jmsyst.com/bundles/JMSDiExtraBundle",
-            "keywords": [
-                "annotations",
-                "dependency injection"
-            ],
-            "time": "2015-05-21 14:28:38"
-        },
-        {
             "name": "jms/metadata",
             "version": "dev-master",
             "source": {
@@ -2012,75 +1812,6 @@
             ],
             "description": "A library for easily creating recursive-descent parsers.",
             "time": "2014-07-08 16:40:41"
-        },
-        {
-            "name": "jms/security-extra-bundle",
-            "version": "dev-master",
-            "target-dir": "JMS/SecurityExtraBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/JMSSecurityExtraBundle.git",
-                "reference": "59b777ebaa37803a75803982ddab18c08a47e48f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSSecurityExtraBundle/zipball/59b777ebaa37803a75803982ddab18c08a47e48f",
-                "reference": "59b777ebaa37803a75803982ddab18c08a47e48f",
-                "shasum": ""
-            },
-            "require": {
-                "jms/aop-bundle": "~1.0",
-                "jms/di-extra-bundle": "~1.3",
-                "jms/metadata": "~1.0",
-                "jms/parser-lib": "~1.0",
-                "symfony/framework-bundle": "~2.1",
-                "symfony/security-bundle": "*"
-            },
-            "require-dev": {
-                "doctrine/doctrine-bundle": "*",
-                "doctrine/orm": "*",
-                "sensio/framework-extra-bundle": "*",
-                "symfony/browser-kit": "*",
-                "symfony/class-loader": "*",
-                "symfony/css-selector": "*",
-                "symfony/finder": "*",
-                "symfony/form": "*",
-                "symfony/process": "*",
-                "symfony/twig-bundle": "*",
-                "symfony/validator": "*",
-                "symfony/yaml": "*"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "JMS\\SecurityExtraBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache2"
-            ],
-            "authors": [
-                {
-                    "name": "Johannes M. Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "Enhances the Symfony2 Security Component by adding several new features",
-            "homepage": "http://jmsyst.com/bundles/JMSSecurityExtraBundle",
-            "keywords": [
-                "annotations",
-                "authorization",
-                "expression",
-                "secure",
-                "security"
-            ],
-            "time": "2014-08-20 16:22:51"
         },
         {
             "name": "jms/serializer",
@@ -3082,12 +2813,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataAdminBundle.git",
-                "reference": "13b224bb7e9a4791953a80bfd1e7f0fbe68a45ee"
+                "reference": "746c54d9b2d64502425e1237eaaa834d2502d6fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/13b224bb7e9a4791953a80bfd1e7f0fbe68a45ee",
-                "reference": "13b224bb7e9a4791953a80bfd1e7f0fbe68a45ee",
+                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/746c54d9b2d64502425e1237eaaa834d2502d6fd",
+                "reference": "746c54d9b2d64502425e1237eaaa834d2502d6fd",
                 "shasum": ""
             },
             "require": {
@@ -3164,7 +2895,7 @@
                 "rmzamora fork",
                 "sonata"
             ],
-            "time": "2015-06-09 01:22:35"
+            "time": "2015-06-10 01:01:28"
         },
         {
             "name": "rmzamora/block-bundle",
@@ -3172,12 +2903,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataBlockBundle.git",
-                "reference": "ae292f7f9be21ffbf231a9077f04f825d0472f61"
+                "reference": "f27e86569470f95785a681c78aa98c8a57b7ccb2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataBlockBundle/zipball/ae292f7f9be21ffbf231a9077f04f825d0472f61",
-                "reference": "ae292f7f9be21ffbf231a9077f04f825d0472f61",
+                "url": "https://api.github.com/repos/rmzamora/SonataBlockBundle/zipball/f27e86569470f95785a681c78aa98c8a57b7ccb2",
+                "reference": "f27e86569470f95785a681c78aa98c8a57b7ccb2",
                 "shasum": ""
             },
             "require": {
@@ -3234,7 +2965,7 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2015-06-09 01:25:23"
+            "time": "2015-06-10 01:03:08"
         },
         {
             "name": "rmzamora/bootstrap-bundle",
@@ -3361,12 +3092,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataCacheBundle.git",
-                "reference": "e002157818d4d04fd860020e46794caa0afe375d"
+                "reference": "3a96b29e1ac971f7551d9018087f6838ea313f7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataCacheBundle/zipball/e002157818d4d04fd860020e46794caa0afe375d",
-                "reference": "e002157818d4d04fd860020e46794caa0afe375d",
+                "url": "https://api.github.com/repos/rmzamora/SonataCacheBundle/zipball/3a96b29e1ac971f7551d9018087f6838ea313f7d",
+                "reference": "3a96b29e1ac971f7551d9018087f6838ea313f7d",
                 "shasum": ""
             },
             "require": {
@@ -3427,7 +3158,7 @@
                 "cache block",
                 "rmzamora fork"
             ],
-            "time": "2015-05-19 00:47:56"
+            "time": "2015-06-10 01:03:35"
         },
         {
             "name": "rmzamora/ccdn-user-security-bundle",
@@ -4592,12 +4323,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataUserBundle.git",
-                "reference": "94f1c828b83bff23ad1eed18c3a5124fb9ef378c"
+                "reference": "02ab404e3503695324478f4e86576c2b550e3166"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataUserBundle/zipball/94f1c828b83bff23ad1eed18c3a5124fb9ef378c",
-                "reference": "94f1c828b83bff23ad1eed18c3a5124fb9ef378c",
+                "url": "https://api.github.com/repos/rmzamora/SonataUserBundle/zipball/02ab404e3503695324478f4e86576c2b550e3166",
+                "reference": "02ab404e3503695324478f4e86576c2b550e3166",
                 "shasum": ""
             },
             "require": {
@@ -4663,7 +4394,7 @@
                 "sonata",
                 "user"
             ],
-            "time": "2015-06-09 01:24:53"
+            "time": "2015-06-10 01:02:00"
         },
         {
             "name": "rmzamora/zendsearch",
@@ -5065,12 +4796,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "ffe3bec93e8f7d48c384f7bff0fe80def72e01e4"
+                "reference": "ba626ce8fcb21ecc3b3e86ba5f1b98622c255c59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/ffe3bec93e8f7d48c384f7bff0fe80def72e01e4",
-                "reference": "ffe3bec93e8f7d48c384f7bff0fe80def72e01e4",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/ba626ce8fcb21ecc3b3e86ba5f1b98622c255c59",
+                "reference": "ba626ce8fcb21ecc3b3e86ba5f1b98622c255c59",
                 "shasum": ""
             },
             "require": {
@@ -5113,7 +4844,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-06-05 08:00:07"
+            "time": "2015-06-09 06:13:31"
         },
         {
             "name": "rz/oauth-bundle",
@@ -5866,12 +5597,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/exporter.git",
-                "reference": "fbfac4ca1095d8773db33b4d2e7f469f9640bf80"
+                "reference": "bf67d63059a133743a1ea5b62d3596b2c331a085"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/exporter/zipball/fbfac4ca1095d8773db33b4d2e7f469f9640bf80",
-                "reference": "fbfac4ca1095d8773db33b4d2e7f469f9640bf80",
+                "url": "https://api.github.com/repos/sonata-project/exporter/zipball/bf67d63059a133743a1ea5b62d3596b2c331a085",
+                "reference": "bf67d63059a133743a1ea5b62d3596b2c331a085",
                 "shasum": ""
             },
             "require": {
@@ -5879,13 +5610,14 @@
             },
             "require-dev": {
                 "propel/propel1": "~1.6",
-                "symfony/property-access": "~2.2",
+                "symfony/phpunit-bridge": "~2.7",
+                "symfony/property-access": "~2.3",
                 "symfony/routing": "*"
             },
             "suggest": {
                 "ext-curl": "*",
                 "propel/propel1": "~1.6",
-                "symfony/property-access": "~2.2",
+                "symfony/property-access": "~2.3",
                 "symfony/routing": "*"
             },
             "type": "library",
@@ -5919,7 +5651,7 @@
                 "export",
                 "xls"
             ],
-            "time": "2015-03-21 08:42:43"
+            "time": "2015-06-09 19:45:45"
         },
         {
             "name": "sonata-project/google-authenticator",
@@ -8109,12 +7841,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "688b6a58acb19c1899dc887b1efb6403dc6dc0bd"
+                "reference": "a02682e0fee6392379f6cc1784aa8a7b83bf4551"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/688b6a58acb19c1899dc887b1efb6403dc6dc0bd",
-                "reference": "688b6a58acb19c1899dc887b1efb6403dc6dc0bd",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/a02682e0fee6392379f6cc1784aa8a7b83bf4551",
+                "reference": "a02682e0fee6392379f6cc1784aa8a7b83bf4551",
                 "shasum": ""
             },
             "require": {
@@ -8163,7 +7895,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-06-06 08:31:47"
+            "time": "2015-06-09 13:06:54"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -8854,7 +8586,6 @@
         "doctrine/doctrine-migrations-bundle": 20,
         "doctrine/migrations": 20,
         "doctrine/data-fixtures": 20,
-        "jms/command-bundle": 20,
         "knplabs/gaufrette": 20,
         "friendsofsymfony/comment-bundle": 20,
         "rmzamora/cache": 20,

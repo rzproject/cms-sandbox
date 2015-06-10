@@ -29,10 +29,7 @@
         "doctrine/doctrine-fixtures-bundle": "~2.2",
         "doctrine/data-fixtures": "dev-master",
 
-        "jms/security-extra-bundle": "~1.5",
-        "jms/di-extra-bundle": "~1.4",
         "jms/serializer-bundle": "~0.13",
-        "jms/command-bundle": "dev-master",
 
         "symfony-cmf/routing-bundle": "~1.1",
 
