@@ -17,15 +17,19 @@ hwi_oauth:
             client_id:          %hwi_oauth_facebook_client_id%
             client_secret:      %hwi_oauth_facebook_client_secret%
             type:               facebook
-            scope:              "email"
-            infos_url:          "https://graph.facebook.com/me?fields=name,email,picture.type(square)"
+            scope:              "public_profile email user_birthday"
+            infos_url:          "https://graph.facebook.com/me?fields=name,first_name,last_name,birthday,email,gender,picture.type(square)"
             paths:
                 facebookUid:    id
                 facebookName:   name
                 username:       name
+                firstname:      first_name
+                lastname:       last_name
                 email:          email
                 emailCanonical: email
-                facebookData:   ['picture.data.url', 'email']
+                gender :        gender
+                dateOfBirth:    birthday
+                facebookData:   ['picture.data.url', 'email', 'gender']
             user_response_class: Rz\OAuthBundle\OAuth\Response\FacebookUserResponse
             options:
                 display: page #dialog is optimized for popup window
