@@ -56,7 +56,7 @@ rz_news:
   # news configuration
   #####################
   settings:
-    news_pager_max_per_page: 2
+    news_pager_max_per_page: 20
     ajax_pagination: true
 
   #####################

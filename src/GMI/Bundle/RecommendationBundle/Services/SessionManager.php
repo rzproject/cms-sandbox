@@ -3,16 +3,16 @@
 namespace GMI\Bundle\RecommendationBundle\Services;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpFoundation\Cookie;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\RequestStack;
-use Symfony\Component\Security\Core\SecurityContextInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use GMI\Bundle\RecommendationBundle\Model\CloudableInterface;
 use GMI\Bundle\RecommendationBundle\Model\CloudInterface;
 use Sonata\CoreBundle\Model\ManagerInterface;
-use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Cookie;
 
 class SessionManager
 {
@@ -28,7 +28,8 @@ class SessionManager
     protected $config;
     protected $session;
     protected $request;
-    protected $securityContext;
+    protected $tokenStorage;
+	protected $authorizationChecker;
     protected $cloudManager;
     protected $cloudCategoryManager;
 	protected $cloudTagManager;
@@ -40,6 +41,8 @@ class SessionManager
 	protected $tagData;
 	protected $dataKeyValueProcessed;
 	protected $cloudType;
+	protected $pioEventServer;
+	protected $pioRecommendationClient;
 
 	/**
 	 * Default constructor
@@ -56,11 +59,14 @@ class SessionManager
     public function __construct(SessionInterface $session,
                                 RequestStack $request,
                                 Config $config,
-                                SecurityContextInterface $securityContext,
+                                TokenStorageInterface $tokenStorage,
+                                AuthorizationCheckerInterface $authorizationChecker,
                                 ManagerInterface $cloudManager,
                                 ManagerInterface $cloudCategoryManager,
                                 ManagerInterface $cloudTagManager,
-                                ManagerInterface $cloudLogsManager)
+                                ManagerInterface $cloudLogsManager,
+                                $pioEventServer = null,
+								$pioRecommendationClient = null)
     {
 
         # Recommendation Config
@@ -69,8 +75,10 @@ class SessionManager
         $this->session = $session;
         # Request
         $this->request = $request;
-        # Security Context
-        $this->securityContext = $securityContext;
+        # token storage
+        $this->tokenStorage = $tokenStorage;
+	    # token storage
+	    $this->authorizationChecker = $authorizationChecker;
         # Cloud Manager
         $this->cloudManager = $cloudManager;
         # Cloud Category Manager
@@ -92,6 +100,9 @@ class SessionManager
 		// container to make sure categories are processed only once per request.
 		$this->dataKeyValueProcessed = array();
 	    $this->cloudType = array('category', 'tag');
+
+	    $this->pioEventServer =$pioEventServer;
+	    $this->pioRecommendationClient = $pioRecommendationClient;
     }
     
     /**
@@ -125,8 +136,14 @@ class SessionManager
 			return null;
 		}
 		$categories=$data[$type];
-		arsort($categories);
-		return $categories;
+
+		if(is_array($categories)) {
+			arsort($categories);
+			return $categories;
+		}
+
+		return null;
+
 	}
 
 	protected function buildArrayProfileData($data = array()) {
@@ -294,38 +311,38 @@ class SessionManager
 	 * 
 	 * @param \Symfony\Component\HttpFoundation\Response $response
 	 */
-//	public function updateCloud(Response $response = null)
-//	{
-//		$request      = $this->getRequestStackService()->getCurrentRequest();
-//		$enabled      = $this->getConfig()->isEnabled();
-//		$allowedRoute = $this->getConfig()->isAllowedInRoute($request->get('_route'));
-//
-//		if (!($enabled && $allowedRoute)) {
-//			return false;
-//		}
-//
-//		if (!$this->cloud) {
-//			return;
-//		}
-//
-//		$cloud = $this->cloud;
-//		$cookieName = $this->getKeyName();
-//		if ($cloud) {
-//			if (!($uid = $this->getRequestStackService()->getCurrentRequest()->cookies->get($cookieName))) {
-//				// create the cloud cookie if not exist
-//				$cookie = new Cookie($cookieName, $cloud->getUid(), $this->getCookieLifetime());
-//				if (!$response) {
-//					$response = new Response();
-//				}
-//				$response->headers->setCookie($cookie);
-//			}
-//			if ($this->hasCloudDataForUpdate()) {
-//				// persist cloud to storage
-//				$cloudManager = $this->getCloudManagerService();
-//				$cloudManager->save($cloud);
-//			}
-//		}
-//	}
+	public function updateCloud(Response $response = null)
+	{
+		$request      = $this->getRequestStackService()->getCurrentRequest();
+		$enabled      = $this->getConfig()->isEnabled();
+		$allowedRoute = $this->getConfig()->isAllowedInRoute($request->get('_route'));
+
+		if (!($enabled && $allowedRoute)) {
+			return false;
+		}
+
+		if (!$this->cloud) {
+			return;
+		}
+
+		$cloud = $this->cloud;
+		$cookieName = $this->getKeyName();
+		if ($cloud) {
+			if (!($uid = $this->getRequestStackService()->getCurrentRequest()->cookies->get($cookieName))) {
+				// create the cloud cookie if not exist
+				$cookie = new Cookie($cookieName, $cloud->getUid(), $this->getCookieLifetime());
+				if (!$response) {
+					$response = new Response();
+				}
+				$response->headers->setCookie($cookie);
+			}
+			if ($this->hasCloudDataForUpdate()) {
+				// persist cloud to storage
+				$cloudManager = $this->getCloudManagerService();
+				$cloudManager->save($cloud);
+			}
+		}
+	}
 	
 	public function linkSessionCloudToUser(UserInterface $user)
 	{
@@ -354,7 +371,31 @@ class SessionManager
 			if (isset($sorted[self::CLOUD_CATEGORY_KEY])) {
 				$sorted = $sorted[self::CLOUD_CATEGORY_KEY];
 			}
-			arsort($sorted, SORT_NUMERIC);
+			if(is_array($sorted)) {
+				arsort($sorted, SORT_NUMERIC);
+			}
+
+		}
+		return $sorted;
+	}
+
+	/**
+	 * Return the current category cloud data
+	 *
+	 * @return array
+	 */
+	public function getTagCloudData()
+	{
+		$sorted = array();
+		if ($this->cloud) {
+			$sorted = $this->cloud->getData();
+			if (isset($sorted[self::CLOUD_TAG_KEY])) {
+				$sorted = $sorted[self::CLOUD_TAG_KEY];
+			}
+			if(is_array($sorted)) {
+				arsort($sorted, SORT_NUMERIC);
+			}
+
 		}
 		return $sorted;
 	}
@@ -435,6 +476,8 @@ class SessionManager
 	 */
 	protected function rebuildCloud($uid)
 	{
+		die('here');
+		$this->pioEventServer->createUser($uid);
 		$cloudManager = $this->getCloudManagerService();
 		$cloud = $cloudManager->create();
 		$cloud->setUid($uid);
@@ -450,6 +493,7 @@ class SessionManager
 	 */
 	protected function rebuildUserCloud($user)
 	{
+		$this->pioEventServer->createUser($user->getId());
 		$cloudManager = $this->getCloudManagerService();
 		$cloud = $cloudManager->create();
 		$cloud->setUser($user);
@@ -512,8 +556,6 @@ class SessionManager
         $tempData = $data[$key];
 
         $temp = $this->updateDataKeyValue($cData, $value, $tempData);
-	    dump($temp);
-	    dump($data);
         $data[$key] = $temp;
         $this->logCloudData($cData, $value, $event, $this->cloud, $type);
         $this->cloud->setData($data);
@@ -720,14 +762,6 @@ class SessionManager
 	}
 	
 	/**
-	 * @return \Symfony\Component\Security\Core\SecurityContextInterface
-	 */
-	protected function getSecurityContextService()
-	{
-		return $this->securityContext;
-	}
-	
-	/**
 	 * @return \Sonata\CoreBundle\Model\ManagerInterface
 	 */
 	protected function getCloudManagerService()
@@ -758,10 +792,13 @@ class SessionManager
 	 */
 	protected function isUserLoggedIn()
 	{
-		if ($this->getSecurityContextService()->getToken()) {
-			return (bool)$this->getSecurityContextService()->isGranted('IS_AUTHENTICATED_REMEMBERED');
+		try {
+			if ($this->authorizationChecker->isGranted('IS_AUTHENTICATED_FULLY')) {
+				return (bool)$this->authorizationChecker->isGranted('IS_AUTHENTICATED_REMEMBERED');
+			}
+		} catch (\Exception $e) {
+			return false;
 		}
-		return false;
 	}
 	
 	/**
@@ -770,6 +807,147 @@ class SessionManager
 	 */
 	protected function getLoggedInUser()
 	{
-		return $this->getSecurityContextService()->getToken()->getUser();
+		try {
+			if ($this->authorizationChecker->isGranted('IS_AUTHENTICATED_FULLY')) {
+				return $this->tokenStorage->getToken()->getUser();
+			}
+		} catch (\Exception $e) {
+			return null;
+		}
+	}
+
+	public function pioFetchRecommendation($itemCount) {
+
+		if($this->isUserLoggedIn()) {
+			$userId = $this->getLoggedInUser()->getId();
+		} else {
+			$userId = $this->cloud->getUid() ?: null;
+		}
+		$recommendation =$this->pioRecommendationClient->sendQuery(['user' => $userId, 'num' => $itemCount]);
+		return $this->processRecommendation($recommendation);
+	}
+
+	public function pioFetchRecommendationByCategory($itemCount) {
+		if($this->isUserLoggedIn()) {
+			$userId = $this->getLoggedInUser()->getId();
+		} else {
+			$userId = $this->cloud->getUid() ?: null;
+		}
+		$categories = $this->getCategoryCloudData();
+
+		if($categories && is_array($categories)) {
+			$categories = array_keys($categories);
+			$recommendation = $this->pioRecommendationClient->sendQuery(['user' => $userId, 'num' => $itemCount, 'categories'=>$categories]);
+		} else {
+			$recommendation = $this->pioRecommendationClient->sendQuery(['user' => $userId, 'num' => $itemCount]);
+		}
+
+		return $this->processRecommendation($recommendation);
+	}
+
+	public function pioFetchRecommendationByTag($itemCount) {
+		if($this->isUserLoggedIn()) {
+			$userId = $this->getLoggedInUser()->getId();
+		} else {
+			$userId = $this->cloud->getUid() ?: null;
+		}
+		$tags = $this->getTagCloudData();
+
+		if($tags && is_array($tags)) {
+			$tags = array_keys($tags);
+
+
+			$recommendation = $this->pioRecommendationClient->sendQuery(['user' => $userId, 'num' => $itemCount, 'tags'=>$tags]);
+		} else {
+			$recommendation = $this->pioRecommendationClient->sendQuery(['user' => $userId, 'num' => $itemCount]);
+		}
+		return $this->processRecommendation($recommendation);
+	}
+
+	protected function processRecommendation($recomendations) {
+		$reco = array();
+		foreach($recomendations as $tempRecomendation) {
+			foreach($tempRecomendation as $recomendation) {
+				$reco[] = 	$recomendation['article'];
+			}
+		}
+
+		return $reco;
+	}
+
+	public function pioSendUserAction($post, $type='view', $attributes = null) {
+		if($this->isUserLoggedIn()) {
+			$userId = $this->getLoggedInUser()->getId();
+		} else {
+			$userId = $this->cloud->getUid() ?: null;
+		}
+		if ($attributes) {
+			$this->pioEventServer->recordUserActionOnItem($type, $userId, $post->getId(), array('categories'=>$attributes));
+		} else {
+			$this->pioEventServer->recordUserActionOnItem($type, $userId, $post->getId());
+		}
+
+		/** @var EventClient $eventClient */
+		#$eventClient = $this->get('endroid.prediction_io.app_one.event_client');
+		/** @var EngineClient $recommendationEngineClient */
+		#$recommendationEngineClient = $this->get('endroid.prediction_io.app_one.recommendation.engine_client');
+
+
+// Populate with users and items
+#	    $eventClient->createUser($userId);
+#	    $eventClient->createItem($itemId);
+
+// Record actions
+#	    $client->recordUserActionOnItem('view', $userId, $itemId);
+
+// Return recommendations
+//		$recommendedItems = $this->pioRecommendationClient->getRecommendedItems($this->getLoggedInUser()->getId(), 3);
+//		$similar = $this->pioRecommendationClient->getSimilarItems($this->getLoggedInUser()->getId(), 3);
+#	    $similarItems = $similarProductEngineClient->getSimilarItems($itemId, $itemCount);
+
+//		dump($similar);
+//		dump($recommendedItems);
+//		die();
+	}
+
+	public function checkRecommendationServerConnection() {
+		try {
+			$this->pioRecommendationClient->getStatus();
+			return true;
+		} catch(\Exception $e) {
+			return false;
+		}
+	}
+
+	/**
+	 * @return null
+	 */
+	public function getPioRecommendationClient()
+	{
+		return $this->pioRecommendationClient;
+	}
+
+	/**
+	 * @param null $pioRecommendationClient
+	 */
+	public function setPioRecommendationClient($pioRecommendationClient)
+	{
+		$this->pioRecommendationClient = $pioRecommendationClient;
+	}
+
+	/**
+	 * @return null
+	 */
+	public function getPioEventServer()
+	{
+		return $this->pioEventServer;
+	}
+
+	/**
+	 * @param null $pioEventServer
+	 */
+	public function setPioEventServer($pioEventServer)
+	{
+		$this->pioEventServer = $pioEventServer;
 	}
 }

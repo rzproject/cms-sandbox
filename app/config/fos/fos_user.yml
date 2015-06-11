@@ -18,7 +18,7 @@ fos_user:
     #required for SonataUserBundle or RzUserbundle
     registration:
         confirmation:
-            enabled:    true
+            enabled:    false
             from_email:
                 address:        registration@rmzamora.com
                 sender_name:    rzamora-sandbox Registration

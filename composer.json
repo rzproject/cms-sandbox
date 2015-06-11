@@ -29,10 +29,7 @@
         "doctrine/doctrine-fixtures-bundle": "~2.2",
         "doctrine/data-fixtures": "dev-master",
 
-        "jms/security-extra-bundle": "~1.5",
-        "jms/di-extra-bundle": "~1.4",
         "jms/serializer-bundle": "~0.13",
-        "jms/command-bundle": "dev-master",
 
         "symfony-cmf/routing-bundle": "~1.1",
 
@@ -98,7 +95,8 @@
         "nelmio/api-doc-bundle": "~2.4",
         "willdurand/hateoas-bundle": "0.2.*",
         "webfactory/piwik-bundle": "~2.0",
-        "beberlei/DoctrineExtensions":"1.0.*@dev"
+        "beberlei/DoctrineExtensions":"1.0.*@dev",
+        "endroid/prediction-io-bundle": "2.0.1"
 
     },
 

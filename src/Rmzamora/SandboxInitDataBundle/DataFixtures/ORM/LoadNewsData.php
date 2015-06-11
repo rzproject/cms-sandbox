@@ -20,6 +20,7 @@ use Sonata\NewsBundle\Model\CommentInterface;
 
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Cocur\Slugify\Slugify;
 
 class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, OrderedFixtureInterface
 {
@@ -27,7 +28,7 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
 
     function getOrder()
     {
-        return 4;
+        return 6;
     }
 
     public function setContainer(ContainerInterface $container = null)
@@ -42,136 +43,133 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
 
         $faker = $this->getFaker();
 
-        $tags =  array('blog', 'article', 'event', 'promo');
+	    $blogCategories = array('technology', 'travel', 'entertainment', 'finance', 'business');
+	    $slugify = new Slugify();
 
         $i = 0;
         foreach (range(1, 5) as $id) {
-            $post = $postManager->create();
-            $post->setAuthor($this->getReference('user-admin'));
+	        foreach($blogCategories as $cat) {
+	            $post = $postManager->create();
+	            $post->setAuthor($this->getReference('user-admin'));
 
-            $post->setCollection($this->getReference('news-classification-collection-blog'));
-            $post->setAbstract($faker->sentence(30));
-            $post->setEnabled(true);
-            $post->setTitle($faker->sentence(6));
-            $post->setPublicationDateStart($faker->dateTimeBetween('-30 days', '-1 days'));
-            $post->setImage($this->getReference('sonata-media-news-'.$faker->numberBetween(0,2)));
+	            $post->setCollection($this->getReference('news-classification-collection-blog'));
+	            $post->setAbstract($faker->sentence(10));
+	            $post->setEnabled(true);
+		        $post->setTitle(sprintf('SAMPLE %s %s',$cat ,$faker->sentence(3)));
+	            $post->setPublicationDateStart($faker->dateTimeBetween('-30 days', '-1 days'));
+	            $post->setImage($this->getReference('sonata-media-news-'.$faker->numberBetween(0,2)));
 
-            $categories = array('technology', 'travel', 'entertainment', 'finance', 'business');
-            foreach($categories as $cat) {
                 $this->addCategory($post, $this->getReference(sprintf('news-classification-category-news-blog-%s', $cat)));
-            }
 
-            $raw = null;
+	            $raw = null;
 
-            $raw .= sprintf("%s\n\n%s\n\n %s\n\n%s",
-                $faker->sentence(rand(3, 6)),
-                $faker->text(1000),
-                $faker->sentence(rand(3, 6)),
-                $faker->text(1000)
-            );
+	            $raw .= sprintf("%s\n\n%s\n\n %s\n\n%s",
+	                $faker->sentence(rand(3, 6)),
+	                $faker->text(100),
+	                $faker->sentence(rand(3, 6)),
+	                $faker->text(100)
+	            );
 
-            $post->setRawContent($raw);
-            $post->setContentFormatter('richhtml');
+	            $post->setRawContent($raw);
+	            $post->setContentFormatter('richhtml');
 
-            $post->setContent($this->getPoolFormatter()->transform($post->getContentFormatter(), $post->getRawContent()));
-            $post->setCommentsDefaultStatus(CommentInterface::STATUS_VALID);
+	            $post->setContent($this->getPoolFormatter()->transform($post->getContentFormatter(), $post->getRawContent()));
+	            $post->setCommentsDefaultStatus(CommentInterface::STATUS_VALID);
 
-            $settings = array('template'=>'RzNewsBundle:Post:view.html.twig');
-            $post->setSettings($settings);
+	            $settings = array('template'=>'RzNewsBundle:Post:view.html.twig');
+	            $post->setSettings($settings);
 
-            foreach($tags as $key=>$tag) {
-                $post->addTags($this->getReference(sprintf('news-classification-tag-%s', $tag)));
-            }
+	            foreach(array('blog') as $key=>$tag) {
+	                $post->addTags($this->getReference(sprintf('news-classification-tag-%s', $tag)));
+	            }
 
-            foreach(range(1, $faker->randomDigit + 2) as $commentId) {
-                $comment = $this->getCommentManager()->create();
-                $comment->setEmail($faker->email);
-                $comment->setName($faker->name);
-                $comment->setStatus(CommentInterface::STATUS_VALID);
-                $comment->setMessage($faker->sentence(25));
-                $comment->setUrl($faker->url);
+//	            foreach(range(1, $faker->randomDigit + 2) as $commentId) {
+//	                $comment = $this->getCommentManager()->create();
+//	                $comment->setEmail($faker->email);
+//	                $comment->setName($faker->name);
+//	                $comment->setStatus(CommentInterface::STATUS_VALID);
+//	                $comment->setMessage($faker->sentence(25));
+//	                $comment->setUrl($faker->url);
+//
+//	                $post->addComments($comment);
+//	            }
 
-                $post->addComments($comment);
-            }
+	            $this->addReference(sprintf('sonata-news-%s-%s', $cat, $id), $post);
 
-            $this->addReference('sonata-news-'.($i++), $post);
-
-            $postManager->save($post);
+	            $postManager->save($post);
+	        }
         }
 
+	    $eventCategories = array('trade fair', 'travel show', 'press conference', 'product launches', 'business conference', 'award', 'weddings', 'birthday', 'anniversary');
 
         foreach (range(1, 3) as $id) {
-            $post = $postManager->create();
-            $post->setAuthor($this->getReference('user-admin'));
+	        foreach($eventCategories as $cat) {
+		        $post = $postManager->create();
+		        $post->setAuthor($this->getReference('user-admin'));
 
-            $post->setCollection($this->getReference('news-classification-collection-event'));
-            $post->setAbstract($faker->sentence(30));
-            $post->setEnabled(true);
-            $post->setTitle($faker->sentence(6));
-            $post->setPublicationDateStart($faker->dateTimeBetween('-30 days', '-1 days'));
-            $post->setImage($this->getReference('sonata-media-news-'.$faker->numberBetween(0,2)));
+		        $post->setCollection($this->getReference('news-classification-collection-event'));
+		        $post->setAbstract($faker->sentence(10));
+		        $post->setEnabled(true);
+		        $post->setTitle(sprintf('SAMPLE %s %s',$cat ,$faker->sentence(3)));
+		        $post->setPublicationDateStart($faker->dateTimeBetween('-30 days', '-1 days'));
+		        $post->setImage($this->getReference('sonata-media-news-' . $faker->numberBetween(0, 2)));
+		        $this->addCategory($post, $this->getReference(sprintf('news-classification-category-news-event-%s', $slugify->slugify($cat))));
+		        $raw = null;
+		        $raw .= sprintf("%s\n\n%s\n\n %s\n\n%s",
+			        $faker->sentence(rand(3, 6)),
+			        $faker->text(100),
+			        $faker->sentence(rand(3, 6)),
+			        $faker->text(100)
+		        );
 
-            $categories = array('trade fair', 'travel show', 'press conference', 'product launches', 'business conference', 'award', 'weddings', 'birthday', 'anniversary');
-            foreach($categories as $cat) {
-                $this->addCategory($post, $this->getReference(sprintf('news-classification-category-news-event-%s', $cat)));
-            }
+		        $post->setRawContent($raw);
+		        $post->setContentFormatter('richhtml');
 
-            $raw = null;
+		        $post->setContent($this->getPoolFormatter()->transform($post->getContentFormatter(), $post->getRawContent()));
+		        $post->setCommentsDefaultStatus(CommentInterface::STATUS_VALID);
 
-            $raw .= sprintf("%s\n\n%s\n\n %s\n\n%s",
-                $faker->sentence(rand(3, 6)),
-                $faker->text(1000),
-                $faker->sentence(rand(3, 6)),
-                $faker->text(1000)
-            );
+		        //set event settings
+		        $end_day = null;
+		        $month = $faker->numberBetween(1, 12);
 
-            $post->setRawContent($raw);
-            $post->setContentFormatter('richhtml');
-
-            $post->setContent($this->getPoolFormatter()->transform($post->getContentFormatter(), $post->getRawContent()));
-            $post->setCommentsDefaultStatus(CommentInterface::STATUS_VALID);
-
-            //set event settings
-            $end_day = null;
-            $month = $faker->numberBetween(1, 12);
-
-            if($month == 2) {
-                $day = $faker->numberBetween(1, 20);
-                $end_day = $faker->numberBetween(21, 28);
-            } else {
-                $day = $faker->numberBetween(1, 20);
-                $end_day = $faker->numberBetween(21, 30);
-            }
+		        if ($month == 2) {
+			        $day = $faker->numberBetween(1, 20);
+			        $end_day = $faker->numberBetween(21, 28);
+		        } else {
+			        $day = $faker->numberBetween(1, 20);
+			        $end_day = $faker->numberBetween(21, 30);
+		        }
 
 
-            $year = $faker->numberBetween(2014, 2016);
-            $settings = array('template'=>'RzNewsBundle:Post:view_event.html.twig',
-                              'start_date'=>array("year"=>$year,"month"=>$month,"day"=>$day),
-                              'end_date'=>array("year"=>$year,"month"=>$month,"day"=>$end_day),
-                              "location"=>array("lat"=>"16.0432998","lng"=>"120.33331240000007"),
-                              "address"=>$faker->address
-            );
+		        $year = $faker->numberBetween(2014, 2016);
+		        $settings = array('template'   => 'RzNewsBundle:Post:view_event.html.twig',
+		                          'start_date' => array("year" => $year, "month" => $month, "day" => $day),
+		                          'end_date'   => array("year" => $year, "month" => $month, "day" => $end_day),
+		                          "location"   => array("lat" => "16.0432998", "lng" => "120.33331240000007"),
+		                          "address"    => $faker->address
+		        );
 
-            $post->setSettings($settings);
+		        $post->setSettings($settings);
 
-            foreach($tags as $key=>$tag) {
-                $post->addTags($this->getReference(sprintf('news-classification-tag-%s', $tag)));
-            }
+		        foreach (array('event') as $key => $tag) {
+			        $post->addTags($this->getReference(sprintf('news-classification-tag-%s', $tag)));
+		        }
 
-            foreach(range(1, $faker->randomDigit + 2) as $commentId) {
-                $comment = $this->getCommentManager()->create();
-                $comment->setEmail($faker->email);
-                $comment->setName($faker->name);
-                $comment->setStatus(CommentInterface::STATUS_VALID);
-                $comment->setMessage($faker->sentence(25));
-                $comment->setUrl($faker->url);
+//		        foreach (range(1, $faker->randomDigit + 2) as $commentId) {
+//			        $comment = $this->getCommentManager()->create();
+//			        $comment->setEmail($faker->email);
+//			        $comment->setName($faker->name);
+//			        $comment->setStatus(CommentInterface::STATUS_VALID);
+//			        $comment->setMessage($faker->sentence(25));
+//			        $comment->setUrl($faker->url);
+//
+//			        $post->addComments($comment);
+//		        }
 
-                $post->addComments($comment);
-            }
+		        $this->addReference(sprintf('sonata-news-%s-%s', $slugify->slugify($cat), $id), $post);
 
-            $this->addReference('sonata-news-'.($i++), $post);
-
-            $postManager->save($post);
+		        $postManager->save($post);
+	        }
         }
     }
 

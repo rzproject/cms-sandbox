@@ -20,6 +20,7 @@ use Sonata\NewsBundle\Model\CommentInterface;
 
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Cocur\Slugify\Slugify;
 
 class LoadClassificationData extends AbstractFixture implements ContainerAwareInterface, OrderedFixtureInterface
 {
@@ -27,7 +28,7 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
 
     function getOrder()
     {
-        return 2;
+        return 3;
     }
 
     public function setContainer(ContainerInterface $container = null)
@@ -37,6 +38,8 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
 
     public function load(ObjectManager $manager)
     {
+
+	    $slugify = new Slugify();
 
         //Create Default Context
         $context = $this->getContextManager()->create();
@@ -99,6 +102,7 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
 
         // News Child Category EVENT
         $categories = array('trade fair', 'travel show', 'press conference', 'product launches', 'business conference', 'award', 'weddings', 'birthday', 'anniversary');
+	    $slugify = new Slugify();
         foreach($categories as $cat) {
             $category = $this->getCategoryManager()->create();
             $category->setEnabled(true);
@@ -107,7 +111,7 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
             $category->setParent( $this->getReference('news-classification-category-news-event'));
             $category->setSettings(array('template'=>'RzNewsBundle:Post:category_list_event.html.twig'));
             $this->getCategoryManager()->save($category);
-            $this->addReference(sprintf('news-classification-category-news-event-%s', $cat), $category);
+            $this->addReference(sprintf('news-classification-category-news-event-%s', $slugify->slugify($cat)), $category);
         }
 
         $tags = array('general' => null);
@@ -122,7 +126,7 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
             $this->addReference(sprintf('default-classification-tag-%s', $tagName), $tag);
         }
 
-        $tags = array('blog' => null, 'article' => null, 'event' => null, 'promo' => null);
+        $tags = array('blog' => null, 'event' => null);
 
         foreach($tags as $tagName => $null) {
             $tag = $this->getTagManager()->create();

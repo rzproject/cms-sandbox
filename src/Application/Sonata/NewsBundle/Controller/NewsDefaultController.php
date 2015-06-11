@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class NewsDefaultController extends BaseController
 {
-	protected function postViewPreRenderEvent(Request $request, $post) {
+	protected function defaultViewPreRenderEvent(Request $request, $post) {
 		###############
 		# Profiling
 		###############
@@ -32,6 +32,9 @@ class NewsDefaultController extends BaseController
 					$tags = $this->get('sonata.classification.manager.tag')->parseTagIds($post->getTags());
 					$sessionManager->cloudData('tag', $tags, 'view');
 				}
+
+				#send evet to server PIO
+				$sessionManager->pioSendUserAction($post, 'view', $categories);
 			} catch(\Exception $e) {
 				return;
 			}

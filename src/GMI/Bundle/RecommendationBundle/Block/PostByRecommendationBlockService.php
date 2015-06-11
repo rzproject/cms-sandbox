@@ -15,6 +15,7 @@ use Sonata\AdminBundle\Admin\AdminInterface;
 use Sonata\ClassificationBundle\Model\CategoryInterface;
 use Sonata\BlockBundle\Exception\BlockNotFoundException;
 use GMI\Bundle\RecommendationBundle\Services\SessionManager;
+use Doctrine\Common\Collections\ArrayCollection;
 
 class PostByRecommendationBlockService extends BaseBlockService
 {
@@ -87,6 +88,13 @@ class PostByRecommendationBlockService extends BaseBlockService
                         'admin'  => 'admin'
                     )
                 )),
+	            array('recommendation_filter', 'choice', array(
+		            'choices' => array(
+			            'user' => 'User',
+			            'tag'  => 'Tag',
+			            'category'  => 'Category',
+		            )
+	            )),
 	            array('noOfPost', 'integer', array('data' => 3)),
                 array('template', 'choice', array('choices' => $this->templates)),
                 array('ajaxTemplate', 'choice', array('choices' => $this->ajaxTemplates)),
@@ -130,42 +138,53 @@ class PostByRecommendationBlockService extends BaseBlockService
      */
     public function execute(BlockContextInterface $blockContext, Response $response = null)
     {
+	    #$response = $this->sessionManager->pioFetchRecommendation(3);
         if(!$blockContext->getBlock()->getEnabled()) {
             throw new BlockNotFoundException(sprintf('Block "%s" is disabled.', $blockContext->getBlock()->getId()));
         }
 
-//        $blockSettings['category'] = $blockContext->getBlock()->getSettings('category');
-//	    $blockSettings['tag'] = $blockContext->getBlock()->getSettings('tag');
-        ####
-        # Get category cloud
-        ###
-	    $categoryData = $this->sessionManager->fetchRawProfile();
-
-	    if($categoryData) {
-		    $criteria['category_id'] = array_keys($categoryData);
-	    }
-
-
-
-	    $tagData = $this->sessionManager->fetchRawProfile('tags');
-
-	    if($tagData) {
-		    $criteria['tag_id'] = array_keys($tagData);
-	    }
-
+	    $postIds = null;
 	    $settings = $blockContext->getSettings();
-
-        $parameters = array(
-            'block_context'  => $blockContext,
-            'settings'       => $settings,
-            'block'          => $blockContext->getBlock(),
-            'enable_category_canonical_page' => $this->isCanonicalPageEnabled,
-            'is_controller_enabled' => $this->isEnabledController,
-        );
+	    $parameters = array(
+		    'block_context'  => $blockContext,
+		    'settings'       => $settings,
+		    'block'          => $blockContext->getBlock(),
+		    'enable_category_canonical_page' => $this->isCanonicalPageEnabled,
+		    'is_controller_enabled' => $this->isEnabledController,
+	    );
 
 	    $criteria['mode'] = $settings['mode'];
 	    $criteria['enabled'] = true;
-	    $noOfPost = isset($settings['noOfPost']) ?: 3;
+	    $noOfPost = (int)(isset($settings['noOfPost']) ? (int)$settings['noOfPost'] : 3);
+
+	    //check if recommendation server is available
+	    if($this->sessionManager->checkRecommendationServerConnection()) {
+		    #fetch recommendation type
+		    $recommendationFilter = $blockContext->getBlock()->getSetting('recommendation_filter');
+		    if($recommendationFilter === 'user') {
+			    $postIds = $this->sessionManager->pioFetchRecommendation($noOfPost);
+		    } elseif ($recommendationFilter === 'category') {
+			    $postIds = $this->sessionManager->pioFetchRecommendationByCategory($noOfPost);
+		    } elseif ($recommendationFilter === 'tag') {
+			    $postIds = $this->sessionManager->pioFetchRecommendationByTag($noOfPost);
+		    }
+	    } else {
+			$categoryCloud = $this->sessionManager->getCategoryCloudData();
+		    $tagCloud = $this->sessionManager->getTagCloudData();
+
+
+		    if(is_array($categoryCloud) && count($categoryCloud) > 0) {
+			    $criteria['category_id'] = array_keys($categoryCloud);
+		    }
+
+		    if(is_array($tagCloud) && count($tagCloud) > 0) {
+			    $criteria['tag_id'] = array_keys($tagCloud);
+		    }
+	    }
+
+	    if(is_array($postIds)) {
+		    $criteria['post_id'] = $postIds;
+	    }
 
 	    $sort = array('publicationDateStart'=>'DESC', 'tag'=>'DESC');
 
@@ -204,6 +223,8 @@ class PostByRecommendationBlockService extends BaseBlockService
             'ajaxPagerTemplate'   => 'GMIRecommendationBundle:Block:post_by_recommendation_ajax_pager.html.twig',
             'category' => null,
             'tag' => null,
+            'recommendation_filter' => 'user',
+	        'noOfPost' => 3
         ));
     }
 }

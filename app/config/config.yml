@@ -58,6 +58,8 @@ imports:
     - { resource: webfactory/piwik.yml }
 
     - { resource: beberlei/mysql.yml }
+    - { resource: endroid/prediction_io.yml }
+
 
 framework:
     trusted_proxies: ['127.0.0.1'] # a list of proxy IPs you trust

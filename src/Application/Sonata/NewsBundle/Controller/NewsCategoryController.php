@@ -12,7 +12,7 @@ use Rz\NewsBundle\Controller\NewsCategoryController as BaseController;
  */
 class NewsCategoryController extends BaseController
 {
-	protected function categoryViewPreRenderEvent(Request $request, $category, $post = null) {
+	protected function categoryViewPreRenderEvent(Request $request, $post, $category = null) {
 		###############
 		# Profiling
 		###############

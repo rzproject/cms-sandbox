@@ -13,11 +13,14 @@
 			<argument type="service" id="session" />
 			<argument type="service" id="request_stack" />
             <argument type="service" id="gmi_recommendation.config.profiler" />
-			<argument type="service" id="security.context" />
+            <argument type="service" id="security.token_storage" />
+            <argument type="service" id="security.authorization_checker" />
             <argument type="service" id="gmi_recommendation.manager.cloud" />
             <argument type="service" id="gmi_recommendation.manager.cloud_category" />
             <argument type="service" id="gmi_recommendation.manager.cloud_tag" />
             <argument type="service" id="gmi_recommendation.manager.cloud_logs" />
+            <argument type="service" id="endroid.prediction_io.app_one.event_client" />
+            <argument type="service" id="endroid.prediction_io.app_one.recommendation.engine_client" />
         </service>
     </services>
 

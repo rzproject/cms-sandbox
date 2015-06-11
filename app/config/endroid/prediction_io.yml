@@ -1,0 +1,19 @@
+endroid_prediction_io:
+    event_server:
+        url: %prediction_io.event_server.url%
+    apps:
+        app_one:
+            key: %prediction_io.app_one.key%
+            engines:
+#                complementarypurchase:
+#                    url: http://localhost:8000
+#                productranking:
+#                    url: http://localhost:8001
+#                viewedthenbought:
+#                    url: http://localhost:8002
+                recommendation:
+                    url: %prediction_io.app_one.recommendation_url%
+#                similarproduct:
+#                    url: http://localhost:8004
+#                leadscoring:
+#                    url: http://localhost:8005
