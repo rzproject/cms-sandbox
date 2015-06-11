@@ -4,9 +4,13 @@ CHANGELOG
 --------------
 ### 2015-06-11
 --------------
+###### [RzNewsBundle](https://github.com/rzproject/NewsBundle/commit/25d5cc25a9e01e087c59d5187f6207d29bf47e18) ######
+* added [view count] ()
+* documentation for implementation can be found here [https://github.com/rzproject/NewsBundle/blob/1.4/Resources/docs/view_count.md](https://github.com/rzproject/NewsBundle/blob/1.4/Resources/docs/view_count.md)
+
+
 ###### [RzNewsBundle](https://github.com/rzproject/NewsBundle/commit/3ed59b5e422c19b18ab964eb5356abb20b6fb02d) ######
 * refactor [postManager](https://github.com/rzproject/NewsBundle/commit/aa5b1e05587ccc578b0506d8189d64c6a586db48)
-
 
 --------------
 ### 2015-06-10

@@ -4796,12 +4796,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "aa5b1e05587ccc578b0506d8189d64c6a586db48"
+                "reference": "3d834c1df9307f16453ef0eeccd0550e1c0386dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/aa5b1e05587ccc578b0506d8189d64c6a586db48",
-                "reference": "aa5b1e05587ccc578b0506d8189d64c6a586db48",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/3d834c1df9307f16453ef0eeccd0550e1c0386dd",
+                "reference": "3d834c1df9307f16453ef0eeccd0550e1c0386dd",
                 "shasum": ""
             },
             "require": {
@@ -4844,7 +4844,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-06-11 02:56:58"
+            "time": "2015-06-11 09:08:17"
         },
         {
             "name": "rz/oauth-bundle",
@@ -8088,12 +8088,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "52614404b26c963c07b729740bcb204a89324ed6"
+                "reference": "29063239df374fb990d09aff6ce8e65fd0718d6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/52614404b26c963c07b729740bcb204a89324ed6",
-                "reference": "52614404b26c963c07b729740bcb204a89324ed6",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/29063239df374fb990d09aff6ce8e65fd0718d6b",
+                "reference": "29063239df374fb990d09aff6ce8e65fd0718d6b",
                 "shasum": ""
             },
             "require": {
@@ -8152,7 +8152,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-06-10 08:17:05"
+            "time": "2015-06-11 06:24:26"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
