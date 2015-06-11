@@ -2,6 +2,13 @@ CHANGELOG
 =========
 
 --------------
+### 2015-06-11
+--------------
+###### [RzNewsBundle](https://github.com/rzproject/NewsBundle/commit/3ed59b5e422c19b18ab964eb5356abb20b6fb02d) ######
+* refactor [postManager](https://github.com/rzproject/NewsBundle/commit/aa5b1e05587ccc578b0506d8189d64c6a586db48)
+
+
+--------------
 ### 2015-06-10
 --------------
 ###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/855479c6ac6e5e5f72c7bf10fa5d99d6339788d0) ######
