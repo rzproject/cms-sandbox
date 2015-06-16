@@ -2,6 +2,12 @@ CHANGELOG
 =========
 
 --------------
+### 2015-06-16
+--------------
+###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/be94a46e1d7587b40f6c830aa11e42f7981edeef#diff-1da2c7edc898c70e5a79a9997c98cecc) ######
+* SonataBundle updates reflected on forked version Rmzamora/SonataBundles. Updates are in preparation for Symfony2.7 and Symfony3.0 compatibility. NO BC BREAKS!!!
+
+--------------
 ### 2015-06-11
 --------------
 ###### [RzNewsBundle](https://github.com/rzproject/NewsBundle/commit/25d5cc25a9e01e087c59d5187f6207d29bf47e18) ######
