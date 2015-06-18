@@ -23,6 +23,7 @@ class NewsDefaultController extends BaseController
 				#updated category cloud
 				$postHasCategory = $post->getPostHasCategory();
 				$categories = array();
+				$tags = null;
 				foreach($postHasCategory as $key=>$value) {
 					$this->get('sonata.classification.manager.category')->parseCategoryIds($value->getCategory(), $categories);
 				}
@@ -34,7 +35,7 @@ class NewsDefaultController extends BaseController
 				}
 
 				#send evet to server PIO
-				$sessionManager->pioSendUserAction($post, 'view', $categories);
+				$sessionManager->pioSendUserAction($post, 'view', array('categories'=>$categories, 'tags'=>$tags));
 			} catch(\Exception $e) {
 				return;
 			}

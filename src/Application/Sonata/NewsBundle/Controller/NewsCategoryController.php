@@ -20,6 +20,7 @@ class NewsCategoryController extends BaseController
 			try{
 				$sessionManager = $this->get('gmi_recommendation.manager.session');
 				$categories = array();
+				$tags = null;
 				$this->get('sonata.classification.manager.category')->parseCategoryIds($category, $categories);
 				$sessionManager->cloudData('category', $categories, 'view');
 				#updated tag cloud
@@ -27,6 +28,8 @@ class NewsCategoryController extends BaseController
 					$tags = $this->get('sonata.classification.manager.tag')->parseTagIds($post->getTags());
 					$sessionManager->cloudData('tag', $tags, 'view');
 				}
+				#send evet to server PIO
+				$sessionManager->pioSendUserAction($post, 'view', array('categories'=>$categories, 'tags'=>$tags));
 			} catch(\Exception $e) {
 				throw $e;
 			}
