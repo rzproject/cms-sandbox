@@ -96,7 +96,6 @@
         "willdurand/hateoas-bundle": "0.2.*",
         "webfactory/piwik-bundle": "~2.0",
         "beberlei/DoctrineExtensions":"1.0.*@dev",
-        "endroid/prediction-io-bundle": "2.0.1",
 
         "groupminteractionph/recommendation-bundle": "1.0.*@dev"
     },
