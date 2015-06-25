@@ -2,6 +2,12 @@ CHANGELOG
 =========
 
 --------------
+### 2015-06-25
+--------------
+###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/8f964f6a2a09e7bc87e11bb79ebaba560f52677e) ######
+* fix version of doctrine to avoid Warning: spl_object_hash() expects parameter 1 to be object, null given on OneToMany and ManyToOne relationship introduced on dev-master of doctrine/orm
+
+--------------
 ### 2015-06-16
 --------------
 ###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/be94a46e1d7587b40f6c830aa11e42f7981edeef#diff-1da2c7edc898c70e5a79a9997c98cecc) ######
