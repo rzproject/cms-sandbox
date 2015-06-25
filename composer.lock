@@ -4525,12 +4525,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/ClassificationBundle.git",
-                "reference": "c62aef04748be92b49aaace0207e230c8139b17a"
+                "reference": "2b5a9f1901ac146e64a2e2c1ffc46f5e66c5f65b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/c62aef04748be92b49aaace0207e230c8139b17a",
-                "reference": "c62aef04748be92b49aaace0207e230c8139b17a",
+                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/2b5a9f1901ac146e64a2e2c1ffc46f5e66c5f65b",
+                "reference": "2b5a9f1901ac146e64a2e2c1ffc46f5e66c5f65b",
                 "shasum": ""
             },
             "require": {
@@ -4567,7 +4567,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-05-27 03:22:14"
+            "time": "2015-06-25 03:15:35"
         },
         {
             "name": "rz/doctrine-orm-admin-bundle",

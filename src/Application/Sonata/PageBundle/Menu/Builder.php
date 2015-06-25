@@ -16,16 +16,18 @@ class Builder extends ContainerAware
      */
     public function mainMenu(FactoryInterface $factory, array $options)
     {
+        $menuOptions = array_merge($options, array(
+            'childrenAttributes' => array('class' => 'nav'),
+        ));
         $categoryManager = $this->container->get('sonata.classification.manager.category');
         $isEnabledController = $this->container->getParameter('rz_classification.enable_controllers');
-        $newsParentCategory = $categoryManager->findOneBy(array('enabled' => true, 'slug'=>'news'));
+        $newsParentCategory = $categoryManager->findOneBy(array('enabled' => true, 'slug'=>'post'));
+        $menu = $factory->createItem('main', $menuOptions);
+        $categories = array();
 
         if($newsParentCategory) {
-            $categories = $categoryManager->getSubCategories($newsParentCategory->getId());
+            $categories = $categoryManager->getSubCategories($newsParentCategory->getId(), array('enabled'=>true), array('createdAt'=>'ASC'), $sort=true);
         }
-
-        $menuOptions = $options;
-        $menu = $factory->createItem('main', $menuOptions);
 
         $menu->addChild('Home', array(
             'route' => 'page_slug',

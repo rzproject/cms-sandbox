@@ -6,6 +6,12 @@ CHANGELOG
 --------------
 ###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/8f964f6a2a09e7bc87e11bb79ebaba560f52677e) ######
 * fix version of doctrine to avoid Warning: spl_object_hash() expects parameter 1 to be object, null given on OneToMany and ManyToOne relationship introduced on dev-master of doctrine/orm
+* updated MenuBuilder
+
+###### [RzClassificationBundle](https://github.com/rzproject/ClassificationBundle/commit/2b5a9f1901ac146e64a2e2c1ffc46f5e66c5f65b) ######
+* added filters for category
+* added order field for DefaultCategoryProvider
+
 
 --------------
 ### 2015-06-16
