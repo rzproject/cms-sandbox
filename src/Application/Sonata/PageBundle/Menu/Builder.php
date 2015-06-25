@@ -21,7 +21,7 @@ class Builder extends ContainerAware
         ));
         $categoryManager = $this->container->get('sonata.classification.manager.category');
         $isEnabledController = $this->container->getParameter('rz_classification.enable_controllers');
-        $newsParentCategory = $categoryManager->findOneBy(array('enabled' => true, 'slug'=>'post'));
+        $newsParentCategory = $categoryManager->findOneBy(array('enabled' => true, 'slug'=>'news'));
         $menu = $factory->createItem('main', $menuOptions);
         $categories = array();
 

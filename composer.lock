@@ -52,12 +52,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cocur/slugify.git",
-                "reference": "cdd2426ef869c82d46dec6dbf2cb0c5a5471814b"
+                "reference": "a463c52320902020f87991fa7c0a1fd25531df01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cocur/slugify/zipball/cdd2426ef869c82d46dec6dbf2cb0c5a5471814b",
-                "reference": "cdd2426ef869c82d46dec6dbf2cb0c5a5471814b",
+                "url": "https://api.github.com/repos/cocur/slugify/zipball/a463c52320902020f87991fa7c0a1fd25531df01",
+                "reference": "a463c52320902020f87991fa7c0a1fd25531df01",
                 "shasum": ""
             },
             "require": {
@@ -107,7 +107,7 @@
                 "slug",
                 "slugify"
             ],
-            "time": "2015-06-11 10:42:36"
+            "time": "2015-06-25 13:41:44"
         },
         {
             "name": "doctrine/annotations",
@@ -4525,12 +4525,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/ClassificationBundle.git",
-                "reference": "2b5a9f1901ac146e64a2e2c1ffc46f5e66c5f65b"
+                "reference": "8f1b3f7e38a3b4268abb02762b3db30d194ee808"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/2b5a9f1901ac146e64a2e2c1ffc46f5e66c5f65b",
-                "reference": "2b5a9f1901ac146e64a2e2c1ffc46f5e66c5f65b",
+                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/8f1b3f7e38a3b4268abb02762b3db30d194ee808",
+                "reference": "8f1b3f7e38a3b4268abb02762b3db30d194ee808",
                 "shasum": ""
             },
             "require": {
@@ -4567,7 +4567,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-06-25 03:15:35"
+            "time": "2015-06-25 07:16:54"
         },
         {
             "name": "rz/doctrine-orm-admin-bundle",
@@ -4775,12 +4775,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "3d834c1df9307f16453ef0eeccd0550e1c0386dd"
+                "reference": "4663e539d20c4ab9b61ef63202e1556714406df2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/3d834c1df9307f16453ef0eeccd0550e1c0386dd",
-                "reference": "3d834c1df9307f16453ef0eeccd0550e1c0386dd",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/4663e539d20c4ab9b61ef63202e1556714406df2",
+                "reference": "4663e539d20c4ab9b61ef63202e1556714406df2",
                 "shasum": ""
             },
             "require": {
@@ -4823,7 +4823,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-06-11 09:08:17"
+            "time": "2015-06-25 09:50:21"
         },
         {
             "name": "rz/oauth-bundle",
@@ -8232,12 +8232,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "893f3ce946f2b65920b173d831d769ab2f35097e"
+                "reference": "21b619c6f0386a06d1646f401a398af3d33fc047"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/893f3ce946f2b65920b173d831d769ab2f35097e",
-                "reference": "893f3ce946f2b65920b173d831d769ab2f35097e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/21b619c6f0386a06d1646f401a398af3d33fc047",
+                "reference": "21b619c6f0386a06d1646f401a398af3d33fc047",
                 "shasum": ""
             },
             "require": {
@@ -8296,7 +8296,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-06-23 14:43:58"
+            "time": "2015-06-25 05:24:49"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
