@@ -30,8 +30,8 @@ rz_classification:
             name: Pager Ajax | Category List
             path: RzClassificationBundle:Block:category_ajax_pager.html.twig
 
-  #############################
-  # Category and Tag Providers
+  ########################################
+  # Category, Collection and Tag Providers
   #############################
   providers: # extension to add fields on category & tag module
     category:
