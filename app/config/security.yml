@@ -86,6 +86,7 @@ security:
             logout:
               path: /logout
               success_handler: rz_user_security.component.authentication.handler.logout_success_handler
+              handlers: [rz.user.component.authentication.handler.user_logout]
             anonymous:    true
 
     access_control:

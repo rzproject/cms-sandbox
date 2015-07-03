@@ -25,11 +25,15 @@ sonata_admin:
         blocks:
             - { position: top, type: sonata.block.service.text, settings: { content: "<h2>rzproject cms-sandbox</h2> <p>CMS built on top of Synfony2 and SonataBundles.</p>"} }
             - { position: left, type: sonata.admin.block.admin_list }
-#            - { position: right, type: sonata.admin_doctrine_orm.block.audit}
-            - { position: center, type: sonata.news.block.recent_posts, settings: { title: Recent Posts, number: 5, mode: admin }}
-            - { position: center, type: sonata.news.block.recent_comments, settings: { title: Recent Comments, number: 5, mode: admin }}
+            - { position: left, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: http://sonata-project.org/blog/archive.rss, mode: admin }}
+            - { position: center, type: rz.user.block.profile_gender_graph, settings: { title: Overall User Gender, mode: admin }}
+            - { position: center, type: rz.user.block.profile_age_graph, settings: { title: Overall User Age, mode: admin }}
+            - { position: center, type: rz.user.block.user_authentication_logs_graph, settings: { title: Recent User Login, mode: admin }}
+            - { position: center, type: rz.user.block.user_registration_graph, settings: { title: Registration, mode: admin, fetchCountRecord: 7 }}
+            - { position: right, type: rz_news.block.all_time_popular_posts, settings: { title: Trending Posts, number: 5, mode: admin }}
+            - { position: right, type: sonata.news.block.recent_posts, settings: { title: Recent Posts, number: 5, mode: admin }}
+            - { position: right, type: sonata.news.block.recent_comments, settings: { title: Recent Comments, number: 5, mode: admin }}
 #            - { position: center, type: sonata.timeline.block.timeline, settings: { context: SONATA_ADMIN, max_per_page: 10 }}
-            - { position: right, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: http://sonata-project.org/blog/archive.rss, mode: admin }}
 
         groups:
             CMS:

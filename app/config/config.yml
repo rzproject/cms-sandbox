@@ -26,6 +26,9 @@ imports:
     # stof
     - { resource: stof/doctrine_extension.yml }
 
+    # mysql func extension
+    - { resource: beberlei/mysql.yml }
+
     # pagerfanta
     - { resource: pagerfanta/views.yml }
 
@@ -48,6 +51,7 @@ imports:
 
     #CCDN
     - { resource: ccdn/ccdn_user_security.yml }
+
 
 framework:
     trusted_proxies: ['127.0.0.1'] # a list of proxy IPs you trust

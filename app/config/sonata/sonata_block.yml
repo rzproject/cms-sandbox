@@ -53,6 +53,10 @@ sonata_block:
             cache: sonata.cache.mongo
         rz_news.block.post_by_category:
             cache: sonata.cache.mongo
+        rz_news.block.related_post:
+            cache: sonata.cache.mongo
+        rz_news.block.all_time_popular_posts:
+            contexts: [admin]
 
         # TimelineBundle's Blocks
         sonata.timeline.block.timeline:
@@ -64,6 +68,14 @@ sonata_block:
             contexts: [user]
         sonata.user.block.menu:
             contexts: [user]
+        rz.user.block.profile_age_graph:
+            contexts: [admin]
+        rz.user.block.profile_gender_graph:
+            contexts: [admin]
+        rz.user.block.user_authentication_logs_graph:
+            contexts: [admin]
+        rz.user.block.user_registration_graph:
+            contexts: [admin]
 
         # SeoBundle's Blocks
         sonata.seo.block.email.share_button:
