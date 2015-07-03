@@ -2,6 +2,19 @@ CHANGELOG
 =========
 
 --------------
+### 2015-07-03
+--------------
+###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/66ce8b7313ef97c6e8950c469ea0fbd8c36f21b1) ######
+* new features dashboard graphs: user login, user registration, demographics (Age and Gender)
+* <br /> ![Alt text](https://raw.githubusercontent.com/rzproject/cms-sandbox/1.3/app/Resources/docs/screenshots/rz-cms-sandbox-dashboard.jpg)
+
+--------------
+### 2015-07-01
+--------------
+###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/ca5b642bbd8fddb293aed8b1abdee357b743632a) ######
+* added template for SOLR server configuration
+
+--------------
 ### 2015-06-25
 --------------
 ###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/8f964f6a2a09e7bc87e11bb79ebaba560f52677e) ######
