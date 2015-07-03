@@ -6,7 +6,8 @@ CHANGELOG
 --------------
 ###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/66ce8b7313ef97c6e8950c469ea0fbd8c36f21b1) ######
 * new features dashboard graphs: user login, user registration, demographics (Age and Gender)
-* <br /> ![Alt text](https://raw.githubusercontent.com/rzproject/cms-sandbox/1.3/app/Resources/docs/screenshots/rz-cms-sandbox-dashboard.jpg)
+###### [screenshot]
+![Alt text](https://raw.githubusercontent.com/rzproject/cms-sandbox/1.3/app/Resources/docs/screenshots/rz-cms-sandbox-dashboard.jpg)
 
 --------------
 ### 2015-07-01
