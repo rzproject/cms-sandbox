@@ -13,7 +13,8 @@ Versions
 --------
 
 * [2.0.x](https://github.com/rzproject/cms-sandbox/tree/2.0)   [HEAVY DEVELOPMENT] Symfony 2.7 compatible with Bootstrap3  
-* **[1.3.x] [STABLE] version with updated page, classification and news bundle**
+* **[1.3.x] [DEVELOPMENT]
+* [1.3.1] [STABLE] version with updated page, classification and news bundle**
 * [1.3.0](https://github.com/rzproject/cms-sandbox/tree/1.3.0)   [DEPRECATED] version before page, classification and news bundle refactor
 * [1.2.x](https://github.com/rzproject/cms-sandbox/tree/1.2)   [DEPRECATED] stable version with updated page, classification and news bundle
 * [1.2.0](https://github.com/rzproject/cms-sandbox/tree/1.2.0)   [DEPRECATED] stable version based on Sonata 2.3
