@@ -2228,12 +2228,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kriswallsmith/assetic.git",
-                "reference": "b17bd13759a7c63b16a6bb88b9e84e4ff767dfaf"
+                "reference": "0023c5e18f4a03c6ba72706dea6514d45c7136d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/b17bd13759a7c63b16a6bb88b9e84e4ff767dfaf",
-                "reference": "b17bd13759a7c63b16a6bb88b9e84e4ff767dfaf",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/0023c5e18f4a03c6ba72706dea6514d45c7136d7",
+                "reference": "0023c5e18f4a03c6ba72706dea6514d45c7136d7",
                 "shasum": ""
             },
             "require": {
@@ -2294,7 +2294,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2015-06-16 13:36:43"
+            "time": "2015-07-08 20:36:44"
         },
         {
             "name": "kriswallsmith/buzz",
@@ -4483,12 +4483,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/AdminBundle.git",
-                "reference": "ded5779f4281e55275fd03c36b2d5ca8cc0cde4f"
+                "reference": "939c02ea70619d621b94461829caad1b47cbd9b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/ded5779f4281e55275fd03c36b2d5ca8cc0cde4f",
-                "reference": "ded5779f4281e55275fd03c36b2d5ca8cc0cde4f",
+                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/939c02ea70619d621b94461829caad1b47cbd9b3",
+                "reference": "939c02ea70619d621b94461829caad1b47cbd9b3",
                 "shasum": ""
             },
             "require": {
@@ -4528,7 +4528,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-07-02 10:00:31"
+            "time": "2015-07-08 09:43:02"
         },
         {
             "name": "rz/block-bundle",
@@ -4536,12 +4536,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/BlockBundle.git",
-                "reference": "d1523b52db15e7fa4c6c22cba9305fc6f7e67731"
+                "reference": "c32116d77cd6641e84608fe0a835619ec58c1de9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/BlockBundle/zipball/d1523b52db15e7fa4c6c22cba9305fc6f7e67731",
-                "reference": "d1523b52db15e7fa4c6c22cba9305fc6f7e67731",
+                "url": "https://api.github.com/repos/rzproject/BlockBundle/zipball/c32116d77cd6641e84608fe0a835619ec58c1de9",
+                "reference": "c32116d77cd6641e84608fe0a835619ec58c1de9",
                 "shasum": ""
             },
             "require": {
@@ -4552,7 +4552,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.2": "1.2-dev"
+                    "dev-1.2": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -4578,7 +4578,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-05-14 08:44:59"
+            "time": "2015-07-09 05:29:40"
         },
         {
             "name": "rz/classification-bundle",
@@ -4586,12 +4586,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/ClassificationBundle.git",
-                "reference": "4257f11ccb777a2066d565c8bc6c082fd7f7770a"
+                "reference": "c387b1303a4f2feb53348ba95cf5cb89e50126db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/4257f11ccb777a2066d565c8bc6c082fd7f7770a",
-                "reference": "4257f11ccb777a2066d565c8bc6c082fd7f7770a",
+                "url": "https://api.github.com/repos/rzproject/ClassificationBundle/zipball/c387b1303a4f2feb53348ba95cf5cb89e50126db",
+                "reference": "c387b1303a4f2feb53348ba95cf5cb89e50126db",
                 "shasum": ""
             },
             "require": {
@@ -4602,7 +4602,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.4": "1.4-dev"
+                    "dev-1.4": "1.4.x-dev"
                 }
             },
             "autoload": {
@@ -4628,7 +4628,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-07-02 09:06:56"
+            "time": "2015-07-09 05:13:01"
         },
         {
             "name": "rz/doctrine-orm-admin-bundle",
@@ -4636,12 +4636,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/DoctrineORMAdminBundle.git",
-                "reference": "5461edca322fb9e6ae76a72229e8e50713b1927d"
+                "reference": "df57df1a972d8ba987e33b734add99012599e3a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/DoctrineORMAdminBundle/zipball/5461edca322fb9e6ae76a72229e8e50713b1927d",
-                "reference": "5461edca322fb9e6ae76a72229e8e50713b1927d",
+                "url": "https://api.github.com/repos/rzproject/DoctrineORMAdminBundle/zipball/df57df1a972d8ba987e33b734add99012599e3a3",
+                "reference": "df57df1a972d8ba987e33b734add99012599e3a3",
                 "shasum": ""
             },
             "require": {
@@ -4677,7 +4677,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-05-04 07:50:13"
+            "time": "2015-07-09 05:05:10"
         },
         {
             "name": "rz/field-type-bundle",
@@ -4733,12 +4733,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/FormatterBundle.git",
-                "reference": "06dc2dfa9c7801000a4409b003c404af266b4ecf"
+                "reference": "382889cef8532f1fce3c869f86c424c405532944"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/FormatterBundle/zipball/06dc2dfa9c7801000a4409b003c404af266b4ecf",
-                "reference": "06dc2dfa9c7801000a4409b003c404af266b4ecf",
+                "url": "https://api.github.com/repos/rzproject/FormatterBundle/zipball/382889cef8532f1fce3c869f86c424c405532944",
+                "reference": "382889cef8532f1fce3c869f86c424c405532944",
                 "shasum": ""
             },
             "require": {
@@ -4748,7 +4748,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-1.0": "1.1.x-dev"
+                    "dev-1.1": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -4774,7 +4774,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-05-04 07:18:55"
+            "time": "2015-07-08 09:38:03"
         },
         {
             "name": "rz/media-bundle",
@@ -4782,12 +4782,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/MediaBundle.git",
-                "reference": "55f047bc668979e31b5ed8f61976602f70180dd5"
+                "reference": "b765d51a6c79677d0ff83b06a4d2a11439e2439f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/MediaBundle/zipball/55f047bc668979e31b5ed8f61976602f70180dd5",
-                "reference": "55f047bc668979e31b5ed8f61976602f70180dd5",
+                "url": "https://api.github.com/repos/rzproject/MediaBundle/zipball/b765d51a6c79677d0ff83b06a4d2a11439e2439f",
+                "reference": "b765d51a6c79677d0ff83b06a4d2a11439e2439f",
                 "shasum": ""
             },
             "require": {
@@ -4828,7 +4828,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-05-19 05:33:52"
+            "time": "2015-07-09 04:50:03"
         },
         {
             "name": "rz/news-bundle",
@@ -4836,12 +4836,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "0bd66df566c799285e141322cc44207b4ba0f855"
+                "reference": "91e074ed122b490a57573aff46c9feeb07d633ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/0bd66df566c799285e141322cc44207b4ba0f855",
-                "reference": "0bd66df566c799285e141322cc44207b4ba0f855",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/91e074ed122b490a57573aff46c9feeb07d633ff",
+                "reference": "91e074ed122b490a57573aff46c9feeb07d633ff",
                 "shasum": ""
             },
             "require": {
@@ -4885,7 +4885,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-07-06 09:16:39"
+            "time": "2015-07-09 05:02:24"
         },
         {
             "name": "rz/oauth-bundle",
@@ -4893,12 +4893,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/OAuthBundle.git",
-                "reference": "01af5dcea9ffa3d5ee2fc265259973f261f6c3f0"
+                "reference": "eee44951525895ae9d2a80726abd2bc594b985fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/OAuthBundle/zipball/01af5dcea9ffa3d5ee2fc265259973f261f6c3f0",
-                "reference": "01af5dcea9ffa3d5ee2fc265259973f261f6c3f0",
+                "url": "https://api.github.com/repos/rzproject/OAuthBundle/zipball/eee44951525895ae9d2a80726abd2bc594b985fc",
+                "reference": "eee44951525895ae9d2a80726abd2bc594b985fc",
                 "shasum": ""
             },
             "require": {
@@ -4934,7 +4934,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-06-26 02:33:21"
+            "time": "2015-07-09 05:31:53"
         },
         {
             "name": "rz/page-bundle",
@@ -4942,12 +4942,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/PageBundle.git",
-                "reference": "29d4c6c944cd994491d1a2305f90946581a9ae39"
+                "reference": "1ae84016a665a3ae1b11f6a35154462aae8f1fcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/29d4c6c944cd994491d1a2305f90946581a9ae39",
-                "reference": "29d4c6c944cd994491d1a2305f90946581a9ae39",
+                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/1ae84016a665a3ae1b11f6a35154462aae8f1fcf",
+                "reference": "1ae84016a665a3ae1b11f6a35154462aae8f1fcf",
                 "shasum": ""
             },
             "require": {
@@ -4984,7 +4984,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-07-07 02:35:42"
+            "time": "2015-07-09 03:04:22"
         },
         {
             "name": "rz/search-bundle",
@@ -4992,12 +4992,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/SearchBundle.git",
-                "reference": "b07279da77a218eef6d49a6eaec2a41f67c2bf73"
+                "reference": "1b5b365e4cb768d219fbdcaa365140b7a306f507"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/SearchBundle/zipball/b07279da77a218eef6d49a6eaec2a41f67c2bf73",
-                "reference": "b07279da77a218eef6d49a6eaec2a41f67c2bf73",
+                "url": "https://api.github.com/repos/rzproject/SearchBundle/zipball/1b5b365e4cb768d219fbdcaa365140b7a306f507",
+                "reference": "1b5b365e4cb768d219fbdcaa365140b7a306f507",
                 "shasum": ""
             },
             "require": {
@@ -5035,7 +5035,7 @@
                 "RZProject",
                 "Symfony2"
             ],
-            "time": "2015-07-07 08:08:07"
+            "time": "2015-07-09 05:29:14"
         },
         {
             "name": "rz/seo-bundle",
@@ -5043,12 +5043,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/SeoBundle.git",
-                "reference": "3401073bc37183ccd408f157a6c70e13c6b4e7ba"
+                "reference": "66d0b8ac8008e035ffa182ec26c0e87448862a1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/SeoBundle/zipball/3401073bc37183ccd408f157a6c70e13c6b4e7ba",
-                "reference": "3401073bc37183ccd408f157a6c70e13c6b4e7ba",
+                "url": "https://api.github.com/repos/rzproject/SeoBundle/zipball/66d0b8ac8008e035ffa182ec26c0e87448862a1c",
+                "reference": "66d0b8ac8008e035ffa182ec26c0e87448862a1c",
                 "shasum": ""
             },
             "require": {
@@ -5070,7 +5070,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-1.1": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -5105,7 +5105,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-05-04 07:42:55"
+            "time": "2015-07-09 05:23:29"
         },
         {
             "name": "rz/timeline-bundle",
@@ -5113,12 +5113,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/TimelineBundle.git",
-                "reference": "3d4a37e8fc0ba7803cef89c44bfb3d446cdda963"
+                "reference": "c23b4f552cbd4d3582783a7a6248a69285ea5ea9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/TimelineBundle/zipball/3d4a37e8fc0ba7803cef89c44bfb3d446cdda963",
-                "reference": "3d4a37e8fc0ba7803cef89c44bfb3d446cdda963",
+                "url": "https://api.github.com/repos/rzproject/TimelineBundle/zipball/c23b4f552cbd4d3582783a7a6248a69285ea5ea9",
+                "reference": "c23b4f552cbd4d3582783a7a6248a69285ea5ea9",
                 "shasum": ""
             },
             "require": {
@@ -5155,7 +5155,7 @@
                 "time",
                 "wall"
             ],
-            "time": "2015-03-12 03:46:03"
+            "time": "2015-07-09 05:26:33"
         },
         {
             "name": "rz/user-bundle",
@@ -5163,12 +5163,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/UserBundle.git",
-                "reference": "62b00a617135d3cfab56296a8305851c68ed268e"
+                "reference": "3b8f74437b8f651a8a999c3e9906c62a7e7a05c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/UserBundle/zipball/62b00a617135d3cfab56296a8305851c68ed268e",
-                "reference": "62b00a617135d3cfab56296a8305851c68ed268e",
+                "url": "https://api.github.com/repos/rzproject/UserBundle/zipball/3b8f74437b8f651a8a999c3e9906c62a7e7a05c1",
+                "reference": "3b8f74437b8f651a8a999c3e9906c62a7e7a05c1",
                 "shasum": ""
             },
             "require": {
@@ -5205,7 +5205,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-07-03 08:49:32"
+            "time": "2015-07-09 03:00:38"
         },
         {
             "name": "rz/user-security-bundle",
