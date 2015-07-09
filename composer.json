@@ -47,7 +47,7 @@
         "rmzamora/cache-bundle": "~2.2",
         "rmzamora/notification-bundle": "2.4.1.*",
         "rmzamora/admin-bundle": "2.4.1.*",
-        "rmzamora/block-bundle": "2.4.1*",
+        "rmzamora/block-bundle": "2.4.1.*",
         "rmzamora/user-bundle": "2.4.1.*",
         "rmzamora/media-bundle": "2.4.1.*",
         "rmzamora/doctrine-orm-admin-bundle": "2.4.1.*",
