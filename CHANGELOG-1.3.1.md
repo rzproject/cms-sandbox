@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+### 2015-07-09
+--------------
+###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/137633859898e2129290eda25c130bb574ab66d4) ######
+* STABLE version uses a frozen version of SONATA/RMZAMORA Bundles and RZ Bundles
+
 --------------
 ### 2015-07-03
 --------------

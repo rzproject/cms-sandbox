@@ -6,7 +6,7 @@ cms-sandbox
 CHANGELOG
 ---------
 
-View [changelog](https://github.com/rzproject/cms-sandbox/blob/1.3/CHANGELOG-1.3.md) for details.
+View [changelog](https://github.com/rzproject/cms-sandbox/blob/1.3.1/CHANGELOG-1.3.1.md) for details.
 
 
 Versions
