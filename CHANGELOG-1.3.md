@@ -2,6 +2,12 @@ CHANGELOG
 =========
 
 --------------
+### 2015-07-14
+--------------
+###### [cms-sandbox] ######
+* Symfony2 upgrade to version 2.6.10
+
+--------------
 ### 2015-07-03
 --------------
 ###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/66ce8b7313ef97c6e8950c469ea0fbd8c36f21b1) ######
