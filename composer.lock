@@ -1581,6 +1581,49 @@
             "time": "2015-02-24 21:41:37"
         },
         {
+            "name": "google/apiclient",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/google/google-api-php-client.git",
+                "reference": "7ee4cb2b473de3bf5cd2a5ada95a2f363b4a4532"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/google/google-api-php-client/zipball/7ee4cb2b473de3bf5cd2a5ada95a2f363b4a4532",
+                "reference": "7ee4cb2b473de3bf5cd2a5ada95a2f363b4a4532",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Client library for Google APIs",
+            "homepage": "http://developers.google.com/api-client-library/php",
+            "keywords": [
+                "google"
+            ],
+            "time": "2015-07-10 10:32:54"
+        },
+        {
             "name": "imagine/imagine",
             "version": "v0.4.1",
             "source": {
@@ -2454,12 +2497,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "328d66f13fc62018192a7d38281e6bbc09f5b798"
+                "reference": "c5b08724f4b11fd90a2c36a64d4868bcee7ba6a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/328d66f13fc62018192a7d38281e6bbc09f5b798",
-                "reference": "328d66f13fc62018192a7d38281e6bbc09f5b798",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c5b08724f4b11fd90a2c36a64d4868bcee7ba6a4",
+                "reference": "c5b08724f4b11fd90a2c36a64d4868bcee7ba6a4",
                 "shasum": ""
             },
             "require": {
@@ -2522,7 +2565,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-07-13 10:06:01"
+            "time": "2015-07-14 09:27:59"
         },
         {
             "name": "nelmio/api-doc-bundle",
@@ -4485,12 +4528,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/AdminBundle.git",
-                "reference": "a9935590f5d267e2181aeb5b4cc9d0afb5bbd48f"
+                "reference": "81b20869a2bc5d74202784dd7e272c09736e1526"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/a9935590f5d267e2181aeb5b4cc9d0afb5bbd48f",
-                "reference": "a9935590f5d267e2181aeb5b4cc9d0afb5bbd48f",
+                "url": "https://api.github.com/repos/rzproject/AdminBundle/zipball/81b20869a2bc5d74202784dd7e272c09736e1526",
+                "reference": "81b20869a2bc5d74202784dd7e272c09736e1526",
                 "shasum": ""
             },
             "require": {
@@ -4499,7 +4542,8 @@
                 "rmzamora/bootstrap-bundle": "~2.3.1",
                 "rmzamora/jquery-bundle": ">=1.11.0,<2.0",
                 "rz/block-bundle": "1.2.1.*",
-                "rz/field-type-bundle": "1.1.0.*"
+                "rz/field-type-bundle": "1.1.0.*",
+                "rz/google-api-client-bundle": "1.0.*"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -4530,7 +4574,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-07-09 03:18:23"
+            "time": "2015-07-15 03:54:43"
         },
         {
             "name": "rz/block-bundle",
@@ -4779,6 +4823,61 @@
             "time": "2015-07-09 03:12:39"
         },
         {
+            "name": "rz/google-api-client-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rzproject/GoogleAPIClientBundle.git",
+                "reference": "03fd1c7771638c461d2b23406813ffbd0dce327f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rzproject/GoogleAPIClientBundle/zipball/03fd1c7771638c461d2b23406813ffbd0dce327f",
+                "reference": "03fd1c7771638c461d2b23406813ffbd0dce327f",
+                "shasum": ""
+            },
+            "require": {
+                "google/apiclient": "1.*",
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": "2.*",
+                "symfony/yaml": "2.*"
+            },
+            "require-dev": {
+                "mockery/mockery": "*"
+            },
+            "suggest": {
+                "rz/block-bundle": "1.2.1.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rz\\GoogleAPIClientBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mell M. Zamora",
+                    "email": "mell@rzproject.org",
+                    "homepage": "http://www.rzproject.org"
+                }
+            ],
+            "description": "A Symfony2 Wrapper for the Google APIs Client Library for PHP",
+            "homepage": "http://github.com/rzproject/RzGoogleAPIClientBundle",
+            "keywords": [
+                "google api"
+            ],
+            "time": "2015-07-15 05:50:18"
+        },
+        {
             "name": "rz/media-bundle",
             "version": "1.2.1.x-dev",
             "source": {
@@ -4944,18 +5043,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/PageBundle.git",
-                "reference": "220b25cee596900a4e13bbe188dfd3a2ca2f1369"
+                "reference": "641549b5e36a2536333197d76e1b2be2314acbee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/220b25cee596900a4e13bbe188dfd3a2ca2f1369",
-                "reference": "220b25cee596900a4e13bbe188dfd3a2ca2f1369",
+                "url": "https://api.github.com/repos/rzproject/PageBundle/zipball/641549b5e36a2536333197d76e1b2be2314acbee",
+                "reference": "641549b5e36a2536333197d76e1b2be2314acbee",
                 "shasum": ""
             },
             "require": {
                 "rmzamora/page-bundle": "2.4.1.*",
                 "rz/admin-bundle": "1.1.1.*",
-                "rz/doctrine-orm-admin-bundle": "1.1.0.*"
+                "rz/doctrine-orm-admin-bundle": "1.1.0.*",
+                "rz/google-api-client-bundle": "1.0.*"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -4986,7 +5086,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-07-09 03:03:41"
+            "time": "2015-07-15 04:53:45"
         },
         {
             "name": "rz/search-bundle",
@@ -8261,6 +8361,62 @@
                 "xunit"
             ],
             "time": "2015-07-13 11:33:07"
+        },
+        {
+            "name": "phpunit/phpunit-mock-objects",
+            "version": "2.3.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
+                "reference": "18dfbcb81d05e2296c0bcddd4db96cade75e6f42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/18dfbcb81d05e2296c0bcddd4db96cade75e6f42",
+                "reference": "18dfbcb81d05e2296c0bcddd4db96cade75e6f42",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/instantiator": "~1.0,>=1.0.2",
+                "php": ">=5.3.3",
+                "phpunit/php-text-template": "~1.2",
+                "sebastian/exporter": "~1.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "suggest": {
+                "ext-soap": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Mock Object library for PHPUnit",
+            "homepage": "https://github.com/sebastianbergmann/phpunit-mock-objects/",
+            "keywords": [
+                "mock",
+                "xunit"
+            ],
+            "time": "2015-07-10 06:54:24"
         },
         {
             "name": "sebastian/comparator",

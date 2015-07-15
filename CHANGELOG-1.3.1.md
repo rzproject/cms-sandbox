@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+--------------
+### 2015-07-15
+--------------
+###### [cms-sandbox] ######
+* added [GoogleAPIClientBundle](https://github.com/rzproject/GoogleAPIClientBundle) as a core component for cms-sandbox. Usage and screehsots can be found here: [README](https://github.com/rzproject/GoogleAPIClientBundle)
+
 ### 2015-07-14
 --------------
 ###### [cms-sandbox] ######

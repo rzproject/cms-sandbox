@@ -1,0 +1,45 @@
+rz_google_api_client:
+  settings:
+    google_services:
+      ################
+      # Sample Analytics Code replace with you own tracking code
+      ################
+      analytics:
+        enabled: true
+        tracking_id: UA-XXXXXXXX-X
+        tracker_name: __rz_gaTracker
+      ################
+      # Sample GTM Code replace with you own tracking code
+      ################
+      tag_manager:
+        enabled: true
+        gtm_id: GTM-XXXXXX
+
+    ################
+    # Google Client API
+    ################
+    client_api:
+      ################
+      # Google Client API Public API
+      ################
+      public:
+        app_name: rz-cms-XXXXXX
+        api_key: ~
+        site_name: rz-cms
+      ################
+      # Google Client API Service Account
+      ################
+      service:
+        app_name: ~
+        client_id: ~
+        client_email: ~
+        certificate_fingerprint: ~
+        certificate_key: %kernel.root_dir%/config/rmzamora/rz/google_api_key/YOUR_KEY_HERE.json
+        certificate_p12: %kernel.root_dir%/config/rmzamora/rz/google_api_key/YOUR_KEY_HERE.p12
+        certificate_password: XXXXXXXX
+      ################
+      # Google Client API Web Application
+      ################
+      web_app:
+        client_id: ~
+        client_secret: ~

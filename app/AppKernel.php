@@ -134,6 +134,7 @@ class AppKernel extends Kernel
             new Rz\SeoBundle\RzSeoBundle(),
             new Rz\TimelineBundle\RzTimelineBundle(),
             new Rz\SearchBundle\RzSearchBundle(),
+            new Rz\GoogleAPIClientBundle\RzGoogleAPIClientBundle(),
 
             #CCDN Security
             new CCDNUser\SecurityBundle\CCDNUserSecurityBundle(),
