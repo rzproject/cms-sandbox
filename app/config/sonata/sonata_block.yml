@@ -105,6 +105,10 @@ sonata_block:
         rz_classification.block.category:
             cache: sonata.cache.mongo
 
+        #GOOGLE ANALYTICS
+        rz_google_api_client.block.admin_ga_site_traffic:
+            contexts: [admin]
+
     container:
         types: [sonata.block.service.container, sonata.page.block.container]
         templates:  { 'SonataPageBundle:Block:block_container.html.twig': 'SonataPageBundle default template', 'SonataSeoBundle:Block:block_social_container.html.twig': 'SonataSeoBundle (to contain social buttons)'}

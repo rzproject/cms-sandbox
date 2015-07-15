@@ -4828,12 +4828,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/GoogleAPIClientBundle.git",
-                "reference": "08da47509b01a7c7ba92cea25f70d2fe6539000e"
+                "reference": "03fd1c7771638c461d2b23406813ffbd0dce327f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/GoogleAPIClientBundle/zipball/08da47509b01a7c7ba92cea25f70d2fe6539000e",
-                "reference": "08da47509b01a7c7ba92cea25f70d2fe6539000e",
+                "url": "https://api.github.com/repos/rzproject/GoogleAPIClientBundle/zipball/03fd1c7771638c461d2b23406813ffbd0dce327f",
+                "reference": "03fd1c7771638c461d2b23406813ffbd0dce327f",
                 "shasum": ""
             },
             "require": {
@@ -4875,7 +4875,7 @@
             "keywords": [
                 "google api"
             ],
-            "time": "2015-07-15 05:18:03"
+            "time": "2015-07-15 05:50:18"
         },
         {
             "name": "rz/media-bundle",
