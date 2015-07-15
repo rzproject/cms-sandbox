@@ -41,6 +41,7 @@ imports:
     - { resource: rmzamora/rz/rz_block.yml }
     - { resource: rmzamora/rz/rz_formatter.yml }
     - { resource: rmzamora/rz/rz_media.yml }
+    - { resource: rmzamora/rz/rz_google_api_client.yml }
 
     #HWI
     - { resource: rmzamora/hwi.yml }
