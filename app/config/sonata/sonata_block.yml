@@ -53,6 +53,8 @@ sonata_block:
             cache: sonata.cache.mongo
         rz_news.block.post_by_category:
             cache: sonata.cache.mongo
+        rz_news.block.all_time_popular_posts:
+            cache: sonata.cache.mongo
         gmi_recommendation.block.post_by_recommendation:
             cache: sonata.cache.mongo
 
@@ -66,6 +68,16 @@ sonata_block:
             contexts: [user]
         sonata.user.block.menu:
             contexts: [user]
+        rz.user.block.profile_gender_graph:
+            contexts: [admin]
+        rz.user.block.profile_age_graph:
+            contexts: [admin]
+        rz.user.block.user_authentication_logs_graph:
+            contexts: [admin]
+        rz.user.block.user_registration_graph:
+            contexts: [admin]
+        rz_news.block.piwik_widget:
+            contexts: [admin]
 
         # SeoBundle's Blocks
         sonata.seo.block.email.share_button:
@@ -93,6 +105,9 @@ sonata_block:
         # classification
         rz_classification.block.category:
             cache: sonata.cache.mongo
+
+        rz_google_api_client.block.admin_ga_site_traffic:
+            contexts: [admin]
 
     container:
         types: [sonata.block.service.container, sonata.page.block.container]

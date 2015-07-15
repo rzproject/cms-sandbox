@@ -38,6 +38,7 @@ sonata_block:
         rz_news.block.featured_post:
         rz_news.block.tags:
         rz_news.block.post_by_category:
+        rz_news.block.all_time_popular_posts:
         gmi_recommendation.block.post_by_recommendation:
 
         # TimelineBundle's Blocks
@@ -50,6 +51,16 @@ sonata_block:
             contexts: [user]
         sonata.user.block.menu:
             contexts: [user]
+        rz.user.block.profile_gender_graph:
+            contexts: [admin]
+        rz.user.block.profile_age_graph:
+            contexts: [admin]
+        rz.user.block.user_authentication_logs_graph:
+            contexts: [admin]
+        rz.user.block.user_registration_graph:
+            contexts: [admin]
+        rz_news.block.piwik_widget:
+            contexts: [admin]
 
         # SeoBundle's Blocks
         sonata.seo.block.email.share_button:
@@ -75,6 +86,9 @@ sonata_block:
 
         # Classification
         rz_classification.block.category:
+
+        rz_google_api_client.block.admin_ga_site_traffic:
+            contexts: [admin]
 
     container:
         types: [sonata.block.service.container, sonata.page.block.container]

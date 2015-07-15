@@ -135,6 +135,7 @@ class AppKernel extends Kernel
             new Rz\TimelineBundle\RzTimelineBundle(),
             new Rz\SearchBundle\RzSearchBundle(),
             new Rz\BlockBundle\RzBlockBundle(),
+            new Rz\GoogleAPIClientBundle\RzGoogleAPIClientBundle(),
 
             #CCDN Security
             new CCDNUser\SecurityBundle\CCDNUserSecurityBundle(),
@@ -144,8 +145,6 @@ class AppKernel extends Kernel
             new GMI\Bundle\RecommendationBundle\GMIRecommendationBundle(),
             new Application\GMI\Bundle\RecommendationBundle\ApplicationGMIRecommendationBundle(),
 
-	        #PIWIK
-	        new Webfactory\Bundle\PiwikBundle\WebfactoryPiwikBundle(),
 	        #PREDICTION IO
 	        new Endroid\Bundle\PredictionIOBundle\EndroidPredictionIOBundle(),
         );

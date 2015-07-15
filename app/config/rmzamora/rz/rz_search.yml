@@ -75,9 +75,17 @@ rz_search:
                 label: Sonata News
                 model_class: Application\Sonata\NewsBundle\Entity\Post
                 model_manager: sonata.news.manager.post
+                # media manager to generate image link
+                media_manager: sonata.media.manager.media
                 route_generator: rz_news.permalink.post
                 model_identifier: sonata.news.post
                 route: rz_news_view
+                ###############
+                # media settings
+                ###############
+                media:
+                  #format defined on sonata_media.yml
+                  formats:
 
                 ###############
                 # Templates

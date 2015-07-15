@@ -1,0 +1,27 @@
+rz_google_api_client:
+  settings:
+    google_services:
+      analytics:
+        enabled: true
+        tracking_id: UA-40447986-1
+        tracker_name: __cms_gaTracker
+      tag_manager:
+        enabled: true
+        gtm_id: GTM-NLNRH9
+    client_api:
+        enabled: true
+        public:
+          app_name: rz-cms-100207
+          api_key: AIzaSyBhblJ-i2gd85Ept903SlyvQXYAdYlP25U
+          site_name: Manifesto
+        service:
+          app_name: manifesto-1006
+          client_id: 226843909179-7useh406jjth20iloa26n4mq7cg6irkp.apps.googleusercontent.com
+          client_email: 226843909179-7useh406jjth20iloa26n4mq7cg6irkp@developer.gserviceaccount.com
+          certificate_fingerprint: 554b2ed488b8c47ca6f14b1884351a466ddf3ff5
+          certificate_key: %kernel.root_dir%/config/rmzamora/rz/google_api_key/cms-sandbox-google-api-d92445772711.json
+          certificate_p12: %kernel.root_dir%/config/rmzamora/rz/google_api_key/cms-sandbox-google-api-554b2ed488b8.p12
+          certificate_password: notasecret
+        web_app:
+          client_id: 226843909179-27cnvhh3heovpe94rda3d9nlph5aro63.apps.googleusercontent.com
+          client_secret: 1SVFYxNLXUUH7K5j9Rj61ACG

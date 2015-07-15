@@ -31,7 +31,7 @@ rz_classification:
             path: RzClassificationBundle:Block:category_ajax_pager.html.twig
 
   #############################
-  # Category and Tag Providers
+  # Category, Collection and Tag Providers
   #############################
   providers: # extension to add fields on category & tag module
     category:
@@ -148,3 +148,11 @@ rz_classification:
                   default:
                       path: RzNewsBundle:Post:tag_list_default_ajax_pager.html.twig
                       name: Default Ajax Pager
+
+    collection:
+      default_context: default
+      contexts:
+          default:  # the default context is mandatory
+              provider: rz_classification.provider.collection.default
+          rz_user_age_demographics:
+              provider: rz.user.provider.collection.age_demographics
