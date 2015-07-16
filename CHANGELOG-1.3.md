@@ -2,6 +2,25 @@ CHANGELOG
 =========
 
 --------------
+### 2015-07-16
+--------------
+###### [RzMediaBundle](https://github.com/rzproject/MediaBundle/commits/1.2) ######
+* CKEditor Media Browser Pagination Fix
+* added admin templates to allow override via config
+
+###### [RzUserBundle](https://github.com/rzproject/UserBundle/commits/1.1) ######
+* added admin templates to allow override via config
+
+###### [RzPageBundle](https://github.com/rzproject/PageBundle/commits/1.2) ######
+* added admin templates to allow override via config
+
+###### [RzNewsBundle](https://github.com/rzproject/NewsBundle/commits/1.4) ######
+* added admin templates to allow override via config
+
+###### [RzClassificationBundle](https://github.com/rzproject/ClassificationBundle/commits/1.4) ######
+* added admin templates to allow override via config
+
+--------------
 ### 2015-07-15
 --------------
 ###### [cms-sandbox] ######
