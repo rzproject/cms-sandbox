@@ -5,9 +5,10 @@ CHANGELOG
 ### 2015-07-21
 --------------
 ###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/c08e4ae3644ee66ec7188b8338bcf9464e741297) ######
-* Upgraded to 2.7.* LTS since Symfony 2.6 is a stable release whose support will end in January 2016. 
-
-
+* Upgraded to 2.7.* LTS since Symfony 2.6 is a stable release whose support will end in January 2016.
+ 
+###### [RzMediaBundle](https://github.com/rzproject/MediaBundle/commits/1.2.1) ######
+ * CKEditor Media Browser Pagination Javascript Error fix
 
 --------------
 ### 2015-07-16

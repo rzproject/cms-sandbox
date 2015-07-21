@@ -4883,12 +4883,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/MediaBundle.git",
-                "reference": "3fd0ffd28b025e4875128038a4c97e545491b1a1"
+                "reference": "23e047ac732307516d8ef3e13f38efe7d05aa0a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/MediaBundle/zipball/3fd0ffd28b025e4875128038a4c97e545491b1a1",
-                "reference": "3fd0ffd28b025e4875128038a4c97e545491b1a1",
+                "url": "https://api.github.com/repos/rzproject/MediaBundle/zipball/23e047ac732307516d8ef3e13f38efe7d05aa0a8",
+                "reference": "23e047ac732307516d8ef3e13f38efe7d05aa0a8",
                 "shasum": ""
             },
             "require": {
@@ -4929,7 +4929,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-07-16 03:07:07"
+            "time": "2015-07-21 05:42:30"
         },
         {
             "name": "rz/news-bundle",
