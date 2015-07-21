@@ -2863,12 +2863,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataAdminBundle.git",
-                "reference": "1cc5f9d93cd27f1ad77e1c8e8c41201a2d4225e1"
+                "reference": "e4dc8db082de97416b7f56e8a73e9f9ed9e704b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/1cc5f9d93cd27f1ad77e1c8e8c41201a2d4225e1",
-                "reference": "1cc5f9d93cd27f1ad77e1c8e8c41201a2d4225e1",
+                "url": "https://api.github.com/repos/rmzamora/SonataAdminBundle/zipball/e4dc8db082de97416b7f56e8a73e9f9ed9e704b3",
+                "reference": "e4dc8db082de97416b7f56e8a73e9f9ed9e704b3",
                 "shasum": ""
             },
             "require": {
@@ -2946,7 +2946,7 @@
                 "rmzamora fork",
                 "sonata"
             ],
-            "time": "2015-07-08 08:38:47"
+            "time": "2015-07-21 04:51:50"
         },
         {
             "name": "rmzamora/block-bundle",
@@ -2954,12 +2954,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataBlockBundle.git",
-                "reference": "fc09a04fa9fc8be2a3820aabc4a8910e00c62cdd"
+                "reference": "dbf46c85c63422a83c0912111523e512c20d1f8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataBlockBundle/zipball/fc09a04fa9fc8be2a3820aabc4a8910e00c62cdd",
-                "reference": "fc09a04fa9fc8be2a3820aabc4a8910e00c62cdd",
+                "url": "https://api.github.com/repos/rmzamora/SonataBlockBundle/zipball/dbf46c85c63422a83c0912111523e512c20d1f8f",
+                "reference": "dbf46c85c63422a83c0912111523e512c20d1f8f",
                 "shasum": ""
             },
             "require": {
@@ -3017,7 +3017,7 @@
                 "rmzamora forked",
                 "sonata"
             ],
-            "time": "2015-07-08 09:03:11"
+            "time": "2015-07-21 04:53:45"
         },
         {
             "name": "rmzamora/bootstrap-bundle",
