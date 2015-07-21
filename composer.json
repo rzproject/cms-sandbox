@@ -12,7 +12,7 @@
         "twig/twig": "~1.12",
         "twig/extensions": "~1.0",
 
-        "symfony/symfony": "2.6.10",
+        "symfony/symfony": "2.7.2",
         "symfony/assetic-bundle": "~2.4",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
@@ -79,7 +79,7 @@
         "rz/timeline-bundle": "1.1.*",
         "rz/search-bundle": "1.1.*",
         "rz/oauth-bundle": "1.2.*",
-        "rz/user-security-bundle": "1.1.*",
+        "rz/user-security-bundle": "1.1.2.*",
 
         "liip/imagine-bundle": "0.9.*@stable",
 
