@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4cba5d1e103f34a3d138df030688f721",
+    "hash": "ba774bf7349db63f0d115477a70f9233",
     "packages": [
         {
             "name": "beberlei/DoctrineExtensions",
@@ -1456,12 +1456,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "293c3609e57f7990035cb3352cd728db092d978a"
+                "reference": "5594929b5d9d31871cace6d3d7cb940a0010161c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/293c3609e57f7990035cb3352cd728db092d978a",
-                "reference": "293c3609e57f7990035cb3352cd728db092d978a",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/5594929b5d9d31871cace6d3d7cb940a0010161c",
+                "reference": "5594929b5d9d31871cace6d3d7cb940a0010161c",
                 "shasum": ""
             },
             "require": {
@@ -1500,7 +1500,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-07-20 12:54:01"
+            "time": "2015-07-21 12:25:36"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -2001,16 +2001,16 @@
         },
         {
             "name": "knplabs/gaufrette",
-            "version": "dev-master",
+            "version": "v0.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/Gaufrette.git",
-                "reference": "9d52413665284f9c96e0cef399fc14e68ac0aa5a"
+                "reference": "4c73bb66ff41d7c9beb57372a82047cf5dcc6d1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/9d52413665284f9c96e0cef399fc14e68ac0aa5a",
-                "reference": "9d52413665284f9c96e0cef399fc14e68ac0aa5a",
+                "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/4c73bb66ff41d7c9beb57372a82047cf5dcc6d1c",
+                "reference": "4c73bb66ff41d7c9beb57372a82047cf5dcc6d1c",
                 "shasum": ""
             },
             "require": {
@@ -2081,7 +2081,7 @@
                 "filesystem",
                 "media"
             ],
-            "time": "2015-05-26 08:25:40"
+            "time": "2015-03-09 08:06:57"
         },
         {
             "name": "knplabs/knp-markdown-bundle",
@@ -6706,12 +6706,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/videlalvaro/php-amqplib.git",
-                "reference": "4403cd9458ea248218393733d9e6461eb780755e"
+                "reference": "cce38fe1947a79b70cf54f88efec17563f0fa983"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/videlalvaro/php-amqplib/zipball/4403cd9458ea248218393733d9e6461eb780755e",
-                "reference": "4403cd9458ea248218393733d9e6461eb780755e",
+                "url": "https://api.github.com/repos/videlalvaro/php-amqplib/zipball/cce38fe1947a79b70cf54f88efec17563f0fa983",
+                "reference": "cce38fe1947a79b70cf54f88efec17563f0fa983",
                 "shasum": ""
             },
             "require": {
@@ -6752,7 +6752,7 @@
                 "queue",
                 "rabbitmq"
             ],
-            "time": "2015-06-29 19:09:28"
+            "time": "2015-07-23 22:40:45"
         },
         {
             "name": "white-october/pagerfanta-bundle",
@@ -7068,12 +7068,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-stdlib.git",
-                "reference": "378d623b3513bdb4457c4dd0662faae63b524570"
+                "reference": "297c69931ebc0d17a454656fd3b63e3fb0098f1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/378d623b3513bdb4457c4dd0662faae63b524570",
-                "reference": "378d623b3513bdb4457c4dd0662faae63b524570",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/297c69931ebc0d17a454656fd3b63e3fb0098f1d",
+                "reference": "297c69931ebc0d17a454656fd3b63e3fb0098f1d",
                 "shasum": ""
             },
             "require": {
@@ -7098,8 +7098,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5-dev",
-                    "dev-develop": "2.6-dev"
+                    "dev-master": "2.6-dev",
+                    "dev-develop": "2.7-dev"
                 }
             },
             "autoload": {
@@ -7116,7 +7116,7 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2015-06-05 09:18:13"
+            "time": "2015-07-21 17:11:52"
         }
     ],
     "packages-dev": [
@@ -7535,12 +7535,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/MinkSelenium2Driver.git",
-                "reference": "7c96892dfce83b9bbf1f521262c2d869d618aea7"
+                "reference": "3472eb89a0825e25ed83ec5b8f268702b1221c04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/7c96892dfce83b9bbf1f521262c2d869d618aea7",
-                "reference": "7c96892dfce83b9bbf1f521262c2d869d618aea7",
+                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/3472eb89a0825e25ed83ec5b8f268702b1221c04",
+                "reference": "3472eb89a0825e25ed83ec5b8f268702b1221c04",
                 "shasum": ""
             },
             "require": {
@@ -7585,7 +7585,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2015-04-02 11:42:30"
+            "time": "2015-07-22 16:57:28"
         },
         {
             "name": "doctrine/instantiator",
@@ -8801,7 +8801,6 @@
         "doctrine/doctrine-migrations-bundle": 20,
         "doctrine/migrations": 20,
         "doctrine/data-fixtures": 20,
-        "knplabs/gaufrette": 20,
         "friendsofsymfony/comment-bundle": 20,
         "rmzamora/cache": 20,
         "rmzamora/bootstrap-bundle": 20,
