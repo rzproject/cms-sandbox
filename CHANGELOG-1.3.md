@@ -2,6 +2,12 @@ CHANGELOG
 =========
 
 --------------
+### 2015-07-24
+--------------
+###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/6793e2edaf3974e0aab6305c263da7764790b9ac) ######
+* Updated composer dependency 
+
+--------------
 ### 2015-07-21
 --------------
 ###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/7c0ab15f157d2d06c5982cdfd72e07c62ee50260) ######
