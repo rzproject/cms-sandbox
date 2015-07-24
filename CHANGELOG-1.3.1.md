@@ -2,6 +2,12 @@ CHANGELOG
 =========
 
 --------------
+### 2015-07-24
+--------------
+###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/10591498eb5c69d4490a390476efe725806e0f36) ######
+* updated gaufrette version
+
+--------------
 ### 2015-07-21
 --------------
 ###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/c08e4ae3644ee66ec7188b8338bcf9464e741297) ######
