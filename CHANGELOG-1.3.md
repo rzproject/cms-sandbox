@@ -2,6 +2,12 @@ CHANGELOG
 =========
 
 --------------
+### 2015-08-10
+--------------
+###### [RzNewsBundle](https://github.com/rzproject/NewsBundle/commit/dda5f2d14ea211678629f8c1cbe9ed6bf2db4d83) ######
+* Added ads provider for news. This will allow adding of ads pages as News. User is responsible for filtering frontend content.
+
+--------------
 ### 2015-07-24
 --------------
 ###### [cms-sandbox](https://github.com/rzproject/cms-sandbox/commit/6793e2edaf3974e0aab6305c263da7764790b9ac) ######

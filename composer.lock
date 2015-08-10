@@ -4947,12 +4947,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rzproject/NewsBundle.git",
-                "reference": "0f5a0b85df3e970c69f60e6ae0b1b939f88e4a63"
+                "reference": "a9fcbbbaca01e9877a938d7f9d535a9a63d068f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/0f5a0b85df3e970c69f60e6ae0b1b939f88e4a63",
-                "reference": "0f5a0b85df3e970c69f60e6ae0b1b939f88e4a63",
+                "url": "https://api.github.com/repos/rzproject/NewsBundle/zipball/a9fcbbbaca01e9877a938d7f9d535a9a63d068f9",
+                "reference": "a9fcbbbaca01e9877a938d7f9d535a9a63d068f9",
                 "shasum": ""
             },
             "require": {
@@ -4996,7 +4996,7 @@
                 "Sonata Project",
                 "Symfony2"
             ],
-            "time": "2015-08-07 02:10:24"
+            "time": "2015-08-10 03:20:14"
         },
         {
             "name": "rz/oauth-bundle",
