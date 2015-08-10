@@ -92,3 +92,10 @@ rz_news:
               Event:
                   path: RzNewsBundle:Post:view_event.html.twig
                   name: Event
+      ads:
+          provider: rz_news.provider.ads
+          default_template: default
+          templates:
+              default:
+                  path: RzNewsBundle:Post:view.html.twig
+                  name: Default
