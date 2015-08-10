@@ -161,6 +161,15 @@ class LoadClassificationData extends AbstractFixture implements ContainerAwareIn
         $this->getCollectionManager()->save($collection);
         $this->addReference('news-classification-collection-event', $collection);
 
+        // Ads Collection
+        $collection = $this->getCollectionManager()->create();
+        $collection->setEnabled(true);
+        $collection->setName('Ads');
+        $collection->setContext($this->getReference('news-classification-context'));
+        $category->setSettings(array('template'=>'RzNewsBundle:Post:collection_list_ads.html.twig'));
+        $this->getCollectionManager()->save($collection);
+        $this->addReference('news-classification-collection-ads', $collection);
+
     }
 
     /**
