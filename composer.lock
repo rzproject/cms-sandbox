@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9ca9240a48ae3c1e9b0698c1a7d73f84",
+    "hash": "7ee384254a8d7606fc997bfe3ea82a70",
     "packages": [
         {
             "name": "beberlei/DoctrineExtensions",
@@ -979,12 +979,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/migrations.git",
-                "reference": "c030c0ca811ff2a03615a2608f895bd89ce48b93"
+                "reference": "27edc388296a3cffc7c30942a7613abb4998701c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/migrations/zipball/c030c0ca811ff2a03615a2608f895bd89ce48b93",
-                "reference": "c030c0ca811ff2a03615a2608f895bd89ce48b93",
+                "url": "https://api.github.com/repos/doctrine/migrations/zipball/27edc388296a3cffc7c30942a7613abb4998701c",
+                "reference": "27edc388296a3cffc7c30942a7613abb4998701c",
                 "shasum": ""
             },
             "require": {
@@ -1038,7 +1038,7 @@
                 "database",
                 "migrations"
             ],
-            "time": "2015-08-18 14:11:04"
+            "time": "2015-08-19 08:37:47"
         },
         {
             "name": "doctrine/orm",
@@ -1221,84 +1221,6 @@
                 "json"
             ],
             "time": "2015-08-14 09:32:58"
-        },
-        {
-            "name": "friendsofsymfony/comment-bundle",
-            "version": "dev-master",
-            "target-dir": "FOS/CommentBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfSymfony/FOSCommentBundle.git",
-                "reference": "daa566de7921c0db28c35ce53442a204d0c6fa73"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSCommentBundle/zipball/daa566de7921c0db28c35ce53442a204d0c6fa73",
-                "reference": "daa566de7921c0db28c35ce53442a204d0c6fa73",
-                "shasum": ""
-            },
-            "require": {
-                "friendsofsymfony/rest-bundle": "~1.0",
-                "jms/serializer-bundle": "~0.11",
-                "php": ">=5.3.2",
-                "symfony/form": "~2.3",
-                "symfony/framework-bundle": "~2.3",
-                "symfony/security-bundle": "~2.3",
-                "symfony/twig-bundle": "~2.3",
-                "symfony/validator": "~2.3",
-                "symfony/yaml": "~2.3"
-            },
-            "require-dev": {
-                "doctrine/doctrine-bundle": "~1.1",
-                "doctrine/orm": "~2.3",
-                "friendsofsymfony/user-bundle": "~1.1",
-                "ornicar/akismet-bundle": "dev-master",
-                "symfony/assetic-bundle": "~2.3",
-                "symfony/browser-kit": "~2.3",
-                "symfony/css-selector": "~2.3",
-                "symfony/expression-language": "~2.4"
-            },
-            "suggest": {
-                "friendsofsymfony/user-bundle": "Allows for user integration.",
-                "ornicar/akismet-bundle": "Integrate Akismet for spamdetection."
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "FOS\\CommentBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tim Nagel",
-                    "email": "tim@nagel.com.au"
-                },
-                {
-                    "name": "FriendsOfSymfony Community",
-                    "homepage": "https://github.com/friendsofsymfony/FOSCommentBundle/contributors"
-                },
-                {
-                    "name": "Alexander Mols",
-                    "email": "iam.asm89@gmail.com"
-                }
-            ],
-            "description": "This Bundle provides threaded comment functionality for Symfony2 applications",
-            "homepage": "http://friendsofsymfony.github.com",
-            "keywords": [
-                "comment",
-                "forum",
-                "threads"
-            ],
-            "time": "2015-08-03 14:29:49"
         },
         {
             "name": "friendsofsymfony/rest-bundle",
@@ -3371,16 +3293,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataCommentBundle.git",
-                "reference": "4b8f4ca33d80f04a4417a91efcaa092b94ad0f32"
+                "reference": "52d4c4f53e3e0ec0d52dc598fabbdb6fbcd76015"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataCommentBundle/zipball/4b8f4ca33d80f04a4417a91efcaa092b94ad0f32",
-                "reference": "4b8f4ca33d80f04a4417a91efcaa092b94ad0f32",
+                "url": "https://api.github.com/repos/rmzamora/SonataCommentBundle/zipball/52d4c4f53e3e0ec0d52dc598fabbdb6fbcd76015",
+                "reference": "52d4c4f53e3e0ec0d52dc598fabbdb6fbcd76015",
                 "shasum": ""
             },
             "require": {
-                "friendsofsymfony/comment-bundle": "~2.0@dev",
+                "rmzamora/fos-comment-bundle": "~2.0@dev",
                 "sonata-project/core-bundle": "~2.2",
                 "sonata-project/doctrine-extensions": "~1.0",
                 "sonata-project/easy-extends-bundle": "~2.1",
@@ -3436,7 +3358,7 @@
                 "rmzamora fork",
                 "sonata"
             ],
-            "time": "2015-08-10 02:03:20"
+            "time": "2015-08-19 08:36:40"
         },
         {
             "name": "rmzamora/doctrine-orm-admin-bundle",
@@ -3642,6 +3564,88 @@
                 "sonata"
             ],
             "time": "2015-08-10 02:02:52"
+        },
+        {
+            "name": "rmzamora/fos-comment-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmzamora/FOSCommentBundle.git",
+                "reference": "76d32e88203f0d916af097b6ed47ffbd25cfb7cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rmzamora/FOSCommentBundle/zipball/76d32e88203f0d916af097b6ed47ffbd25cfb7cd",
+                "reference": "76d32e88203f0d916af097b6ed47ffbd25cfb7cd",
+                "shasum": ""
+            },
+            "require": {
+                "friendsofsymfony/rest-bundle": "~1.0",
+                "jms/serializer-bundle": "~0.11",
+                "php": ">=5.3.2",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/security-bundle": "~2.3",
+                "symfony/twig-bundle": "~2.3",
+                "symfony/validator": "~2.3",
+                "symfony/yaml": "~2.3"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "~1.1",
+                "doctrine/orm": "~2.3",
+                "friendsofsymfony/user-bundle": "~1.1",
+                "ornicar/akismet-bundle": "dev-master",
+                "symfony/assetic-bundle": "~2.3",
+                "symfony/browser-kit": "~2.3",
+                "symfony/css-selector": "~2.3",
+                "symfony/expression-language": "~2.4"
+            },
+            "suggest": {
+                "friendsofsymfony/user-bundle": "Allows for user integration.",
+                "ornicar/akismet-bundle": "Integrate Akismet for spamdetection."
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FOS\\CommentBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Nagel",
+                    "email": "tim@nagel.com.au"
+                },
+                {
+                    "name": "FriendsOfSymfony Community",
+                    "homepage": "https://github.com/friendsofsymfony/FOSCommentBundle/contributors"
+                },
+                {
+                    "name": "Mell M. Zamora",
+                    "email": "me@mellzamora.com",
+                    "homepage": "http://mellzamora.com"
+                },
+                {
+                    "name": "Alexander Mols",
+                    "email": "iam.asm89@gmail.com"
+                }
+            ],
+            "description": "This Bundle provides threaded comment functionality for Symfony2 applications FORK",
+            "homepage": "http://friendsofsymfony.github.com",
+            "keywords": [
+                "comment",
+                "forum",
+                "threads"
+            ],
+            "time": "2015-08-19 08:28:57"
         },
         {
             "name": "rmzamora/hwi-oauth-bundle",
@@ -8388,12 +8392,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "dccd8011934fba6fb77c7182c74926ad58c9ecd1"
+                "reference": "5e2645ad49d196e020b85598d7c97e482725786a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/dccd8011934fba6fb77c7182c74926ad58c9ecd1",
-                "reference": "dccd8011934fba6fb77c7182c74926ad58c9ecd1",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/5e2645ad49d196e020b85598d7c97e482725786a",
+                "reference": "5e2645ad49d196e020b85598d7c97e482725786a",
                 "shasum": ""
             },
             "require": {
@@ -8436,7 +8440,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-08-09 04:15:55"
+            "time": "2015-08-19 09:14:08"
         },
         {
             "name": "sebastian/comparator",
@@ -8817,7 +8821,7 @@
         "doctrine/doctrine-migrations-bundle": 20,
         "doctrine/migrations": 20,
         "doctrine/data-fixtures": 20,
-        "friendsofsymfony/comment-bundle": 20,
+        "rmzamora/fos-comment-bundle": 20,
         "rmzamora/cache": 20,
         "rmzamora/bootstrap-bundle": 20,
         "rmzamora/knp-menu-bundle": 20,
