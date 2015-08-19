@@ -979,12 +979,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/migrations.git",
-                "reference": "c36e249aa59e8be98c0ee3889fd4ae8000dd856f"
+                "reference": "c030c0ca811ff2a03615a2608f895bd89ce48b93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/migrations/zipball/c36e249aa59e8be98c0ee3889fd4ae8000dd856f",
-                "reference": "c36e249aa59e8be98c0ee3889fd4ae8000dd856f",
+                "url": "https://api.github.com/repos/doctrine/migrations/zipball/c030c0ca811ff2a03615a2608f895bd89ce48b93",
+                "reference": "c030c0ca811ff2a03615a2608f895bd89ce48b93",
                 "shasum": ""
             },
             "require": {
@@ -1038,7 +1038,7 @@
                 "database",
                 "migrations"
             ],
-            "time": "2015-08-16 06:31:15"
+            "time": "2015-08-18 14:11:04"
         },
         {
             "name": "doctrine/orm",
@@ -3300,12 +3300,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmzamora/SonataClassificationBundle.git",
-                "reference": "07cde4a143b6abe4fe23edbab906e5695491b52e"
+                "reference": "09bb80e5132d8d087706fa916524bf78f403f98a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmzamora/SonataClassificationBundle/zipball/07cde4a143b6abe4fe23edbab906e5695491b52e",
-                "reference": "07cde4a143b6abe4fe23edbab906e5695491b52e",
+                "url": "https://api.github.com/repos/rmzamora/SonataClassificationBundle/zipball/09bb80e5132d8d087706fa916524bf78f403f98a",
+                "reference": "09bb80e5132d8d087706fa916524bf78f403f98a",
                 "shasum": ""
             },
             "require": {
@@ -3364,7 +3364,7 @@
                 "tag",
                 "taxonomy"
             ],
-            "time": "2015-08-10 01:59:50"
+            "time": "2015-08-19 03:35:31"
         },
         {
             "name": "rmzamora/comment-bundle",
@@ -5530,12 +5530,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataCoreBundle.git",
-                "reference": "36ba9594fdb28689ff1335812abbc5be2832b4ce"
+                "reference": "69217cd11f1771137d3a3d7bfd4c115ed82919f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/36ba9594fdb28689ff1335812abbc5be2832b4ce",
-                "reference": "36ba9594fdb28689ff1335812abbc5be2832b4ce",
+                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/69217cd11f1771137d3a3d7bfd4c115ed82919f0",
+                "reference": "69217cd11f1771137d3a3d7bfd4c115ed82919f0",
                 "shasum": ""
             },
             "require": {
@@ -5591,7 +5591,7 @@
             "keywords": [
                 "sonata"
             ],
-            "time": "2015-08-17 14:30:18"
+            "time": "2015-08-18 14:12:45"
         },
         {
             "name": "sonata-project/datagrid-bundle",
@@ -6661,21 +6661,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "5f253f77a8dfc5e288cae52c643f6ea2abff443a"
+                "reference": "d4aa0238c358aea7f40403d3d13d0b171f0ff07a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/5f253f77a8dfc5e288cae52c643f6ea2abff443a",
-                "reference": "5f253f77a8dfc5e288cae52c643f6ea2abff443a",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d4aa0238c358aea7f40403d3d13d0b171f0ff07a",
+                "reference": "d4aa0238c358aea7f40403d3d13d0b171f0ff07a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.7"
             },
+            "require-dev": {
+                "symfony/debug": "~2.7",
+                "symfony/phpunit-bridge": "~2.7"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.20-dev"
+                    "dev-master": "1.21-dev"
                 }
             },
             "autoload": {
@@ -6710,7 +6714,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-08-17 19:42:30"
+            "time": "2015-08-18 13:28:19"
         },
         {
             "name": "videlalvaro/php-amqplib",
@@ -8264,12 +8268,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "3ab72c62e550370a6cd5dc873e1a04ab57562f5b"
+                "reference": "92d472f7ac0cd45b7f6d66cb807646432cf89f5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/3ab72c62e550370a6cd5dc873e1a04ab57562f5b",
-                "reference": "3ab72c62e550370a6cd5dc873e1a04ab57562f5b",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/92d472f7ac0cd45b7f6d66cb807646432cf89f5d",
+                "reference": "92d472f7ac0cd45b7f6d66cb807646432cf89f5d",
                 "shasum": ""
             },
             "require": {
@@ -8305,7 +8309,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-08-16 08:51:00"
+            "time": "2015-08-18 15:47:59"
         },
         {
             "name": "phpunit/phpunit",
@@ -8313,12 +8317,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "55bf1d6092b0e13a1f26bd5eaffeef3d8ad85ea7"
+                "reference": "650f482841ac845c165e47758617e773e471bbe0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/55bf1d6092b0e13a1f26bd5eaffeef3d8ad85ea7",
-                "reference": "55bf1d6092b0e13a1f26bd5eaffeef3d8ad85ea7",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/650f482841ac845c165e47758617e773e471bbe0",
+                "reference": "650f482841ac845c165e47758617e773e471bbe0",
                 "shasum": ""
             },
             "require": {
@@ -8377,7 +8381,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-15 04:21:23"
+            "time": "2015-08-18 03:58:29"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
