@@ -2088,16 +2088,15 @@
         {
             "name": "knplabs/knp-markdown-bundle",
             "version": "dev-master",
-            "target-dir": "Knp/Bundle/MarkdownBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMarkdownBundle.git",
-                "reference": "1384e0569338b42fc36942bba22077a17f28f36b"
+                "reference": "91c916f0e0e3a5a49841f28f9c6acfca87cdf692"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMarkdownBundle/zipball/1384e0569338b42fc36942bba22077a17f28f36b",
-                "reference": "1384e0569338b42fc36942bba22077a17f28f36b",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMarkdownBundle/zipball/91c916f0e0e3a5a49841f28f9c6acfca87cdf692",
+                "reference": "91c916f0e0e3a5a49841f28f9c6acfca87cdf692",
                 "shasum": ""
             },
             "require": {
@@ -2119,8 +2118,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Knp\\Bundle\\MarkdownBundle": ""
+                "psr-4": {
+                    "Knp\\Bundle\\MarkdownBundle\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2145,7 +2144,7 @@
                 "knplabs",
                 "markdown"
             ],
-            "time": "2015-06-11 23:46:58"
+            "time": "2015-08-19 08:20:02"
         },
         {
             "name": "knplabs/knp-menu",
@@ -5705,12 +5704,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataEasyExtendsBundle.git",
-                "reference": "ae15e73adf9425058de99e596c3041cdf582d822"
+                "reference": "2558ec3481a9aa23c41dc7729cc34bb9855e1edc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataEasyExtendsBundle/zipball/ae15e73adf9425058de99e596c3041cdf582d822",
-                "reference": "ae15e73adf9425058de99e596c3041cdf582d822",
+                "url": "https://api.github.com/repos/sonata-project/SonataEasyExtendsBundle/zipball/2558ec3481a9aa23c41dc7729cc34bb9855e1edc",
+                "reference": "2558ec3481a9aa23c41dc7729cc34bb9855e1edc",
                 "shasum": ""
             },
             "require": {
@@ -5756,7 +5755,7 @@
                 "Easy Extends",
                 "sonata"
             ],
-            "time": "2015-08-06 14:48:53"
+            "time": "2015-08-19 08:15:04"
         },
         {
             "name": "sonata-project/exporter",
