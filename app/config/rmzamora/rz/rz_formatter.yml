@@ -1,0 +1,9 @@
+rz_formatter:
+  # Uncomment below if you want to override the following block
+  blocks:
+    formatter:
+      class: Rz\FormatterBundle\Block\FormatterBlockService
+      templates:
+        text_block:
+          name: Default
+          path: RzFormatterBundle:Block:block_formatter.html.twig

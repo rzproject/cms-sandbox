@@ -1,0 +1,147 @@
+{%- block sonata_page_html_tag -%}
+<!DOCTYPE html>
+<html {{ sonata_seo_html_attributes() }}>
+{% endblock %}
+{% block sonata_page_head %}
+    <head {{ sonata_seo_head_attributes() }}>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{ sonata_seo_title() }}
+        {{ sonata_seo_metadatas() }}
+
+        {% block sonata_page_stylesheets %}
+            {% stylesheets
+            'bundles/rmzamorabootstrap/css/bootstrap.min.css'
+            'bundles/rmzamorabootstrap/css/bootstrap-responsive.min.css'
+            'bundles/rzpage/sonata/css/default.css'
+            filter='?yui_css'
+            %}
+            <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
+            {% endstylesheets %}
+
+            {% if sonata_page.isEditor or (app.user is not null and app.user and is_granted('ROLE_PREVIOUS_ADMIN')) %}
+                {% stylesheets
+                'bundles/rzpage/rzcms/css/rzcms-sidebar.css'
+                filter='?yui_css'
+                %}
+                <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
+                {% endstylesheets %}
+            {% endif %}
+            <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rmzamorajquery/jquery-plugins/gritter/css/gritter.css') }}" />
+            <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rzadmin/css/font.css') }}" />
+            <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rmzamorajquery/jquery-plugins/icheck/skins/all.css') }}" />
+            {{ sonata_seo_link_canonical() }}
+            {{ sonata_seo_lang_alternates() }}
+            {% block rz_page_theme_stylesheets %}{% endblock %}
+        {% endblock %}
+
+        {% block sonata_page_javascripts %}
+            <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+            <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+            {% javascripts
+            '@RmzamoraJqueryBundle/Resources/public/jquery/jquery.min.js'
+            '@RmzamoraJqueryBundle/Resources/public/jqueryui/jquery-ui.min.js'
+            '@RmzamoraBootstrapBundle/Resources/public/js/bootstrap.min.js'
+            filter='?closure'
+            %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+
+            {% if sonata_page.isEditor or (app.user is not null and app.user and is_granted('ROLE_PREVIOUS_ADMIN')) %}
+                {% javascripts
+                    '@RzPageBundle/Resources/public/rzcms/js/custom.js'
+                    filter='?closure' %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>
+                {% endjavascripts %}
+            {% endif %}
+            {% block rz_page_theme_javascripts %}{% endblock %}
+        {% endblock %}
+    </head>
+{% endblock %}
+
+
+    {% block sonata_page_body_tag %}
+    <body class="rz-cms{% if sonata_page.isEditor or (app.user is not null and app.user and is_granted('ROLE_PREVIOUS_ADMIN')) %} rz-cms-edit{% endif %}">
+    {% endblock %}
+
+        {% block sonata_page_top_bar %}
+            {% if sonata_page.isEditor or (app.user is not null and app.user and is_granted('ROLE_PREVIOUS_ADMIN')) %}
+                <div class="rzcms-admin-cmsmenu">
+                    <div class="arrow-box"><a class="switch-button closed"><div class="arrow-button-container"><i class="icon-cogs"></i></div></a></div>
+                    <h4>CMS-ADMIN</h4>
+                    <ul>
+                        {%  if app.user is not null and app.user and is_granted('ROLE_SONATA_ADMIN') %}
+                            <li><a href="{{ path('sonata_admin_dashboard') }}">{{ "header.sonata_admin_dashboard"|trans({}, 'SonataPageBundle') }}</a></li>
+                        {% endif %}
+                        {% if sonata_page.isEditor %}
+                            {% set sites = sonata_page.siteavailables %}
+
+                            {% if sites|length > 1 and site is defined %}
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ site.name }} <i class="icon-chevron-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        {% for site in sites %}
+                                            <li><a href="{{ site.url }}">{{ site.name }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                            {% endif %}
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <i class="icon-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    {% if page is defined %}
+                                        <li><a href="{{ path('admin_sonata_page_page_edit', {'id': page.id }) }}" target="_new">{{ "header.edit_page"|trans({}, 'SonataPageBundle') }}</a></li>
+                                        {% if not page.isInternal  %}
+                                        <li><a href="{{ path('admin_sonata_page_page_compose', {'id': page.id }) }}" target="_new">{{ "header.compose_page"|trans({}, 'SonataPageBundle') }}</a></li>
+                                        {% endif %}
+                                        <li><a href="{{ path('admin_sonata_page_page_snapshot_create', {'id': page.id }) }}" target="_new">{{ "header.create_snapshot"|trans({}, 'SonataPageBundle') }}</a></li>
+                                        <li class="divider"></li>
+                                    {% endif %}
+
+                                    <li><a href="{{ path('admin_sonata_page_page_list') }}" target="_new">{{ "header.view_all_pages"|trans({}, 'SonataPageBundle') }}</a></li>
+
+                                    {% if error_codes is defined and error_codes|length %}
+                                        <li class="divider"></li>
+                                        <li><a href="{{ path('sonata_page_exceptions_list') }}" target="_new">{{ "header.view_all_exceptions"|trans({}, 'SonataPageBundle') }}</a></li>
+                                    {% endif %}
+                                </ul>
+                            </li>
+                            {% if page is defined and not page.enabled %}
+                                <li class="page-disabled">Status: <span class="label label-important">{{ 'header.page_is_disabled'|trans([], 'SonataPageBundle') }}</span></li>
+                            {% endif %}
+                        {% endif %}
+                        {%  if app.user is not null and app.user and is_granted('ROLE_SONATA_ADMIN') %}
+                            <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+                        {% endif %}
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            {% endif %}
+        {% endblock %}
+
+        {% block sonata_page_container %}{% endblock %}
+
+        {% block sonata_page_asset_footer %}
+            {% if page is defined %}
+                <script>
+                    {{ page.javascript|raw }}
+                </script>
+
+                <style>
+                    {{ page.stylesheet|raw }}
+                </style>
+            {% endif %}
+            {% if not sonata_page.isEditor%}
+                <!--loaded only if not edit mode//-->
+                {{ sonata_block_include_stylesheets('screen') }}
+                {{ sonata_block_include_javascripts('screen') }}
+            {% endif %}
+        {% endblock %}
+    {% block sonata_page_body_tag_close %}
+    </body>
+    {% endblock %}
+{%- block sonata_page_html_tag_close -%}
+</html>
+{% endblock %}

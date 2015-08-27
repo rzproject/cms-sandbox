@@ -16,16 +16,8 @@ class AppKernel extends Kernel
      */
     public function __construct($environment, $debug)
     {
-        $this->environment = $environment;
-        $this->debug = (bool) $debug;
-        $this->rootDir = $this->getRootDir();
-        $this->name = $this->getName();
-
-        if ($this->debug) {
-            $this->startTime = microtime(true);
-        }
-
-        bcscale(3);
+	    bcscale(3);
+	    parent::__construct($environment, $debug);
     }
 
     protected function initializeContainer() {
@@ -47,8 +39,6 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new JMS\AopBundle\JMSAopBundle(),
-            new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
 
             // DOCTRINE
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
@@ -71,7 +61,7 @@ class AppKernel extends Kernel
             new Application\Sonata\PageBundle\ApplicationSonataPageBundle(),
 
             // NEWS
-            new Sonata\MarkItUpBundle\SonataMarkItUpBundle(),
+            #new Sonata\MarkItUpBundle\SonataMarkItUpBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new Sonata\NewsBundle\SonataNewsBundle(),
             new Rz\NewsBundle\RzNewsBundle(),
@@ -86,7 +76,6 @@ class AppKernel extends Kernel
             // SONATA CORE & HELPER BUNDLES
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
-            new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\IntlBundle\SonataIntlBundle(),
@@ -111,13 +100,11 @@ class AppKernel extends Kernel
             new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
 
             //FOS
-            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
 
             //JMS
             new JMS\SerializerBundle\JMSSerializerBundle($this),
-            new JMS\CommandBundle\JMSCommandBundle(),
 
             //Stof
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
@@ -138,7 +125,6 @@ class AppKernel extends Kernel
             new Rmzamora\SandboxInitDataBundle\RmzamoraSandboxInitDataBundle(),
             new Rmzamora\BootstrapBundle\RmzamoraBootstrapBundle(),
             new Rmzamora\JqueryBundle\RmzamoraJqueryBundle(),
-            new Rz\CodemirrorBundle\RzCodemirrorBundle(),
             new Rz\AdminBundle\RzAdminBundle(),
             new Rz\BlockBundle\RzBlockBundle(),
             new Rz\DoctrineORMAdminBundle\RzDoctrineORMAdminBundle(),
@@ -148,6 +134,7 @@ class AppKernel extends Kernel
             new Rz\SeoBundle\RzSeoBundle(),
             new Rz\TimelineBundle\RzTimelineBundle(),
             new Rz\SearchBundle\RzSearchBundle(),
+            new Rz\GoogleAPIClientBundle\RzGoogleAPIClientBundle(),
 
             #CCDN Security
             new CCDNUser\SecurityBundle\CCDNUserSecurityBundle(),
@@ -155,6 +142,7 @@ class AppKernel extends Kernel
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+            $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();

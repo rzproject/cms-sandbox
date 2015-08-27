@@ -1,0 +1,158 @@
+rz_classification:
+
+  #####################
+  # bundle configuration
+  #####################
+  enable_controllers: false # true - will convert controller to use page
+  settings:
+    category:
+      enable_category_canonical_page: true
+      category_list_max_per_page: 6
+      default_category_page_template: rzcms_blog_page_category
+
+  #####################
+  # blocks configuration
+  #####################
+  blocks:
+    category:
+        class: Rz\ClassificationBundle\Block\CategoryBlockService
+        category_pager_max_per_page: 6
+        templates:
+          category_default_block:
+            name: Category List
+            path: RzClassificationBundle:Block:category_list.html.twig
+        ajax_templates:
+          category_default_ajax:
+            name: Ajax | Category List
+            path: RzClassificationBundle:Block:category_ajax.html.twig
+        ajax_pager_templates:
+          category_default_ajax_pager:
+            name: Pager Ajax | Category List
+            path: RzClassificationBundle:Block:category_ajax_pager.html.twig
+
+  ########################################
+  # Category, Collection and Tag Providers
+  #############################
+  providers: # extension to add fields on category & tag module
+    category:
+      # default context of the category & tag used if no other context is defined mandatory
+      default_context: default
+      contexts:
+          default:  # the default context is mandatory
+              provider: rz_classification.provider.category.default
+              # news' default template will be used if no other template is defined
+              default_template: default
+              templates:
+                  default:
+                      # path of the template
+                      path: RzNewsBundle:Post:category_list_default.html.twig
+                      # name of the template for admin selection
+                      name: Default
+                      # type of template 2 types are currently supported post and category will determine if the listing will be post or sub categories
+                      type: post
+              ajax_templates:
+                  default:
+                      path: RzNewsBundle:Post:category_list_default_ajax.html.twig
+                      name: Default
+                      type: post
+              ajax_pager_templates:
+                  default:
+                      path: RzNewsBundle:Post:category_list_default_ajax_pager.html.twig
+                      name: Default
+                      type: post
+          # news context
+          news:
+              provider: rz_classification.provider.category.news
+              default_template: default
+              templates:
+                  default:
+                      path: RzNewsBundle:Post:category_list_default.html.twig
+                      name: Default
+                      type: post
+                  blog:
+                      path: RzNewsBundle:Post:category_list_blog.html.twig
+                      name: Blog
+                      type: post
+                  event:
+                      path: RzNewsBundle:Post:category_list_event.html.twig
+                      name: Event
+                      type: post
+                  category_list:
+                      path: RzNewsBundle:Category:category_list.html.twig
+                      name: Category List
+                      type: category
+              ajax_templates:
+                  default:
+                      path: RzNewsBundle:Post:category_list_default_ajax.html.twig
+                      name: Default
+                      type: post
+                  blog:
+                      path: RzNewsBundle:Post:category_list_blog_ajax.html.twig
+                      name: Blog
+                      type: post
+                  event:
+                      path: RzNewsBundle:Post:category_list_event_ajax.html.twig
+                      name: Event
+                      type: post
+                  category_list:
+                      path: RzNewsBundle:Category:category_list_ajax.html.twig
+                      name: Category List Ajax
+                      type: category
+              ajax_pager_templates:
+                  default:
+                      path: RzNewsBundle:Post:category_list_default_ajax_pager.html.twig
+                      name: Default
+                      type: post
+                  blog:
+                      path: RzNewsBundle:Post:category_list_blog_ajax_pager.html.twig
+                      name: Blog
+                      type: post
+                  event:
+                      path: RzNewsBundle:Post:category_list_event_ajax_pager.html.twig
+                      name: Event
+                      type: post
+                  category_list:
+                      path: RzNewsBundle:Category:category_list_ajax_pager.html.twig
+                      name: Category List Ajax Pager
+                      type: category
+    tag:
+      default_context: default
+      contexts:
+          default:  # the default context is mandatory
+              provider: rz_classification.provider.tag.default
+              default_template: default
+              templates:
+                  default:
+                      path: RzNewsBundle:Post:tag_list_default.html.twig
+                      name: Default
+              ajax_templates:
+                  default:
+                      path: RzNewsBundle:Post:tag_list_default_ajax.html.twig
+                      name: Default Ajax
+              ajax_pager_templates:
+                  default:
+                      path: RzNewsBundle:Post:tag_list_default_ajax_pager.html.twig
+                      name: Default Ajax Pager
+          news:
+              provider: rz_classification.provider.tag.news
+              default_template: default
+              templates:
+                  default:
+                      path: RzNewsBundle:Post:tag_list_default.html.twig
+                      name: Default
+              ajax_templates:
+                  default:
+                      path: RzNewsBundle:Post:tag_list_default_ajax.html.twig
+                      name: Default Ajax
+              ajax_pager_templates:
+                  default:
+                      path: RzNewsBundle:Post:tag_list_default_ajax_pager.html.twig
+                      name: Default Ajax Pager
+
+    collection:
+          default_context: default
+          contexts:
+              default:  # the default context is mandatory
+                  provider: rz_classification.provider.collection.default
+              rz_user_age_demographics:
+                  provider: rz.user.provider.collection.age_demographics

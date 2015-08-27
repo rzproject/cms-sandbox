@@ -5,6 +5,7 @@ cmf_routing:
             # symfony_cmf_routing_extra.dynamic_router: 200
             # enable the symfony default router with a lower priority
             sonata.page.router: 150
+            #rz_news.router: 120
             router.default: 100
 #
 # more information can be found here http://sonata-project.org/bundles/page
@@ -15,7 +16,8 @@ sonata_page:
     ignore_route_patterns:
         - (.*)admin(.*)     # ignore admin route, ie route containing 'admin'
         - ^_(.*)            # ignore symfony routes
-
+    # Generates a snapshot when a page is saved (from the admin)
+    direct_publication: false # or %kernel.debug% if you want to publish in dev mode (but not in prod)
     ignore_routes:
         - sonata_page_cache_esi
         - sonata_page_cache_ssi
@@ -51,16 +53,279 @@ sonata_page:
                     CCCCCCCCCCCC
                     FFFFFFFFFFFF
                 mapping:
-                    H: header
                     C: content
                     F: footer
-        rzcms_homepage: { path: 'RzPageBundle:theme\rzcms:homepage.html.twig', name: 'Homepage' }
-        rzcms_blog: { path: 'RzPageBundle:theme\rzcms:blog.html.twig', name: 'Blog' }
-        rzcms_blog_post: { path: 'RzPageBundle:theme\rzcms:blog_post.html.twig', name: 'Blog Post' }
-        rzcms_gallery: { path: 'RzPageBundle:theme\rzcms:gallery.html.twig', name: 'Gallery' }
-        rzcms_user_profile: { path: 'RzPageBundle:theme\rzcms:profile.html.twig', name: 'User Profile' }
-        rzcms_full: { path: 'RzPageBundle:theme\rzcms:full.html.twig', name: 'Generic Page' }
-        rz_user_security: { path: 'RzUserSecurityBundle:Layout:security.html.twig', name: 'Security Template' }
+        rzcms_homepage:
+            path: 'RzPageBundle:theme\rzcms:homepage.html.twig'
+            name: 'Homepage'
+            containers:
+                content_top:
+                    name: Content Top
+#                    blocks:
+#                      - sonata.media.block.media
+#                      - sonata.media.block.gallery
+#                      - sonata.media.block.feature_media
+                content:
+                    name: Main Content
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: footer
+                    shared: true
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    F: footer
+        rzcms_blog:
+            path: 'RzPageBundle:theme\rzcms:blog.html.twig'
+            name: 'Blog'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                news_content_right:
+                    name: Content Right
+                    shared: true
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: footer
+                    shared: true
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCRRR
+                    CCCCCCCCCRRR
+                    CCCCCCCCCRRR
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    R: news_content_right
+                    F: footer
+
+        rzcms_blog_page:
+            path: 'RzPageBundle:theme\rzcms:blog_page.html.twig'
+            name: 'Blog Page List'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                news_content_right:
+                    name: Content Right
+                    shared: true
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: footer
+                    shared: true
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCRRR
+                    CCCCCCCCCRRR
+                    CCCCCCCCCRRR
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    R: news_content_right
+                    F: footer
+
+        rzcms_blog_category:
+            path: 'RzPageBundle:theme\rzcms:blog_category.html.twig'
+            name: 'Blog Category'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: footer
+                    shared: true
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    F: footer
+
+        ######################################################################
+        # Required as a default template for category if controller is enabled
+        ######################################################################
+        rzcms_blog_page_category:
+            path: 'RzPageBundle:theme\rzcms:blog_page_category.html.twig'
+            name: 'Blog Page Category List'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: footer
+                    shared: true
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    F: footer
+
+        rzcms_blog_post:
+            path: 'RzPageBundle:theme\rzcms:blog_post.html.twig'
+            name: 'Blog Post'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: footer
+                    shared: true
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    F: footer
+        rzcms_gallery:
+            path: 'RzPageBundle:theme\rzcms:gallery.html.twig'
+            name: 'Gallery'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: footer
+                    shared: true
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    F: footer
+        rzcms_user_profile:
+            path: 'RzPageBundle:theme\rzcms:profile.html.twig'
+            name: 'User Profile'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: footer
+                    shared: true
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    F: footer
+        rzcms_full:
+            path: 'RzPageBundle:theme\rzcms:full.html.twig'
+            name: 'Generic Page'
+            containers:
+                content_top:
+                    name: Content Top
+                content:
+                    name: Main Content
+                content_bottom:
+                    name: Content Bottom
+                footer:
+                    name: footer
+                    shared: true
+            matrix:
+                layout: |
+                    AAAAAAAAAAAA
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    EEEEEEEEEEEE
+                    FFFFFFFFFFFF
+                mapping:
+                    A: content_top
+                    C: content
+                    E: content_bottom
+                    F: footer
+        rz_user_security:
+            path: 'RzUserSecurityBundle:Layout:security.html.twig'
+            name: 'Security Template'
+            containers:
+                content:
+                    name: Main Content
+                footer:
+                    name: footer
+                    shared: true
+            matrix:
+                layout: |
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    CCCCCCCCCCCC
+                    FFFFFFFFFFFF
+                mapping:
+                    C: content
+                    F: footer
         rzcms_exception_404:
             path: 'RzPageBundle:theme\rzcms:error404.html.twig'
             name: 'Exception 404'
@@ -89,14 +354,14 @@ sonata_page:
 #            - assetic/sonata_front_theme_js.js
 
     caches:
-         esi:
-            token: ~
-            version: 3
-            servers:
-                # you need to ajust this configuration to match your varnish configuration
-                - %sonata_page.varnish.command%
+#         esi:
+#            token: %sonata_page_cache_esi_token%
+#            version: 3
+#            servers:
+#                # you need to ajust this configuration to match your varnish configuration
+#                - %sonata_page.varnish.command%
          ssi:
-            token: ~ #add an unique token here # default is a random value
+            token: %sonata_page_cache_ssi_token% #add an unique token here # default is a random value
 
     catch_exceptions:
         not_found: [404]    # render 404 page with "not_found" key (name generated: _page_internal_error_{key})

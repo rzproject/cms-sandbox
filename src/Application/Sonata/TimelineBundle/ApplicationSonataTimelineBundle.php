@@ -27,6 +27,6 @@ class ApplicationSonataTimelineBundle extends Bundle
      */
     public function getParent()
     {
-        return 'SonataTimelineBundle';
+        return 'RzTimelineBundle';
     }
 }

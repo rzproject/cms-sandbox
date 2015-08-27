@@ -1,0 +1,247 @@
+{% extends 'RzPageBundle::base_layout.html.twig' %}
+
+{% block rz_page_theme_stylesheets %}
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+    <!--[if IE]>
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+    <![endif]-->
+
+    {% stylesheets
+        'bundles/rzpage/theme/rzcms/css/fontello.css'
+        'bundles/rzpage/theme/rzcms/css/style.css'
+        'bundles/rzpage/theme/rzcms/css/settings.css'
+        'bundles/rzpage/theme/rzcms/css/icon-effect.css'
+        'bundles/rzpage/theme/rzcms/css/prettyphoto.css'
+        'bundles/rzpage/theme/rzcms/css/dzsportfolio.css'
+        filter='?yui_css'
+    %}
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rmzamorajquery/jquery-plugins/bxslider/jquery.bxslider.css') }}"/>
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/rzpage/theme/rzcms/css/font-awesome.min.css') }}"/>
+    {% if sonata_page.isEditor or (app.user is defined and app.user and is_granted('ROLE_PREVIOUS_ADMIN')) %}
+        {% stylesheets
+            'bundles/sonatamedia/blocks/feature_media/theme.css'
+            'bundles/rzmedia/css/block/rzmedia-featured-gallery.css'
+            'bundles/rznews/css/featured_post_block.css'
+            filter='?yui_css'
+        %}
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
+        {% endstylesheets %}
+    {%  endif %}
+    {% stylesheets
+        'bundles/rzpage/theme/rzcms/css/style-override.css'
+        'bundles/rzpage/theme/rzcms/css/theme-override.css'
+        filter='?yui_css'
+    %}
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block rz_page_theme_javascripts %}
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="{{  asset('bundles/rzpage/theme/rzcms/css/font-awesome-ie7.min.css')}}">
+    <link rel="stylesheet" href="{{  asset('bundles/rzpage/theme/rzcms/css/fontello-ie7.css')}}">
+    <![endif]-->
+    {% javascripts
+    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/bxslider/jquery.bxslider.js'
+    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/imgLiquid/js/imgLiquid.js'
+    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/eqheight/jquery.eqheight.js'
+    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/masonry/masonry.min.js'
+    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/imagesloaded/imagesloaded.min.js'
+    '@RmzamoraJqueryBundle/Resources/public/jquery-plugins/fitvids/jquery.fitvids.js'
+    '@RmzamoraJqueryBundle/Resources/public/lib/sprintf.js'
+    '@RzNewsBundle/Resources/public/js/post_loadmore.js'
+    '@RzMediaBundle/Resources/public/js/block/rzmedia-featured-gallery.js'
+    '@RzPageBundle/Resources/public/theme/rzcms/js/jquery.themepunch.revolution.min.js'
+    '@RzPageBundle/Resources/public/theme/rzcms/js/jquery.themepunch.plugins.min.js'
+    '@RzPageBundle/Resources/public/theme/rzcms/js/dzsportfolio.js'
+    '@RzPageBundle/Resources/public/theme/rzcms/js/scroller.js'
+    '@RzPageBundle/Resources/public/theme/rzcms/js/prettyphoto.js'
+    '@RzPageBundle/Resources/public/theme/rzcms/js/scripts.js'
+    filter='?closure'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <!-- fade in settings -->
+    <script>
+        //<![CDATA[
+        $(window).scroll(function() {
+            $('.hi-icon').each(function(){
+                var imagePos = $(this).offset().top;
+                var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+900) {
+                    $(this).addClass("fadeIn2");
+                }
+            });
+        });
+        //]]>
+    </script>
+    <script>
+        //<![CDATA[
+        $(window).scroll(function() {
+            $('.line').each(function(){
+                var imagePos = $(this).offset().top;
+                var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+900) {
+                    $(this).addClass("fadeIn2");
+                }
+            });
+        });
+        //]]>
+    </script>
+{% endblock %}
+
+{% block sonata_page_container %}
+    {% block rzcms_header %}
+    <header class="header">
+        <!--logo-->
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="navbar">
+                        <!--logo-->
+                        <div class="logo">
+                            <a href="#"><img src="{{  asset('bundles/rzpage/theme/rzcms/img/sandbox-logo.png') }}" alt="" /></a>
+                        </div>
+                        <!--menu-->
+                        <a class="menu-link" href="#menu"><i class="icon-reorder white"></i></a>
+                        <nav id="menu2" class="menu">
+                            {% if (app.user is defined and app.user and is_granted('IS_AUTHENTICATED_FULLY')) %}
+                                {{ sonata_block_render({ 'type' : 'sonata.block.service.menu',
+                                    'settings' : { 'title' : 'Header Menu',
+                                        'cache_policy' : 0,
+                                        'template' : 'SonataBlockBundle:Block:block_core_menu.html.twig',
+                                        'menu_name' : 'ApplicationSonataPageBundle:Builder:userMainMenu',
+                                        'safe_labels' : true} }) }}
+                            {% else %}
+                                {{ sonata_block_render({ 'type' : 'sonata.block.service.menu',
+                                                         'settings' : { 'title' : 'Header Menu',
+                                                                        'cache_policy' : 0,
+                                                                        'template' : 'SonataBlockBundle:Block:block_core_menu.html.twig',
+                                                                        'menu_name' : 'ApplicationSonataPageBundle:Builder:anonymousMainMenu',
+                                                                        'safe_labels' : true} }
+                                                      ) }}
+                            {% endif %}
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--//header-->
+
+    <!-- sticky header-->
+    <header class="header sticky hidden-phone hidden-tablet">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="navbar">
+                        <!--logo-->
+                        <div class="logo-sticky">
+                            <a href="#"><img src="{{  asset('bundles/rzpage/theme/rzcms/img/diamond.png') }}" alt="" /></a>
+                        </div>
+                        <!--menu-->
+                        <nav id="menu" class="menu menu-sticky">
+                            {% if (app.user is defined and app.user and is_granted('IS_AUTHENTICATED_FULLY')) %}
+                                {{ sonata_block_render({ 'type' : 'sonata.block.service.menu',
+                                    'settings' : { 'title' : 'Header Menu',
+                                        'cache_policy' : 0,
+                                        'template' : 'SonataBlockBundle:Block:block_core_menu.html.twig',
+                                        'menu_name' : 'ApplicationSonataPageBundle:Builder:userMainMenu',
+                                        'safe_labels' : true} }) }}
+                            {% else %}
+                                {{ sonata_block_render({ 'type' : 'sonata.block.service.menu',
+                                    'settings' : { 'title' : 'Header Menu',
+                                        'cache_policy' : 0,
+                                        'template' : 'SonataBlockBundle:Block:block_core_menu.html.twig',
+                                        'menu_name' : 'ApplicationSonataPageBundle:Builder:anonymousMainMenu',
+                                        'safe_labels' : true} }) }}
+                            {% endif %}
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- // header -->
+    {% endblock rzcms_header %}
+
+    {% block sonata_page_breadcrumb %}
+        <div class="container">
+            {{ sonata_block_render_event('breadcrumb', { 'settings': {'include_homepage_link': true},  'context': 'page', 'current_uri': app.request.requestUri, 'container_attr': {'class': 'breadcrumb'}, 'separator': '<i class="icon-angle-right"></i>', 'current_class': 'active' }) }}
+        </div>
+    {% endblock %}
+
+    {% block rzcms_body %}
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span12 content">
+                <div class="row-fluid">
+                    <div class="span12">
+                    {% if content is defined %}
+                        {{ content|raw }}
+                    {% else %}
+                        {% set content = block('content') %}
+                        {% if content|length > 0 %}
+                            {{ content|raw }}
+                        {% elseif page is defined %}
+                            {% if sonata_page.isEditor or (app.user is defined and app.user and is_granted('ROLE_PREVIOUS_ADMIN')) %}
+                                {{ sonata_page_render_container('content',page,{ 'use_cache': false})}}
+                            {% else %}
+                                {{ sonata_page_render_container('content', page,{ 'use_cache': true}) }}
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock rzcms_body %}
+
+    {% block rzcms_footer %}
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="span12 center">
+                        <img src="{{  asset('bundles/rzpage/theme/rzcms/img/diamond.png')}}" alt="" />
+                        <div class="copyright" style="text-align: center !important;">
+                            <p class="a2a_kit">
+                                <a class="a2a_button_facebook"><i class="icon icon-facebook marg-right5"></i></a>
+                                <a class="a2a_button_twitter"><i class="icon icon-twitter marg-right5"></i></a>
+                                <a class="a2a_button_pinterest"><i class="icon icon-pinterest marg-right5"></i></a>
+                                <a class="a2a_button_google_plus"><i class="icon icon-google-plus"></i></a>
+                                <a class="a2a_button_email"><i class="icon icon-envelope marg-right5"></i></a>
+                            </p>
+                            {#{% endif %}#}
+                            {% if page is defined %}
+                            <p>
+                                {% if sonata_page.isEditor or (app.user is defined and app.user and is_granted('ROLE_PREVIOUS_ADMIN')) %}
+                                    {{ sonata_page_render_container('footer', 'global', { 'use_cache': false})}}
+                                {% else %}
+                                    {{ sonata_page_render_container('footer', 'global', { 'use_cache': true}) }}
+                                {% endif %}
+                            </p>
+                            {% endif %}
+                        </div>
+                        <div class="go-top">
+                            <span class="dark-grey"><i class="icon icon-align-justify marg-right5"></i></span>
+                            <a href="#"><i class="icon icon-chevron-sign-up"></i></a>
+                            <span class="dark-grey"><i class="icon icon-align-justify marg-left5"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- // END FOOTER -->
+    {% endblock rzcms_footer %}
+{% endblock %}

@@ -27,7 +27,7 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
 
     function getOrder()
     {
-        return 3;
+        return 4;
     }
 
     public function setContainer(ContainerInterface $container = null)
@@ -37,74 +37,125 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
 
     public function load(ObjectManager $manager)
     {
-//        $userManager = $this->getUserManager();
+
         $postManager = $this->getPostManager();
 
         $faker = $this->getFaker();
 
-        $tags = array(
-            'symfony' => null,
-            'form' => null,
-            'general' => null,
-            'web2' => null,
-        );
-
-        foreach($tags as $tagName => $null) {
-            $tag = $this->getTagManager()->create();
-            $tag->setEnabled(true);
-            $tag->setName($tagName);
-
-            $tags[$tagName] = $tag;
-            $this->getTagManager()->save($tag);
-        }
-
-        $collection = $this->getCollectionManager()->create();
-        $collection->setEnabled(true);
-        $collection->setName('General');
-        $this->getCollectionManager()->save($collection);
+        $tags =  array('blog', 'article', 'event', 'promo');
 
         $i = 0;
-        foreach (range(1, 3) as $id) {
+        foreach (range(1, 5) as $id) {
             $post = $postManager->create();
             $post->setAuthor($this->getReference('user-admin'));
 
-            $post->setCollection($collection);
+            $post->setCollection($this->getReference('news-classification-collection-blog'));
             $post->setAbstract($faker->sentence(30));
             $post->setEnabled(true);
             $post->setTitle($faker->sentence(6));
             $post->setPublicationDateStart($faker->dateTimeBetween('-30 days', '-1 days'));
+            $post->setImage($this->getReference('sonata-media-news-'.$faker->numberBetween(0,2)));
 
-            $raw =<<<RAW
-### Gist Formatter
+            $categories = array('technology', 'travel', 'entertainment', 'finance', 'business');
+            foreach($categories as $cat) {
+                $this->addCategory($post, $this->getReference(sprintf('news-classification-category-news-blog-%s', $cat)));
+            }
 
-Now a specific gist from github
+            $raw = null;
 
-<% gist '1552362', 'gistfile1.txt' %>
-
-### Media Formatter
-
-Load a media from a <code>SonataMediaBundle</code> with a specific format
-
-<% media $id, 'big' %>
-
-RAW
-            ;
-
-            $raw .= sprintf("### %s\n\n%s\n\n### %s\n\n%s",
-                            $faker->sentence(rand(3, 6)),
-                            $faker->text(1000),
-                            $faker->sentence(rand(3, 6)),
-                            $faker->text(1000)
+            $raw .= sprintf("%s\n\n%s\n\n %s\n\n%s",
+                $faker->sentence(rand(3, 6)),
+                $faker->text(1000),
+                $faker->sentence(rand(3, 6)),
+                $faker->text(1000)
             );
 
             $post->setRawContent($raw);
-            $post->setContentFormatter('markdown');
+            $post->setContentFormatter('richhtml');
 
             $post->setContent($this->getPoolFormatter()->transform($post->getContentFormatter(), $post->getRawContent()));
             $post->setCommentsDefaultStatus(CommentInterface::STATUS_VALID);
 
-            foreach($tags as $tag) {
-                $post->addTags($tag);
+            $settings = array('template'=>'RzNewsBundle:Post:view.html.twig');
+            $post->setSettings($settings);
+
+            foreach($tags as $key=>$tag) {
+                $post->addTags($this->getReference(sprintf('news-classification-tag-%s', $tag)));
+            }
+
+            foreach(range(1, $faker->randomDigit + 2) as $commentId) {
+                $comment = $this->getCommentManager()->create();
+                $comment->setEmail($faker->email);
+                $comment->setName($faker->name);
+                $comment->setStatus(CommentInterface::STATUS_VALID);
+                $comment->setMessage($faker->sentence(25));
+                $comment->setUrl($faker->url);
+
+                $post->addComments($comment);
+            }
+
+            $this->addReference('sonata-news-'.($i++), $post);
+
+            $postManager->save($post);
+        }
+
+
+        foreach (range(1, 3) as $id) {
+            $post = $postManager->create();
+            $post->setAuthor($this->getReference('user-admin'));
+
+            $post->setCollection($this->getReference('news-classification-collection-event'));
+            $post->setAbstract($faker->sentence(30));
+            $post->setEnabled(true);
+            $post->setTitle($faker->sentence(6));
+            $post->setPublicationDateStart($faker->dateTimeBetween('-30 days', '-1 days'));
+            $post->setImage($this->getReference('sonata-media-news-'.$faker->numberBetween(0,2)));
+
+            $categories = array('trade fair', 'travel show', 'press conference', 'product launches', 'business conference', 'award', 'weddings', 'birthday', 'anniversary');
+            foreach($categories as $cat) {
+                $this->addCategory($post, $this->getReference(sprintf('news-classification-category-news-event-%s', $cat)));
+            }
+
+            $raw = null;
+
+            $raw .= sprintf("%s\n\n%s\n\n %s\n\n%s",
+                $faker->sentence(rand(3, 6)),
+                $faker->text(1000),
+                $faker->sentence(rand(3, 6)),
+                $faker->text(1000)
+            );
+
+            $post->setRawContent($raw);
+            $post->setContentFormatter('richhtml');
+
+            $post->setContent($this->getPoolFormatter()->transform($post->getContentFormatter(), $post->getRawContent()));
+            $post->setCommentsDefaultStatus(CommentInterface::STATUS_VALID);
+
+            //set event settings
+            $end_day = null;
+            $month = $faker->numberBetween(1, 12);
+
+            if($month == 2) {
+                $day = $faker->numberBetween(1, 20);
+                $end_day = $faker->numberBetween(21, 28);
+            } else {
+                $day = $faker->numberBetween(1, 20);
+                $end_day = $faker->numberBetween(21, 30);
+            }
+
+
+            $year = $faker->numberBetween(2014, 2016);
+            $settings = array('template'=>'RzNewsBundle:Post:view_event.html.twig',
+                              'start_date'=>array("year"=>$year,"month"=>$month,"day"=>$day),
+                              'end_date'=>array("year"=>$year,"month"=>$month,"day"=>$end_day),
+                              "location"=>array("lat"=>"16.0432998","lng"=>"120.33331240000007"),
+                              "address"=>$faker->address
+            );
+
+            $post->setSettings($settings);
+
+            foreach($tags as $key=>$tag) {
+                $post->addTags($this->getReference(sprintf('news-classification-tag-%s', $tag)));
             }
 
             foreach(range(1, $faker->randomDigit + 2) as $commentId) {
@@ -124,26 +175,21 @@ RAW
         }
     }
 
+    public function addCategory($post, $category) {
+        $postHasCategory = new \Application\Sonata\NewsBundle\Entity\PostHasCategory();
+        $postHasCategory->setCategory($category);
+        $postHasCategory->setPost($post);
+        $postHasCategory->setPosition(count($post->getPostHasCategory()) + 1);
+        $postHasCategory->setEnabled(true);
+
+        $post->addPostHasCategory($postHasCategory);
+    }
+
     public function getPoolFormatter()
     {
         return $this->container->get('sonata.formatter.pool');
     }
 
-    /**
-     * @return \Sonata\ClassificationBundle\Model\TagManagerInterface
-     */
-    public function getTagManager()
-    {
-        return $this->container->get('sonata.classification.manager.tag');
-    }
-
-    /**
-     * @return \Sonata\ClassificationBundle\Model\CollectionManagerInterface
-     */
-    public function getCollectionManager()
-    {
-        return $this->container->get('sonata.classification.manager.collection');
-    }
 
     /**
      * @return \Sonata\NewsBundle\Model\PostManagerInterface
@@ -160,6 +206,8 @@ RAW
     {
         return $this->container->get('sonata.news.manager.comment');
     }
+
+
 
     /**
      * @return \Faker\Generator

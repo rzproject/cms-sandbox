@@ -3,7 +3,7 @@ parameters:
 
 security:
     encoders:
-        "Application\Sonata\UserBundle\Entity\User":
+        %security_encoders_user% :
             algorithm: sha512
             encode_as_base64: false
             iterations: 1
@@ -40,6 +40,7 @@ security:
                 check_path:     /admin/login_check
                 failure_path:   null
                 remember_me: false
+                default_target_path: sonata_admin_default
 #            remember_me:
 #                key: mellzamora_001
 #                lifetime: 31536000
@@ -85,6 +86,7 @@ security:
             logout:
               path: /logout
               success_handler: rz_user_security.component.authentication.handler.logout_success_handler
+              handlers: [rz.user.component.authentication.handler.user_logout]
             anonymous:    true
 
     access_control:

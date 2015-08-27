@@ -1,4 +1,30 @@
 rz_search:
+   #####################
+    # bundle configuration
+    #####################
+    settings:
+      search:
+        pagination_per_page: 5
+
+    #####################
+    # blocks configuration
+    #####################
+    blocks:
+      # Post By Category Block Configuration
+      search:
+          class: Rz\SearchBundle\Block\SearchBlockService
+          templates:
+            search_bar_block:
+              name: Search Bar
+              path: RzSearchBundle:Block:block_search.html.twig
+
+            search_bar_block_full:
+              name: Full Search Bar
+              path: RzSearchBundle:Block:block_search_full.html.twig
+
+    #####################
+    # search engine configuration SOLR
+    #####################
     engine:
       solr:
         enabled: false
@@ -13,6 +39,9 @@ rz_search:
 #          sonata.news.post:
 #              endpoints: [default]
 
+      #####################
+      # search engine configuration ZEND_LUCENE will be deprecated on 2.0
+      #####################
       zend_lucene:
         enabled: true
         settings:
@@ -46,6 +75,10 @@ rz_search:
                     auto_optimized: true
                     #identifier used on the configs
                     mapping_config: sonata.news.post
+
+    #####################
+    # search index mapping
+    #####################
     configs:
       # Identifier can by any word with no space replace space using . or _
       sonata.news.post:
@@ -54,7 +87,7 @@ rz_search:
                 model_manager: sonata.news.manager.post
                 route_generator: sonata.news.permalink.date
                 model_identifier: sonata.news.post
-                route: sonata_news_view
+                route: rz_news_view
                 template:
                   result:
                     #solr: RzSearchBundle:Search:news_solr_results.html.twig
@@ -72,6 +105,7 @@ rz_search:
                       tags : tags
                       comments : comments
                       author : author
+                      settings: settings
                 field_map_settings:
                       title :
                          fields : ~
@@ -109,3 +143,9 @@ rz_search:
                         separator: " "
                         filter: ~
                         type : text
+                      settings:
+                        fields:
+                          - address
+                        separator: " "
+                        filter: ~
+                        type : unStored

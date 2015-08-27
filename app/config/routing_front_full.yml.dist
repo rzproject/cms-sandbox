@@ -1,0 +1,174 @@
+rz_user_security:
+    resource: "@RzUserSecurityBundle/Resources/config/routing/lockout.xml"
+    prefix:   /security
+
+rz_oauth_redirect:
+    resource: "@RzOAuthBundle/Resources/config/routing/redirect.xml"
+    prefix:   /connect
+
+rz_oauth_connect:
+    resource: "@RzOAuthBundle/Resources/config/routing/connect.xml"
+    prefix:   /connect
+
+rz_oauth_security:
+    resource: "@RzOAuthBundle/Resources/config/routing/security.xml"
+
+rz_oauth_profile:
+    resource: "@RzOAuthBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+rz_oauth_register:
+    resource: "@RzOAuthBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+facebook_login:
+    pattern: /login/check-facebook
+
+twitter_login:
+    pattern: /login/check-twitter
+
+google_login:
+    pattern: /login/check-google
+
+#Rz
+#rz_user_security:
+#    resource: "@RzUserBundle/Resources/config/routing/security.xml"
+
+rz_user_resetting:
+    resource: "@RzUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+#rz_user_profile:
+#    resource: "@RzUserBundle/Resources/config/routing/profile.xml"
+#    prefix: /profile
+#
+#rz_user_register:
+#    resource: "@RzUserBundle/Resources/config/routing/registration.xml"
+#    prefix: /register
+
+rz_user_change_password:
+    resource: "@RzUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
+#Sonata
+#sonata_user_security:
+#    resource: "@SonataUserBundle/Resources/config/routing/sonata_security_1.xml"
+#
+#sonata_user_resetting:
+#    resource: "@SonataUserBundle/Resources/config/routing/sonata_resetting_1.xml"
+#    prefix: /resetting
+#
+#sonata_user_profile:
+#    resource: "@SonataUserBundle/Resources/config/routing/sonata_profile_1.xml"
+#    prefix: /profile
+#
+#sonata_user_register:
+#    resource: "@SonataUserBundle/Resources/config/routing/sonata_registration_1.xml"
+#    prefix: /register
+#
+#sonata_user_change_password:
+#    resource: "@SonataUserBundle/Resources/config/routing/sonata_change_password_1.xml"
+#    prefix: /profile
+
+
+#FOS
+#fos_user_security:
+#    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+#
+#fos_user_resetting:
+#    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+#    prefix: /resetting
+#
+#fos_user_profile:
+#    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+#    prefix: /profile
+#
+#fos_user_register:
+#    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+#    prefix: /register
+#
+#fos_user_change_password:
+#    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+#    prefix: /profile
+
+
+#sonata_user_profile:
+#    #use oauth controller
+#    resource: "@RzOAuthBundle/Resources/config/routing/profile.xml"
+#    prefix: /profile
+
+
+
+#sonata_media_gallery:
+#    resource: '@RzMediaBundle/Resources/config/routing/gallery.xml'
+#    prefix: /media/gallery
+#
+#sonata_media_media:
+#    resource: '@RzMediaBundle/Resources/config/routing/media.xml'
+#    prefix: /media
+
+sonata_cache_cache:
+    resource: '@SonataCacheBundle/Resources/config/routing/cache.xml'
+    prefix: /
+
+sonata_page_ajax:
+    resource: '@SonataPageBundle/Resources/config/routing/page.xml'
+    prefix: /
+
+sonata_page_exceptions:
+    resource: '@SonataPageBundle/Resources/config/routing/exceptions.xml'
+    prefix: /page
+
+#sonata_media_pixlr:
+#    resource: '@SonataMediaBundle/Resources/config/routing/pixlr.xml'
+#    prefix: /admin/media
+
+sonata_qa:
+    resource: "@SonataQABundle/Resources/config/routing/qa.xml"
+#_imagine:
+#    resource: .
+#    type:     imagine
+
+#blog:
+#    resource: '@SonataNewsBundle/Resources/config/routing/news.xml'
+#    prefix: /blog
+
+blog_comment:
+    resource: '@RzNewsBundle/Resources/config/routing/news_comment.xml'
+    prefix: /blog
+
+fos_comment:
+    type: rest
+    resource: "@FOSCommentBundle/Resources/config/routing.yml"
+    prefix: /comments
+    defaults: { _format: html }
+
+rz_seach:
+    resource: "@RzSearchBundle/Resources/config/routing/search.xml"
+    prefix: /search
+
+#FOLLOW EXACT ORDER
+blog_post_by_category_ajax:
+    resource: '@RzNewsBundle/Resources/config/routing/post_by_category.xml'
+    prefix: /
+
+blog_category_ajax:
+    resource: '@RzClassificationBundle/Resources/config/routing/category.xml'
+    prefix: /
+
+blog_archive:
+    resource: '@RzNewsBundle/Resources/config/routing/news_archive.xml'
+    prefix: /articles
+
+blog_default:
+    resource: '@RzNewsBundle/Resources/config/routing/news_default.xml'
+    prefix: /article
+
+blog_tag:
+    resource: '@RzNewsBundle/Resources/config/routing/news_tag.xml'
+    prefix: /tag
+
+# Rmove if controller for category is disabled
+blog_category:
+    resource: '@RzNewsBundle/Resources/config/routing/news_category.xml'
+    prefix: /

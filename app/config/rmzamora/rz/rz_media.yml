@@ -1,0 +1,29 @@
+rz_media:
+
+# Uncomment below if you want to override the following block
+
+#  blocks:
+#    media:
+#      class: Rz\MediaBundle\Block\MediaBlockService
+#      templates:
+#        media_block:
+#          name: Default
+#          path: RzMediaBundle:Block:block_media.html.twig
+#    feature_media:
+#      class: Rz\MediaBundle\Block\FeatureMediaBlockService
+#      templates:
+#        feature_media_block:
+#          name: Default
+#          path: RzMediaBundle:Block:block_feature_media.html.twig
+#    gallery:
+#      class: Rz\MediaBundle\Block\GalleryBlockService
+#      templates:
+#        text_block:
+#          name: Default
+#          path: RzMediaBundle:Block:block_gallery.html.twig
+#    breadcrumb_media:
+#      class: Rz\MediaBundle\Block\Breadcrumb\MediaViewBreadcrumbBlockService
+#      templates:
+#        text_block:
+#          name: Default
+#          path: RzMediaBundle:Block:block_breadcrumb_media.html.twig

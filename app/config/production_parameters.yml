@@ -1,52 +1,60 @@
+# This file is auto-generated during the composer install
 parameters:
-    database_driver:   pdo_mysql
-    database_host:     localhost
-    database_name:     cms_sandbox
-    database_user:     username
-    database_password: password
-
-    mailer_transport:   gmail
-    mailer_host:        gmail.com
-    mailer_auth_mode:   login
-    mailer_user:        test@gmail.com
-    mailer_password:    password
-
-    locale:             en
-
-    secret:             secret
-
-    # Sonata Admin Options
-    sonata_admin.title:             cms-sandbox
-    sonata_admin.logo_title:        /bundles/rzadmin/img/rz-logo.png
-
-    # Sonata News Options
-    sonata_news.blog_title:         cms-sandbox Blog
-    sonata_news.blog_link:          http://awesome-blog.ltd
-    sonata_news.blog_description:   My Awesome blog description
-    sonata_news.salt:               ThisTokenIsNotSoSecretChangeIt
-    sonata_news.comment.emails:     [mail@example.org]
+    database_driver: pdo_mysql
+    database_host: localhost
+    database_name: cms_sandbox_1_3
+    database_user: dbuser
+    database_password: same2you
+    mailer_transport: gmail
+    mailer_host: null
+    mailer_auth_mode: null
+    mailer_user: ~
+    mailer_password: ~
+    locale: en
+    secret: d4b3a896a53437307b062a8d229e0c97
+    session_name: cms-sandbox
+    cookie_lifetime: 3600
+    sonata_admin.title: prod-cms-sandbox-v1.3
+    sonata_admin.logo_title: /bundles/rzadmin/img/rz-logo.png
+    sonata_news.blog_title: 'cms-sandbox Blog'
+    sonata_news.blog_link: 'http://awesome-blog.ltd'
+    sonata_news.blog_description: 'My Awesome blog description'
+    sonata_news.salt: ThisTokenIsNotSoSecretChangeIt
+    sonata_news.comment.emails:
+        - mail@example.org
     sonata_news.comment.email_from: no-reply@example.org
-
-    # Sonata Media options
-    sonata_media.cdn.host:          /uploads/media
-
-    # Sonata User Options
-    sonata_user.google_authenticator.server:  demo.sonata-project.org
-
-    #rabbitmq settings
-    rabbitmq_host:         127.0.0.1
-    rabbitmq_user:         user
-    rabbitmq_pass:         pass
-    rabbitmq_port:         5672
-    rabbitmq_vhost:        /
-
-    #memcache settings
-    memcache_host:         localhost
-    memcache_port:         11211
-
-    #monolog production mailer
-    prod_monolog_type:       swift_mailer
+    sonata_media.cdn.host: /uploads/media
+    sonata_user.google_authenticator.server: demo.sonata-project.org
+    sonata_page.varnish.command: 'sudo varnishadm -S /etc/varnish/secret -T 127.0.0.1:6082 {{ COMMAND }} "{{ EXPRESSION }}"'
+    rabbitmq_host: 127.0.0.1
+    rabbitmq_user: user
+    rabbitmq_pass: pass
+    rabbitmq_port: 5672
+    rabbitmq_vhost: /
+    memcache_host: localhost
+    memcache_port: 11211
+    prod_monolog_type: swift_mailer
     prod_monolog_from_email: test@gmail.com
-    prod_monolog_to_email:   test@gmail.com
-    prod_monolog_subject:    cms-sandbox Monitoring Mailer!
-    prod_monolog_level:      error
+    prod_monolog_to_email: test@gmail.com
+    prod_monolog_subject: 'cms-sandbox Monitoring Mailer!'
+    prod_monolog_level: error
+    twig_app_error_title: cms-sandbox
+    doctrine_phpcr_username: dbuser
+    doctrine_phpcr_password: same2you
+    hwi_oauth_facebook_client_id: 657955534251877
+    hwi_oauth_facebook_client_secret: 5f05eccbb42c9879abb93361cd0582de
+    hwi_oauth_twitter_client_id: CLIENT_ID
+    hwi_oauth_twitter_client_secret: CLIENT_SECRET
+    hwi_oauth_google_client_id: CLIENT_ID
+    hwi_oauth_google_client_secret: CLIENT_SECRET
+    sonata_cache_esi_token: ~
+    sonata_cache_ssi_token: ~
+    sonata_cache_apc_token: s3cur3
+    sonata_page_cache_esi_token: ~
+    sonata_page_cache_ssi_token: ~
+    security_encoders_user: Application\Sonata\UserBundle\Entity\User
+    ccdn_user_security_entity_user: Application\Sonata\UserBundle\Entity\User
+    fos_user_user_class: Application\Sonata\UserBundle\Entity\User
+    fos_user_group_class: Application\Sonata\UserBundle\Entity\Group
+    sonata_user_class_user: Application\Sonata\UserBundle\Entity\User
+    sonata_user_class_group: Application\Sonata\UserBundle\Entity\Group

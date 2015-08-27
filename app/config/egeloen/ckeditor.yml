@@ -4,7 +4,7 @@ ivory_ck_editor:
         default:
             toolbar:  "simple_toolbar"
             allowedContent: true
-            enterMode: "CKEDITOR.ENTER_P"
+            enterMode: "CKEDITOR.ENTER_BR"
             filebrowserBrowseRoute: admin_sonata_media_media_browser
             filebrowserImageBrowseRoute: admin_sonata_media_media_browser
             # Display images by default when clicking the image dialog browse button
@@ -21,12 +21,14 @@ ivory_ck_editor:
         news:
             toolbar:  "simple_toolbar"
             allowedContent: true
-            enterMode: "CKEDITOR.ENTER_P"
+            enterMode: "CKEDITOR.ENTER_BR"
             filebrowserBrowseRoute: admin_sonata_media_media_browser
             filebrowserImageBrowseRoute: admin_sonata_media_media_browser
             # Display images by default when clicking the image dialog browse button
             filebrowserImageBrowseRouteParameters:
                 provider: sonata.media.provider.image
+                context: news
+                hide_context: true
             filebrowserUploadRoute: admin_sonata_media_media_upload
             filebrowserUploadRouteParameters:
                 provider: sonata.media.provider.file
@@ -39,7 +41,7 @@ ivory_ck_editor:
         admin_full_editor:
             toolbar:  "full_toolbar"
             allowedContent: true
-            enterMode: "CKEDITOR.ENTER_P"
+            enterMode: "CKEDITOR.ENTER_BR"
             filebrowserBrowseRoute: admin_sonata_media_media_browser
             filebrowserImageBrowseRoute: admin_sonata_media_media_browser
             # Display images by default when clicking the image dialog browse button

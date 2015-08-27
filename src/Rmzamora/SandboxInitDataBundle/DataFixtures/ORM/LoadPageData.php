@@ -28,7 +28,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
 
     function getOrder()
     {
-        return 4;
+        return 5;
     }
 
     public function setContainer(ContainerInterface $container = null)
@@ -41,7 +41,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
         $site = $this->createSite();
         $this->createGlobalPage($site);
         $this->createHomePage($site);
-        $this->createBlogIndex($site);
+//        $this->createBlogIndex($site);
         $this->createGalleryIndex($site);
     }
 
@@ -117,7 +117,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
         $this->addReference('page-homepage', $homepage = $pageManager->create());
         $homepage->setSlug('/');
         $homepage->setUrl('/');
-        $homepage->setName('homepage');
+        $homepage->setName('home');
         $homepage->setEnabled(true);
         $homepage->setDecorate(0);
         $homepage->setRequestMethod('GET|POST|HEAD|DELETE|PUT');
@@ -176,14 +176,14 @@ CONTENT
             'page' => $global,
             'code' => 'footer',
         )));
-
-        $footer->setName('global-footer');
+        $footer->setName('footer');
+        $blockManager->save($footer);
 
         $footer->addChildren($text = $blockManager->create());
 
         $text->setType('sonata.block.service.text');
         $text->setSetting('content', <<<FOOTER
-        <p>cms-sandbox (c) rzproject.org &nbsp;2014.</p>
+        <p>cms-sandbox (c) rzproject.org &nbsp;2015.</p>
 FOOTER
         );
         $text->setPosition(1);

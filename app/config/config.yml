@@ -4,7 +4,6 @@ imports:
 #    - { resource: assetic.yml }
     - { resource: fos/fos_user.yml }
     - { resource: fos/fos_rest.yml }
-    - { resource: fos/fos_js.yml }
     - { resource: fos/fos_comment.yml }
     - { resource: jms/jms_serializer.yml }
 
@@ -27,15 +26,22 @@ imports:
     # stof
     - { resource: stof/doctrine_extension.yml }
 
+    # mysql func extension
+    - { resource: beberlei/mysql.yml }
+
     # pagerfanta
     - { resource: pagerfanta/views.yml }
 
     # rmzamora
-#    - { resource: rmzamora/ckeditor.yml }
     - { resource: rmzamora/rz/rz_user.yml }
-    - { resource: rmzamora/rz/rz_news.yml }
-#    - { resource: rmzamora/solr.yml }
     - { resource: rmzamora/rz/rz_search.yml }
+    - { resource: rmzamora/rz/rz_news.yml }
+    - { resource: rmzamora/rz/rz_classification.yml }
+    - { resource: rmzamora/rz/rz_seo.yml }
+    - { resource: rmzamora/rz/rz_block.yml }
+    - { resource: rmzamora/rz/rz_formatter.yml }
+    - { resource: rmzamora/rz/rz_media.yml }
+    - { resource: rmzamora/rz/rz_google_api_client.yml }
 
     #HWI
     - { resource: rmzamora/hwi.yml }
@@ -46,6 +52,7 @@ imports:
 
     #CCDN
     - { resource: ccdn/ccdn_user_security.yml }
+
 
 framework:
     trusted_proxies: ['127.0.0.1'] # a list of proxy IPs you trust
@@ -60,7 +67,9 @@ framework:
         strict_requirements: ~
     form:            true
     csrf_protection: true
-    validation:      { enable_annotations: true }
+    validation:
+      enable_annotations: true
+      enabled: true
     #templating:      { engines: ['twig'], assets_version_format: %%s?v=%%s, assets_version: demo-0.4.1 }
     templating:      { engines: ['twig'] }
     default_locale: %locale%
@@ -69,8 +78,12 @@ framework:
       cookie_lifetime: %cookie_lifetime%
       cookie_secure: false
       cookie_httponly: true
+      save_path: %kernel.root_dir%/cache/sessions
     fragments:       ~
     http_method_override: true
+    serializer:
+      enabled: true
+
 
 # Twig Configuration
 twig:
@@ -93,6 +106,19 @@ assetic:
     debug:          %kernel.debug%
     use_controller: false
     java: "/usr/bin/java"
+    assets:
+      fontawesome-webfont-eot:
+        inputs: '%kernel.root_dir%/../vendor/rz/admin-bundle/Resources/public/css/font/fontawesome-webfont.eot'
+        output: 'css/font/fontawesome-webfont.eot'
+      fontawesome-webfont-svg:
+        inputs: '%kernel.root_dir%/../vendor/rz/admin-bundle/Resources/public/css/font/fontawesome-webfont.svg'
+        output: 'css/font/fontawesome-webfont.svg'
+      fontawesome-webfont-ttf:
+        inputs: '%kernel.root_dir%/../vendor/rz/admin-bundle/Resources/public/css/font/fontawesome-webfont.ttf'
+        output: 'css/font/fontawesome-webfont.ttf'
+      fontawesome-webfont-woff:
+        inputs: '%kernel.root_dir%/../vendor/rz/admin-bundle/Resources/public/css/font/fontawesome-webfont.woff'
+        output: 'css/font/fontawesome-webfont.woff'
     filters:
         cssrewrite: ~
         yui_css:
@@ -137,9 +163,6 @@ swiftmailer:
     host:       %mailer_host%
     username:   %mailer_user%
     password:   %mailer_password%
-
-jms_security_extra:
-    secure_all_services: false
 
 jms_serializer:
     metadata:

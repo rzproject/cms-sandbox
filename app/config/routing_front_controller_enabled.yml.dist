@@ -1,0 +1,98 @@
+rz_user_security:
+    resource: "@RzUserSecurityBundle/Resources/config/routing/lockout.xml"
+    prefix:   /security
+
+rz_oauth_redirect:
+    resource: "@RzOAuthBundle/Resources/config/routing/redirect.xml"
+    prefix:   /connect
+
+rz_oauth_connect:
+    resource: "@RzOAuthBundle/Resources/config/routing/connect.xml"
+    prefix:   /connect
+
+rz_oauth_security:
+    resource: "@RzOAuthBundle/Resources/config/routing/security.xml"
+
+rz_oauth_profile:
+    resource: "@RzOAuthBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+rz_oauth_register:
+    resource: "@RzOAuthBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+facebook_login:
+    pattern: /login/check-facebook
+
+twitter_login:
+    pattern: /login/check-twitter
+
+google_login:
+    pattern: /login/check-google
+
+rz_user_resetting:
+    resource: "@RzUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+rz_user_change_password:
+    resource: "@RzUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
+sonata_cache_cache:
+    resource: '@SonataCacheBundle/Resources/config/routing/cache.xml'
+    prefix: /
+
+sonata_page_ajax:
+    resource: '@SonataPageBundle/Resources/config/routing/page.xml'
+    prefix: /
+
+sonata_page_exceptions:
+    resource: '@SonataPageBundle/Resources/config/routing/exceptions.xml'
+    prefix: /page
+
+sonata_qa:
+    resource: "@SonataQABundle/Resources/config/routing/qa.xml"
+
+blog_comment:
+    resource: '@RzNewsBundle/Resources/config/routing/news_comment.xml'
+    prefix: /blog
+
+fos_comment:
+    type: rest
+    resource: "@FOSCommentBundle/Resources/config/routing.yml"
+    prefix: /comments
+    defaults: { _format: html }
+
+rz_seach:
+    resource: "@RzSearchBundle/Resources/config/routing/search.xml"
+    prefix: /search
+
+#FOLLOW EXACT ORDER
+blog_post_by_category_ajax:
+    resource: '@RzNewsBundle/Resources/config/routing/post_by_category.xml'
+    prefix: /
+
+blog_category_ajax:
+    resource: '@RzClassificationBundle/Resources/config/routing/category.xml'
+    prefix: /
+
+blog_archive:
+    resource: '@RzNewsBundle/Resources/config/routing/news_archive.xml'
+    prefix: /articles
+
+blog_default:
+    resource: '@RzNewsBundle/Resources/config/routing/news_default.xml'
+    prefix: /article
+
+blog_tag:
+    resource: '@RzNewsBundle/Resources/config/routing/news_tag.xml'
+    prefix: /tag
+
+blog_category_view:
+    resource: '@RzNewsBundle/Resources/config/routing/news_category_view.xml'
+    prefix: /
+
+# Rmove if controller for category is disabled
+blog_category:
+    resource: '@RzNewsBundle/Resources/config/routing/news_category.xml'
+    prefix: /
