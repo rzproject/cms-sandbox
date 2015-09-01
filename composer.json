@@ -53,7 +53,7 @@
         "rmzamora/doctrine-orm-admin-bundle": "2.4.1.*",
         "rmzamora/timeline-bundle": "2.4.1.*",
         "rmzamora/classification-bundle": "2.4.1.*",
-        "rmzamora/seo-bundle": "2.0.1.*",
+        "rmzamora/seo-bundle": "2.4.1.*",
         "rmzamora/comment-bundle": "2.4.1.*",
 
         "rmzamora/jquery-bundle": "~1.11",
