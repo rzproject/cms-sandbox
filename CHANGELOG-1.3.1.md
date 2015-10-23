@@ -10,8 +10,9 @@ CHANGELOG
 ###### [RzAdminBundle](https://github.com/rzproject/AdminBundle/commit/5d7bd1105f1229206b8840ee6362e954977ff3de) ######
 * added date range support for admin filter
 
-.. code-block:: php
-        $datagridMapper->add('publicationDateStart', 'doctrine_orm_datetime_range', array('field_type' => 'sonata_type_datetime_range_picker'));
+```
+    $datagridMapper->add('publicationDateStart', 'doctrine_orm_datetime_range', array('field_type' => 'sonata_type_datetime_range_picker'));
+```
 
 --------------
 ### 2015-08-10
