@@ -4,6 +4,18 @@ CHANGELOG
 --------------
 ### 2015-08-10
 --------------
+###### [RzFieldTypeBundle](https://github.com/rzproject/FieldTypeBundle/commit/c1a5e3e8a4e0fb83bab7d8ae90e9cd42818b024d) ######
+* added date range support for admin filter
+
+###### [RzAdminBundle](https://github.com/rzproject/AdminBundle/commit/5d7bd1105f1229206b8840ee6362e954977ff3de) ######
+* added date range support for admin filter
+
+.. code-block:: php
+        $datagridMapper->add('publicationDateStart', 'doctrine_orm_datetime_range', array('field_type' => 'sonata_type_datetime_range_picker'));
+
+--------------
+### 2015-08-10
+--------------
 ###### [RzNewsBundle](https://github.com/rzproject/NewsBundle/commit/dda5f2d14ea211678629f8c1cbe9ed6bf2db4d83) ######
 * Added ads provider for news. This will allow adding of ads pages as News. User is responsible for filtering frontend content.
 
