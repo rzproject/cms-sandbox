@@ -2,7 +2,7 @@ CHANGELOG
 =========
 
 --------------
-### 2015-08-10
+### 2015-10-23
 --------------
 ###### [RzFieldTypeBundle](https://github.com/rzproject/FieldTypeBundle/commit/c1a5e3e8a4e0fb83bab7d8ae90e9cd42818b024d) ######
 * added date range support for admin filter
