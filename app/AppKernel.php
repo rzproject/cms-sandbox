@@ -47,8 +47,6 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new JMS\AopBundle\JMSAopBundle(),
-            new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
 
             // DOCTRINE
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
@@ -115,7 +113,6 @@ class AppKernel extends Kernel
 
             //JMS
             new JMS\SerializerBundle\JMSSerializerBundle($this),
-            new JMS\CommandBundle\JMSCommandBundle(),
 
             //Stof
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),

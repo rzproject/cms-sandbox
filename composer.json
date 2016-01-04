@@ -9,10 +9,10 @@
     "require": {
         "php": ">=5.3.9",
 
-        "twig/twig": "~1.12",
+        "twig/twig": "~1.23",
         "twig/extensions": "~1.0",
 
-        "symfony/symfony": "2.6.6",
+        "symfony/symfony": "2.7.7",
         "symfony/assetic-bundle": "~2.4",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
@@ -28,11 +28,7 @@
         "doctrine/migrations": "dev-master",
         "doctrine/doctrine-fixtures-bundle": "~2.2",
         "doctrine/data-fixtures": "dev-master",
-
-        "jms/security-extra-bundle": "~1.5",
-        "jms/di-extra-bundle": "~1.4",
         "jms/serializer-bundle": "~0.13",
-        "jms/command-bundle": "dev-master",
 
         "symfony-cmf/routing-bundle": "~1.1",
 
@@ -68,22 +64,21 @@
 
         "rmzamora/knp-menu-bundle": "2.0.x-dev",
         "rmzamora/entity-audit-bundle": "0.*@dev",
-        "rmzamora/rest-bundle": "~1.4",
 
-        "rz/formatter-bundle":  "1.1.0",
-        "rz/admin-bundle":  "1.1.0.*",
-        "rz/block-bundle": "1.2.0",
-        "rz/user-bundle":  "1.1.0.*",
+        "rz/formatter-bundle":  "1.1.*",
+        "rz/admin-bundle":  "1.1.*",
+        "rz/block-bundle": "1.2.*",
+        "rz/user-bundle":  "1.1.*",
         "rz/page-bundle":  "1.2.*",
-        "rz/media-bundle":  "1.2.0",
+        "rz/media-bundle":  "1.2.*",
         "rz/news-bundle":  "1.4.0.*",
         "rz/doctrine-orm-admin-bundle":  "1.1.*",
         "rz/classification-bundle": "1.4.0.*",
         "rz/seo-bundle": "1.1.*",
         "rz/timeline-bundle": "1.1.*",
         "rz/search-bundle": "1.1.*",
-        "rz/oauth-bundle": "1.1.0",
-        "rz/user-security-bundle": "1.1.*",
+        "rz/oauth-bundle": "1.2.*",
+        "rz/user-security-bundle": "1.1.2.*",
 
         "liip/imagine-bundle": "0.9.*@stable",
 
@@ -97,7 +92,6 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "nelmio/api-doc-bundle": "~2.4",
         "willdurand/hateoas-bundle": "0.2.*"
-
     },
 
     "require-dev": {
@@ -151,7 +145,7 @@
         "symfony-web-dir": "web",
         "symfony-assets-install": "symlink",
         "branch-alias": {
-            "dev-master": "1.1.x-dev"
+            "dev-1.3.x": "1.3.x-dev"
         },
         "incenteev-parameters": [{
             "file": "app/config/parameters.yml",
