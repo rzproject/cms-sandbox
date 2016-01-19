@@ -1,6 +1,14 @@
 CHANGELOG
 =========
 
+CVE-2016-1902: SecureRandom's fallback not secure when OpenSSL fails
+
+--------------
+### 2016-01-19
+--------------
+###### [Symony2 Core](https://github.com/symfony/symfony/blob/v2.7.9/CHANGELOG-2.7.md) ######
+* https://symfony.com/blog/cve-2016-1902-securerandom-s-fallback-not-secure-when-openssl-fails
+
 --------------
 ### 2015-10-23
 --------------
