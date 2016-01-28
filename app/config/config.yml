@@ -51,7 +51,7 @@ imports:
     #- { resource: egeloen/lucene.yml }
 
     #CCDN
-    - { resource: ccdn/ccdn_user_security.yml }
+    #- { resource: ccdn/ccdn_user_security.yml }
 
 
 framework:

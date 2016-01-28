@@ -63,8 +63,8 @@ security:
                 use_forward:    false
                 check_path:     /login_check
                 failure_path:   null
-                success_handler: rz_user_security.component.authentication.handler.login_success_handler
-                failure_handler: rz_user_security.component.authentication.handler.login_failure_handler
+#                success_handler: rz_user_security.component.authentication.handler.login_success_handler
+#                failure_handler: rz_user_security.component.authentication.handler.login_failure_handler
 #                remember_me: true
 #            remember_me:
 #                key: mellzamora_002
@@ -85,8 +85,8 @@ security:
                 service: hwi_oauth.user.provider.fosub_bridge
             logout:
               path: /logout
-              success_handler: rz_user_security.component.authentication.handler.logout_success_handler
-              handlers: [rz.user.component.authentication.handler.user_logout]
+#              success_handler: rz_user_security.component.authentication.handler.logout_success_handler
+#              handlers: [rz.user.component.authentication.handler.user_logout]
             anonymous:    true
 
     access_control:

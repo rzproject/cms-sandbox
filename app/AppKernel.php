@@ -137,8 +137,8 @@ class AppKernel extends Kernel
             new Rz\GoogleAPIClientBundle\RzGoogleAPIClientBundle(),
 
             #CCDN Security
-            new CCDNUser\SecurityBundle\CCDNUserSecurityBundle(),
-            new Rz\UserSecurityBundle\RzUserSecurityBundle(),
+            #new CCDNUser\SecurityBundle\CCDNUserSecurityBundle(),
+            #new Rz\UserSecurityBundle\RzUserSecurityBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

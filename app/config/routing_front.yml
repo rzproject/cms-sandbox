@@ -1,6 +1,6 @@
-rz_user_security:
-    resource: "@RzUserSecurityBundle/Resources/config/routing/lockout.xml"
-    prefix:   /security
+#rz_user_security:
+#    resource: "@RzUserSecurityBundle/Resources/config/routing/lockout.xml"
+#    prefix:   /security
 
 rz_oauth_redirect:
     resource: "@RzOAuthBundle/Resources/config/routing/redirect.xml"
