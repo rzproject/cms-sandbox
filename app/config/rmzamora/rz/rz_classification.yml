@@ -9,6 +9,11 @@ rz_classification:
       enable_category_canonical_page: true
       category_list_max_per_page: 6
       default_category_page_template: rzcms_blog_page_category
+      admin_default_context: 'news'
+    collection:
+      admin_default_context: 'news'
+    tag:
+      admin_default_context: 'news'
 
   #####################
   # blocks configuration
