@@ -9,10 +9,10 @@
     "require": {
         "php": ">=5.3.9",
 
-        "twig/twig": "~1.12",
+        "twig/twig": "~1.23",
         "twig/extensions": "~1.0",
 
-        "symfony/symfony": "2.7.8",
+        "symfony/symfony": "2.7.9",
         "symfony/assetic-bundle": "~2.4",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
@@ -123,7 +123,6 @@
         "post-update-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-create-project-cmd": [
